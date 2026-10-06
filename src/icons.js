@@ -2,7 +2,7 @@
 const s = (d, extra = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"${extra}>${d}</svg>`;
 
 module.exports = {
-  shield: `<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 5 7v11c0 9.5 6.4 17.4 15 20 8.6-2.6 15-10.5 15-20V7L20 2z" fill="#002f6c"/><path d="M13 13h8.5c3 0 4.8 1.5 4.8 3.8 0 1.6-.9 2.7-2.3 3.2 1.8.4 3 1.7 3 3.6 0 2.6-2 4.4-5.3 4.4H13V13zm4 5.9h3.6c1.2 0 1.9-.6 1.9-1.6s-.7-1.5-1.9-1.5H17v3.1zm0 6.2h4c1.3 0 2.1-.6 2.1-1.7s-.8-1.7-2.1-1.7h-4v3.4z" fill="#fff"/></svg>`,
+  logoMark: '<svg class="logo__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 1.7 38.3 20 20 38.3 1.7 20z" stroke-linejoin="miter"/><path d="M15 12v16M15 12h5a4 4 0 0 1 0 8h-5M15 20h6a4 4 0 0 1 0 8h-6" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round"/></svg>',
   chevron: s('<path d="m6 9 6 6 6-6"/>', ' style="stroke-width:3"'),
   left: s('<path d="m15 18-6-6 6-6"/>', ' style="stroke-width:2.5"'),
   right: s('<path d="m9 18 6-6-6-6"/>', ' style="stroke-width:2.5"'),

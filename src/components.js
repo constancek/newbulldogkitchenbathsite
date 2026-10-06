@@ -8,8 +8,8 @@ const picture = (name, alt, attrs = '') => `<img src="${img(name)}" alt="${esc(a
 
 function logo() {
   return `<a class="logo" href="/" aria-label="${SITE.name} home">
-    <span class="logo__mark">${icon.shield}BULLDOG</span>
-    <span class="logo__sub">Kitchen &amp; Bath</span>
+    ${icon.logoMark}
+    <span class="logo__text"><span class="logo__name">BULLDOG</span><span class="logo__sub">Kitchen &amp; Bath</span></span>
   </a>`;
 }
 

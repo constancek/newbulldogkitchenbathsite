@@ -81,10 +81,12 @@ ul { margin: 0 0 1rem; }
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 50; background: #fff; box-shadow: 0 1px 0 var(--grey-line); }
 .site-header__inner { display: flex; align-items: center; gap: 1.5rem; min-height: var(--header-h); }
-.logo { display: flex; flex-direction: column; text-decoration: none; color: var(--navy); line-height: 1; margin-right: auto; }
-.logo__mark { display: flex; align-items: center; gap: .5rem; font-weight: 800; font-size: 1.6rem; letter-spacing: .02em; }
-.logo__mark svg { width: 34px; height: 34px; flex: none; }
-.logo__sub { font-size: .62rem; font-weight: 600; letter-spacing: .32em; text-transform: uppercase; margin-top: .3rem; padding-left: 42px; }
+.logo { display: flex; align-items: center; gap: .85rem; text-decoration: none; color: var(--navy); line-height: 1; margin-right: auto; }
+.logo__icon { width: 50px; height: 50px; flex: none; }
+.logo__text { display: flex; flex-direction: column; gap: .35rem; }
+.logo__name { font-size: 1.45rem; font-weight: 500; letter-spacing: .28em; margin-right: -.28em; }
+.logo__sub { font-size: .72rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; }
+@media (max-width: 420px) { .logo__icon { width: 42px; height: 42px; } .logo__name { font-size: 1.2rem; } .logo__sub { font-size: .6rem; letter-spacing: .22em; } }
 .main-nav > ul { display: flex; align-items: center; gap: .25rem; list-style: none; margin: 0; padding: 0; }
 .main-nav li { position: relative; }
 .main-nav__link {
