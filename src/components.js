@@ -150,20 +150,20 @@ function callout(html) {
 </div></section>`;
 }
 
-function banner({ title, text, buttons = [], img: im, alt, badge }) {
+function banner({ title, titleTag = 'h2', text, buttons = [], img: im, alt, badge, bold = false }) {
   const btns = buttons.map(([l, h]) => `<a class="button button--outline-light" href="${h}">${l}</a>`).join('');
-  return `<section class="banner">
+  return `<section class="banner${bold ? ' banner--bold' : ''}">
   ${picture(im, alt || '')}
   <div class="banner__content">
     ${badge ? `<div class="diamond-badge" aria-hidden="true"><span>${badge}</span></div>` : ''}
-    <h2>${title}</h2>
+    <${titleTag}>${title}</${titleTag}>
     ${text ? `<p>${text}</p>` : ''}
     <div class="button-row">${btns}</div>
   </div>
 </section>`;
 }
 
-function offerCards({ title, offers, allLink = true, grey = false }) {
+function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = false }) {
   const cards = offers.map((o) => `<article class="offer-card">
     <div class="offer-card__image">${picture(o.img, o.alt)}<span class="offer-card__icon">${icon[o.icon] || icon.tag}</span></div>
     <div class="offer-card__content">
@@ -172,18 +172,18 @@ function offerCards({ title, offers, allLink = true, grey = false }) {
       <a class="offer-card__link" href="${o.href || '/contact/'}">Claim Promo</a>
     </div>
   </article>`).join('');
-  return `<section class="section${grey ? ' section--grey' : ''}"><div class="container">
-  <header class="section-head"><h2>${title}</h2>${allLink ? '<a class="button button--outline" href="/current-promos/">View All Promos</a>' : ''}</header>
+  return `<section class="section bleed${grey ? ' section--grey' : ''}">
+  <header class="section-head"><${titleTag}>${title}</${titleTag}>${allLink ? '<a class="button button--outline" href="/current-promos/">View All Promos</a>' : ''}</header>
   <div class="offer-grid">${cards}</div>
-</div></section>`;
+</section>`;
 }
 
-function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your in-home consultation.', id = 'estimate', button = 'Request My Estimate', message = false, promo = false } = {}) {
-  const interest = promo ? `<fieldset class="interest"><legend>I'm interested in:</legend>
+function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your in-home consultation.', id = 'estimate', button = 'Request My Estimate', message = false, promo = false, picker = promo, bare = false } = {}) {
+  const interest = picker ?`<fieldset class="interest"><legend>I'm interested in:</legend>
       ${[['bath', 'tub', 'Bathroom<br>Remodel'], ['kitchen', 'sink', 'Kitchen<br>Remodel'], ['walkin', 'walkin', 'Walk-in Tub<br>Installation']].map(([v, ic, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}>${icon[ic]}<span>${l}</span></label>`).join('')}
     </fieldset>` : '';
-  const head = promo
-    ? `<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>your new kitchen or bathroom remodel.*</p></div>`
+  const head = bare ? '' : promo
+    ?`<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>your new kitchen or bathroom remodel.*</p></div>`
     : `<h2>${heading}</h2>${text ? `<p>${text}</p>` : ''}`;
   return `<div class="form-card${promo ? ' form-card--promo' : ''}">
   ${head}
@@ -195,7 +195,7 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
       <div class="field"><label for="${id}-phone">Phone <span class="req">*</span></label><input id="${id}-phone" name="phone" type="tel" autocomplete="tel" required></div>
       <div class="field"><label for="${id}-zip">ZIP code <span class="req">*</span></label><input id="${id}-zip" name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
       <div class="field full"><label for="${id}-email">Email <span class="req">*</span></label><input id="${id}-email" name="email" type="email" autocomplete="email" required></div>
-      ${promo ? '' : `<div class="field full"><label for="${id}-project">Project type</label><select id="${id}-project" name="project">
+      ${picker ? '' : `<div class="field full"><label for="${id}-project">Project type</label><select id="${id}-project" name="project">
         <option>Bathroom remodel</option><option>Kitchen remodel</option><option>Kitchen &amp; bathroom</option><option>Walk-in tub / accessibility</option><option>Not sure yet</option>
       </select></div>`}
       ${message ? `<div class="field full"><label for="${id}-msg">How can we help?</label><textarea id="${id}-msg" name="message"></textarea></div>` : ''}
@@ -207,12 +207,11 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
 </div>`;
 }
 
-function hero({ img: im, alt, title, lead, crumbs, form = true }) {
-  const bc = crumbs ? `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a>${crumbs.map(([l, h]) => ` / ${h ? `<a href="${h}">${l}</a>` : l}`).join('')}</nav>` : '';
+function hero({ img: im, alt, title, lead, form = true }) {
   return `<section class="hero">
   <img src="${img(im)}" alt="${esc(alt || '')}" fetchpriority="high">
   <div class="container hero__inner${form ? '' : ' hero__inner--solo'}">
-    <div>${bc}<h1>${title}</h1>${lead ? `<p class="hero__lead">${lead}</p>` : ''}</div>
+    <div><h1>${title}</h1>${lead ? `<p class="hero__lead">${lead}</p>` : ''}</div>
     ${form ? estimateForm({ id: 'hero', promo: true }) : ''}
   </div>
 </section>`;
@@ -222,11 +221,11 @@ function pageBand({ title, lead, extra = '' }) {
   return `<section class="page-band"><div class="container"><h1>${title}</h1>${lead ? `<p>${lead}</p>` : ''}${extra}</div></section>`;
 }
 
-function sideBySide({ title, titleTag = 'h2', text = '', bullets, img: im, alt, media, reverse = false, grey = false, navy = false, buttons = [], id }) {
+function sideBySide({ title, titleTag = 'h2', text = '', bullets, img: im, alt, media, reverse = false, grey = false, navy = false, spot = false, buttons = [], id }) {
   const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : (navy ? ' button--outline-light' : '')}" href="${h}">${l}</a>`).join('')}</div>` : '';
   const list = bullets ? `<ul class="check-list">${bullets.map((b) => `<li>${b}</li>`).join('')}</ul>` : '';
   const mediaHtml = media || (im ? picture(im, alt || '') : '');
-  return `<section class="sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${navy ? ' sbs--navy' : ''}"${id ? ` id="${id}"` : ''}><div class="sbs__grid">
+  return `<section class="sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${navy ? ' sbs--navy' : ''}${spot ? ' sbs--spot' : ''}"${id ? ` id="${id}"` : ''}><div class="sbs__grid">
   <div class="sbs__media${media ? ' sbs__media--pad' : ''}">${mediaHtml}</div>
   <div class="sbs__content">
     <${titleTag} class="sbs__title">${title}</${titleTag}>
@@ -252,17 +251,17 @@ function cards({ title, intro, items, perRow = 4, grey = false, center = false, 
 </div></section>`;
 }
 
-function tiles({ title, items, perRow = 4, grey = false }) {
+function tiles({ title, items, grey = false, tall = false }) {
   const html = items.map((t) => `<a class="tile" href="${t.href}"><div class="tile__img">${picture(t.img, t.title)}</div><h3 class="tile__title">${t.title}</h3></a>`).join('');
-  return `<section class="section${grey ? ' section--grey' : ''}"><div class="container">
-  <header class="section-head"><h2>${title}</h2></header>
-  <div class="card-grid" style="--per-row:${perRow}">${html}</div>
-</div></section>`;
+  return `<section class="section bleed${grey ? ' section--grey' : ''}">
+  ${title ? `<header class="section-head"><h2>${title}</h2></header>` : ''}
+  <div class="tile-grid${tall ? ' tile-grid--tall' : ''}">${html}</div>
+</section>`;
 }
 
-function gallery({ title, images, grey = false }) {
+function gallery({ title, images, grey = false, spot = false }) {
   const items = images.map((g) => `<div class="gallery__item">${picture(g, 'Project photo')}</div>`).join('');
-  return `<section class="section gallery${grey ? ' section--grey' : ''}">
+  return `<section class="section gallery${grey ? ' section--grey' : ''}${spot ? ' gallery--spot' : ''}">
   ${title ? `<div class="container"><header class="section-head"><h2>${title}</h2></header></div>` : ''}
   <div class="gallery__track" tabindex="0" aria-label="Photo gallery">${items}</div>
   <div class="gallery__controls">
@@ -288,19 +287,62 @@ function steps({ title, items, grey = true }) {
 </div></section>`;
 }
 
-function swatches({ title, intro, items, grey = false }) {
-  const html = items.map((s) => s.color
-    ? `<div class="swatch swatch--solid"><span style="background:${s.color}"></span><h3>${s.name}</h3></div>`
-    : `<div class="swatch">${picture(s.img, s.name)}<h3>${s.name}</h3></div>`).join('');
-  return `<section class="section${grey ? ' section--grey' : ''}"><div class="container">
-  <header class="section-head"><div><h2>${title}</h2>${intro ? `<p>${intro}</p>` : ''}</div></header>
-  <div class="swatch-grid">${html}</div>
+// Option swatches: photos (img), flat colors (color) or CSS-drawn samples (bg).
+// "wide" lays four landscape samples edge to edge with a centered bold heading (glass options).
+function swatches({ title, intro, items, grey = false, wide = false, flush = false }) {
+  const html = items.map((s) => {
+    const fill = s.img ? picture(s.img, s.name) : `<span style="background:${esc(s.bg || s.color)}"></span>`;
+    return `<div class="swatch${s.img ? '' : ' swatch--drawn'}">${fill}<h3>${s.name}</h3></div>`;
+  }).join('');
+  const head = wide
+    ? `<header class="section-head section-head--center"><div><h2 class="swatch-title--bold">${title}</h2>${intro ? `<p>${intro}</p>` : ''}</div></header>`
+    : `<header class="section-head"><div><h2 class="swatch-title">${title}</h2>${intro ? `<p>${intro}</p>` : ''}</div></header>`;
+  const cls = `section swatch-section${flush ? ' swatch-section--flush' : ''}${grey ? ' section--grey' : ''}`;
+  return wide
+    ? `<section class="${cls}">${head}<div class="swatch-grid swatch-grid--wide">${html}</div></section>`
+    : `<section class="${cls}"><div class="container">${head}<div class="swatch-grid">${html}</div></div></section>`;
+}
+
+function benefitList(items) {
+  return `<ul class="benefit-list">${items.map(([label, text]) => `<li><strong>${label}:</strong> ${text}</li>`).join('')}</ul>`;
+}
+
+// Named product photos with category filter buttons (filtering in main.js)
+function productGrid({ title, filters = [], items }) {
+  const btns = filters.length ? `<div class="filter-row" role="group" aria-label="Filter by category">
+    <button class="button" type="button" data-filter="all" aria-pressed="true">All</button>
+    ${filters.map(([key, label]) => `<button class="button button--outline" type="button" data-filter="${key}" aria-pressed="false">${label}</button>`).join('')}
+  </div>` : '';
+  const html = items.map((it) => `<figure class="product-grid__item" data-cat="${it.cat}">${picture(it.img, it.name)}<figcaption>${it.name}</figcaption></figure>`).join('');
+  return `<section class="section bleed product-grid-section">
+  <header class="section-head section-head--center"><h2>${title}</h2></header>
+  ${btns}
+  <div class="product-grid">${html}</div>
+</section>`;
+}
+
+function ctaBlock({ title, text, buttons = [] }) {
+  return `<section class="section cta-block"><div class="container">
+  <h2>${title}</h2>${text ? `<p>${text}</p>` : ''}
+  <div class="button-row">${buttons.map(([l, h]) => `<a class="button" href="${h}">${l}</a>`).join('')}</div>
 </div></section>`;
 }
 
-function faqGroups(groups) {
-  const html = groups.map((g) => `<div class="faq-group"><h2>${g.title}</h2>${g.items.map(([q, a]) => `<details class="faq"><summary>${q}</summary><div class="faq__body"><p>${a}</p></div></details>`).join('')}</div>`).join('');
+function faqGroups(groups, intro = '') {
+  const html = groups.map((g, i) => `<div class="faq-group"><div>${i === 0 && intro ? `<p class="faq-group__intro">${intro}</p>` : ''}<h2>${g.title}</h2></div><div class="faq-list">${g.items.map(([q, a]) => `<details class="faq"><summary>${q}</summary><div class="faq__body"><p>${a}</p></div></details>`).join('')}</div></div>`).join('');
   return `<section class="section"><div class="container">${html}</div></section>`;
+}
+
+function formPage({ title, text, media = '', form, bold = false }) {
+  return `<section class="form-page${bold ? ' form-page--bold' : ''}"><div class="form-page__inner">
+  <h1>${title}</h1>${text ? `<p>${text}</p>` : ''}
+  ${media ? `<div class="form-page__media">${media}</div>` : ''}
+  ${form}
+</div></section>`;
+}
+
+function photoStrip(im, alt) {
+  return `<div class="photo-strip">${picture(im, alt)}</div>`;
 }
 
 function brochureCover(im = 'bath-12') {
@@ -309,5 +351,5 @@ function brochureCover(im = 'bath-12') {
 
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, columns, steps, swatches, faqGroups, brochureCover, icon,
+  sideBySide, cards, tiles, gallery, columns, steps, swatches, ctaBlock, benefitList, productGrid, faqGroups, brochureCover, formPage, photoStrip, icon,
 };

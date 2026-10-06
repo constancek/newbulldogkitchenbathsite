@@ -44,8 +44,8 @@ const bath = [
     slug: 'shower-enclosures', title: 'Shower Enclosures', card: 'shower-6',
     hero: 'shower-4', lead: 'Glass doors and enclosures that finish your shower and keep water where it belongs.',
     intro: { title: 'Doors That <strong>Complete the Look</strong>', img: 'shower-5',
-      text: '<p>Choose from sliding, pivot, and frameless-style glass doors in clear, frosted, or patterned glass. Hardware finishes include chrome, brushed nickel, matte black, and brushed gold.</p>',
-      bullets: ['Sliding, bypass, and pivot doors', 'Clear, frosted, and rain glass', 'Easy-clean glass coatings', 'Four hardware finishes'] },
+      text: '<p>Choose from sliding, pivot, and frameless-style glass doors in clear, frosted, or patterned glass. Door and rod finishes include matte black, brushed nickel, oil-rubbed bronze, and chrome.</p>',
+      bullets: ['Sliding, bypass, and pivot doors', 'Clear, rain, frosted, and reeded glass', 'Optional V-groove etched patterns', 'Four door and rod finishes'] },
     gallery: ['shower-6', 'shower-7', 'shower-8', 'bath-12', 'bath-13', 'bath-14'],
     feature: { title: 'Light, Open, and <strong>Easy to Clean</strong>', img: 'bath-15',
       text: '<p>Clear glass lets light flow through the room and shows off your new wall pattern. A protective coating helps water bead off so spots and soap scum wipe away.</p>' },
@@ -116,12 +116,12 @@ const kitchen = [
 ];
 
 const swatchList = [
-  { name: 'Arctic Marble', img: 'texture-1' }, { name: 'Harbor Gray', img: 'texture-2' },
-  { name: 'Desert Travertine', img: 'texture-3' }, { name: 'Canyon Stone', img: 'texture-4' },
-  { name: 'Midnight Granite', img: 'texture-5' }, { name: 'Coastal Fog', img: 'texture-6' },
-  { name: 'Riverbed', img: 'texture-7' }, { name: 'Sierra Sand', img: 'texture-8' },
-  { name: 'Carrara Mist', img: 'texture-9' }, { name: 'Slate Ash', img: 'texture-10' },
-  { name: 'Ivory Quartz', img: 'texture-11' }, { name: 'Storm Cloud', img: 'texture-12' },
+  { name: 'Sahara Beige', img: 'texture-1' }, { name: 'Arctic White', img: 'texture-2' },
+  { name: 'Rosso Onyx', img: 'texture-3' }, { name: 'Golden Slate', img: 'texture-4' },
+  { name: 'Midnight Granite', img: 'texture-5' }, { name: 'Desert Sand', img: 'texture-6' },
+  { name: 'Storm Cloud', img: 'texture-7' }, { name: 'Ocean Blue', img: 'texture-8' },
+  { name: 'Travertine Cream', img: 'texture-9' }, { name: 'Slate Ash', img: 'texture-10' },
+  { name: 'Harbor Gray', img: 'texture-11' }, { name: 'Rose Quartz', img: 'texture-12' },
 ];
 const solidList = [
   { name: 'White (Matte or Gloss)', color: '#f7f7f5' }, { name: 'Almond', color: '#efe6d4' },

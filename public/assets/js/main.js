@@ -64,6 +64,24 @@
     g.querySelector('[data-dir="next"]').addEventListener('click', function () { step(1); });
   });
 
+  // Product grid category filters
+  document.querySelectorAll('.product-grid-section').forEach(function (sec) {
+    var btns = sec.querySelectorAll('[data-filter]');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-filter');
+        btns.forEach(function (o) {
+          var on = o === b;
+          o.setAttribute('aria-pressed', on);
+          o.classList.toggle('button--outline', !on);
+        });
+        sec.querySelectorAll('.product-grid__item').forEach(function (it) {
+          it.hidden = f !== 'all' && it.getAttribute('data-cat') !== f;
+        });
+      });
+    });
+  });
+
   // Placeholder form handling — replace with a real form endpoint (HubSpot, Formspree, etc.)
   document.querySelectorAll('form[data-placeholder-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
