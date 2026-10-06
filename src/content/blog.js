@@ -21,7 +21,7 @@ const posts = [
 <ul><li>Your cabinet boxes are solid and free of water damage.</li><li>You like your current layout.</li><li>You want a faster project with less disruption.</li></ul>
 <h2>Choose replacement if…</h2>
 <ul><li>You want to change the layout or add an island.</li><li>Boxes are damaged, sagging, or poorly built.</li><li>You want specialized storage throughout.</li></ul>
-<p>Not sure? A free consultation will tell you which option makes sense for your kitchen.</p>`,
+<p>Not sure? A design consultation will tell you which option makes sense for your kitchen.</p>`,
   },
   {
     slug: 'aging-in-place-bathroom-upgrades', date: 'August 28, 2026', img: 'access-2',

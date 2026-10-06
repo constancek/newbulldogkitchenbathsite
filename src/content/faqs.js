@@ -1,9 +1,9 @@
 // FAQ groups: [question, answer]. Placeholder answers — review for accuracy before launch.
 const faqs = [
   { title: 'Cost &amp; Financing', items: [
-    ['How much does a bathroom or kitchen remodel cost?', 'Every project is different. Price depends on the size of your space, the products you choose, and any plumbing or structural work needed. We give you a clear, written quote after your free consultation.'],
+    ['How much does a bathroom or kitchen remodel cost?', 'Every project is different. Price depends on the size of your space, the products you choose, and any plumbing or structural work needed. We give you a clear, written quote after your consultation.'],
     ['Do you offer financing?', 'Yes. We offer several financing options on approved credit, including promotional no-interest plans and terms up to 60 months. Visit our Financing page for details.'],
-    ['Is the estimate really free?', 'Yes. The consultation, measurements, design, and written estimate are all free with no obligation.'],
+    ['What happens at the consultation?', 'We measure your space, walk through product and finish options with you, and provide a clear, written estimate for your project.'],
   ] },
   { title: 'Installation Process', items: [
     ['Can you really remodel a bathroom in one day?', 'Many tub, shower, and wall-system replacements are completed in as little as one day. Projects involving layout changes, plumbing moves, or full gut remodels take longer — we\'ll give you a timeline up front.'],
@@ -12,7 +12,7 @@ const faqs = [
   ] },
   { title: 'Products &amp; Materials', items: [
     ['What are your shower and tub walls made of?', 'Our wall systems are made from durable, non-porous materials that resist mold, mildew, and stains, with no grout lines to clean.'],
-    ['Can I see samples before I decide?', 'Yes. Your design consultant brings samples to your home, and we can create a free 3D design of your new space.'],
+    ['Can I see samples before I decide?', 'Yes. Your design consultant brings samples to your home, and we can create a 3D design of your new space.'],
     ['How do I clean my new surfaces?', 'Most surfaces just need mild soap and water. Avoid abrasive pads and harsh chemicals. We\'ll leave care instructions after your install.'],
   ] },
   { title: 'Kitchen Remodeling', items: [

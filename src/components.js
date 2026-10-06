@@ -30,14 +30,14 @@ function header(current) {
     <nav class="main-nav" id="main-nav" aria-label="Main">
       <ul>${SITE.nav.map((n) => navItem(n, current)).join('')}</ul>
       <div class="mobile-only">
-        <a class="button button--block" href="/contact/">Get a Free Estimate</a>
+        <a class="button button--block" href="/contact/">Request an Estimate</a>
         <p style="margin-top:1rem"><a class="header-phone" href="tel:${SITE.phoneHref}">${icon.phone}${SITE.phone}</a></p>
       </div>
     </nav>
     <div class="header-actions">
       <a class="promos-pill" href="/current-promos/">${icon.tag}Promos</a>
       <a class="header-phone" href="tel:${SITE.phoneHref}" aria-label="Call ${SITE.phone}">${icon.phoneSolid}</a>
-      <a class="header-cta" href="/contact/">Get a Free Estimate</a>
+      <a class="header-cta" href="/contact/">Request an Estimate</a>
       <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu">${icon.menu}</button>
     </div>
   </div>
@@ -178,7 +178,7 @@ function offerCards({ title, offers, allLink = true, grey = false }) {
 </div></section>`;
 }
 
-function estimateForm({ heading = 'Get <strong>a Free Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your free in-home consultation.', id = 'estimate', button = 'Get My Free Estimate', message = false, promo = false } = {}) {
+function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your in-home consultation.', id = 'estimate', button = 'Request My Estimate', message = false, promo = false } = {}) {
   const interest = promo ? `<fieldset class="interest"><legend>I'm interested in:</legend>
       ${[['bath', 'tub', 'Bathroom<br>Remodel'], ['kitchen', 'sink', 'Kitchen<br>Remodel'], ['walkin', 'walkin', 'Walk-in Tub<br>Installation']].map(([v, ic, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}>${icon[ic]}<span>${l}</span></label>`).join('')}
     </fieldset>` : '';

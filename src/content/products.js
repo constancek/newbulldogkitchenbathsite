@@ -64,7 +64,7 @@ const bath = [
     slug: 'colors-patterns', title: 'Colors &amp; Patterns', plainTitle: 'Colors & Patterns', card: 'texture-13',
     hero: 'bath-21', lead: 'Stone-look, tile-look, and solid finishes to match any style — from classic to modern.',
     intro: { title: 'Find <strong>Your Finish</strong>', img: 'texture-1',
-      text: '<p>Our wall systems come in a wide range of marble, granite, travertine, and solid colors, with optional tile patterns like subway, hexagon, and herringbone. Bring samples home during your free consultation.</p>',
+      text: '<p>Our wall systems come in a wide range of marble, granite, travertine, and solid colors, with optional tile patterns like subway, hexagon, and herringbone. Bring samples home during your consultation.</p>',
       bullets: ['Marble, granite, and stone looks', 'Subway, hex, and herringbone patterns', 'Solid colors in matte or gloss', 'Accent trim and border options'] },
     swatches: true,
     feature: { title: 'See It <strong>Before You Buy</strong>', img: 'design-1',
