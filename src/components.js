@@ -24,9 +24,8 @@ function navItem(item, current) {
 
 function header(current) {
   return `<a class="skip-link" href="#main">Skip to main content</a>
-<div class="promo-bar">${SITE.promoBar.text}<a href="${SITE.promoBar.href}">${SITE.promoBar.link}</a></div>
 <header class="site-header">
-  <div class="container site-header__inner">
+  <div class="site-header__inner">
     ${logo()}
     <nav class="main-nav" id="main-nav" aria-label="Main">
       <ul>${SITE.nav.map((n) => navItem(n, current)).join('')}</ul>
@@ -36,12 +35,14 @@ function header(current) {
       </div>
     </nav>
     <div class="header-actions">
-      <a class="header-phone" href="tel:${SITE.phoneHref}">${icon.phone}<span>${SITE.phone}</span></a>
-      <a class="button" href="/contact/">Get a Free Estimate</a>
+      <a class="promos-pill" href="/current-promos/">${icon.tag}Promos</a>
+      <a class="header-phone" href="tel:${SITE.phoneHref}" aria-label="Call ${SITE.phone}">${icon.phoneSolid}</a>
+      <a class="header-cta" href="/contact/">Get a Free Estimate</a>
       <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu">${icon.menu}</button>
     </div>
   </div>
-</header>`;
+</header>
+<div class="promo-bar"><a href="${SITE.promoBar.href}">${SITE.promoBar.text} ${SITE.promoBar.link}</a></div>`;
 }
 
 function footer() {
@@ -132,17 +133,34 @@ function carousel(slides) {
   const dots = slides.map((_, i) => `<button type="button" aria-label="Go to slide ${i + 1}"></button>`).join('');
   return `<section class="carousel" aria-roledescription="carousel" aria-label="Featured">
   <div class="carousel__track">${s}</div>
+  <div class="carousel__controls">
+    <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous slide">${icon.left}</button>
+    <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next slide">${icon.right}</button>
+  </div>
   <div class="carousel__dots">${dots}</div>
-  <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous slide">${icon.left}</button>
-  <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next slide">${icon.right}</button>
+  <button class="carousel__pause" type="button" aria-label="Pause slideshow" aria-pressed="false">${icon.pause}${icon.play}</button>
 </section>`;
 }
 
 function callout(html) {
-  return `<section class="callout"><div class="container callout__inner">
-  <div class="callout__badge" aria-hidden="true"><strong>${SITE.years}+</strong>Years<br>Serving</div>
+  return `<section class="callout"><div class="callout__inner">
+  <div class="callout__badge">${icon.shieldCheck}<span><strong>Lifetime</strong>Warranty</span></div>
   <div class="callout__content"><h2>${html}</h2></div>
+  <div class="callout__years" aria-hidden="true"><strong>${SITE.years}</strong><span>Years</span></div>
 </div></section>`;
+}
+
+function banner({ title, text, buttons = [], img: im, alt, badge }) {
+  const btns = buttons.map(([l, h]) => `<a class="button button--outline-light" href="${h}">${l}</a>`).join('');
+  return `<section class="banner">
+  ${picture(im, alt || '')}
+  <div class="banner__content">
+    ${badge ? `<div class="diamond-badge" aria-hidden="true"><span>${badge}</span></div>` : ''}
+    <h2>${title}</h2>
+    ${text ? `<p>${text}</p>` : ''}
+    <div class="button-row">${btns}</div>
+  </div>
+</section>`;
 }
 
 function offerCards({ title, offers, allLink = true, grey = false }) {
@@ -160,24 +178,30 @@ function offerCards({ title, offers, allLink = true, grey = false }) {
 </div></section>`;
 }
 
-function estimateForm({ heading = 'Get <strong>a Free Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your free in-home consultation.', id = 'estimate', button = 'Get My Free Estimate', message = false } = {}) {
-  return `<div class="form-card">
-  <h2>${heading}</h2>
-  ${text ? `<p>${text}</p>` : ''}
+function estimateForm({ heading = 'Get <strong>a Free Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your free in-home consultation.', id = 'estimate', button = 'Get My Free Estimate', message = false, promo = false } = {}) {
+  const interest = promo ? `<fieldset class="interest"><legend>I'm interested in:</legend>
+      ${[['bath', 'tub', 'Bathroom<br>Remodel'], ['kitchen', 'sink', 'Kitchen<br>Remodel'], ['walkin', 'walkin', 'Walk-in Tub<br>Installation']].map(([v, ic, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}>${icon[ic]}<span>${l}</span></label>`).join('')}
+    </fieldset>` : '';
+  const head = promo
+    ? `<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>your new kitchen or bathroom remodel.*</p></div>`
+    : `<h2>${heading}</h2>${text ? `<p>${text}</p>` : ''}`;
+  return `<div class="form-card${promo ? ' form-card--promo' : ''}">
+  ${head}
   <form data-placeholder-form novalidate>
+    ${interest}
     <div class="form-grid">
       <div class="field"><label for="${id}-first">First name <span class="req">*</span></label><input id="${id}-first" name="first_name" autocomplete="given-name" required></div>
       <div class="field"><label for="${id}-last">Last name <span class="req">*</span></label><input id="${id}-last" name="last_name" autocomplete="family-name" required></div>
       <div class="field"><label for="${id}-phone">Phone <span class="req">*</span></label><input id="${id}-phone" name="phone" type="tel" autocomplete="tel" required></div>
       <div class="field"><label for="${id}-zip">ZIP code <span class="req">*</span></label><input id="${id}-zip" name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
       <div class="field full"><label for="${id}-email">Email <span class="req">*</span></label><input id="${id}-email" name="email" type="email" autocomplete="email" required></div>
-      <div class="field full"><label for="${id}-project">Project type</label><select id="${id}-project" name="project">
+      ${promo ? '' : `<div class="field full"><label for="${id}-project">Project type</label><select id="${id}-project" name="project">
         <option>Bathroom remodel</option><option>Kitchen remodel</option><option>Kitchen &amp; bathroom</option><option>Walk-in tub / accessibility</option><option>Not sure yet</option>
-      </select></div>
+      </select></div>`}
       ${message ? `<div class="field full"><label for="${id}-msg">How can we help?</label><textarea id="${id}-msg" name="message"></textarea></div>` : ''}
     </div>
     <p class="form-legal">By submitting, you agree that ${SITE.name} may contact you by phone, text, or email about your project. Consent is not a condition of purchase. Message &amp; data rates may apply.</p>
-    <button class="button button--block" type="submit">${button}</button>
+    <button class="button button--block" type="submit">${promo ? 'Submit' : button}</button>
     <div class="form-success" role="status">Thank you! A ${SITE.short} design consultant will be in touch shortly.</div>
   </form>
 </div>`;
@@ -189,7 +213,7 @@ function hero({ img: im, alt, title, lead, crumbs, form = true }) {
   <img src="${img(im)}" alt="${esc(alt || '')}" fetchpriority="high">
   <div class="container hero__inner${form ? '' : ' hero__inner--solo'}">
     <div>${bc}<h1>${title}</h1>${lead ? `<p class="hero__lead">${lead}</p>` : ''}</div>
-    ${form ? estimateForm({ id: 'hero' }) : ''}
+    ${form ? estimateForm({ id: 'hero', promo: true }) : ''}
   </div>
 </section>`;
 }
@@ -199,11 +223,11 @@ function pageBand({ title, lead, extra = '' }) {
 }
 
 function sideBySide({ title, titleTag = 'h2', text = '', bullets, img: im, alt, media, reverse = false, grey = false, navy = false, buttons = [], id }) {
-  const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : (navy ? ' button--white' : '')}" href="${h}">${l}</a>`).join('')}</div>` : '';
+  const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : (navy ? ' button--outline-light' : '')}" href="${h}">${l}</a>`).join('')}</div>` : '';
   const list = bullets ? `<ul class="check-list">${bullets.map((b) => `<li>${b}</li>`).join('')}</ul>` : '';
   const mediaHtml = media || (im ? picture(im, alt || '') : '');
-  return `<section class="section sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${navy ? ' sbs--navy' : ''}"${id ? ` id="${id}"` : ''}><div class="container sbs__grid">
-  <div class="sbs__media">${mediaHtml}</div>
+  return `<section class="sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${navy ? ' sbs--navy' : ''}"${id ? ` id="${id}"` : ''}><div class="sbs__grid">
+  <div class="sbs__media${media ? ' sbs__media--pad' : ''}">${mediaHtml}</div>
   <div class="sbs__content">
     <${titleTag} class="sbs__title">${title}</${titleTag}>
     ${text ? `<div class="sbs__text">${text}</div>` : ''}
@@ -229,7 +253,7 @@ function cards({ title, intro, items, perRow = 4, grey = false, center = false, 
 }
 
 function tiles({ title, items, perRow = 4, grey = false }) {
-  const html = items.map((t) => `<a class="tile" href="${t.href}">${picture(t.img, t.title)}<div class="tile__body"><h3 class="tile__title">${t.title}</h3><span class="tile__link">Learn More</span></div></a>`).join('');
+  const html = items.map((t) => `<a class="tile" href="${t.href}"><div class="tile__img">${picture(t.img, t.title)}</div><h3 class="tile__title">${t.title}</h3></a>`).join('');
   return `<section class="section${grey ? ' section--grey' : ''}"><div class="container">
   <header class="section-head"><h2>${title}</h2></header>
   <div class="card-grid" style="--per-row:${perRow}">${html}</div>
@@ -284,6 +308,6 @@ function brochureCover(im = 'bath-12') {
 }
 
 module.exports = {
-  esc, img, picture, layout, carousel, callout, offerCards, estimateForm, hero, pageBand,
+  esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
   sideBySide, cards, tiles, gallery, columns, steps, swatches, faqGroups, brochureCover, icon,
 };

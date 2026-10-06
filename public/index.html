@@ -17,9 +17,8 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
-<div class="promo-bar">Get $1,250 OFF your new kitchen or bathroom*<a href="/current-promos/">View Promo</a></div>
 <header class="site-header">
-  <div class="container site-header__inner">
+  <div class="site-header__inner">
     <a class="logo" href="/" aria-label="Bulldog Kitchen & Bath home">
     <svg class="logo__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 1.7 38.3 20 20 38.3 1.7 20z" stroke-linejoin="miter"/><path d="M15 12v16M15 12h5a4 4 0 0 1 0 8h-5M15 20h6a4 4 0 0 1 0 8h-6" stroke-width="2.8" stroke-linecap="square" stroke-linejoin="round"/></svg>
     <span class="logo__text"><span class="logo__name">BULLDOG</span><span class="logo__sub">Kitchen &amp; Bath</span></span>
@@ -32,12 +31,14 @@
       </div>
     </nav>
     <div class="header-actions">
-      <a class="header-phone" href="tel:+15550100199"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>(555) 010-0199</span></a>
-      <a class="button" href="/contact/">Get a Free Estimate</a>
+      <a class="promos-pill" href="/current-promos/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg>Promos</a>
+      <a class="header-phone" href="tel:+15550100199" aria-label="Call (555) 010-0199"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6a1 1 0 0 0-1 .25l-2.2 2.2a15 15 0 0 1-6.6-6.6l2.2-2.2a1 1 0 0 0 .25-1A11.4 11.4 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1 17 17 0 0 0 17 17 1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z"/></svg></a>
+      <a class="header-cta" href="/contact/">Get a Free Estimate</a>
       <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
 </header>
+<div class="promo-bar"><a href="/current-promos/">Get $1,250 OFF your new kitchen or bathroom* View Promo</a></div>
 <main id="main">
 <section class="carousel" aria-roledescription="carousel" aria-label="Featured">
   <div class="carousel__track"><div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 5">
@@ -81,13 +82,17 @@
         <a class="button button--white" href="/contact/">Free Design Consultation</a>
       </div>
     </div></div>
+  <div class="carousel__controls">
+    <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke-width:2.5"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke-width:2.5"><path d="m9 18 6-6-6-6"/></svg></button>
+  </div>
   <div class="carousel__dots"><button type="button" aria-label="Go to slide 1"></button><button type="button" aria-label="Go to slide 2"></button><button type="button" aria-label="Go to slide 3"></button><button type="button" aria-label="Go to slide 4"></button><button type="button" aria-label="Go to slide 5"></button></div>
-  <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke-width:2.5"><path d="m15 18-6-6 6-6"/></svg></button>
-  <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke-width:2.5"><path d="m9 18 6-6-6-6"/></svg></button>
+  <button class="carousel__pause" type="button" aria-label="Pause slideshow" aria-pressed="false"><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="7" y="5" width="3.2" height="14" rx="1"/><rect x="13.8" y="5" width="3.2" height="14" rx="1"/></svg><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg></button>
 </section>
-<section class="callout"><div class="container callout__inner">
-  <div class="callout__badge" aria-hidden="true"><strong>33+</strong>Years<br>Serving</div>
+<section class="callout"><div class="callout__inner">
+  <div class="callout__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span><strong>Lifetime</strong>Warranty</span></div>
   <div class="callout__content"><h2>Bulldog Kitchen & Bath — <strong>Beautiful Remodels Since 1993</strong></h2></div>
+  <div class="callout__years" aria-hidden="true"><strong>33</strong><span>Years</span></div>
 </div></section>
 <section class="section"><div class="container">
   <header class="section-head"><h2>Current <strong>Promos</strong></h2><a class="button button--outline" href="/current-promos/">View All Promos</a></header>
@@ -114,54 +119,36 @@
     </div>
   </article></div>
 </div></section>
-<section class="section sbs sbs--reverse section--grey"><div class="container sbs__grid">
-  <div class="sbs__media"><div class="form-card">
-  <h2>Design <strong>Your Space</strong></h2>
-  <p>Start with a few details and a designer will reach out to build your free 3D plan.</p>
-  <form data-placeholder-form novalidate>
-    <div class="form-grid">
-      <div class="field"><label for="studio-first">First name <span class="req">*</span></label><input id="studio-first" name="first_name" autocomplete="given-name" required></div>
-      <div class="field"><label for="studio-last">Last name <span class="req">*</span></label><input id="studio-last" name="last_name" autocomplete="family-name" required></div>
-      <div class="field"><label for="studio-phone">Phone <span class="req">*</span></label><input id="studio-phone" name="phone" type="tel" autocomplete="tel" required></div>
-      <div class="field"><label for="studio-zip">ZIP code <span class="req">*</span></label><input id="studio-zip" name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
-      <div class="field full"><label for="studio-email">Email <span class="req">*</span></label><input id="studio-email" name="email" type="email" autocomplete="email" required></div>
-      <div class="field full"><label for="studio-project">Project type</label><select id="studio-project" name="project">
-        <option>Bathroom remodel</option><option>Kitchen remodel</option><option>Kitchen &amp; bathroom</option><option>Walk-in tub / accessibility</option><option>Not sure yet</option>
-      </select></div>
-      
-    </div>
-    <p class="form-legal">By submitting, you agree that Bulldog Kitchen & Bath may contact you by phone, text, or email about your project. Consent is not a condition of purchase. Message &amp; data rates may apply.</p>
-    <button class="button button--block" type="submit">Get Started</button>
-    <div class="form-success" role="status">Thank you! A Bulldog design consultant will be in touch shortly.</div>
-  </form>
-</div></div>
+<section class="sbs sbs--reverse sbs--navy"><div class="sbs__grid">
+  <div class="sbs__media"><img src="/assets/img/design-3.jpg" alt="Designer reviewing finish samples" loading="lazy" decoding="async"></div>
   <div class="sbs__content">
-    <h2 class="sbs__title">Plan Your Dream Space <strong>With Our Design Studio</strong></h2>
-    <div class="sbs__text"><p>Pick your layout, wall pattern, fixtures, cabinets, and trim — then let our designers turn it into a free 3D rendering of your new room.</p></div>
-    
+    <h2 class="sbs__title">Plan Your Dream Space <strong>With Our Free Design Studio</strong></h2>
+    <div class="sbs__text"><p>Customize wall patterns, fixtures, cabinets, trim, and more — then get a free 3D rendering of your new room.</p></div>
+    <div class="button-row"><a class="button button--outline-light" href="/design-your-space/">Get Started</a></div>
   </div>
 </div></section>
 <section class="section"><div class="container">
   <header class="section-head"><h2>Explore Our <strong>Products</strong></h2></header>
-  <div class="card-grid" style="--per-row:4"><a class="tile" href="/products/showers/"><img src="/assets/img/shower-8.jpg" alt="Showers" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Showers</h3><span class="tile__link">Learn More</span></div></a><a class="tile" href="/products/bathtubs/"><img src="/assets/img/tub-8.jpg" alt="Bathtubs" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Bathtubs</h3><span class="tile__link">Learn More</span></div></a><a class="tile" href="/products/walk-in-tubs/"><img src="/assets/img/tub-5.jpg" alt="Walk-In Tubs" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Walk-In Tubs</h3><span class="tile__link">Learn More</span></div></a><a class="tile" href="/products/accessibility/"><img src="/assets/img/access-3.jpg" alt="Accessibility" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Accessibility</h3><span class="tile__link">Learn More</span></div></a><a class="tile" href="/products/shower-enclosures/"><img src="/assets/img/shower-6.jpg" alt="Shower Enclosures" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Shower Enclosures</h3><span class="tile__link">Learn More</span></div></a><a class="tile" href="/products/accessories/"><img src="/assets/img/accessory-2.jpg" alt="Accessories" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Accessories</h3><span class="tile__link">Learn More</span></div></a><a class="tile" href="/products/colors-patterns/"><img src="/assets/img/texture-13.jpg" alt="Colors &amp; Patterns" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Colors & Patterns</h3><span class="tile__link">Learn More</span></div></a><a class="tile" href="/kitchens/"><img src="/assets/img/kitchen-17.jpg" alt="Kitchens" loading="lazy" decoding="async"><div class="tile__body"><h3 class="tile__title">Kitchens</h3><span class="tile__link">Learn More</span></div></a></div>
+  <div class="card-grid" style="--per-row:4"><a class="tile" href="/products/showers/"><div class="tile__img"><img src="/assets/img/shower-8.jpg" alt="Showers" loading="lazy" decoding="async"></div><h3 class="tile__title">Showers</h3></a><a class="tile" href="/products/bathtubs/"><div class="tile__img"><img src="/assets/img/tub-8.jpg" alt="Bathtubs" loading="lazy" decoding="async"></div><h3 class="tile__title">Bathtubs</h3></a><a class="tile" href="/products/walk-in-tubs/"><div class="tile__img"><img src="/assets/img/tub-5.jpg" alt="Walk-In Tubs" loading="lazy" decoding="async"></div><h3 class="tile__title">Walk-In Tubs</h3></a><a class="tile" href="/products/accessibility/"><div class="tile__img"><img src="/assets/img/access-3.jpg" alt="Accessibility" loading="lazy" decoding="async"></div><h3 class="tile__title">Accessibility</h3></a><a class="tile" href="/products/shower-enclosures/"><div class="tile__img"><img src="/assets/img/shower-6.jpg" alt="Shower Enclosures" loading="lazy" decoding="async"></div><h3 class="tile__title">Shower Enclosures</h3></a><a class="tile" href="/products/accessories/"><div class="tile__img"><img src="/assets/img/accessory-2.jpg" alt="Accessories" loading="lazy" decoding="async"></div><h3 class="tile__title">Accessories</h3></a><a class="tile" href="/products/colors-patterns/"><div class="tile__img"><img src="/assets/img/texture-13.jpg" alt="Colors &amp; Patterns" loading="lazy" decoding="async"></div><h3 class="tile__title">Colors & Patterns</h3></a><a class="tile" href="/kitchens/"><div class="tile__img"><img src="/assets/img/kitchen-17.jpg" alt="Kitchens" loading="lazy" decoding="async"></div><h3 class="tile__title">Kitchens</h3></a></div>
 </div></section>
-<section class="section sbs sbs--navy"><div class="container sbs__grid">
-  <div class="sbs__media"><img src="/assets/img/bath-24.jpg" alt="Finished bathroom remodel" loading="lazy" decoding="async"></div>
-  <div class="sbs__content">
-    <h2 class="sbs__title">A Brand-New Bath in <strong>As Little As One Day</strong></h2>
-    <div class="sbs__text"><p>Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up — often in a single visit.</p></div>
-    <div class="button-row"><a class="button button--white" href="/contact/">Schedule Free Estimate</a></div>
+<section class="banner">
+  <img src="/assets/img/bath-24.jpg" alt="Finished bathroom remodel" loading="lazy" decoding="async">
+  <div class="banner__content">
+    <div class="diamond-badge" aria-hidden="true"><span>1-DAY</span></div>
+    <h2>A Brand-New Bath in <strong>As Little As One Day</strong></h2>
+    <p>Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up — often in a single visit.</p>
+    <div class="button-row"><a class="button button--outline-light" href="/contact/">Schedule Free Estimate</a></div>
   </div>
-</div></section>
-<section class="section sbs sbs--reverse"><div class="container sbs__grid">
-  <div class="sbs__media"><div class="brochure"><img src="/assets/img/bath-25.jpg" alt="Brochure cover" loading="lazy" decoding="async"><div class="brochure__label"><strong>BULLDOG</strong><span>Kitchen &amp; Bath Lookbook</span></div></div></div>
+</section>
+<section class="sbs sbs--reverse"><div class="sbs__grid">
+  <div class="sbs__media sbs__media--pad"><div class="brochure"><img src="/assets/img/bath-25.jpg" alt="Brochure cover" loading="lazy" decoding="async"><div class="brochure__label"><strong>BULLDOG</strong><span>Kitchen &amp; Bath Lookbook</span></div></div></div>
   <div class="sbs__content">
     <h2 class="sbs__title">Discover What <strong>Bulldog Can Do</strong></h2>
     <div class="sbs__text"><p>Download our lookbook to explore real before-and-after transformations and our full range of tile looks, accessories, cabinets, countertops, and fixtures.</p></div>
     <div class="button-row"><a class="button" href="/download-brochure/">Get Free Brochure</a></div>
   </div>
 </div></section>
-<section class="section sbs section--grey"><div class="container sbs__grid">
+<section class="sbs section--grey"><div class="sbs__grid">
   <div class="sbs__media"><img src="/assets/img/kitchen-18.jpg" alt="Remodeled kitchen" loading="lazy" decoding="async"></div>
   <div class="sbs__content">
     <h2 class="sbs__title">Quality Products for <strong>Your Home</strong></h2>

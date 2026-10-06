@@ -22,11 +22,11 @@ const promos = {
   design: { title: 'Free 3D Design', text: 'See your new kitchen or bath in 3D before you commit — free with your consultation.', img: 'design-2', alt: 'Designer reviewing samples', icon: 'pencil', href: '/design-your-space/' },
 };
 
-const designStudio = (grey = true) => C.sideBySide({
-  title: 'Plan Your Dream Space <strong>With Our Design Studio</strong>',
-  text: '<p>Pick your layout, wall pattern, fixtures, cabinets, and trim — then let our designers turn it into a free 3D rendering of your new room.</p>',
-  media: C.estimateForm({ id: 'studio', heading: 'Design <strong>Your Space</strong>', text: 'Start with a few details and a designer will reach out to build your free 3D plan.', button: 'Get Started' }),
-  reverse: true, grey,
+const designStudio = () => C.sideBySide({
+  title: 'Plan Your Dream Space <strong>With Our Free Design Studio</strong>',
+  text: '<p>Customize wall patterns, fixtures, cabinets, trim, and more — then get a free 3D rendering of your new room.</p>',
+  img: 'design-3', alt: 'Designer reviewing finish samples',
+  buttons: [['Get Started', '/design-your-space/']], reverse: true, navy: true,
 });
 
 const exploreBath = (grey = false) => C.tiles({
@@ -63,12 +63,12 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
   ]),
   C.callout(`${SITE.name} — <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
   C.offerCards({ title: 'Current <strong>Promos</strong>', offers: [promos.dollarsOff, promos.financing, promos.senior] }),
-  designStudio(true),
+  designStudio(),
   exploreBath(),
-  C.sideBySide({
-    title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'bath-24', alt: 'Finished bathroom remodel',
-    text: '<p>Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up — often in a single visit.</p>',
-    buttons: [['Schedule Free Estimate', '/contact/']], navy: true,
+  C.banner({
+    title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'bath-24', alt: 'Finished bathroom remodel', badge: '1-DAY',
+    text: 'Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up — often in a single visit.',
+    buttons: [['Schedule Free Estimate', '/contact/']],
   }),
   C.sideBySide({
     title: 'Discover What <strong>Bulldog Can Do</strong>', media: C.brochureCover('bath-25'), reverse: true,
@@ -86,7 +86,7 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
 function productPage(p, base, crumbLabel) {
   const title = p.plainTitle || p.title;
   const body = [
-    C.hero({ img: p.hero, alt: title, title: p.title.includes('<') ? p.title : `<strong>${p.title}</strong>`, lead: p.lead, crumbs: [[crumbLabel, base], [p.title]] }),
+    C.hero({ img: p.hero, alt: title, title: p.title, lead: p.lead, crumbs: [[crumbLabel, base], [p.title]] }),
     C.sideBySide({ ...p.intro, alt: title }),
     p.swatches
       ? C.swatches({ title: 'Stone &amp; Tile <strong>Looks</strong>', intro: 'Swatches shown are placeholders — ask for real samples at your consultation.', items: swatchList, grey: true })
@@ -158,7 +158,7 @@ page('/inspiration-shop-the-room/', 'Shop the Room', `Browse kitchen and bathroo
   C.hero({ img: 'bath-30', alt: 'Styled bathroom', title: 'Shop <strong>The Room</strong>', lead: 'Find a look you love, then get a free estimate to bring it home.', crumbs: [['Inspiration'], ['Shop the Room']] }),
   C.cards({ title: 'Get <strong>The Look</strong>', perRow: 3, link: 'Get This Look',
     items: styles.map(([t, im]) => ({ title: t, img: im, href: '/contact/' })) }),
-  designStudio(true),
+  designStudio(),
   exploreBath(),
 ].join('\n'));
 
