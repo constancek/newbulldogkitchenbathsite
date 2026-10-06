@@ -1,0 +1,10 @@
+{
+  "name": "bulldogkitchenbath-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bulldog Kitchen & Bath marketing website (static HTML)",
+  "scripts": {
+    "build": "node src/build.js",
+    "start": "npx serve public"
+  }
+}
