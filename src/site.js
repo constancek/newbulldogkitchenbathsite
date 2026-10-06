@@ -8,9 +8,10 @@ module.exports = {
   phoneHref: '+15550100199', // PLACEHOLDER
   email: 'info@bulldogkitchenbath.com', // PLACEHOLDER
   address: '123 Placeholder Ave, Your City, ST 00000', // PLACEHOLDER
-  hours: 'Mon–Sat, 8am–6pm', // PLACEHOLDER
+  hours: 'Mon–Sun, 8am–8pm',
   serviceArea: '[Your City] and surrounding areas', // PLACEHOLDER
-  years: 20, // PLACEHOLDER — years in business
+  founded: 1993,
+  years: new Date().getFullYear() - 1993, // recalculated on every build
   social: { facebook: '#', instagram: '#', youtube: '#' }, // PLACEHOLDER
 
   promoBar: { text: 'Get $1,250 OFF your new kitchen or bathroom*', link: 'View Promo', href: '/current-promos/' },
