@@ -38,8 +38,8 @@ const exploreBath = (grey = false) => C.tiles({
 
 const learnMore = (custom = {}) => C.banner({
   title: custom.title || 'Learn More About <strong>Bulldog Kitchen &amp; Bath Products</strong>', img: 'texture-13', alt: 'Stone and tile finish samples',
-  text: custom.text || 'Download our free lookbook to see real before-and-after transformations and explore every finish, fixture, and layout option we offer for kitchens and baths. Bulldog stands out as the affordable choice for lasting quality and style.',
-  buttons: [['Get Free Brochure', '/download-brochure/'], ['Schedule an Estimate', '/contact/']],
+  text: custom.text || 'Explore every finish, fixture, and layout option we offer for kitchens and baths. Bulldog stands out as the affordable choice for lasting quality and style.',
+  buttons: [['Schedule an Estimate', '/contact/']],
 });
 
 const bulldogDifference = () => C.difference({
@@ -84,11 +84,6 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'bath-24', alt: 'Finished bathroom remodel', badge: '1-DAY',
     text: 'Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up — often in a single visit.',
     buttons: [['Schedule an Estimate', '/contact/']],
-  }),
-  C.sideBySide({
-    title: 'Discover What <strong>Bulldog Can Do</strong>', media: C.brochureCover('bath-25'), reverse: true,
-    text: '<p>Download our lookbook to explore real before-and-after transformations and our full range of tile looks, accessories, cabinets, countertops, and fixtures.</p>',
-    buttons: [['Get Free Brochure', '/download-brochure/']],
   }),
   C.sideBySide({
     title: 'Quality Products for <strong>Your Home</strong>', img: 'kitchen-18', alt: 'Remodeled kitchen',
@@ -138,9 +133,9 @@ function productPage(p, base) {
     bulldogDifference(),
     galleryFirst ? '' : gallery,
     ...(optionSections[p.slug] || []),
-    x.accessories ? C.productGrid({ title: 'Shop <strong>Accessories</strong>', ...x.accessories }) : '',
     C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/contact/']] }),
     processSteps(),
+    x.accessories ? C.productGrid({ title: 'Shop <strong>Accessories</strong>', ...x.accessories }) : '',
     learnMore(x.learn),
   ].join('\n');
   page(`${base}${p.slug}/`, title, `${title} from ${SITE.name}. ${p.lead}`, body);
@@ -226,8 +221,6 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
     { title: 'Install Day', text: 'Our crew removes the old and installs the new — usually in one day.' },
     { title: 'Enjoy', text: 'We clean up, walk you through care, and register your warranty.' },
   ] }),
-  C.sideBySide({ title: 'Discover What <strong>Bulldog Can Do</strong>', media: C.brochureCover('bath-25'), reverse: true,
-    text: '<p>See before-and-after transformations and every option available in our free lookbook.</p>', buttons: [['Get Free Brochure', '/download-brochure/']] }),
   C.sideBySide({ title: 'Quality Products for Your <strong>One Day Remodel</strong>', img: 'bath-21', alt: 'Bathroom remodel',
     text: '<p>Fast doesn\'t mean cutting corners. Our tubs, showers, and wall systems are built from durable, non-porous materials that resist mold, mildew, and stains — and they\'re backed by our lifetime warranty.*</p>',
     buttons: [['View Bath Products', '/products/']] }),
@@ -244,13 +237,6 @@ page('/financing/', 'Financing', `Flexible financing for your kitchen or bathroo
   C.formPage({ bold: true, title: 'Up to 60-Month Financing Available – Get $1,250 OFF',
     text: 'and transform your kitchen or bathroom with low monthly payments.* Financing subject to credit approval; terms vary.',
     form: C.estimateForm({ id: 'fin', promo: true, bare: true }) }),
-].join('\n'));
-
-page('/download-brochure/', 'Free Brochure', `Download the free ${SITE.name} lookbook.`, [
-  C.formPage({ title: 'Download <strong>Free Brochure</strong>',
-    text: 'Fill out your contact info below to get our lookbook. Inside you\'ll explore real before-and-after transformations and every finish, fixture, and layout option we offer.',
-    media: C.brochureCover('bath-23'),
-    form: C.estimateForm({ id: 'brochure', bare: true, button: 'Submit' }) }),
 ].join('\n'));
 
 page('/contact/', 'Contact Us', `Contact ${SITE.name} for a kitchen or bathroom remodeling estimate.`, [

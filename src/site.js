@@ -62,7 +62,6 @@ module.exports = {
     ['About Us', '/about/'],
     ['Contact Us', '/contact/'],
     ['FAQ', '/faqs/'],
-    ['Free Brochure', '/download-brochure/'],
     ['Blog', '/blog/'],
     ['Warranty Info', '/warranty/'],
     ['Bath Products', '/products/'],

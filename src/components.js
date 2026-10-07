@@ -384,11 +384,7 @@ function photoStrip(im, alt) {
   return `<div class="photo-strip">${picture(im, alt)}</div>`;
 }
 
-function brochureCover(im = 'bath-12') {
-  return `<div class="brochure">${picture(im, 'Brochure cover')}<div class="brochure__label"><strong>BULLDOG</strong><span>Kitchen &amp; Bath Lookbook</span></div></div>`;
-}
-
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, benefitList, productGrid, difference, processSteps, faqGroups, brochureCover, formPage, photoStrip, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, benefitList, productGrid, difference, processSteps, faqGroups, formPage, photoStrip, icon,
 };
