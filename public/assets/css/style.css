@@ -85,13 +85,14 @@ ul { margin: 0 0 1rem; }
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--navy); color: #fff; }
 .site-header__inner { position: relative; display: flex; align-items: center; gap: 1.25rem; min-height: var(--header-h); padding-right: clamp(.75rem, 1vw, 1rem); }
 .logo { position: relative; display: flex; align-items: center; gap: .85rem; text-decoration: none; color: inherit; line-height: 1; margin-right: auto; padding: .75rem 1rem .75rem .6rem; align-self: stretch; }
-.site-header .logo::before { content: ""; position: absolute; inset: 0 -1rem 0 0; background: var(--diamond-pattern) left center / 40px 40px; -webkit-mask: linear-gradient(90deg, #000 0%, rgba(0,0,0,.6) 35%, transparent 75%); mask: linear-gradient(90deg, #000 0%, rgba(0,0,0,.6) 35%, transparent 75%); pointer-events: none; }
+.site-header .logo::before { content: ""; position: absolute; inset: 0 -1rem 0 0; background: var(--diamond-pattern) calc(.6rem + 33px) calc(50% - 20px) / 40px 40px; -webkit-mask: linear-gradient(90deg, #000 0%, rgba(0,0,0,.6) 35%, transparent 75%); mask: linear-gradient(90deg, #000 0%, rgba(0,0,0,.6) 35%, transparent 75%); pointer-events: none; }
 .logo > * { position: relative; }
 .logo__icon { width: 66px; height: 66px; flex: none; }
+.site-header .logo__icon path:first-child { fill: var(--navy); }
 .logo__text { display: flex; flex-direction: column; gap: .45rem; }
 .logo__name { font-size: 1.45rem; font-weight: 500; letter-spacing: .28em; margin-right: -.28em; }
 .logo__sub { font-size: .72rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; }
-@media (max-width: 420px) { .logo__icon { width: 46px; height: 46px; } .logo__name { font-size: 1.15rem; } .logo__sub { font-size: .58rem; letter-spacing: .22em; } }
+@media (max-width: 420px) { .logo__icon { width: 46px; height: 46px; } .site-header .logo::before { background-position: calc(.6rem + 23px) calc(50% - 20px); } .logo__name { font-size: 1.15rem; } .logo__sub { font-size: .58rem; letter-spacing: .22em; } }
 .main-nav > ul { display: flex; align-items: center; gap: clamp(.5rem, 1.6vw, 2rem); list-style: none; margin: 0; padding: 0; }
 .main-nav li { position: relative; }
 .main-nav__link {
