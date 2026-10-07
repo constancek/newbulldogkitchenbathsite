@@ -10,11 +10,11 @@
   }
 
   // Dropdowns: click to toggle (needed on touch / mobile), close on outside click
-  document.querySelectorAll('.has-sub > .main-nav__link').forEach(function (btn) {
+  document.querySelectorAll('.has-sub > button.main-nav__link, .has-sub .main-nav__toggle').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var li = btn.parentElement;
+      var li = btn.closest('.has-sub');
       var open = !li.classList.contains('open');
-      document.querySelectorAll('.has-sub.open').forEach(function (o) { if (o !== li) { o.classList.remove('open'); o.firstElementChild.setAttribute('aria-expanded', 'false'); } });
+      document.querySelectorAll('.has-sub.open').forEach(function (o) { if (o !== li) { o.classList.remove('open'); o.querySelector('[aria-expanded]').setAttribute('aria-expanded', 'false'); } });
       li.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', open);
     });
@@ -28,8 +28,7 @@
     var track = c.querySelector('.carousel__track');
     var slides = c.querySelectorAll('.carousel__slide');
     var dots = c.querySelectorAll('.carousel__dots button');
-    var pause = c.querySelector('.carousel__pause');
-    var i = 0, timer, paused = false;
+    var i = 0, timer, paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function go(n) {
       i = (n + slides.length) % slides.length;
       track.style.transform = 'translateX(' + (-100 * i) + '%)';
@@ -40,16 +39,12 @@
     c.querySelector('.carousel__nav--prev').addEventListener('click', function () { go(i - 1); auto(); });
     c.querySelector('.carousel__nav--next').addEventListener('click', function () { go(i + 1); auto(); });
     dots.forEach(function (d, k) { d.addEventListener('click', function () { go(k); auto(); }); });
+    // Hold the slideshow while it's hovered or has keyboard focus
     c.addEventListener('mouseenter', function () { clearInterval(timer); });
-    c.addEventListener('mouseleave', auto);
-    if (pause) pause.addEventListener('click', function () {
-      paused = !paused;
-      pause.setAttribute('aria-pressed', paused);
-      pause.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
-      if (paused) clearInterval(timer); else auto();
-    });
+    c.addEventListener('mouseleave', function () { if (!c.contains(document.activeElement)) auto(); });
+    c.addEventListener('focusin', function () { clearInterval(timer); });
+    c.addEventListener('focusout', function (e) { if (!c.contains(e.relatedTarget)) auto(); });
     go(0);
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { paused = true; if (pause) pause.setAttribute('aria-pressed', 'true'); }
     auto();
   });
 

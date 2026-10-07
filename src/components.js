@@ -19,6 +19,11 @@ function navItem(item, current) {
     return `<li><a class="main-nav__link" href="${item.href}"${cur}>${item.label}</a></li>`;
   }
   const subs = item.children.map((c) => `<li><a href="${c.href}">${c.label}</a></li>`).join('');
+  if (item.href) {
+    // Parent is its own link; the small arrow button opens the dropdown on touch and keyboard
+    const cur = current === item.href ? ' aria-current="page"' : '';
+    return `<li class="has-sub"><div class="main-nav__parent"><a class="main-nav__link" href="${item.href}"${cur}>${item.label}</a><button class="main-nav__toggle" type="button" aria-expanded="false" aria-label="Show ${item.label} menu">${icon.chevron}</button></div><ul class="submenu">${subs}</ul></li>`;
+  }
   return `<li class="has-sub"><button class="main-nav__link" type="button" aria-expanded="false">${item.label}${icon.chevron}</button><ul class="submenu">${subs}</ul></li>`;
 }
 
@@ -70,7 +75,7 @@ function footer() {
       <div><a href="tel:${SITE.phoneHref}">${SITE.phone}</a></div>
       <div><a href="mailto:${SITE.email}">${SITE.email}</a></div>
       <div>${SITE.hours}</div>
-      <span class="footer__badge">Licensed &amp; Insured</span>
+      <img class="footer__badge" src="/assets/img/made-in-usa.png" alt="Made in the USA" width="122" height="30">
     </div>
     <ul class="footer__links">${links}</ul>
   </div>
@@ -137,9 +142,7 @@ function carousel(slides) {
     <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous slide">${icon.left}</button>
     <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next slide">${icon.right}</button>
   </div>
-  <div class="carousel__dots">${dots}</div>
-  <button class="carousel__pause" type="button" aria-label="Pause slideshow" aria-pressed="false">${icon.pause}${icon.play}</button>
-</section>`;
+  <div class="carousel__dots">${dots}</div></section>`;
 }
 
 function callout(html) {
@@ -221,16 +224,15 @@ function pageBand({ title, lead, extra = '' }) {
   return `<section class="page-band"><div class="container"><h1>${title}</h1>${lead ? `<p>${lead}</p>` : ''}${extra}</div></section>`;
 }
 
-function sideBySide({ title, titleTag = 'h2', text = '', bullets, img: im, alt, media, reverse = false, grey = false, navy = false, spot = false, buttons = [], id }) {
+function sideBySide({ title, titleTag = 'h2', text = '', img: im, alt, media, reverse = false, grey = false, navy = false, spot = false, buttons = [], id }) {
   const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : (navy ? ' button--outline-light' : '')}" href="${h}">${l}</a>`).join('')}</div>` : '';
-  const list = bullets ? `<ul class="check-list">${bullets.map((b) => `<li>${b}</li>`).join('')}</ul>` : '';
   const mediaHtml = media || (im ? picture(im, alt || '') : '');
   return `<section class="sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${navy ? ' sbs--navy' : ''}${spot ? ' sbs--spot' : ''}"${id ? ` id="${id}"` : ''}><div class="sbs__grid">
   <div class="sbs__media${media ? ' sbs__media--pad' : ''}">${mediaHtml}</div>
   <div class="sbs__content">
     <${titleTag} class="sbs__title">${title}</${titleTag}>
     ${text ? `<div class="sbs__text">${text}</div>` : ''}
-    ${list}${btns}
+    ${btns}
   </div>
 </div></section>`;
 }
@@ -336,13 +338,14 @@ function productGrid({ title, filters = [], items }) {
 }
 
 // "The Bulldog Difference": intro on a light band, then value cards over a marble photo
-function difference({ eyebrow, title, text, img: im, items }) {
+function difference({ title, tagline, img: im, items }) {
   const cards = items.map((c) => `<div class="difference__card"><span class="difference__icon">${icon[c.icon]}</span><h3>${c.title}</h3><p>${c.text}</p></div>`).join('');
   return `<section class="difference">
-  <div class="difference__intro"><div class="container">
-    ${eyebrow ? `<span class="eyebrow">${eyebrow}</span>` : ''}<h2>${title}</h2><p>${text}</p>
-  </div></div>
-  <div class="difference__band">${picture(im, '')}<div class="container difference__grid">${cards}</div></div>
+  ${picture(im, '')}
+  <div class="container">
+    <header class="difference__head"><h2>${title}</h2>${tagline ? `<p class="difference__tagline">${tagline}</p>` : ''}</header>
+    <div class="difference__grid">${cards}</div>
+  </div>
 </section>`;
 }
 

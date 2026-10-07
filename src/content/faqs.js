@@ -2,7 +2,7 @@
 const faqs = [
   { title: 'Cost &amp; Financing', items: [
     ['How much does a bathroom or kitchen remodel cost?', 'Every project is different. Price depends on the size of your space, the products you choose, and any plumbing or structural work needed. We give you a clear, written quote after your consultation.'],
-    ['Do you offer financing?', 'Yes. We offer several financing options on approved credit, including promotional no-interest plans and terms up to 60 months. Visit our Financing page for details.'],
+    ['Do you offer financing?', 'Yes. We offer several financing options on approved credit, including promotional no-interest plans and terms up to 60 months, to help make your remodel more affordable with manageable monthly payments. Visit our Financing page for details.'],
     ['What happens at the consultation?', 'We measure your space, walk through product and finish options with you, and provide a clear, written estimate for your project.'],
   ] },
   { title: 'Installation Process', items: [

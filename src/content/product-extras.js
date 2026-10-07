@@ -1,28 +1,32 @@
 // Extra product-page content keyed by product slug:
+//   since    — ending of the "Since <year>, Bulldog Kitchen & Bath ..." sentence in the intro
 //   benefits — labelled points shown in the feature section
 //   learn    — closing "Learn More" banner text for that product
 //   accessories — named accessory grid with category filters (accessories page)
 
 const standard = (thing) => [
-  ['Easy Care', `Non-porous surfaces resist mold and mildew, so keeping your new ${thing} clean takes a quick wipe instead of a scrub brush.`],
-  ['Your Style', 'Choose from stone looks, tile patterns, solid colors, trim, and fixtures to match any bathroom.'],
-  ['Built to Last', 'Scratch-, chip-, stain-, and fade-resistant materials keep looking new for years.'],
+  ['Easy Maintenance', `Non-porous surfaces resist mold and mildew, so keeping your new ${thing} clean takes a quick wipe instead of a scrub brush.`],
+  ['Customizable Style', 'Choose from stone looks, tile patterns, solid colors, trim, and fixtures to match any bathroom.'],
+  ['Exceptional Durability', 'Scratch-, chip-, stain-, and fade-resistant materials keep looking new for years.'],
   ['Fast Installation', 'Every piece is custom-measured before install day, so our own crews can often finish in a single day.'],
   ['Lifetime Warranty', 'Products and workmanship are backed for as long as you own your home.*'],
 ];
 
 module.exports = {
   showers: {
+    since: 'has been helping homeowners replace worn-out tubs and showers with durable, easy-care shower systems built to last.',
     benefits: standard('shower'),
     learn: { title: 'Learn More About <strong>Bulldog Showers</strong>',
-      text: 'Whether you\'re replacing an old shower or converting a tub, Bulldog builds showers that combine solid craftsmanship with thoughtful design. Request an estimate or call us to talk through your options.' },
+      text: 'Whether you\'re replacing an old shower or converting a tub, Bulldog builds showers that combine solid craftsmanship with thoughtful design, so you can count on dependable quality and lasting value. Request an estimate or call us to talk through your options.' },
   },
   bathtubs: {
+    since: 'has been installing bathtubs that stand up to everyday family life while staying easy to clean.',
     benefits: standard('tub'),
     learn: { title: 'Learn More About <strong>Bulldog Bathtubs</strong>',
-      text: 'A new tub and matching wall surround is one of the fastest ways to transform a bathroom. Request an estimate or call us to see which tub fits your space.' },
+      text: 'A new tub and matching wall surround is one of the fastest ways to transform a bathroom, and Bulldog is the affordable choice for lasting quality and style. Request an estimate or call us to see which tub fits your space.' },
   },
   'walk-in-tubs': {
+    since: 'has been committed to providing secure, top-quality walk-in tubs designed for safety and comfort.',
     benefits: [
       ['Hydromassage', 'Water jets target sore muscles and joints for soothing relief.'],
       ['Air Massage', 'Gentle air bubbles relax the whole body without strong pressure points.'],
@@ -31,9 +35,10 @@ module.exports = {
       ['Quick Drain', 'Faster draining means less time waiting before you step out.'],
     ],
     learn: { title: 'Learn More About <strong>Bulldog Walk-In Tubs</strong>',
-      text: 'Enjoy bathing again with a safe, comfortable walk-in tub that fits your existing space. Call us or request an estimate to learn about accessibility options.' },
+      text: 'Enjoy bathing again with a safe, comfortable walk-in tub that fits your existing space. Call us or request an estimate to learn about affordable accessibility options.' },
   },
   accessibility: {
+    since: 'has been designing accessible bathrooms that help seniors and people with limited mobility bathe safely at home.',
     benefits: [
       ['Walk-In Tubs', 'Step in through a sealed door instead of climbing over a high tub wall.'],
       ['Roll-In Showers', 'Barrier-free bases with no curb, so a wheelchair or walker can roll straight in.'],
@@ -45,6 +50,7 @@ module.exports = {
       text: 'Our accessible designs help you stay safe and independent at home without giving up a beautiful bathroom. Call us or request an estimate to plan your upgrade.' },
   },
   'shower-enclosures': {
+    since: 'has been finishing showers with glass doors and enclosures that are measured, fitted, and sealed by our own crews.',
     benefits: [
       ['Sliding & Bypass Doors', 'Space-saving doors that glide open, ideal for tubs and wide showers.'],
       ['Pivot & Hinged Doors', 'A clean, frameless-style look for walk-in showers.'],
@@ -53,9 +59,10 @@ module.exports = {
       ['Custom-Measured', 'Every enclosure is sized to your opening for a precise, watertight fit.'],
     ],
     learn: { title: 'Learn More About <strong>Bulldog Shower Enclosures</strong>',
-      text: 'The right door finishes your new shower and keeps water where it belongs. Request an estimate or call us to see glass and finish samples.' },
+      text: 'The right door finishes your new shower and keeps water where it belongs, and Bulldog is the affordable choice for lasting quality and style. Request an estimate or call us to see glass and finish samples.' },
   },
   accessories: {
+    since: 'has been helping homeowners add the storage, safety, and finishing touches that make a bathroom work every day.',
     benefits: [
       ['Faucets & Spouts', 'Coordinated finishes from the tub spout to the sink.'],
       ['Shower Heads', 'Rain heads, handheld wands, and multi-setting massage heads.'],
@@ -85,6 +92,7 @@ module.exports = {
     },
   },
   'colors-patterns': {
+    since: 'has been helping homeowners choose colors and patterns that make a new bathroom feel like their own.',
     benefits: [
       ['Stone Looks', 'Marble, granite, and travertine looks without the sealing and upkeep of real stone.'],
       ['Solid Colors', 'Classic whites, almonds, and grays in matte or gloss.'],
@@ -92,6 +100,18 @@ module.exports = {
       ['Trim & Accents', 'Matching or contrasting trim, borders, and accessories.'],
     ],
     learn: { title: 'Learn More About <strong>Bulldog Colors &amp; Patterns</strong>',
-      text: 'See real samples in your own lighting during your design consultation. Request an estimate or call us to get started.' },
+      text: 'See real samples in your own lighting during your design consultation. With so many options, Bulldog is the affordable choice for lasting quality and style. Request an estimate or call us to get started.' },
+  },
+  cabinets: {
+    since: 'has been installing and refacing kitchen cabinets built for the way families actually cook and live.',
+  },
+  countertops: {
+    since: 'has been fabricating and installing countertops that stand up to busy kitchens.',
+  },
+  backsplash: {
+    since: 'has been installing backsplashes that protect kitchen walls and pull the whole room together.',
+  },
+  'sinks-faucets': {
+    since: 'has been matching sinks and faucets to the way homeowners cook, clean, and entertain.',
   },
 };

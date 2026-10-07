@@ -18,9 +18,8 @@ module.exports = {
 
   nav: [
     {
-      label: 'Bath',
+      label: 'Bath', href: '/products/',
       children: [
-        { label: 'All Bath Products', href: '/products/' },
         { label: 'Showers', href: '/products/showers/' },
         { label: 'Bathtubs', href: '/products/bathtubs/' },
         { label: 'Walk-In Tubs', href: '/products/walk-in-tubs/' },
@@ -31,9 +30,8 @@ module.exports = {
       ],
     },
     {
-      label: 'Kitchen',
+      label: 'Kitchen', href: '/kitchens/',
       children: [
-        { label: 'Kitchen Remodeling', href: '/kitchens/' },
         { label: 'Cabinets', href: '/kitchens/cabinets/' },
         { label: 'Countertops', href: '/kitchens/countertops/' },
         { label: 'Backsplash', href: '/kitchens/backsplash/' },
@@ -50,9 +48,8 @@ module.exports = {
     },
     { label: 'One Day Remodel', href: '/one-day-bathroom-remodel/' },
     {
-      label: 'About',
+      label: 'About', href: '/about/',
       children: [
-        { label: 'About Us', href: '/about/' },
         { label: 'Blog', href: '/blog/' },
         { label: 'FAQ', href: '/faqs/' },
         { label: 'Warranty', href: '/warranty/' },
