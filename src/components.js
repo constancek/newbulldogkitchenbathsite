@@ -107,6 +107,7 @@ function layout({ path, title, description, body }) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.mainReady)document.documentElement.classList.remove('js');},3000);</script>
 </head>
 <body>
 ${header(path)}

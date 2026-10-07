@@ -149,7 +149,7 @@ ul { margin: 0 0 1rem; }
 /* Home carousel */
 .carousel { position: relative; overflow: hidden; background: #000; }
 .carousel__track { display: flex; transition: transform .7s ease; }
-.carousel__slide { position: relative; flex: 0 0 100%; min-height: clamp(520px, 68vh, 640px); display: flex; align-items: center; }
+.carousel__slide { position: relative; flex: 0 0 100%; min-height: clamp(520px, 68vh, 640px); display: flex; align-items: center; overflow: hidden; }
 .carousel__slide > img, .hero > img, .banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .carousel__slide::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.3) 45%, rgba(0,0,0,0) 75%); }
 .carousel__content { position: relative; z-index: 2; color: #fff; max-width: 760px; padding: 2rem var(--gutter) 5rem; }
@@ -537,4 +537,49 @@ form.sent .form-success { display: block; }
 @media (max-width: 640px) {
   .before-after__grid { grid-template-columns: 1fr; }
   .before-after__arrow { position: relative; left: auto; top: auto; justify-self: center; margin: -2.6rem 0; transform: rotate(90deg); }
+}
+
+/* ---------- Animations ----------
+   Only run when JavaScript is on (html.js); content is fully visible without it. */
+
+/* 1. Fade up on scroll (main.js adds .reveal to things below the fold, then .is-visible) */
+.js .reveal { opacity: 0; translate: 0 22px; transition: opacity .6s ease-out, translate .6s ease-out, transform .25s ease, box-shadow .25s ease; }
+.js .reveal.is-visible { opacity: 1; translate: 0 0; }
+
+/* 2. Hover lift on cards */
+.offer-card, .difference__card { transition: transform .25s ease, box-shadow .25s ease; }
+.offer-card:hover, .difference__card:hover { transform: translateY(-6px); box-shadow: 0 16px 36px rgba(0, 33, 76, .28); }
+
+/* 3. Steps: numbers pop in one by one while the connecting line draws across */
+.js .process__num { opacity: 0; scale: .6; transition: opacity .4s ease-out, scale .4s cubic-bezier(.34, 1.56, .64, 1); }
+.js .process__steps.is-visible .process__num { opacity: 1; scale: 1; }
+.js .process__step:nth-child(2) .process__num { transition-delay: .6s; }
+.js .process__step:nth-child(3) .process__num { transition-delay: 1.2s; }
+.js .process__step:nth-child(4) .process__num { transition-delay: 1.8s; }
+.js .process__step:not(:last-child)::after { transform: scaleX(0); transform-origin: left center; transition: transform .6s ease-in-out; }
+.js .process__steps.is-visible .process__step:not(:last-child)::after { transform: scaleX(1); }
+.js .process__step:nth-child(1)::after { transition-delay: .2s; }
+.js .process__step:nth-child(2)::after { transition-delay: .8s; }
+.js .process__step:nth-child(3)::after { transition-delay: 1.4s; }
+
+/* 4. Homepage slideshow: slow zoom on the photo, text fades up when a slide becomes active */
+.carousel__slide > img { transition: transform 8s ease-out; }
+.carousel__slide[aria-hidden="false"] > img { transform: scale(1.08); }
+.js .carousel__content > * { opacity: 0; translate: 0 18px; transition: opacity .7s ease-out, translate .7s ease-out; }
+.js .carousel__slide[aria-hidden="false"] .carousel__content > * { opacity: 1; translate: 0 0; }
+.js .carousel__slide[aria-hidden="false"] .carousel__content > :nth-child(2) { transition-delay: .15s; }
+.js .carousel__slide[aria-hidden="false"] .carousel__content > :nth-child(3) { transition-delay: .3s; }
+.js .carousel__slide[aria-hidden="false"] .carousel__content > :nth-child(4) { transition-delay: .45s; }
+
+/* 5. Before/after: arrow slides in from the left after the cards appear */
+.js .before-after__arrow { opacity: 0; translate: -36px 0; transition: opacity .5s ease-out .7s, translate .5s ease-out .7s; }
+.js .before-after__grid.is-visible .before-after__arrow { opacity: 1; translate: 0 0; }
+@media (max-width: 640px) { .js .before-after__arrow { translate: 0 -24px; } }
+
+/* No animation for people who ask their device to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal, .js .process__num, .js .carousel__content > *, .js .before-after__arrow { opacity: 1 !important; translate: none !important; scale: none !important; transition: none !important; }
+  .js .process__step::after { transform: none !important; transition: none !important; }
+  .carousel__slide > img { transform: none !important; transition: none !important; }
+  .offer-card:hover, .difference__card:hover { transform: none; }
 }

@@ -1,4 +1,7 @@
 (function () {
+  // Tells the page head this script is running, so animated content isn't left hidden
+  window.mainReady = true;
+
   // Mobile menu
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.main-nav');
@@ -75,6 +78,51 @@
     g.querySelector('.image-gallery__nav--prev').addEventListener('click', function () { show(i - 1); });
     g.querySelector('.image-gallery__nav--next').addEventListener('click', function () { show(i + 1); });
   });
+
+  // Scroll animations: sections and cards below the fold fade up once as they come into view.
+  // Anything already on screen at load stays visible, so nothing flashes.
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // These play their own animation when they come into view (no fade of their own)
+  var animated = document.querySelectorAll('.process__steps, .before-after__grid');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    animated.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    var targets = Array.prototype.slice.call(document.querySelectorAll('main > section:not(.carousel):not(.hero)'));
+    ['.offer-grid', '.tile-grid', '.difference__grid', '.swatch-grid', '.before-after__grid', '.product-grid', '.card-grid', '.process__photos'].forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (group) {
+        var i = 0;
+        Array.prototype.forEach.call(group.children, function (child) {
+          if (child.classList.contains('before-after__arrow')) return;
+          var d = Math.min(i++ * 90, 630) + 'ms';
+          child.style.transitionDelay = d + ', ' + d + ', 0s, 0s';
+          targets.push(child);
+        });
+      });
+    });
+    targets.forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight) { el.classList.add('is-visible'); return; }
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+    animated.forEach(function (el) { io.observe(el); });
+    // Safety net for big jumps (scrollbar drag, End key, links): reveal anything already scrolled past
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        ticking = false;
+        document.querySelectorAll('.reveal:not(.is-visible), .process__steps:not(.is-visible), .before-after__grid:not(.is-visible)').forEach(function (el) {
+          if (el.getBoundingClientRect().top < window.innerHeight) { el.classList.add('is-visible'); io.unobserve(el); }
+        });
+      });
+    }, { passive: true });
+  }
 
   // Product grid category filters
   document.querySelectorAll('.product-grid-section').forEach(function (sec) {
