@@ -12,6 +12,7 @@ module.exports = {
   pause: '<svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="7" y="5" width="3.2" height="14" rx="1"/><rect x="13.8" y="5" width="3.2" height="14" rx="1"/></svg>',
   play: '<svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>',
   tub: s('<path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M6 12V5.5A2.5 2.5 0 0 1 8.5 3c1.2 0 2.2.8 2.4 2"/><path d="M9.5 5.5h3M7 19l-1 2M17 19l1 2"/>'),
+  shower: s('<path d="M4 21V7a4 4 0 0 1 4-4h1a4 4 0 0 1 4 4"/><path d="M9 7h8l-1.5 3h-5z"/><path d="M11 13v.01M13 14v.01M15 13v.01M12 16v.01M14 17v.01M16 16v.01M13 19v.01M15 20v.01"/>'),
   sink: s('<path d="M3 13h18v1a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M12 13V6a2.5 2.5 0 0 1 5 0v1"/><path d="M9 9h6M5 21h14"/>'),
   walkin: s('<path d="M3 8h18v4a7 7 0 0 1-7 7h-4a7 7 0 0 1-7-7z"/><path d="M8 8v5h6V8M5 19l-1 2M19 19l1 2"/><circle cx="11" cy="4.5" r="1.5"/>'),
   mail: s('<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>'),

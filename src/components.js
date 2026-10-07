@@ -180,10 +180,10 @@ function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = fal
 
 function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your in-home consultation.', id = 'estimate', button = 'Request My Estimate', message = false, promo = false, picker = promo, bare = false } = {}) {
   const interest = picker ?`<fieldset class="interest"><legend>I'm interested in:</legend>
-      ${[['bath', 'tub', 'Bathroom<br>Remodel'], ['kitchen', 'sink', 'Kitchen<br>Remodel'], ['walkin', 'walkin', 'Walk-in Tub<br>Installation']].map(([v, ic, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}>${icon[ic]}<span>${l}</span></label>`).join('')}
+      ${[['bath', 'tub', 'Bath<br>Installation'], ['shower', 'shower', 'Shower<br>Installation'], ['walkin', 'walkin', 'Walk-in Tub<br>Installation']].map(([v, ic, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}>${icon[ic]}<span>${l}</span></label>`).join('')}
     </fieldset>` : '';
   const head = bare ? '' : promo
-    ?`<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>your new kitchen or bathroom remodel.*</p></div>`
+    ?`<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>and transform your bathroom in as little as one day.*</p></div>`
     : `<h2>${heading}</h2>${text ? `<p>${text}</p>` : ''}`;
   return `<div class="form-card${promo ? ' form-card--promo' : ''}">
   ${head}
@@ -195,8 +195,8 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
       <div class="field"><label for="${id}-phone">Phone <span class="req">*</span></label><input id="${id}-phone" name="phone" type="tel" autocomplete="tel" required></div>
       <div class="field"><label for="${id}-zip">ZIP code <span class="req">*</span></label><input id="${id}-zip" name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
       <div class="field full"><label for="${id}-email">Email <span class="req">*</span></label><input id="${id}-email" name="email" type="email" autocomplete="email" required></div>
-      ${picker ? '' : `<div class="field full"><label for="${id}-project">Project type</label><select id="${id}-project" name="project">
-        <option>Bathroom remodel</option><option>Kitchen remodel</option><option>Kitchen &amp; bathroom</option><option>Walk-in tub / accessibility</option><option>Not sure yet</option>
+      ${picker ? '' : `<div class="field full"><label for="${id}-project">Product of interest</label><select id="${id}-project" name="project">
+        <option>Bath installation</option><option>Shower installation</option><option>Walk-in tub installation</option><option>Accessibility products</option><option>Shower enclosure</option><option>Kitchen cabinets</option><option>Countertops</option><option>Backsplash</option><option>Sinks &amp; faucets</option><option>Not sure yet</option>
       </select></div>`}
       ${message ? `<div class="field full"><label for="${id}-msg">How can we help?</label><textarea id="${id}-msg" name="message"></textarea></div>` : ''}
     </div>
