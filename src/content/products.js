@@ -6,7 +6,7 @@ const bath = [
     intro: { title: 'A Shower for <strong>Every Lifestyle</strong>', img: 'shower-2',
       text: '<p>Whether you want a sleek walk-in, a tub-to-shower conversion, or a safer low-threshold base, we build a shower that fits your space and your routine. Our solid-surface wall systems go up over a properly prepared substrate with no grout lines to scrub.</p>',
       bullets: ['Custom-measured bases and wall panels', 'Tub-to-shower conversions', 'Built-in seats, niches, and shelving', 'Slip-resistant textured floors'] },
-    gallery: ['shower-3', 'shower-4', 'shower-5', 'shower-6', 'shower-7', 'shower-8', 'bath-1', 'bath-2'],
+    gallery: ['shower-3', 'shower-4', 'shower-5', 'shower-6', 'shower-7', 'shower-8', 'bath-1', 'bath-2', 'gallery-sh-1', 'gallery-sh-2', 'gallery-sh-3', 'gallery-sh-4', 'gallery-sh-5'],
     feature: { title: 'Stunning, <strong>Space-Saving Showers</strong>', img: 'bath-3',
       text: '<p>Small bathroom? A frameless glass door and a low-profile base can make the room feel twice as big. We help you pick the layout, trim, and fixtures that open up the space without sacrificing storage.</p>' },
   },
@@ -16,7 +16,7 @@ const bath = [
     intro: { title: 'A Bath Built for <strong>Relaxing</strong>', img: 'tub-2',
       text: '<p>From classic alcove tubs to deep soakers, our bathtubs are built to resist chips, stains, and fading. Pair one with a seamless wall system and you get a finished, spa-like look with almost no upkeep.</p>',
       bullets: ['Soaking and standard depths', 'Chip- and stain-resistant finishes', 'Shower-to-tub conversions', 'Matching wall surrounds and trim'] },
-    gallery: ['tub-3', 'tub-4', 'tub-5', 'tub-6', 'tub-7', 'tub-8', 'bath-4', 'bath-5'],
+    gallery: ['tub-3', 'tub-4', 'tub-1', 'tub-6', 'tub-7', 'tub-8', 'bath-4', 'bath-5', 'gallery-tub-1', 'gallery-tub-2', 'gallery-tub-3', 'gallery-tub-4', 'gallery-tub-5', 'gallery-tub-6', 'gallery-tub-7', 'gallery-tub-8'],
     feature: { title: 'Family-Friendly <strong>Tub &amp; Shower Combos</strong>', img: 'bath-6',
       text: '<p>A tub-and-shower combo is still the most practical choice for many homes. We pair a comfortable tub with a full wall system, grab bars, and storage so the whole family can use it every day.</p>' },
   },
@@ -36,17 +36,18 @@ const bath = [
     intro: { title: 'Safer Bathrooms, <strong>Beautiful Design</strong>', img: 'access-1',
       text: '<p>We design accessible bathrooms that look like any other upscale remodel. Barrier-free bases, fold-down seats, and well-placed grab bars reduce fall risk for seniors, people with limited mobility, and growing families.</p>',
       bullets: ['Low-threshold and roll-in shower bases', 'Fold-down and built-in seating', 'Decorative grab bars', 'Handheld showers and easy-reach controls'] },
-    gallery: ['access-3', 'access-4', 'shower-3', 'bath-9', 'bath-10', 'bath-11'],
+    gallery: ['access-3', 'access-4', 'gallery-acc-1', 'gallery-acc-2', 'gallery-acc-3', 'gallery-acc-4', 'shower-3', 'bath-9', 'bath-10', 'bath-11'],
     feature: { title: 'Designed for <strong>Aging in Place</strong>', img: 'senior-2',
       text: '<p>Planning ahead? Our consultants walk through your daily routine and recommend the right mix of safety features so your bathroom keeps working for you for years to come.</p>' },
   },
   {
     slug: 'shower-enclosures', title: 'Shower Enclosures', card: 'shower-6',
     hero: 'shower-4', lead: 'Glass doors and enclosures that finish your shower and keep water where it belongs.',
-    intro: { title: 'Doors That <strong>Complete the Look</strong>', img: 'shower-5',
-      text: '<p>Choose from sliding, pivot, and frameless-style glass doors in clear, frosted, or patterned glass. Door and rod finishes include matte black, brushed nickel, oil-rubbed bronze, and chrome.</p>',
-      bullets: ['Sliding, bypass, and pivot doors', 'Clear, rain, frosted, and reeded glass', 'Optional V-groove etched patterns', 'Four door and rod finishes'] },
-    gallery: ['shower-6', 'shower-7', 'shower-8', 'bath-12', 'bath-13', 'bath-14'],
+    intro: { title: 'Quality Bath and <strong>Shower Enclosures</strong>', img: 'shower-5',
+      text: '<p>The finishing details are what make a new bath or shower feel complete, and the enclosure is one of the most important. The right glass door or curtain rod frames your new wall pattern, keeps water where it belongs, and gives you the privacy you want, while making the whole bathroom feel brighter and more open. At Bulldog Kitchen &amp; Bath, we offer a full range of shower doors, tub enclosures, and curtain rods, and we measure every opening so your enclosure fits precisely and seals properly.</p>'
+        + '<p>Choose clear glass to show off your walls and let light flow through the room, or pick rain, frosted, or corrugated glass when you want more privacy with a decorative touch. Etched V-groove patterns add a custom look to most doors. Depending on your layout, we can install sliding and bypass doors that save space on tubs and wide showers, or pivot and hinged doors for a clean, frameless-style walk-in. Every door and rod comes in four coordinating finishes — matte black, brushed nickel, oil-rubbed bronze, and chrome — and a protective glass coating helps water bead off so cleanup stays quick.</p>',
+      bullets: ['Sliding, bypass, and pivot doors', 'Clear, rain, frosted, and corrugated glass', 'Optional V-groove etched patterns', 'Four door and rod finishes'] },
+    gallery: ['gallery-enc-1', 'gallery-enc-2', 'gallery-enc-3', 'gallery-enc-4', 'gallery-enc-5', 'gallery-enc-6', 'gallery-enc-7', 'gallery-enc-8', 'shower-6', 'shower-7', 'shower-8', 'bath-12', 'bath-13', 'bath-14'],
     feature: { title: 'Light, Open, and <strong>Easy to Clean</strong>', img: 'bath-15',
       text: '<p>Clear glass lets light flow through the room and shows off your new wall pattern. A protective coating helps water bead off so spots and soap scum wipe away.</p>' },
   },
@@ -115,18 +116,4 @@ const kitchen = [
   },
 ];
 
-const swatchList = [
-  { name: 'Sahara Beige', img: 'texture-1' }, { name: 'Arctic White', img: 'texture-2' },
-  { name: 'Rosso Onyx', img: 'texture-3' }, { name: 'Golden Slate', img: 'texture-4' },
-  { name: 'Midnight Granite', img: 'texture-5' }, { name: 'Desert Sand', img: 'texture-6' },
-  { name: 'Storm Cloud', img: 'texture-7' }, { name: 'Ocean Blue', img: 'texture-8' },
-  { name: 'Travertine Cream', img: 'texture-9' }, { name: 'Slate Ash', img: 'texture-10' },
-  { name: 'Harbor Gray', img: 'texture-11' }, { name: 'Rose Quartz', img: 'texture-12' },
-];
-const solidList = [
-  { name: 'White (Matte or Gloss)', color: '#f7f7f5' }, { name: 'Almond', color: '#efe6d4' },
-  { name: 'Biscuit', color: '#e8dcc2' }, { name: 'Sandbar', color: '#d8c9ad' },
-  { name: 'Silver Mist', color: '#d5d7d8' }, { name: 'Graphite', color: '#6b6e72' },
-];
-
-module.exports = { bath, kitchen, swatchList, solidList };
+module.exports = { bath, kitchen };

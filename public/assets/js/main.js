@@ -64,6 +64,23 @@
     g.querySelector('[data-dir="next"]').addEventListener('click', function () { step(1); });
   });
 
+  // Product photo viewer: thumbnails and arrows swap the large photo
+  document.querySelectorAll('.image-gallery').forEach(function (g) {
+    var main = g.querySelector('.image-gallery__main img');
+    var thumbs = Array.prototype.slice.call(g.querySelectorAll('.image-gallery__thumb'));
+    var i = 0;
+    function show(n) {
+      i = (n + thumbs.length) % thumbs.length;
+      main.src = thumbs[i].getAttribute('data-src');
+      thumbs.forEach(function (t, k) { if (k === i) t.setAttribute('aria-current', 'true'); else t.removeAttribute('aria-current'); });
+      var row = thumbs[i].parentElement;
+      row.scrollTo({ left: thumbs[i].offsetLeft - row.clientWidth / 2 + thumbs[i].offsetWidth / 2, behavior: 'smooth' });
+    }
+    thumbs.forEach(function (t, k) { t.addEventListener('click', function () { show(k); }); });
+    g.querySelector('.image-gallery__nav--prev').addEventListener('click', function () { show(i - 1); });
+    g.querySelector('.image-gallery__nav--next').addEventListener('click', function () { show(i + 1); });
+  });
+
   // Product grid category filters
   document.querySelectorAll('.product-grid-section').forEach(function (sec) {
     var btns = sec.querySelectorAll('[data-filter]');

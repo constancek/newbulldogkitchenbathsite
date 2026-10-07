@@ -1,45 +1,79 @@
-// Product option swatches drawn with CSS/SVG, so no photos are needed.
-// Replace with real product samples when available.
-
-// Wraps SVG markup as a CSS background image
-const svg = (w, h, body, bg) => `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}'>${body}</svg>`)}") 0 0 / ${w}px ${h}px, ${bg}`;
+// Product option swatches. Sample photos come from bathconcepts.com.
 
 const finishes = [
-  { name: 'Matte Black', bg: 'linear-gradient(160deg, #222 0%, #101010 55%, #1b1b1b 100%)' },
-  { name: 'Brushed Nickel', bg: 'repeating-linear-gradient(90deg, rgba(255,255,255,.1) 0 1px, transparent 1px 3px), linear-gradient(170deg, #d2d1cc 0%, #a9a8a3 50%, #c4c3be 100%)' },
-  { name: 'Oil Rubbed Bronze', bg: 'linear-gradient(165deg, #55504a 0%, #3a3531 55%, #48433e 100%)' },
-  { name: 'Chrome', bg: 'linear-gradient(135deg, #8f8f8f 0%, #f5f5f5 30%, #cdcdcd 46%, #fff 60%, #8a8a8a 100%)' },
+  { name: 'Matte Black', img: 'finish-matte-black' },
+  { name: 'Brushed Nickel', img: 'finish-brushed-nickel' },
+  { name: 'Oil Rubbed Bronze', img: 'finish-oil-rubbed-bronze' },
+  { name: 'Chrome', img: 'finish-chrome' },
 ];
 
 const glass = [
-  { name: 'Clear', bg: 'linear-gradient(180deg, #b6c3c1 0%, #dfe6df 60%, #f1f3ea 100%)' },
-  { name: 'Rain', bg: svg(36, 60, "<path d='M6 0c4 10-3 20 1 30s-3 20 1 30M20 0c-3 12 4 18 0 30s3 18 0 30M31 0c4 9-2 21 2 30s-3 21 1 30' fill='none' stroke='#fff' stroke-opacity='.75' stroke-width='3'/>", 'linear-gradient(180deg, #c3cfca, #e4ebe6)') },
-  { name: 'Frosted', bg: 'radial-gradient(circle at 82% 68%, #cfd4da 0, transparent 38%), linear-gradient(180deg, #eef1f2, #f4f6f5)' },
-  { name: 'Reeded', bg: 'repeating-linear-gradient(90deg, #a6aba2 0 3px, #cfd3ca 3px 7px, #b8bdb4 7px 9px)' },
+  { name: 'Clear', img: 'glass-clear' },
+  { name: 'Rain', img: 'glass-rain' },
+  { name: 'Frosted', img: 'glass-frosted' },
+  { name: 'Corrugated', img: 'glass-corrugated' },
 ];
 
-// V-groove etched patterns on frosted glass
-const etchBg = 'linear-gradient(180deg, #e6ecee, #f2f5f5)';
-const etch = "fill='none' stroke='#9fb0b6' stroke-width='2'";
 const vGroove = [
-  { name: 'Arrow', bg: svg(40, 40, `<path d='M0 30 20 10 40 30' ${etch}/>`, etchBg) },
-  { name: 'Hopscotch', bg: svg(60, 60, `<path d='M0 0h40v40H0zM40 40h20v20H40zM40 0v40M0 40v20' ${etch}/>`, etchBg) },
-  { name: 'Roman Block', bg: svg(90, 60, `<path d='M0 0h90M0 30h90M0 60h90M30 0v30M75 0v30M15 30v30M60 30v30' ${etch}/>`, etchBg) },
-  { name: 'Vertical Block', bg: svg(30, 90, `<path d='M0 0v90M0 0h30' ${etch}/>`, etchBg) },
+  { name: 'Arrow', img: 'vgroove-arrow' },
+  { name: 'Hopscotch', img: 'vgroove-hopscotch' },
+  { name: 'Roman Block', img: 'vgroove-roman-block' },
+  { name: 'Vertical Block', img: 'vgroove-vertical-block' },
 ];
 
-// Tile-look wall layouts
-const tileBg = '#f3f2ee';
-const grout = "fill='none' stroke='#a9a7a0' stroke-width='1.5'";
+// Wall colors (stone looks and solids)
+const colors = [
+  { name: 'Brecchia/Sierra Sand', img: 'color-brecchia-sierra-sand' },
+  { name: 'Madeira/Santa Cruz Granite', img: 'color-madeira-santa-cruz-granite' },
+  { name: 'River Rock/Canyon Rock', img: 'color-river-rock-canyon-rock' },
+  { name: 'Travertine', img: 'color-travertine' },
+  { name: 'Lightning', img: 'color-lightning' },
+  { name: 'Quartz', img: 'color-quartz' },
+  { name: 'Silver White', img: 'color-silver-white' },
+  { name: 'Gray', img: 'color-gray' },
+  { name: 'Almond', img: 'color-almond' },
+  { name: 'Biscuit', img: 'color-biscuit' },
+  { name: 'Sandbar', img: 'color-sandbar' },
+  { name: 'White (Matte or Glossy)', img: 'color-white-matte-or-glossy' },
+  { name: 'Arctic Ice', img: 'color-arctic-ice' },
+  { name: 'Bianco Travertine', img: 'color-bianco-travertine' },
+  { name: 'Calcutta Marble', img: 'color-calcutta-marble' },
+  { name: 'Carbon Ash Classic Concrete', img: 'color-carbon-ash-classic-concrete' },
+  { name: 'Evo', img: 'color-evo' },
+  { name: 'Galena', img: 'color-galena' },
+  { name: 'Glacier Ice', img: 'color-glacier-ice' },
+  { name: 'Horizon Beige', img: 'color-horizon-beige' },
+  { name: 'Metapeake', img: 'color-metapeake' },
+  { name: 'Napoli Marble/Pompeii Marble', img: 'color-napoli-marble-pompeii-marble' },
+  { name: 'San Michele', img: 'color-san-michele' },
+  { name: 'Sandalwood', img: 'color-sandalwood' },
+  { name: 'Santorini White Marble', img: 'color-santorini-white-marble' },
+  { name: 'Tuscany', img: 'color-tuscany' },
+  { name: 'Versailles', img: 'color-versailles' },
+  { name: 'Grayline', img: 'color-grayline' },
+  { name: 'London Fog', img: 'color-london-fog' },
+  { name: 'Othello', img: 'color-othello' },
+];
+
+// Tile-look wall patterns
 const patterns = [
-  { name: '3x6 Subway', bg: svg(60, 40, `<path d='M0 .75h60M0 20.75h60M.75 0v20M30.75 20v20' ${grout}/>`, tileBg) },
-  { name: '4x12 Subway', bg: svg(120, 40, `<path d='M0 .75h120M0 20.75h120M.75 0v20M60.75 20v20' ${grout}/>`, tileBg) },
-  { name: '12x12 Square', bg: svg(60, 60, `<path d='M0 .75h60M.75 0v60' ${grout}/>`, tileBg) },
-  { name: 'Vertical Stack', bg: svg(24, 72, `<path d='M0 .75h24M.75 0v72' ${grout}/>`, tileBg) },
-  { name: 'Herringbone', bg: svg(40, 40, `<path d='M0 0l20 20M20 20l20-20M0 20l20 20M20 40l20-20M20 20v20M0 0v20M40 0v20' ${grout}/>`, tileBg) },
-  { name: 'Chevron', bg: svg(40, 24, `<path d='M0 12 20 0 40 12M0 24 20 12 40 24' ${grout}/>`, tileBg) },
-  { name: 'Hexagon', bg: svg(42, 72, `<path d='M21 0 42 12v24L21 48 0 36V12zM21 48v24M0 36v36M42 36v36' ${grout}/>`, tileBg) },
-  { name: 'Hopscotch', bg: svg(60, 60, `<path d='M0 .75h40M.75 0v40M0 40.75h60M40.75 0v60M40 20.75h20' ${grout}/>`, tileBg) },
+  { name: '3x6 Subway', img: 'pattern-3x6-subway' },
+  { name: '4x12 Subway', img: 'pattern-4x12-subway' },
+  { name: '8x10', img: 'pattern-8x10' },
+  { name: '9x15 Monument', img: 'pattern-9x15-monument' },
+  { name: '12x12 Marazzi', img: 'pattern-12x12-marazzi' },
+  { name: 'Bayview', img: 'pattern-bayview' },
+  { name: 'Chevron', img: 'pattern-chevron' },
+  { name: 'Cobblestone', img: 'pattern-cobblestone' },
+  { name: 'Fairfield', img: 'pattern-fairfield' },
+  { name: 'Flagstone', img: 'pattern-flagstone' },
+  { name: 'Herringbone', img: 'pattern-herringbone' },
+  { name: 'Hexagonal', img: 'pattern-hexagonal' },
+  { name: 'Hopscotch', img: 'pattern-hopscotch' },
+  { name: 'Milano', img: 'pattern-milano' },
+  { name: 'Panorama', img: 'pattern-panorama' },
+  { name: 'Picket', img: 'pattern-picket' },
+  { name: 'Roman Block', img: 'pattern-roman-block' },
 ];
 
-module.exports = { finishes, glass, vGroove, patterns };
+module.exports = { finishes, glass, vGroove, colors, patterns };

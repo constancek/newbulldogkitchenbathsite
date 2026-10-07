@@ -180,7 +180,7 @@ function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = fal
 
 function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your in-home consultation.', id = 'estimate', button = 'Request My Estimate', message = false, promo = false, picker = promo, bare = false } = {}) {
   const interest = picker ?`<fieldset class="interest"><legend>I'm interested in:</legend>
-      ${[['bath', 'tub', 'Bath<br>Installation'], ['shower', 'shower', 'Shower<br>Installation'], ['walkin', 'walkin', 'Walk-in Tub<br>Installation']].map(([v, ic, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}>${icon[ic]}<span>${l}</span></label>`).join('')}
+      ${[['bath', 'Bath<br>Installation'], ['shower', 'Shower<br>Installation'], ['walkin', 'Walk-in Tub<br>Installation']].map(([v, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}><img src="/assets/img/icon-${v}.png" alt="" width="50" height="51"><span>${l}</span></label>`).join('')}
     </fieldset>` : '';
   const head = bare ? '' : promo
     ?`<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>and transform your bathroom in as little as one day.*</p></div>`
@@ -271,6 +271,19 @@ function gallery({ title, images, grey = false, spot = false }) {
 </section>`;
 }
 
+// Product photo viewer: one large photo with arrows, thumbnails below (behaviour in main.js)
+function imageGallery({ images, alt = 'Project photo', wide = false }) {
+  const thumbs = images.map((g, i) => `<button class="image-gallery__thumb" type="button" data-src="${img(g)}" aria-label="Show photo ${i + 1}"${i === 0 ? ' aria-current="true"' : ''}>${picture(g, '')}</button>`).join('');
+  return `<section class="image-gallery${wide ? ' image-gallery--wide' : ''}" aria-label="Photo gallery">
+  <div class="image-gallery__main">
+    <img src="${img(images[0])}" alt="${esc(alt)}" loading="lazy" decoding="async">
+    <button class="image-gallery__nav image-gallery__nav--prev" type="button" aria-label="Previous photo">${icon.left}</button>
+    <button class="image-gallery__nav image-gallery__nav--next" type="button" aria-label="Next photo">${icon.right}</button>
+  </div>
+  <div class="image-gallery__thumbs">${thumbs}</div>
+</section>`;
+}
+
 function columns({ title, items, grey = true }) {
   const html = items.map((c) => `<div class="column"><div class="column__icon">${icon[c.icon]}</div><h3>${c.title}</h3><p>${c.text}</p></div>`).join('');
   return `<section class="section${grey ? ' section--tint' : ''}"><div class="container">
@@ -289,7 +302,8 @@ function steps({ title, items, grey = true }) {
 
 // Option swatches: photos (img), flat colors (color) or CSS-drawn samples (bg).
 // "wide" lays four landscape samples edge to edge with a centered bold heading (glass options).
-function swatches({ title, intro, items, grey = false, wide = false, flush = false }) {
+// "lead" is a short sentence shown above the heading.
+function swatches({ title, intro, lead, items, grey = false, wide = false, flush = false }) {
   const html = items.map((s) => {
     const fill = s.img ? picture(s.img, s.name) : `<span style="background:${esc(s.bg || s.color)}"></span>`;
     return `<div class="swatch${s.img ? '' : ' swatch--drawn'}">${fill}<h3>${s.name}</h3></div>`;
@@ -300,7 +314,7 @@ function swatches({ title, intro, items, grey = false, wide = false, flush = fal
   const cls = `section swatch-section${flush ? ' swatch-section--flush' : ''}${grey ? ' section--grey' : ''}`;
   return wide
     ? `<section class="${cls}">${head}<div class="swatch-grid swatch-grid--wide">${html}</div></section>`
-    : `<section class="${cls}"><div class="container">${head}<div class="swatch-grid">${html}</div></div></section>`;
+    : `<section class="${cls}"><div class="container">${lead ? `<p class="swatch-lead">${lead}</p>` : ''}${head}<div class="swatch-grid">${html}</div></div></section>`;
 }
 
 function benefitList(items) {
@@ -319,6 +333,28 @@ function productGrid({ title, filters = [], items }) {
   ${btns}
   <div class="product-grid">${html}</div>
 </section>`;
+}
+
+// "The Bulldog Difference": intro on a light band, then value cards over a marble photo
+function difference({ eyebrow, title, text, img: im, items }) {
+  const cards = items.map((c) => `<div class="difference__card"><span class="difference__icon">${icon[c.icon]}</span><h3>${c.title}</h3><p>${c.text}</p></div>`).join('');
+  return `<section class="difference">
+  <div class="difference__intro"><div class="container">
+    ${eyebrow ? `<span class="eyebrow">${eyebrow}</span>` : ''}<h2>${title}</h2><p>${text}</p>
+  </div></div>
+  <div class="difference__band">${picture(im, '')}<div class="container difference__grid">${cards}</div></div>
+</section>`;
+}
+
+// Numbered process steps joined by a line, with a photo per step
+function processSteps({ title, text, items }) {
+  const steps = items.map((s, i) => `<li class="process__step"><span class="process__num">${String(i + 1).padStart(2, '0')}</span><h3>${s.title}</h3><p>${s.text}</p></li>`).join('');
+  const photos = items.map((s) => `<div class="process__photo">${picture(s.img, s.alt)}</div>`).join('');
+  return `<section class="section process"><div class="container">
+  <header class="process__head"><h2>${title}</h2>${text ? `<p>${text}</p>` : ''}</header>
+  <ol class="process__steps">${steps}</ol>
+  <div class="process__photos">${photos}</div>
+</div></section>`;
 }
 
 function ctaBlock({ title, text, buttons = [] }) {
@@ -351,5 +387,5 @@ function brochureCover(im = 'bath-12') {
 
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, columns, steps, swatches, ctaBlock, benefitList, productGrid, faqGroups, brochureCover, formPage, photoStrip, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, benefitList, productGrid, difference, processSteps, faqGroups, brochureCover, formPage, photoStrip, icon,
 };
