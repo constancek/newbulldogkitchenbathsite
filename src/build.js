@@ -75,16 +75,20 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     { img: 'hero-bath-3', alt: 'Bathroom with tile walls and vanity', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/contact/' },
   ]),
   C.callout(`${SITE.name} — <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
-  C.offerCards({ title: 'Current <strong>Promos</strong>', offers: [promos.dollarsOff, promos.financing, promos.senior] }),
-  designStudio(),
-  exploreBath(),
-  bulldogDifference(),
-  processSteps(),
   C.banner({
     title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'bath-24', alt: 'Finished bathroom remodel', badge: '1-DAY',
     text: 'Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up — often in a single visit.',
     buttons: [['Schedule an Estimate', '/contact/']],
   }),
+  C.offerCards({ title: 'Current <strong>Promos</strong>', offers: [promos.dollarsOff, promos.financing, promos.senior] }),
+  designStudio(),
+  bulldogDifference(),
+  processSteps(),
+  exploreBath(),
+  C.beforeAfter({ title: 'What your space could look like', items: [
+    { img: 'before-after-before', alt: 'Before — an outdated bathroom', caption: 'Before' },
+    { img: 'before-after-after', alt: 'After — a remodeled bathroom', caption: 'After — done in as little as 1 day' },
+  ] }),
   C.sideBySide({
     title: 'Quality Products for <strong>Your Home</strong>', img: 'kitchen-18', alt: 'Remodeled kitchen',
     text: '<p>Outdated kitchens and bathrooms can feel cramped, hard to clean, and inefficient. We fix that with durable, low-maintenance products, smart layouts, and an installation process built around your schedule — so you can enjoy your home again.</p>',
@@ -126,14 +130,18 @@ function productPage(p, base) {
   const showGallery = !p.swatches && !x.accessories;
   const gallery = showGallery ? C.imageGallery({ images: p.gallery, alt: title, wide: ['shower-enclosures', 'bathtubs'].includes(p.slug) }) : '';
   const galleryFirst = p.slug === 'shower-enclosures';
+  const feature = C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/contact/']] });
+  // On Colors & Patterns, "See It Before You Buy" comes right after The Bulldog Difference
+  const featureFirst = p.slug === 'colors-patterns';
   const body = [
     C.hero({ img: p.hero, alt: title, title: heroTitle, lead: p.lead }),
     galleryFirst ? gallery : '',
     C.sideBySide({ ...p.intro, text: introText, alt: title }),
     bulldogDifference(),
+    featureFirst ? feature : '',
     galleryFirst ? '' : gallery,
     ...(optionSections[p.slug] || []),
-    C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/contact/']] }),
+    featureFirst ? '' : feature,
     processSteps(),
     x.accessories ? C.productGrid({ title: 'Shop <strong>Accessories</strong>', ...x.accessories }) : '',
     learnMore(x.learn),

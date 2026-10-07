@@ -360,6 +360,16 @@ function processSteps({ title, text, items }) {
 </div></section>`;
 }
 
+// Before / after photo pair with captions
+// Before / after photo pair with captions and an arrow between them
+function beforeAfter({ title, items }) {
+  const card = (it) => `<figure class="before-after__card">${picture(it.img, it.alt)}<figcaption>${it.caption}</figcaption></figure>`;
+  return `<section class="section before-after"><div class="container">
+  <h2 class="before-after__title">${title}</h2>
+  <div class="before-after__grid">${card(items[0])}<span class="before-after__arrow" aria-hidden="true">${icon.right}</span>${card(items[1])}</div>
+</div></section>`;
+}
+
 function ctaBlock({ title, text, buttons = [] }) {
   return `<section class="section cta-block"><div class="container">
   <h2>${title}</h2>${text ? `<p>${text}</p>` : ''}
@@ -386,5 +396,5 @@ function photoStrip(im, alt) {
 
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, benefitList, productGrid, difference, processSteps, faqGroups, formPage, photoStrip, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, benefitList, productGrid, difference, processSteps, faqGroups, formPage, photoStrip, icon,
 };

@@ -523,3 +523,18 @@ form.sent .form-success { display: block; }
   .main-nav__parent .main-nav__link { border-bottom: 0; }
   .main-nav__toggle { color: var(--navy); padding: .9rem .5rem; }
 }
+
+/* Before / after photos */
+.before-after { background: linear-gradient(180deg, var(--navy) 0%, rgba(0,47,108,0) 25%, rgba(0,47,108,0) 75%, var(--navy) 100%), var(--diamond-pattern) center top / 56px 56px, var(--navy); }
+.before-after__title { text-align: center; font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 600; color: #fff; margin-bottom: 2rem; }
+.before-after__grid { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; max-width: 980px; margin: 0 auto; }
+.before-after__card { margin: 0; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, .25); }
+.before-after__card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.before-after__card figcaption { padding: 1.1rem 1.25rem; font-size: 1.05rem; font-weight: 600; color: #334155; }
+/* Arrow centred between the two photos */
+.before-after__arrow { position: absolute; z-index: 2; left: 50%; top: 50%; width: 60px; height: 60px; margin: -30px 0 0 -30px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #fff; color: var(--navy); box-shadow: 0 4px 16px rgba(0, 0, 0, .3); }
+.before-after__arrow svg { width: 26px; height: 26px; stroke-width: 2.6; }
+@media (max-width: 640px) {
+  .before-after__grid { grid-template-columns: 1fr; }
+  .before-after__arrow { position: relative; left: auto; top: auto; justify-self: center; margin: -2.6rem 0; transform: rotate(90deg); }
+}
