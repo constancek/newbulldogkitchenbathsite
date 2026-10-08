@@ -62,6 +62,40 @@
     g.querySelector('[data-dir="next"]').addEventListener('click', function () { step(1); });
   });
 
+  // Cabinet solutions slider: loops endlessly. A copy of the cards sits on each side of the originals;
+  // once scrolling settles outside the middle set, the track jumps one set back to the same-looking spot.
+  document.querySelectorAll('.solutions').forEach(function (s) {
+    var track = s.querySelector('.solutions__track');
+    var originals = Array.prototype.slice.call(track.children);
+    var n = originals.length;
+    function copy(card) { var c = card.cloneNode(true); c.setAttribute('aria-hidden', 'true'); return c; }
+    originals.forEach(function (card) { track.appendChild(copy(card)); });
+    originals.slice().reverse().forEach(function (card) { track.insertBefore(copy(card), track.firstChild); });
+    function setWidth() { return track.children[2 * n].offsetLeft - track.children[n].offsetLeft; }
+    function jumpTo(left) {
+      track.style.scrollSnapType = 'none';
+      track.scrollLeft = left;
+      track.style.scrollSnapType = '';
+    }
+    jumpTo(setWidth());
+    var settle;
+    track.addEventListener('scroll', function () {
+      clearTimeout(settle);
+      settle = setTimeout(function () {
+        var w = setWidth();
+        if (track.scrollLeft < w * .5) jumpTo(track.scrollLeft + w);
+        else if (track.scrollLeft >= w * 1.5) jumpTo(track.scrollLeft - w);
+      }, 140);
+    }, { passive: true });
+    window.addEventListener('resize', function () { jumpTo(setWidth() + (track.scrollLeft % setWidth())); });
+    function step(dir) {
+      var card = track.children[n];
+      track.scrollBy({ left: dir * (card.offsetWidth + parseFloat(getComputedStyle(track).columnGap || 20)), behavior: 'smooth' });
+    }
+    s.querySelector('[data-dir="prev"]').addEventListener('click', function () { step(-1); });
+    s.querySelector('[data-dir="next"]').addEventListener('click', function () { step(1); });
+  });
+
   // Promo cards: on small screens the grid scrolls sideways one card at a time; dots show and pick the card
   document.querySelectorAll('.offer-grid--slider').forEach(function (grid) {
     var cards = grid.children;
@@ -105,7 +139,7 @@
   // Anything already on screen at load stays visible, so nothing flashes.
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // These play their own animation when they come into view (no fade of their own)
-  var animated = document.querySelectorAll('.process__steps');
+  var animated = document.querySelectorAll('.process__steps, .anatomy__grid, .solutions');
   if (reduceMotion || !('IntersectionObserver' in window)) {
     animated.forEach(function (el) { el.classList.add('is-visible'); });
   } else {
@@ -140,7 +174,7 @@
       ticking = true;
       requestAnimationFrame(function () {
         ticking = false;
-        document.querySelectorAll('.reveal:not(.is-visible), .process__steps:not(.is-visible)').forEach(function (el) {
+        document.querySelectorAll('.reveal:not(.is-visible), .process__steps:not(.is-visible), .anatomy__grid:not(.is-visible)').forEach(function (el) {
           if (el.getBoundingClientRect().top < window.innerHeight) { el.classList.add('is-visible'); io.unobserve(el); }
         });
       });

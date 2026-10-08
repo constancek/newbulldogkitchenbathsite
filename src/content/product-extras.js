@@ -3,6 +3,8 @@
 //   benefits: labelled points shown in the feature section
 //   learn:   closing "Learn More" banner text for that product
 //   accessories: named accessory grid with category filters (accessories page)
+//   anatomy: cabinet photo with labeled construction details, shown right after the intro
+//   solutions: sideways slider of photo cards, shown after the anatomy section
 
 const standard = (thing) => [
   ['Easy Maintenance', `Non-porous surfaces resist mold and mildew, so keeping your new ${thing} clean takes a quick wipe instead of a scrub brush.`],
@@ -104,6 +106,24 @@ module.exports = {
   },
   cabinets: {
     since: 'has been installing and refacing kitchen cabinets built for the way families actually cook and live.',
+    anatomy: { title: 'What\'s Inside <strong>Every Cabinet</strong>', lead: 'Solid wood doors, plywood boxes, and soft-close hardware, built to hold up to everyday use.',
+      img: 'cab-unit', alt: 'Shaker base cabinet with the door and drawer open', tagline: 'Crafted With Precision, <strong>Designed for Durability</strong>',
+      items: [
+        { img: 'cab-feat-1', title: 'Solid Wood Door & Frame', text: '3/4" solid wood door with a 12mm MDF center panel, on a 3/4" solid hardwood face frame.' },
+        { img: 'cab-feat-8', title: 'All-Plywood Box', text: '1/2" plywood box and toe kick with 3/4" adjustable shelves, UV coated, outside finished to match the door.' },
+        { img: 'cab-feat-3', title: 'Dovetail Drawers', text: '5/8" solid finger-jointed rubberwood in a natural finish.' },
+        { img: 'cab-feat-2', title: 'Soft-Close Hinges', text: 'DTC concealed hinges, adjustable six ways, with door and drawer bumpers for quiet closing.' },
+        { img: 'cab-feat-4', title: 'Soft-Close Drawer Slides', text: 'DTC heavy-duty undermount, full extension, concealed.' },
+        { img: 'cab-feat-7', title: 'Metal Corner Brackets', text: '90 degree brackets keep the box square and strong.' },
+      ] },
+    solutions: { title: 'Cabinet Solutions for <strong>Every Project</strong>', items: [
+      { img: 'cabinets-1', title: 'Kitchen Cabinets', alt: 'Kitchen with new cabinets' },
+      { img: 'sol-bath-vanity', title: 'Bathroom Vanity Cabinets', alt: 'White shaker double bathroom vanity' },
+      { img: 'sol-closet', title: 'Closet Storage Systems', alt: 'Walk-in closet with wood cabinets and drawers' },
+      { img: 'sol-entryway', title: 'Entryway Cabinets', alt: 'Low cabinet in an entry hallway' },
+      { img: 'sol-vanity-table', title: 'Vanity Tables', alt: 'White vanity table with a lighted mirror' },
+      { img: 'sol-tv', title: 'TV Cabinets', alt: 'White TV cabinet in a living room' },
+    ] },
   },
   countertops: {
     since: 'has been fabricating and installing countertops that stand up to busy kitchens.',

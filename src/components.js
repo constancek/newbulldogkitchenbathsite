@@ -419,7 +419,35 @@ function featureImage({ title, lead, img: im, alt, grey = false }) {
 </div></section>`;
 }
 
+// Product photo in the middle with labeled detail photos on both sides (first half left, rest right)
+function anatomy({ title, lead, img: im, alt, items, tagline }) {
+  const half = Math.ceil(items.length / 2);
+  const list = (arr, side) => `<ul class="anatomy__list anatomy__list--${side}">${arr.map((it, i) => `<li class="anatomy__item" style="--i:${i}">${picture(it.img, '', ' class="anatomy__thumb" width="160" height="160"')}<div><h3>${it.title}</h3><p>${it.text}</p></div></li>`).join('')}</ul>`;
+  return `<section class="section anatomy"><div class="container">
+  <header class="materials__head"><h2>${title}</h2>${lead ? `<p>${lead}</p>` : ''}</header>
+  <div class="anatomy__grid">
+    ${list(items.slice(0, half), 'left')}
+    <div class="anatomy__unit">${picture(im, alt)}</div>
+    ${list(items.slice(half), 'right')}
+  </div>
+  ${tagline ? `<p class="anatomy__tagline">${tagline}</p>` : ''}
+</div></section>`;
+}
+
+// Sideways slider of square photo cards with titles; arrows sit over the photos (behaviour in main.js)
+function solutions({ title, items }) {
+  const cards = items.map((it, i) => `<figure class="solutions__card" style="--i:${i}"><div class="solutions__photo">${picture(it.img, it.alt)}</div><figcaption>${it.title}</figcaption></figure>`).join('');
+  return `<section class="section solutions">
+  <div class="container"><header class="materials__head"><h2>${title}</h2></header></div>
+  <div class="solutions__wrap">
+    <div class="solutions__track" tabindex="0" aria-label="Cabinet types">${cards}</div>
+    <button class="solutions__nav solutions__nav--prev" type="button" data-dir="prev" aria-label="Previous">${icon.left}</button>
+    <button class="solutions__nav solutions__nav--next" type="button" data-dir="next" aria-label="Next">${icon.right}</button>
+  </div>
+</section>`;
+}
+
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, anatomy, solutions, icon,
 };

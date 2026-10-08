@@ -127,6 +127,8 @@ function productPage(p, base) {
     C.hero({ img: p.hero, alt: title, title: heroTitle, lead: p.lead }),
     galleryFirst ? gallery : '',
     C.sideBySide({ ...p.intro, text: introText, alt: title }),
+    x.anatomy ? C.anatomy(x.anatomy) : '',
+    x.solutions ? C.solutions(x.solutions) : '',
     bulldogDifference(),
     featureFirst ? feature : '',
     galleryFirst ? '' : gallery,

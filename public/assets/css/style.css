@@ -447,6 +447,46 @@ form.sent .form-success { display: block; }
 .feature-image__frame { margin: 0 auto; max-width: 1152px; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, .12); }
 .feature-image__frame img { display: block; width: 100%; height: auto; }
 
+/* Cabinet solutions: sideways slider of square photo cards, arrows centered on the photos */
+.solutions { --card: clamp(250px, 29vw, 420px); }
+.solutions__wrap { position: relative; }
+.solutions__track { display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+.solutions__track::-webkit-scrollbar { display: none; }
+.solutions__card { flex: 0 0 var(--card); margin: 0; scroll-snap-align: start; }
+.solutions__photo { aspect-ratio: 1; overflow: hidden; border-radius: 8px; }
+.solutions__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.solutions__card:hover .solutions__photo img { transform: scale(1.06); }
+.solutions__card figcaption { margin-top: 1rem; text-align: center; font-size: 1.05rem; font-weight: 700; line-height: 1.25; text-transform: uppercase; letter-spacing: .03em; }
+.solutions__nav { position: absolute; top: calc(var(--card) / 2); translate: 0 -50%; z-index: 2; width: 3.25rem; height: 3.25rem; border: 0; border-radius: 50%; background: rgba(17,17,17,.78); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s, opacity .2s; }
+.solutions__nav:hover, .solutions__nav:focus-visible { background: var(--red); }
+.solutions__nav svg { width: 20px; height: 20px; }
+.solutions__nav--prev { left: calc(var(--gutter) + .75rem); }
+.solutions__nav--next { right: calc(var(--gutter) + .75rem); }
+@media (max-width: 640px) { .solutions { --card: 78vw; } .solutions__nav { width: 2.75rem; height: 2.75rem; } }
+
+/* Cabinet anatomy: product photo in the middle, detail photos in red rings on both sides */
+.anatomy__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 340px) minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 3rem); align-items: center; }
+.anatomy__list { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(1.4rem, 3vw, 2.75rem); }
+.anatomy__item { display: flex; align-items: center; gap: 1.1rem; }
+.anatomy__list--left .anatomy__item { flex-direction: row-reverse; text-align: right; }
+.anatomy__thumb { flex: none; width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 0 0 2px var(--red), 0 8px 18px rgba(0,0,0,.18); transition: transform .25s ease; }
+.anatomy__item:hover .anatomy__thumb { transform: scale(1.12); }
+.anatomy__item h3 { font-size: 1.05rem; font-weight: 600; line-height: 1.25; margin: 0 0 .25rem; }
+.anatomy__item p { font-size: .88rem; line-height: 1.45; color: var(--text-muted); margin: 0; }
+.anatomy__unit img { width: 100%; height: auto; }
+.anatomy__tagline { margin: clamp(2rem, 4vw, 3rem) auto 0; max-width: 900px; padding: 1rem 1.5rem; background: var(--ink); border-bottom: 4px solid var(--red); color: #fff; text-align: center; text-transform: uppercase; letter-spacing: .06em; font-size: clamp(1rem, 2vw, 1.4rem); font-weight: 300; }
+.anatomy__tagline strong { font-weight: 700; color: #fff; }
+@media (max-width: 1000px) {
+  .anatomy__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .anatomy__unit { grid-column: 1 / -1; order: -1; justify-self: center; width: min(320px, 80%); }
+  .anatomy__list--left .anatomy__item { flex-direction: row; text-align: left; }
+}
+@media (max-width: 640px) {
+  .anatomy__grid { grid-template-columns: minmax(0, 1fr); }
+  .anatomy__list { gap: 1.1rem; }
+  .anatomy__thumb { width: 72px; height: 72px; }
+}
+
 /* Design spotlight: light grey sections, bold headings, large rounded photos */
 .sbs--spot { background: #f4f4f4; }
 .sbs--spot .sbs__title { font-weight: 700; }
@@ -626,9 +666,23 @@ form.sent .form-success { display: block; }
 .js .carousel__slide[aria-hidden="false"] .carousel__content > :nth-child(4) { transition-delay: .45s; }
 
 
+/* 5. Cabinet anatomy: cabinet grows in, then the details slide in from each side with their rings popping */
+.js .anatomy__unit { opacity: 0; scale: .9; transition: opacity .7s ease-out, scale .7s cubic-bezier(.34, 1.56, .64, 1); }
+.js .anatomy__grid.is-visible .anatomy__unit { opacity: 1; scale: 1; }
+.js .anatomy__item { opacity: 0; transition: opacity .5s ease-out, translate .5s ease-out; transition-delay: calc(.35s + var(--i) * .13s); }
+.js .anatomy__list--left .anatomy__item { translate: -36px 0; }
+.js .anatomy__list--right .anatomy__item { translate: 36px 0; }
+.js .anatomy__grid.is-visible .anatomy__item { opacity: 1; translate: 0 0; }
+.js .anatomy__thumb { scale: .4; transition: transform .25s ease, scale .5s cubic-bezier(.34, 1.56, .64, 1); transition-delay: 0s, calc(.45s + var(--i) * .13s); }
+.js .anatomy__grid.is-visible .anatomy__thumb { scale: 1; }
+
+/* 6. Cabinet solutions: cards slide in from the right one after another */
+.js .solutions__card > * { opacity: 0; translate: 48px 0; transition: opacity .55s ease-out, translate .55s ease-out; transition-delay: calc(.15s + var(--i) * .1s); }
+.js .solutions.is-visible .solutions__card > * { opacity: 1; translate: 0 0; }
+
 /* No animation for people who ask their device to reduce motion */
 @media (prefers-reduced-motion: reduce) {
-  .js .reveal, .js .process__num, .js .carousel__content > * { opacity: 1 !important; translate: none !important; scale: none !important; transition: none !important; }
+  .js .reveal, .js .process__num, .js .carousel__content > *, .js .anatomy__unit, .js .anatomy__item, .js .anatomy__thumb, .js .solutions__card > * { opacity: 1 !important; translate: none !important; scale: none !important; transition: none !important; }
   .js .process__step::after { transform: none !important; transition: none !important; }
   .carousel__slide > img { transform: none !important; transition: none !important; }
   .offer-card:hover, .difference__card:hover { transform: none; }
