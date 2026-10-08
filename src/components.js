@@ -105,7 +105,7 @@ function layout({ path, title, description, body }) {
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.mainReady)document.documentElement.classList.remove('js');},3000);</script>
 </head>
@@ -167,7 +167,7 @@ function banner({ title, titleTag = 'h2', text, buttons = [], img: im, alt, badg
 </section>`;
 }
 
-function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = false }) {
+function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = false, slider = false }) {
   const cards = offers.map((o) => `<article class="offer-card">
     <div class="offer-card__image">${picture(o.img, o.alt)}<span class="offer-card__icon">${icon[o.icon] || icon.tag}</span></div>
     <div class="offer-card__content">
@@ -178,7 +178,7 @@ function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = fal
   </article>`).join('');
   return `<section class="section bleed${grey ? ' section--grey' : ''}">
   <header class="section-head"><${titleTag}>${title}</${titleTag}>${allLink ? '<a class="button button--outline" href="/current-promos/">View All Promos</a>' : ''}</header>
-  <div class="offer-grid">${cards}</div>
+  <div class="offer-grid${slider ? " offer-grid--slider" : ""}">${cards}</div>
 </section>`;
 }
 
@@ -352,7 +352,8 @@ function difference({ title, tagline, img: im, items }) {
 
 // Numbered process steps joined by a line, with a photo per step
 function processSteps({ title, text, items }) {
-  const steps = items.map((s, i) => `<li class="process__step"><span class="process__num">${String(i + 1).padStart(2, '0')}</span><h3>${s.title}</h3><p>${s.text}</p></li>`).join('');
+  // Each step also carries its own photo, shown beside the text on phones (the photo row is hidden there)
+  const steps = items.map((s, i) => `<li class="process__step"><span class="process__num">${String(i + 1).padStart(2, '0')}</span><div class="process__body"><h3>${s.title}</h3><p>${s.text}</p><div class="process__step-photo">${picture(s.img, s.alt)}</div></div></li>`).join('');
   const photos = items.map((s) => `<div class="process__photo">${picture(s.img, s.alt)}</div>`).join('');
   return `<section class="section process"><div class="container">
   <header class="process__head"><h2>${title}</h2>${text ? `<p>${text}</p>` : ''}</header>
@@ -362,12 +363,16 @@ function processSteps({ title, text, items }) {
 }
 
 // Before / after photo pair with captions
-// Before / after photo pair with captions and an arrow between them
-function beforeAfter({ title, items }) {
-  const card = (it) => `<figure class="before-after__card">${picture(it.img, it.alt)}<figcaption>${it.caption}</figcaption></figure>`;
+// Staggered collage: white-framed photos with a large serif label and a small script word on each frame;
+// the short note sits at the right end of the After label row
+function beforeAfter({ title, text, items }) {
+  const frame = (it, mod, note) => `<figure class="ba-frame ba-frame--${mod}">
+    <figcaption><span class="ba-frame__label">${it.label}</span><span class="ba-frame__script" aria-hidden="true">${it.label.toLowerCase()}</span>${note ? `<span class="ba-frame__note">${note}</span>` : ''}</figcaption>
+    <div class="ba-frame__photo">${picture(it.img, it.alt)}</div>
+  </figure>`;
   return `<section class="section before-after"><div class="container">
   <h2 class="before-after__title">${title}</h2>
-  <div class="before-after__grid">${card(items[0])}<span class="before-after__arrow" aria-hidden="true">${icon.right}</span>${card(items[1])}</div>
+  <div class="ba-collage">${frame(items[0], 'before')}${frame(items[1], 'after', text)}</div>
 </div></section>`;
 }
 

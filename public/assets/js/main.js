@@ -62,6 +62,28 @@
     g.querySelector('[data-dir="next"]').addEventListener('click', function () { step(1); });
   });
 
+  // Promo cards: on small screens the grid scrolls sideways one card at a time; dots show and pick the card
+  document.querySelectorAll('.offer-grid--slider').forEach(function (grid) {
+    var cards = grid.children;
+    if (cards.length < 2) return;
+    var dots = document.createElement('div');
+    dots.className = 'offer-dots';
+    Array.prototype.forEach.call(cards, function (card, k) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Show promo ' + (k + 1));
+      b.addEventListener('click', function () { grid.scrollTo({ left: k * (card.offsetWidth + 16), behavior: 'smooth' }); });
+      dots.appendChild(b);
+    });
+    grid.parentNode.insertBefore(dots, grid.nextSibling);
+    function mark() {
+      var i = Math.round(grid.scrollLeft / (cards[0].offsetWidth || 1));
+      Array.prototype.forEach.call(dots.children, function (d, k) { d.setAttribute('aria-current', k === i); });
+    }
+    grid.addEventListener('scroll', mark, { passive: true });
+    mark();
+  });
+
   // Product photo viewer: thumbnails and arrows swap the large photo
   document.querySelectorAll('.image-gallery').forEach(function (g) {
     var main = g.querySelector('.image-gallery__main img');
@@ -83,7 +105,7 @@
   // Anything already on screen at load stays visible, so nothing flashes.
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // These play their own animation when they come into view (no fade of their own)
-  var animated = document.querySelectorAll('.process__steps, .before-after__grid');
+  var animated = document.querySelectorAll('.process__steps');
   if (reduceMotion || !('IntersectionObserver' in window)) {
     animated.forEach(function (el) { el.classList.add('is-visible'); });
   } else {
@@ -93,11 +115,12 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     var targets = Array.prototype.slice.call(document.querySelectorAll('main > section:not(.carousel):not(.hero)'));
-    ['.offer-grid', '.tile-grid', '.difference__grid', '.swatch-grid', '.before-after__grid', '.product-grid', '.card-grid', '.process__photos'].forEach(function (sel) {
+    ['.offer-grid', '.tile-grid', '.difference__grid', '.swatch-grid', '.ba-collage', '.product-grid', '.card-grid', '.process__photos'].forEach(function (sel) {
       document.querySelectorAll(sel).forEach(function (group) {
+        // Sideways sliders keep their cards visible (off-screen cards would never scroll into view)
+        if (group.scrollWidth > group.clientWidth + 1) return;
         var i = 0;
         Array.prototype.forEach.call(group.children, function (child) {
-          if (child.classList.contains('before-after__arrow')) return;
           var d = Math.min(i++ * 90, 630) + 'ms';
           child.style.transitionDelay = d + ', ' + d + ', 0s, 0s';
           targets.push(child);
@@ -117,7 +140,7 @@
       ticking = true;
       requestAnimationFrame(function () {
         ticking = false;
-        document.querySelectorAll('.reveal:not(.is-visible), .process__steps:not(.is-visible), .before-after__grid:not(.is-visible)').forEach(function (el) {
+        document.querySelectorAll('.reveal:not(.is-visible), .process__steps:not(.is-visible)').forEach(function (el) {
           if (el.getBoundingClientRect().top < window.innerHeight) { el.classList.add('is-visible'); io.unobserve(el); }
         });
       });

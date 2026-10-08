@@ -80,14 +80,14 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     text: 'Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up — often in a single visit.',
     buttons: [['Schedule an Estimate', '/contact/']],
   }),
-  C.offerCards({ title: 'Current <strong>Promos</strong>', offers: [promos.dollarsOff, promos.financing, promos.senior] }),
+  C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
   designStudio(),
   bulldogDifference(),
   processSteps(),
   exploreBath(),
-  C.beforeAfter({ title: 'What your space could look like', items: [
-    { img: 'before-after-before', alt: 'Before — an outdated bathroom', caption: 'Before' },
-    { img: 'before-after-after', alt: 'After — a remodeled bathroom', caption: 'After — done in as little as 1 day' },
+  C.beforeAfter({ title: 'What your space could look like', text: 'Done in as little as 1 day', items: [
+    { img: 'before-after-before', alt: 'Before — an outdated bathroom', label: 'Before' },
+    { img: 'before-after-after', alt: 'After — a remodeled bathroom', label: 'After' },
   ] }),
   C.sideBySide({
     title: 'Quality Products for <strong>Your Home</strong>', img: 'kitchen-18', alt: 'Remodeled kitchen',

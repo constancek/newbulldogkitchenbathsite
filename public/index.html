@@ -12,7 +12,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.mainReady)document.documentElement.classList.remove('js');},3000);</script>
 </head>
@@ -104,7 +104,7 @@
 </section>
 <section class="section bleed">
   <header class="section-head"><h2>Current <strong>Promos</strong></h2><a class="button button--outline" href="/current-promos/">View All Promos</a></header>
-  <div class="offer-grid"><article class="offer-card">
+  <div class="offer-grid offer-grid--slider"><article class="offer-card">
     <div class="offer-card__image"><img src="/assets/img/bath-22.jpg" alt="Remodeled bathroom" loading="lazy" decoding="async"><span class="offer-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></span></div>
     <div class="offer-card__content">
       <h3 class="offer-card__title">Get $1,250 OFF</h3>
@@ -144,7 +144,7 @@
 </section>
 <section class="section process"><div class="container">
   <header class="process__head"><h2>A Thoughtfully Managed Experience <strong>From Start to Finish</strong></h2><p>From your first consultation to the final walkthrough, every step is planned with care to keep your renovation organized, efficient, and designed around your life.</p></header>
-  <ol class="process__steps"><li class="process__step"><span class="process__num">01</span><h3>Discover</h3><p>We learn about your home, goals, priorities, and vision.</p></li><li class="process__step"><span class="process__num">02</span><h3>Design</h3><p>We guide the layout, selections, investment, and project plan.</p></li><li class="process__step"><span class="process__num">03</span><h3>Build</h3><p>Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.</p></li><li class="process__step"><span class="process__num">04</span><h3>Enjoy</h3><p>Return to everyday life in a space thoughtfully designed for you.</p></li></ol>
+  <ol class="process__steps"><li class="process__step"><span class="process__num">01</span><div class="process__body"><h3>Discover</h3><p>We learn about your home, goals, priorities, and vision.</p><div class="process__step-photo"><img src="/assets/img/step-discover.jpg" alt="Finished bathroom with freestanding tub" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">02</span><div class="process__body"><h3>Design</h3><p>We guide the layout, selections, investment, and project plan.</p><div class="process__step-photo"><img src="/assets/img/step-design.jpg" alt="Reviewing floor plans" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">03</span><div class="process__body"><h3>Build</h3><p>Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.</p><div class="process__step-photo"><img src="/assets/img/step-build.jpg" alt="Tools laid out on project plans" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">04</span><div class="process__body"><h3>Enjoy</h3><p>Return to everyday life in a space thoughtfully designed for you.</p><div class="process__step-photo"><img src="/assets/img/step-enjoy.jpg" alt="Relaxing in a new bathtub" loading="lazy" decoding="async"></div></div></li></ol>
   <div class="process__photos"><div class="process__photo"><img src="/assets/img/step-discover.jpg" alt="Finished bathroom with freestanding tub" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/step-design.jpg" alt="Reviewing floor plans" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/step-build.jpg" alt="Tools laid out on project plans" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/step-enjoy.jpg" alt="Relaxing in a new bathtub" loading="lazy" decoding="async"></div></div>
 </div></section>
 <section class="section bleed">
@@ -153,7 +153,13 @@
 </section>
 <section class="section before-after"><div class="container">
   <h2 class="before-after__title">What your space could look like</h2>
-  <div class="before-after__grid"><figure class="before-after__card"><img src="/assets/img/before-after-before.jpg" alt="Before — an outdated bathroom" loading="lazy" decoding="async"><figcaption>Before</figcaption></figure><span class="before-after__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke-width:2.5"><path d="m9 18 6-6-6-6"/></svg></span><figure class="before-after__card"><img src="/assets/img/before-after-after.jpg" alt="After — a remodeled bathroom" loading="lazy" decoding="async"><figcaption>After — done in as little as 1 day</figcaption></figure></div>
+  <div class="ba-collage"><figure class="ba-frame ba-frame--before">
+    <figcaption><span class="ba-frame__label">Before</span><span class="ba-frame__script" aria-hidden="true">before</span></figcaption>
+    <div class="ba-frame__photo"><img src="/assets/img/before-after-before.jpg" alt="Before — an outdated bathroom" loading="lazy" decoding="async"></div>
+  </figure><figure class="ba-frame ba-frame--after">
+    <figcaption><span class="ba-frame__label">After</span><span class="ba-frame__script" aria-hidden="true">after</span><span class="ba-frame__note">Done in as little as 1 day</span></figcaption>
+    <div class="ba-frame__photo"><img src="/assets/img/before-after-after.jpg" alt="After — a remodeled bathroom" loading="lazy" decoding="async"></div>
+  </figure></div>
 </div></section>
 <section class="sbs"><div class="sbs__grid">
   <div class="sbs__media"><img src="/assets/img/kitchen-18.jpg" alt="Remodeled kitchen" loading="lazy" decoding="async"></div>
