@@ -4,12 +4,12 @@ module.exports = {
   short: 'Bulldog',
   legalName: 'Bulldog Kitchen & Bath',
   domain: 'bulldogkitchenbath.com',
-  phone: '(555) 010-0199', // PLACEHOLDER
-  phoneHref: '+15550100199', // PLACEHOLDER
+  phone: '(513) 657-3750',
+  phoneHref: '+15136573750',
   email: 'info@bulldogkitchenbath.com', // PLACEHOLDER
-  address: '123 Placeholder Ave, Your City, ST 00000', // PLACEHOLDER
+  address: '1776 Mentor Ave Ste 315, Cincinnati, OH 45212',
   hours: 'Mon–Sun, 8am–8pm',
-  serviceArea: '[Your City] and surrounding areas', // PLACEHOLDER
+  serviceArea: 'Cincinnati, OH and the surrounding OH, KY & IN tri-state area',
   founded: 1993,
   years: new Date().getFullYear() - 1993, // recalculated on every build
   social: { facebook: '#', instagram: '#', youtube: '#' }, // PLACEHOLDER
@@ -67,11 +67,6 @@ module.exports = {
     ['Kitchen Remodeling', '/kitchens/'],
     ['Current Promos', '/current-promos/'],
     ['Financing', '/financing/'],
-  ],
-  utilityLinks: [
-    ['Terms & Conditions', '/terms-and-conditions/'],
-    ['Privacy Statement', '/privacy-policy/'],
-    ['Website Accessibility', '/accessibility-statement/'],
   ],
   disclaimer:
     '*Offers shown are placeholders. Promotions apply to qualifying full remodel projects, cannot be combined with other offers, and must be presented at time of estimate. Financing subject to credit approval. See a ' +

@@ -33,7 +33,7 @@ const faqs = [
     ['Who do I call if I have a problem?', 'Call or email us directly, and you\'ll talk to our own team, not a call center.'],
   ] },
   { title: 'Scheduling &amp; Service Areas', items: [
-    ['What areas do you serve?', 'We currently serve [Your City] and surrounding areas. Contact us to confirm service at your address.'],
+    ['What areas do you serve?', 'We currently serve Cincinnati, OH and the surrounding OH, KY & IN tri-state area. Contact us to confirm service at your address.'],
     ['How soon can you start?', 'Consultations are usually available within a few days. Install dates depend on your products and project size.'],
   ] },
 ];

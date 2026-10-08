@@ -8,7 +8,6 @@ const options = require('./content/options');
 const extras = require('./content/product-extras');
 const { faqs } = require('./content/faqs');
 const { posts } = require('./content/blog');
-const legal = require('./content/legal');
 
 const OUT = path.join(__dirname, '..', 'public');
 const pages = [];
@@ -299,14 +298,6 @@ posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.excerpt, [
   <p><a class="button" href="/contact/">Request an Estimate</a></p>
   <p><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></p></div></section>`,
 ].join('\n')));
-
-// ---------- Legal ----------
-for (const [slug, l] of Object.entries(legal)) {
-  page(`/${slug}/`, l.title, `${l.title} for ${SITE.domain}.`, [
-    C.pageBand({ title: l.title }),
-    `<section class="section"><div class="container prose"><div class="notice">Placeholder legal text: have this reviewed by your attorney before launch.</div>${l.body}</div></section>`,
-  ].join('\n'));
-}
 
 // ---------- 404 ----------
 page('/404', 'Page Not Found', 'The page you were looking for could not be found.', [

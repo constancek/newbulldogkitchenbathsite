@@ -8,8 +8,7 @@ const picture = (name, alt, attrs = '') => `<img src="${img(name)}" alt="${esc(a
 
 function logo() {
   return `<a class="logo" href="/" aria-label="${SITE.name} home">
-    ${icon.logoMark}
-    <span class="logo__text"><span class="logo__name">BULLDOG</span><span class="logo__sub">Kitchen &amp; Bath</span></span>
+    <img class="logo__img" src="/assets/img/logo.png" alt="${SITE.name}" width="560" height="297">
   </a>`;
 }
 
@@ -52,7 +51,6 @@ function header(current) {
 
 function footer() {
   const links = SITE.footerLinks.map(([l, h]) => `<li><a href="${h}">${l}</a></li>`).join('');
-  const util = SITE.utilityLinks.map(([l, h]) => `<li><a href="${h}">${l}</a></li>`).join('');
   return `<footer class="site-footer">
   <div class="container footer__top">
     <div class="footer__brand">
@@ -81,7 +79,6 @@ function footer() {
   </div>
   <div class="footer__bottom">
     <div class="container">
-      <ul class="footer__utility">${util}</ul>
       <p>Copyright &copy; <span id="year">${new Date().getFullYear()}</span> ${SITE.legalName}. All Rights Reserved.</p>
       <p>${SITE.disclaimer}</p>
     </div>
@@ -102,12 +99,13 @@ function layout({ path, title, description, body }) {
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#111111">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.mainReady)document.documentElement.classList.remove('js');},3000);</script>
 </head>
 <body>
@@ -226,10 +224,10 @@ function pageBand({ title, lead, extra = '' }) {
   return `<section class="page-band"><div class="container"><h1>${title}</h1>${lead ? `<p>${lead}</p>` : ''}${extra}</div></section>`;
 }
 
-function sideBySide({ title, titleTag = 'h2', text = '', img: im, alt, media, reverse = false, grey = false, navy = false, spot = false, buttons = [], id }) {
-  const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : (navy ? ' button--outline-light' : '')}" href="${h}">${l}</a>`).join('')}</div>` : '';
+function sideBySide({ title, titleTag = 'h2', text = '', img: im, alt, media, reverse = false, grey = false, dark = false, spot = false, buttons = [], id }) {
+  const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : (dark ? ' button--outline-light' : '')}" href="${h}">${l}</a>`).join('')}</div>` : '';
   const mediaHtml = media || (im ? picture(im, alt || '') : '');
-  return `<section class="sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${navy ? ' sbs--navy' : ''}${spot ? ' sbs--spot' : ''}"${id ? ` id="${id}"` : ''}><div class="sbs__grid">
+  return `<section class="sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${dark ? ' sbs--dark' : ''}${spot ? ' sbs--spot' : ''}"${id ? ` id="${id}"` : ''}><div class="sbs__grid">
   <div class="sbs__media${media ? ' sbs__media--pad' : ''}">${mediaHtml}</div>
   <div class="sbs__content">
     <${titleTag} class="sbs__title">${title}</${titleTag}>
@@ -341,7 +339,7 @@ function productGrid({ title, filters = [], items }) {
 
 // "The Bulldog Difference": intro on a light band, then value cards over a marble photo
 function difference({ title, tagline, img: im, items }) {
-  const cards = items.map((c) => `<div class="difference__card"><span class="difference__icon">${icon[c.icon]}</span><h3>${c.title}</h3><p>${c.text}</p></div>`).join('');
+  const cards = items.map((c) => `<div class="difference__card"><div class="difference__top"><span class="difference__icon">${icon[c.icon]}</span><h3>${c.title}</h3></div><p>${c.text}</p></div>`).join('');
   return `<section class="difference">
   ${picture(im, '')}
   <div class="container">
