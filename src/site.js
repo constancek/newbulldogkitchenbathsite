@@ -1,4 +1,4 @@
-// Global site settings. PLACEHOLDER values are marked — replace before launch.
+// Global site settings. PLACEHOLDER values are marked; replace before launch.
 module.exports = {
   name: 'Bulldog Kitchen & Bath',
   short: 'Bulldog',

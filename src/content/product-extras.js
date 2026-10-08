@@ -1,8 +1,8 @@
 // Extra product-page content keyed by product slug:
-//   since    — ending of the "Since <year>, Bulldog Kitchen & Bath ..." sentence in the intro
-//   benefits — labelled points shown in the feature section
-//   learn    — closing "Learn More" banner text for that product
-//   accessories — named accessory grid with category filters (accessories page)
+//   since:   ending of the "Since <year>, Bulldog Kitchen & Bath ..." sentence in the intro
+//   benefits: labelled points shown in the feature section
+//   learn:   closing "Learn More" banner text for that product
+//   accessories: named accessory grid with category filters (accessories page)
 
 const standard = (thing) => [
   ['Easy Maintenance', `Non-porous surfaces resist mold and mildew, so keeping your new ${thing} clean takes a quick wipe instead of a scrub brush.`],
@@ -96,7 +96,7 @@ module.exports = {
     benefits: [
       ['Stone Looks', 'Marble, granite, and travertine looks without the sealing and upkeep of real stone.'],
       ['Solid Colors', 'Classic whites, almonds, and grays in matte or gloss.'],
-      ['Tile Patterns', 'Subway, hexagon, herringbone, and more — with no grout to clean.'],
+      ['Tile Patterns', 'Subway, hexagon, herringbone, and more, with no grout to clean.'],
       ['Trim & Accents', 'Matching or contrasting trim, borders, and accessories.'],
     ],
     learn: { title: 'Learn More About <strong>Bulldog Colors &amp; Patterns</strong>',

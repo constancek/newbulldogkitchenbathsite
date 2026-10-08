@@ -165,7 +165,7 @@
     });
   });
 
-  // Placeholder form handling — replace with a real form endpoint (HubSpot, Formspree, etc.)
+  // Placeholder form handling: replace with a real form endpoint (HubSpot, Formspree, etc.)
   document.querySelectorAll('form[data-placeholder-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();

@@ -1,4 +1,4 @@
-// Placeholder legal pages — have these reviewed by counsel before launch.
+// Placeholder legal pages: have these reviewed by counsel before launch.
 const SITE = require('../site');
 
 module.exports = {

@@ -4,7 +4,7 @@ const posts = [
     slug: 'tub-to-shower-conversion-guide', date: 'October 1, 2026', img: 'shower-2',
     title: 'Is a Tub-to-Shower Conversion Right for You?',
     excerpt: 'Thinking about trading your bathtub for a walk-in shower? Here\'s what to weigh before you decide.',
-    body: `<p>Swapping a rarely used bathtub for a spacious walk-in shower is one of the most popular bathroom upgrades — and for good reason. It makes the room feel bigger, safer, and easier to clean.</p>
+    body: `<p>Swapping a rarely used bathtub for a spacious walk-in shower is one of the most popular bathroom upgrades, and for good reason. It makes the room feel bigger, safer, and easier to clean.</p>
 <h2>Benefits of converting</h2>
 <ul><li><strong>Easier access:</strong> a low-threshold base removes the need to climb over a tub wall.</li><li><strong>More space:</strong> a glass door and open layout make small bathrooms feel larger.</li><li><strong>Less cleaning:</strong> seamless wall panels mean no grout lines to scrub.</li></ul>
 <h2>When to keep a tub</h2>
@@ -16,7 +16,7 @@ const posts = [
     slug: 'kitchen-cabinet-refacing-vs-replacement', date: 'September 15, 2026', img: 'cabinets-2',
     title: 'Cabinet Refacing vs. Replacement: Which Should You Choose?',
     excerpt: 'Both can transform your kitchen. The right choice depends on your cabinet boxes, layout, and budget.',
-    body: `<p>Cabinets set the look of your kitchen — and they're usually the largest part of the budget. Here's how to decide between refacing and replacing.</p>
+    body: `<p>Cabinets set the look of your kitchen, and they're usually the largest part of the budget. Here's how to decide between refacing and replacing.</p>
 <h2>Choose refacing if…</h2>
 <ul><li>Your cabinet boxes are solid and free of water damage.</li><li>You like your current layout.</li><li>You want a faster project with less disruption.</li></ul>
 <h2>Choose replacement if…</h2>
