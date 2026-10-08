@@ -38,7 +38,6 @@ module.exports = {
         { label: 'Sinks & Faucets', href: '/kitchens/sinks-faucets/' },
       ],
     },
-    { label: 'Design Your Space', href: '/design-your-space/' },
     {
       label: 'Inspiration',
       children: [

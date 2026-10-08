@@ -21,15 +21,8 @@ const promos = {
   senior: { title: 'Senior Discounts', text: 'Special savings for homeowners 65 and up. See a design consultant for details.*', img: 'senior-1', alt: 'Senior couple smiling over paperwork in their kitchen', icon: 'heart' },
   military: { title: 'Military Discounts', text: 'Thank you for your service. Extra savings for active-duty military and veterans.*', img: 'military-1', alt: 'Military service member', icon: 'flag' },
   sixty: { title: 'Up to 60-Month Financing', text: 'Low monthly payments with flexible terms on approved credit.*', img: 'planning-2', alt: 'Couple planning on a laptop in their kitchen', icon: 'calendar', href: '/financing/' },
-  design: { title: '3D Design Preview', text: 'See your new kitchen or bath in 3D before you commit.', img: 'design-2', alt: 'Designer reviewing samples', icon: 'pencil', href: '/design-your-space/' },
+  design: { title: '3D Design Preview', text: 'See your new kitchen or bath in 3D before you commit.', img: 'design-2', alt: 'Designer reviewing samples', icon: 'pencil' },
 };
-
-const designStudio = () => C.sideBySide({
-  title: 'Plan Your Dream Space <strong>With Our Design Studio</strong>',
-  text: '<p>Customize wall patterns, fixtures, cabinets, trim, and more, then see a 3D rendering of your new room.</p>',
-  img: 'design-3', alt: 'Designer reviewing finish samples',
-  buttons: [['Get Started', '/design-your-space/']], reverse: true, navy: true,
-});
 
 const exploreBath = (grey = false) => C.tiles({
   title: 'Explore Our <strong>Products</strong>', grey,
@@ -71,7 +64,6 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     { img: 'hero-bath-1', alt: 'Newly remodeled bathroom with soaking tub', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/contact/' },
     { img: 'hero-kitchen-1', alt: 'Bright modern kitchen', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
     { img: 'hero-bath-2', alt: 'Bathroom with patterned tile walls', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
-    { img: 'hero-kitchen-2', alt: 'Kitchen with island and pendant lights', eyebrow: 'See It Before You Build It', title: '<strong>3D Design</strong> &amp; In-Home Consultation', text: 'Choose every finish and see your new room before work begins.', cta: 'Design Your Space', href: '/design-your-space/' },
     { img: 'hero-bath-3', alt: 'Bathroom with tile walls and vanity', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/contact/' },
   ]),
   C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
@@ -81,7 +73,6 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     buttons: [['Schedule an Estimate', '/contact/']],
   }),
   C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
-  designStudio(),
   bulldogDifference(),
   processSteps(),
   exploreBath(),
@@ -171,24 +162,17 @@ page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: ca
     text: '<p>Juggling separate cabinet, countertop, and plumbing contractors is stressful. With Bulldog, one design consultant and one installation crew handle your entire kitchen, on one schedule and one warranty. ' + sinceLine('has been designing and installing kitchens that fit the way families cook and gather.') + '</p><p>It starts with an in-home design consultation. From there we handle cabinet replacement or refacing, countertops fabricated to fit, and the backsplash, sinks, faucets, and lighting.</p>' }),
   C.tiles({ title: 'Explore <strong>Kitchen Products</strong>', tall: true,
     items: kitchen.map((k) => ({ title: k.plainTitle || k.title, href: `/kitchens/${k.slug}/`, img: k.card })) }),
+  C.featureImage({ title: 'Cabinet Styles <strong>&amp; Finishes</strong>', lead: 'Mix and match door styles and finishes to create a kitchen that is all your own.', img: 'kitchen-cabinet-styles',
+    alt: 'Kitchen showing cabinet finishes: Graphite Shaker, White Shaker, Light Sage, White Oak, and Sierra Cherry' }),
+  C.materials({ title: 'What Our Cabinets <strong>Are Made Of</strong>', lead: 'Quality you can see, built from materials that last.', items: [
+    { title: 'Solid Wood', img: 'mat-solid-wood', alt: 'Stacked solid wood boards', text: 'We offer solid wood cabinet doors in a variety of hardwoods, from birch to oak.' },
+    { title: 'Plywood', img: 'mat-plywood', alt: 'Layered plywood edges', text: 'Our cabinet boxes are built from plywood for long-lasting strength and durability.' },
+    { title: 'MDF / HDF', img: 'mat-mdf', alt: 'Stack of fiberboard panels', text: 'Engineered from compressed wood fibers, it resists water, warping, and cracking.' },
+    { title: 'Particle Board', no: true, img: 'mat-particle-board', alt: 'Close-up of particle board', text: 'It soaks up water, cracks easily, and wears out sooner, so we don\'t use it.' },
+  ] }),
   C.gallery({ title: 'Kitchen <strong>Gallery</strong>', images: ['kitchen-22', 'kitchen-23', 'kitchen-24', 'kitchen-25', 'kitchen-26', 'kitchen-27', 'kitchen-28', 'kitchen-29'] }),
   processSteps(),
   learnMore(),
-].join('\n'));
-
-// ---------- Design your space ----------
-page('/design-your-space/', 'Design Your Space', `Design your new kitchen or bathroom with ${SITE.name}'s design studio and 3D renderings.`, [
-  C.sideBySide({ titleTag: 'h1', title: 'Plan Your Dream Space <strong>With Our Design Studio</strong>',
-    text: '<p>Choose your layout, wall pattern, colors, fixtures, cabinets, and trim. A Bulldog designer will turn your choices into a 3D rendering so you can see your new room before work begins.</p><p>You\'ll get a 3D design preview, hundreds of color and pattern combinations to choose from, and the option of a virtual or in-home consultation.</p>',
-    img: 'design-3', alt: 'Designer reviewing finish samples', buttons: [['Get Started', '/contact/']], reverse: true, navy: true }),
-  C.cards({ title: 'Design <strong>Spotlight</strong>', grey: true, perRow: 3, link: 'View Style',
-    items: [
-      { title: 'Traditional with an Industrial Edge', img: 'bath-28', href: '/inspiration-design-spotlight/', text: 'Warm stone walls, matte black fixtures, and a clean-lined glass door.' },
-      { title: 'Soft, Elegant Neutrals', img: 'bath-29', href: '/inspiration-design-spotlight/', text: 'Creamy marble looks with brushed gold accents.' },
-      { title: 'Bright Modern Kitchen', img: 'kitchen-30', href: '/inspiration-design-spotlight/', text: 'White shaker cabinets, quartz counters, and a bold backsplash.' },
-    ] }),
-  C.swatches({ title: 'Colors', intro: 'A preview of our wall colors. See every option on our <a href="/products/colors-patterns/">Colors &amp; Patterns</a> page.', items: options.colors.slice(0, 12), flush: true }),
-  C.swatches({ title: 'Patterns', items: options.patterns.slice(0, 12) }),
 ].join('\n'));
 
 // ---------- Inspiration ----------
@@ -201,7 +185,6 @@ page('/inspiration-shop-the-room/', 'Shop the Room', `Browse kitchen and bathroo
   C.hero({ img: 'bath-30', alt: 'Styled bathroom', title: 'Shop <strong>The Room</strong>', lead: 'Find a look you love, then request an estimate to bring it home.' }),
   C.cards({ title: 'Get <strong>The Look</strong>', perRow: 3, link: 'Get This Look',
     items: styles.map(([t, im]) => ({ title: t, img: im, href: '/contact/' })) }),
-  designStudio(),
   exploreBath(),
 ].join('\n'));
 

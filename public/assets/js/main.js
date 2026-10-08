@@ -115,7 +115,7 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     var targets = Array.prototype.slice.call(document.querySelectorAll('main > section:not(.carousel):not(.hero)'));
-    ['.offer-grid', '.tile-grid', '.difference__grid', '.swatch-grid', '.ba-collage', '.product-grid', '.card-grid', '.process__photos'].forEach(function (sel) {
+    ['.offer-grid', '.tile-grid', '.difference__grid', '.material-grid', '.swatch-grid', '.ba-collage', '.product-grid', '.card-grid', '.process__photos'].forEach(function (sel) {
       document.querySelectorAll(sel).forEach(function (group) {
         // Sideways sliders keep their cards visible (off-screen cards would never scroll into view)
         if (group.scrollWidth > group.clientWidth + 1) return;

@@ -1243,5 +1243,25 @@
     "file": "before-after-after.jpg",
     "photographer": "Baths R Us",
     "url": "https://bathsrus.com/offers/bathroom-cost-estimator/"
+  },
+  {
+    "file": "mat-solid-wood.jpg",
+    "photographer": "Mark Stebnicki",
+    "url": "https://www.pexels.com/photo/stack-of-woods-12278569/"
+  },
+  {
+    "file": "mat-plywood.jpg",
+    "photographer": "cottonbro studio",
+    "url": "https://www.pexels.com/photo/close-up-shot-of-plywood-7479035/"
+  },
+  {
+    "file": "mat-mdf.jpg",
+    "photographer": "Julio Muebles",
+    "url": "https://www.pexels.com/photo/a-person-measuring-a-wood-plank-4980787/"
+  },
+  {
+    "file": "mat-particle-board.jpg",
+    "photographer": "Engin Akyurt",
+    "url": "https://www.pexels.com/photo/brown-wooden-surface-10838921/"
   }
 ]

@@ -106,7 +106,8 @@ function layout({ path, title, description, body }) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
 <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.mainReady)document.documentElement.classList.remove('js');},3000);</script>
 </head>
 <body>
@@ -350,6 +351,18 @@ function difference({ title, tagline, img: im, items }) {
 </section>`;
 }
 
+// Material cards: photo with the material name over it, short explanation below; `no` marks a material we don't use
+function materials({ title, lead, items }) {
+  const cards = items.map((m) => `<article class="material${m.no ? ' material--no' : ''}">
+    <div class="material__photo">${picture(m.img, m.alt)}<h3 class="material__name">${m.no ? '<span class="material__no">No</span>' : ''}<span>${m.title}</span></h3></div>
+    <p class="material__text">${m.text}</p>
+  </article>`).join('');
+  return `<section class="section section--grey materials"><div class="container">
+  <header class="materials__head"><h2>${title}</h2>${lead ? `<p>${lead}</p>` : ''}</header>
+  <div class="material-grid">${cards}</div>
+</div></section>`;
+}
+
 // Numbered process steps joined by a line, with a photo per step
 function processSteps({ title, text, items }) {
   // Each step also carries its own photo, shown beside the text on phones (the photo row is hidden there)
@@ -400,7 +413,15 @@ function photoStrip(im, alt) {
   return `<div class="photo-strip">${picture(im, alt)}</div>`;
 }
 
+// Centered heading over one wide, rounded photo (used for labeled showcase images)
+function featureImage({ title, lead, img: im, alt, grey = false }) {
+  return `<section class="section${grey ? ' section--grey' : ''} feature-image"><div class="container">
+  <header class="materials__head"><h2>${title}</h2>${lead ? `<p>${lead}</p>` : ''}</header>
+  <figure class="feature-image__frame">${picture(im, alt)}</figure>
+</div></section>`;
+}
+
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, benefitList, productGrid, difference, processSteps, faqGroups, formPage, photoStrip, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, icon,
 };
