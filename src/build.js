@@ -102,9 +102,6 @@ const optionSections = {
     C.swatches({ title: 'Patterns', items: options.patterns }),
     C.sideBySide({ title: '<strong>Grout-Free</strong> Tile Looks', img: 'pattern-3x6-subway', alt: 'Subway tile-look wall pattern',
       text: '<p>Our tile-look wall patterns have realistic grout lines without the porous grout. They\'re made from the same durable, non-porous material as our standard wall systems, so cleanup is just as easy: no scrubbing, sealing, or regrouting.</p>' }),
-    C.ctaBlock({ title: 'Discover <strong>Quality Customization</strong>',
-      text: `To learn more about colors, patterns, and finishes for your new bathroom, request an estimate or call ${SITE.phone} to speak with a design consultant.`,
-      buttons: [['Request an Estimate', '/contact/']] }),
   ],
   showers: [
     C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit your space.', items: options.showerBases, cards: true, flush: true }),

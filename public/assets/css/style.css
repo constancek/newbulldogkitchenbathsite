@@ -262,13 +262,15 @@ ul { margin: 0 0 1rem; }
 .interest__opt { position: relative; display: flex; flex-direction: column; gap: .5rem; border: 1px solid var(--grey-line); padding: .9rem .8rem; cursor: pointer; font-weight: 700; font-size: 1rem; line-height: 1.4; color: var(--text); }
 .interest__opt img { width: auto; height: 46px; object-fit: contain; align-self: flex-start; }
 .interest__opt input { position: absolute; opacity: 0; }
-.interest__opt:has(input:checked) { border-color: var(--red); box-shadow: inset 0 0 0 1px var(--red); background: var(--red-tint); }
+.interest__opt:has(input:checked) { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); background: var(--grey-light); }
+/* Tick in the top right corner of the chosen tile */
+.interest__opt:has(input:checked)::after { content: ""; position: absolute; top: .5rem; right: .5rem; width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2712%27 fill=%27%23d71920%27/%3E%3Cpath d=%27m7 12.5 3.3 3.3L17 9%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%272.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E") center / contain no-repeat; }
 .interest__opt:has(input:focus-visible) { outline: 2px solid var(--red); }
 /* "View all products" dropdown under the tiles; picking from it clears the tile choice (main.js) */
 .interest__more { grid-column: 1 / -1; }
 .interest__more select { width: 100%; padding: .7rem 2.75rem .7rem .8rem; border: 1px solid var(--field-border); border-radius: 0; background: var(--field-bg) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111111%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27m6 9 6 6 6-6%27/%3E%3C/svg%3E") no-repeat right 1rem center / 16px; font: inherit; color: var(--text); cursor: pointer; -webkit-appearance: none; appearance: none; }
-/* Once a product is picked the dropdown highlights in red, like a chosen tile */
-.interest__more select.is-chosen { border-color: var(--red); box-shadow: inset 0 0 0 1px var(--red); background-color: var(--red-tint); background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23d71920%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27m6 9 6 6 6-6%27/%3E%3C/svg%3E"); font-weight: 600; }
+/* Once a product is picked the dropdown shows a tick, like a chosen tile */
+.interest__more select.is-chosen { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2712%27 fill=%27%23d71920%27/%3E%3Cpath d=%27m7 12.5 3.3 3.3L17 9%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%272.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23111111%27 stroke-width=%273%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27m6 9 6 6 6-6%27/%3E%3C/svg%3E"); background-position: left .8rem center, right 1rem center; background-size: 20px, 16px; background-repeat: no-repeat; padding-left: 2.55rem; font-weight: 600; }
 @media (max-width: 480px) { .interest { grid-template-columns: 1fr; } .interest__opt { flex-direction: row; align-items: center; } }
 
 /* Forms */
@@ -366,8 +368,10 @@ form.sent .form-success { display: block; }
 @media (max-width: 640px) { .swatch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .swatch img, .swatch--drawn span { display: block; width: 100%; aspect-ratio: 187 / 300; object-fit: cover; border-radius: 4px; }
 .swatch--drawn span { box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); }
-.swatch h3 { font-size: .875rem; font-weight: 600; line-height: 1.4; margin: .9rem 0 0; }
-.swatch-title { font-size: clamp(1.4rem, 2.4vw, 1.8rem) !important; font-weight: 300; line-height: 1.4 !important; }
+.swatch h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; margin: .9rem 0 0; }
+/* Gallery headings and intro lines match the side-by-side sections (heading and body text) */
+.swatch-title { font-size: clamp(1.9rem, 3vw, 2.5rem) !important; font-weight: 300; line-height: 1.15 !important; }
+.swatch-section .section-head p { font-size: 1.1rem; color: var(--text); max-width: 760px; }
 .swatch-title--bold { font-weight: 700; }
 .swatch-section--flush { padding-bottom: 0; }
 .swatch-section--flush + .swatch-section { padding-top: 3rem; }
@@ -377,9 +381,10 @@ form.sent .form-success { display: block; }
 @media (max-width: 640px) { .swatch-grid--wide { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .swatch-grid--cards { grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)); gap: 2rem 1.25rem; }
 .swatch-grid--cards .swatch img, .swatch-grid--cards .swatch--drawn span { aspect-ratio: 4 / 3; border-radius: 8px; }
-.swatch-grid--cards .swatch h3 { font-size: 1rem; }
-.swatch p { font-size: .875rem; line-height: 1.5; color: var(--text-muted); margin: .3rem 0 0; }
+.swatch-grid--cards .swatch h3 { font-size: 1.25rem; margin-top: 1rem; }
+.swatch p { font-size: 1.1rem; line-height: 1.6; color: var(--text); margin: .4rem 0 0; }
 @media (max-width: 1000px) { .swatch-grid--cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .swatch-grid--cards { gap: 1.75rem .9rem; } .swatch-grid--cards .swatch h3 { font-size: 1.05rem; } .swatch p { font-size: .95rem; line-height: 1.5; } }
 
 /* Centered call-to-action block */
 .cta-block { text-align: center; }
