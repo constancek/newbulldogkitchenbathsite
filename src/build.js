@@ -60,10 +60,10 @@ const processSteps = () => C.processSteps({
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
   C.carousel([
-    { img: 'hero-bath-1', alt: 'Newly remodeled bathroom with soaking tub', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/contact/' },
-    { img: 'hero-kitchen-1', alt: 'Bright modern kitchen', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
-    { img: 'hero-bath-2', alt: 'Bathroom with patterned tile walls', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
-    { img: 'hero-bath-3', alt: 'Bathroom with tile walls and vanity', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/contact/' },
+    { img: 'hero-bath-1', alt: 'Bathtub with a marble-look wall surround and a window', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/contact/' },
+    { img: 'hero-kitchen-1', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
+    { img: 'hero-bath-2', alt: 'Bathroom with a tub and shower, granite vanity and shower curtain', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
+    { img: 'hero-bath-3', alt: 'Bathroom with a gray vanity, tiled glass shower and wood-look floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/contact/' },
   ]),
   C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
   C.banner({
@@ -106,6 +106,56 @@ const optionSections = {
       text: `To learn more about colors, patterns, and finishes for your new bathroom, request an estimate or call ${SITE.phone} to speak with a design consultant.`,
       buttons: [['Request an Estimate', '/contact/']] }),
   ],
+  showers: [
+    C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit your space.', items: options.showerBases, cards: true, flush: true }),
+    C.swatches({ title: 'Wall Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/products/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
+  ],
+  bathtubs: [
+    C.swatches({ title: 'Tub Styles', intro: 'Pick the tub that fits how you like to bathe.', items: options.tubStyles, cards: true, flush: true }),
+    C.swatches({ title: 'Wall Surround Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/products/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
+  ],
+  'tub-to-shower-conversions': [
+    C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit the space your old tub leaves behind.', items: options.showerBases, cards: true, flush: true }),
+    C.swatches({ title: 'Doors &amp; Curtain Rods', intro: 'Choose glass or a rod, in the finish that matches your fixtures.', items: options.showerDoors, cards: true, flush: true }),
+    C.swatches({ title: 'Safety Add-Ons', intro: 'Small upgrades that make your new shower safer for everyone.', items: options.safetyAddOns, cards: true }),
+  ],
+  'walk-in-tubs': [
+    C.columns({ title: 'Therapy <strong>Packages</strong>', items: options.walkInTherapy, grey: false }),
+    C.columns({ title: 'Comfort <strong>Add-Ons</strong>', items: options.walkInComfort }),
+  ],
+  accessibility: [
+    C.swatches({ title: 'Accessibility Products', intro: 'Mix and match the safety features your household needs.', items: options.accessibilityProducts, cards: true }),
+  ],
+  vanities: [
+    C.swatches({ title: 'Vanity Styles', intro: 'Sized and measured for your bathroom.', items: options.vanityStyles, cards: true, flush: true }),
+    C.swatches({ title: 'Cabinet Colors', intro: 'The same finishes we offer for kitchen cabinets.', items: options.cabinetFinishes, flush: true }),
+    C.swatches({ title: 'Vanity Tops', intro: 'Durable tops that resist water, stains, and scratches.', items: options.vanityTops, flush: true }),
+    C.swatches({ title: 'Sink Styles', items: options.vanitySinks, cards: true }),
+  ],
+  accessories: [
+    C.swatches({ title: 'Fixture Finishes', intro: 'Every accessory comes in finishes that match your faucets and shower heads.', items: options.finishes }),
+  ],
+  cabinets: [
+    C.swatches({ title: 'Door Styles', intro: 'Choose a door style for new cabinets or refacing.', items: options.doorStyles, cards: true, flush: true }),
+    C.swatches({ title: 'Finishes', intro: 'Painted and wood finishes. See real samples during your design consultation.', items: options.cabinetFinishes }),
+  ],
+  countertops: [
+    C.swatches({ title: 'Countertop Materials', intro: 'Every top is measured and fabricated to fit your kitchen.', items: options.counterMaterials, cards: true, flush: true }),
+    C.swatches({ title: 'Popular Colors', intro: 'A few favorites. Color choices vary by material, so see real samples during your design consultation.', items: options.counterColors }),
+  ],
+  backsplash: [
+    C.swatches({ title: 'Tile Patterns', intro: 'Popular layouts for a backsplash that pulls the room together.', items: options.backsplashPatterns, flush: true }),
+    C.swatches({ title: 'Tile Materials', items: options.backsplashMaterials, cards: true }),
+  ],
+  'sinks-faucets': [
+    C.swatches({ title: 'Sink Styles', intro: 'Matched to your countertop and the way you cook and clean.', items: options.kitchenSinks, cards: true, flush: true }),
+    C.swatches({ title: 'Faucet Styles', items: options.faucetTypes, cards: true, flush: true }),
+    C.swatches({ title: 'Finishes', intro: 'Coordinate your faucet with cabinet pulls and lighting.', items: options.kitchenFinishes }),
+  ],
+  'organizers-accessories': [
+    C.swatches({ title: 'Organizer Options', intro: 'Fit new or existing cabinets with storage that works the way you cook.', items: options.organizerTypes, cards: true, flush: true }),
+    C.swatches({ title: 'Hardware Finishes', intro: 'Pulls and knobs in finishes that match your faucet and lighting.', items: options.finishes }),
+  ],
 };
 
 // ---------- Product page template ----------
@@ -125,7 +175,7 @@ function productPage(p, base) {
   // On Colors & Patterns, "See It Before You Buy" comes right after The Bulldog Difference
   const featureFirst = p.slug === 'colors-patterns';
   const body = [
-    C.hero({ img: p.hero, alt: title, title: heroTitle, lead: p.lead }),
+    C.hero({ img: p.hero, alt: title, title: heroTitle, lead: p.lead, kitchen: base === '/kitchens/', product: p.slug }),
     galleryFirst ? gallery : '',
     C.sideBySide({ ...p.intro, text: introText, alt: title }),
     x.anatomy ? C.anatomy(x.anatomy) : '',
@@ -145,7 +195,7 @@ bath.forEach((p) => productPage(p, '/products/'));
 kitchen.forEach((p) => productPage(p, '/kitchens/'));
 
 // ---------- Products overview ----------
-page('/products/', 'Bath Products', `Explore showers, bathtubs, walk-in tubs, accessibility products, enclosures, and accessories from ${SITE.name}.`, [
+page('/products/', 'Bath Products', `Explore showers, tub-to-shower conversions, bathtubs, walk-in tubs, accessibility products, enclosures, vanities, and accessories from ${SITE.name}.`, [
   C.hero({ img: 'bath-26', alt: 'Remodeled bathroom', title: 'Our <strong>Products</strong>', lead: 'Durable, beautiful, low-maintenance bath products, custom-fit and installed by our own team.' }),
   C.sideBySide({ title: 'Beautiful, <strong>Durable Products</strong>', img: 'bath-27', alt: 'Bathroom with glass shower',
     text: '<p>Every product we install is chosen to look great on day one and stay that way for years. Non-porous surfaces resist mold and mildew, colors won\'t fade, and there\'s no grout to scrub. ' + sinceLine('has been installing durable, low-maintenance bath products for homeowners across the area.') + '</p><p>Every product is custom-measured for your space and backed by our lifetime warranty.*</p>' }),
@@ -159,11 +209,9 @@ page('/products/', 'Bath Products', `Explore showers, bathtubs, walk-in tubs, ac
 
 // ---------- Kitchens overview ----------
 page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: cabinets, countertops, backsplash, sinks, and faucets, designed and installed by one team.`, [
-  C.hero({ img: 'kitchen-20', alt: 'Remodeled kitchen', title: 'Kitchen <strong>Remodeling</strong>', lead: 'From a quick refresh to a full transformation, we design and install kitchens that fit the way you cook and gather.' }),
+  C.hero({ img: 'kitchen-20', alt: 'Remodeled kitchen', kitchen: true, title: 'Kitchen <strong>Remodeling</strong>', lead: 'From a quick refresh to a full transformation, we design and install kitchens that fit the way you cook and gather.' }),
   C.sideBySide({ title: 'One Team, <strong>Start to Finish</strong>', img: 'kitchen-21', alt: 'Kitchen with island',
     text: '<p>Juggling separate cabinet, countertop, and plumbing contractors is stressful. With Bulldog, one design consultant and one installation crew handle your entire kitchen, on one schedule and one warranty. ' + sinceLine('has been designing and installing kitchens that fit the way families cook and gather.') + '</p><p>It starts with an in-home design consultation. From there we handle cabinet replacement or refacing, countertops fabricated to fit, and the backsplash, sinks, faucets, and lighting.</p>' }),
-  C.tiles({ title: 'Explore <strong>Kitchen Products</strong>', tall: true,
-    items: kitchen.map((k) => ({ title: k.plainTitle || k.title, href: `/kitchens/${k.slug}/`, img: k.card })) }),
   C.featureImage({ title: 'Cabinet Styles <strong>&amp; Finishes</strong>', lead: 'Mix and match door styles and finishes to create a kitchen that is all your own.', img: 'kitchen-cabinet-styles',
     alt: 'Kitchen showing cabinet finishes: Graphite Shaker, White Shaker, Light Sage, White Oak, and Sierra Cherry' }),
   C.materials({ title: 'What Our Cabinets <strong>Are Made Of</strong>', lead: 'Quality you can see, built from materials that last.', items: [
@@ -172,6 +220,8 @@ page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: ca
     { title: 'MDF / HDF', img: 'mat-mdf', alt: 'Stack of fiberboard panels', text: 'Engineered from compressed wood fibers, it resists water, warping, and cracking.' },
     { title: 'Particle Board', no: true, img: 'mat-particle-board', alt: 'Close-up of particle board', text: 'It soaks up water, cracks easily, and wears out sooner, so we don\'t use it.' },
   ] }),
+  C.tiles({ title: 'Explore <strong>Kitchen Products</strong>', tall: true,
+    items: kitchen.map((k) => ({ title: k.plainTitle || k.title, href: `/kitchens/${k.slug}/`, img: k.card })) }),
   C.gallery({ title: 'Kitchen <strong>Gallery</strong>', images: ['kitchen-22', 'kitchen-23', 'kitchen-24', 'kitchen-25', 'kitchen-26', 'kitchen-27', 'kitchen-28', 'kitchen-29'] }),
   processSteps(),
   learnMore(),
@@ -304,7 +354,7 @@ posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.excerpt, [
 
 // ---------- 404 ----------
 page('/404', 'Page Not Found', 'The page you were looking for could not be found.', [
-  C.pageBand({ title: 'Page <strong>Not Found</strong>', lead: 'Sorry, we couldn\'t find that page.', extra: '<p style="margin-top:1.5rem"><a class="button button--white" href="/">Back to Home</a></p>' }),
+  C.pageBand({ title: 'Page <strong>Not Found</strong>', lead: 'Sorry, we couldn\'t find that page.', extra: '<p style="margin-top:1.5rem"><a class="button" href="/">Back to Home</a></p>' }),
   exploreBath(),
 ].join('\n'));
 

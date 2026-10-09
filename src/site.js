@@ -22,9 +22,11 @@ module.exports = {
       children: [
         { label: 'Showers', href: '/products/showers/' },
         { label: 'Bathtubs', href: '/products/bathtubs/' },
+        { label: 'Tub-to-Shower Conversions', href: '/products/tub-to-shower-conversions/' },
         { label: 'Walk-In Tubs', href: '/products/walk-in-tubs/' },
         { label: 'Accessibility', href: '/products/accessibility/' },
         { label: 'Shower Enclosures', href: '/products/shower-enclosures/' },
+        { label: 'Vanities', href: '/products/vanities/' },
         { label: 'Accessories', href: '/products/accessories/' },
         { label: 'Colors & Patterns', href: '/products/colors-patterns/' },
       ],
@@ -36,6 +38,7 @@ module.exports = {
         { label: 'Countertops', href: '/kitchens/countertops/' },
         { label: 'Backsplash', href: '/kitchens/backsplash/' },
         { label: 'Sinks & Faucets', href: '/kitchens/sinks-faucets/' },
+        { label: 'Organizers & Accessories', href: '/kitchens/organizers-accessories/' },
       ],
     },
     {

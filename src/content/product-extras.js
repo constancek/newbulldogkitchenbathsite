@@ -134,4 +134,40 @@ module.exports = {
   'sinks-faucets': {
     since: 'has been matching sinks and faucets to the way homeowners cook, clean, and entertain.',
   },
+  'tub-to-shower-conversions': {
+    since: 'has been turning hard-to-use tubs into safe, easy-entry showers.',
+    benefits: [
+      ['Easy Entry', 'A low step-in base replaces the high tub wall you climb over today.'],
+      ['Fast Installation', 'Everything is custom-measured before install day, so our own crews can often finish in a single day.'],
+      ['No Grout to Scrub', 'Non-porous wall panels resist mold and mildew and clean up with a quick wipe.'],
+      ['Built-In Safety', 'Add grab bars, a seat, a handheld shower, and a slip-resistant floor.'],
+      ['Lifetime Warranty', 'Products and workmanship are backed for as long as you own your home.*'],
+    ],
+    learn: { title: 'Learn More About <strong>Tub-to-Shower Conversions</strong>',
+      text: 'Ready to step into a shower instead of over a tub? Request an estimate or call us, and a design consultant will measure your space and show you base, wall, and door options.' },
+  },
+  vanities: {
+    since: 'has been installing vanities that add storage and style to busy family bathrooms.',
+    benefits: [
+      ['Built to Fit', 'Single and double vanities sized and measured for your space.'],
+      ['More Storage', 'Drawers and cabinets that keep the counter clear.'],
+      ['Matching Tops and Sinks', 'Quartz, granite, or solid-surface tops with undermount or vessel sinks.'],
+      ['Coordinated Finishes', 'Faucets, pulls, and mirrors in chrome, brushed nickel, matte black, or brushed gold.'],
+      ['Quick Install', 'Most vanity replacements are finished in a single day.'],
+    ],
+    learn: { title: 'Learn More About <strong>Bulldog Vanities</strong>',
+      text: 'See cabinet colors, tops, and sinks in person during your design consultation. Request an estimate or call us to get started.' },
+  },
+  'organizers-accessories': {
+    since: 'has been fitting kitchen cabinets with organizers that make everyday cooking easier.',
+    benefits: [
+      ['Pull-Out Shelves', 'Bring the back of deep base cabinets out to you.'],
+      ['Trash and Recycling Pull-Outs', 'Hide the bins inside a cabinet next to the sink.'],
+      ['Drawer Inserts', 'Cutlery, utensil, and spice inserts that keep drawers tidy.'],
+      ['Corner Solutions', 'Lazy Susans and swing-outs for hard-to-reach corners.'],
+      ['Cabinet Hardware', 'Pulls and knobs in finishes that match your faucet and lighting.'],
+    ],
+    learn: { title: 'Learn More About <strong>Kitchen Organizers</strong>',
+      text: 'Tell us what drives you crazy about your kitchen storage, and we\'ll show you organizers that fix it. Request an estimate or call us to get started.' },
+  },
 };

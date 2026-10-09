@@ -96,6 +96,18 @@
     s.querySelector('[data-dir="next"]').addEventListener('click', function () { step(1); });
   });
 
+  // Estimate form: the tiles and the "View all products" dropdown are one choice, so picking either clears the other
+  document.querySelectorAll('.interest').forEach(function (set) {
+    var select = set.querySelector('.interest__more select');
+    if (!select) return;
+    var tiles = set.querySelectorAll('input[type="radio"]');
+    select.addEventListener('change', function () {
+      select.classList.toggle('is-chosen', !!select.value);
+      if (select.value) tiles.forEach(function (t) { t.checked = false; });
+    });
+    tiles.forEach(function (t) { t.addEventListener('change', function () { select.value = ''; select.classList.remove('is-chosen'); }); });
+  });
+
   // Promo cards: on small screens the grid scrolls sideways one card at a time; dots show and pick the card
   document.querySelectorAll('.offer-grid--slider').forEach(function (grid) {
     var cards = grid.children;

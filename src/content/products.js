@@ -19,6 +19,15 @@ const bath = [
       text: '<p>A tub-and-shower combo is still the most practical choice for many homes. We pair a comfortable tub with a full wall system, grab bars, and storage so the whole family can use it every day, all at an affordable price.</p>' },
   },
   {
+    slug: 'tub-to-shower-conversions', title: 'Tub-to-Shower Conversions', card: 'tts-5',
+    hero: 'tts-1', lead: 'Swap a hard-to-step-over tub for a roomy, easy-entry walk-in shower, often in as little as one day.',
+    intro: { title: 'From Tub to <strong>Walk-In Shower</strong>', img: 'tts-2',
+      text: '<p>If you rarely take baths, that old tub is just a high wall you climb over every day. We remove it and install a custom-fit shower base and a solid-surface wall system in the same space, with no grout lines to scrub.</p><p>Choose a low-threshold or standard base and a glass door or curtain rod, then add a built-in seat, grab bars, shelves, and a handheld shower. Most conversions use the existing plumbing, which keeps the job fast and affordable.</p>' },
+    gallery: ['tts-4', 'tts-5', 'tts-6', 'tts-7', 'tts-8', 'tts-2'],
+    feature: { title: 'Safer, <strong>Easier Showers</strong>', img: 'tts-3',
+      text: '<p>A low step-in base, a slip-resistant floor, and well-placed grab bars make a converted shower safer for everyone, and a smart choice if you plan to stay in your home for years.</p>' },
+  },
+  {
     slug: 'walk-in-tubs', title: 'Walk-In Tubs', card: 'tub-5',
     hero: 'tub-4', lead: 'Bathe safely and comfortably with a low-entry, door-sealed walk-in tub and optional hydrotherapy.',
     intro: { title: 'Safety and Comfort, <strong>Every Day</strong>', img: 'senior-1',
@@ -45,6 +54,15 @@ const bath = [
     gallery: ['gallery-enc-1', 'gallery-enc-2', 'gallery-enc-3', 'gallery-enc-4', 'gallery-enc-5', 'gallery-enc-6', 'gallery-enc-7', 'gallery-enc-8', 'shower-6', 'shower-7', 'shower-8', 'bath-12', 'bath-13', 'bath-14'],
     feature: { title: 'Light, Open, and <strong>Easy to Clean</strong>', img: 'bath-15',
       text: '<p>Clear glass lets light flow through the room and shows off your new wall pattern. A protective coating helps water bead off so spots and soap scum wipe away.</p>' },
+  },
+  {
+    slug: 'vanities', title: 'Bathroom Vanities', card: 'van-4',
+    hero: 'van-1', lead: 'A new vanity, top, sink, and faucet that add storage and finish your bathroom, usually installed in a single day.',
+    intro: { title: 'Storage and Style <strong>in One Piece</strong>', img: 'van-2',
+      text: '<p>Your vanity works harder than any other piece in the bathroom. We replace worn, cramped cabinets with sturdy vanities in single and double sizes, built to fit your space and your routine.</p><p>Pick a cabinet color and door style, a quartz, granite, or solid-surface top, and an undermount or vessel sink, then finish it with a faucet, mirror, and lighting that match.</p>' },
+    gallery: ['van-4', 'van-5', 'van-6', 'van-7', 'van-8', 'van-9'],
+    feature: { title: 'Single or <strong>Double Vanities</strong>', img: 'van-3',
+      text: '<p>Share a bathroom? A double vanity gives everyone their own sink and drawer space. Short on room? A compact single vanity with smart drawers keeps the counter clear.</p>' },
   },
   {
     slug: 'accessories', title: 'Accessories', card: 'accessory-2',
@@ -102,6 +120,15 @@ const kitchen = [
     gallery: ['faucet-4', 'faucet-5', 'faucet-6', 'kitchen-13', 'kitchen-14', 'kitchen-15'],
     feature: { title: 'Finishes That <strong>Tie It Together</strong>', img: 'kitchen-16',
       text: '<p>Match your faucet, cabinet pulls, and lighting in stainless, matte black, brushed gold, or polished chrome for a cohesive, designer look.</p>' },
+  },
+  {
+    slug: 'organizers-accessories', title: 'Organizers &amp; Accessories', plainTitle: 'Organizers & Accessories', card: 'org-2',
+    hero: 'org-1', lead: 'Pull-outs, drawer inserts, and racks that give everything in your kitchen a place, added in hours, not weeks.',
+    intro: { title: 'A Place for <strong>Everything</strong>', img: 'org-3',
+      text: '<p>Most kitchens don\'t need more cabinets, they need smarter ones. We fit your new or existing cabinets with organizers that make every inch easy to reach, from deep base cabinets to awkward corners.</p><p>Choose pull-out shelves, spice and tray pull-outs, trash and recycling pull-outs, cutlery and utensil inserts, lazy Susans for corners, and plate racks, plus pulls and knobs to finish the look.</p>' },
+    gallery: ['org-5', 'org-6', 'org-7', 'org-8', 'org-9', 'org-10'],
+    feature: { title: 'Pantry &amp; <strong>Cabinet Upgrades</strong>', img: 'org-4',
+      text: '<p>Turn a cluttered pantry or upper cabinet into organized storage with roll-out shelves and racks sized to what you keep there, so nothing gets lost in the back.</p>' },
   },
 ];
 

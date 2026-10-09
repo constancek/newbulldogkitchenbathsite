@@ -39,9 +39,12 @@ function header(current) {
       </div>
     </nav>
     <div class="header-actions">
-      <a class="promos-pill" href="/current-promos/">${icon.tag}Promos</a>
-      <a class="header-phone" href="tel:${SITE.phoneHref}" aria-label="Call ${SITE.phone}">${icon.phoneSolid}</a>
+      <a class="header-phone" href="tel:${SITE.phoneHref}">${icon.phoneSolid}${SITE.phone}</a>
       <a class="header-cta" href="/contact/">Request an Estimate</a>
+      <div class="header-quick">
+        <a class="header-quick__call" href="tel:${SITE.phoneHref}">${icon.phoneSolid}${SITE.phone}</a>
+        <a class="header-quick__cta" href="/contact/">Request Estimate</a>
+      </div>
       <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu">${icon.menu}</button>
     </div>
   </div>
@@ -131,7 +134,7 @@ function carousel(slides) {
         ${sl.eyebrow ? `<span class="carousel__eyebrow">${sl.eyebrow}</span>` : ''}
         <${H}>${sl.title}</${H}>
         ${sl.text ? `<p>${sl.text}</p>` : ''}
-        <a class="button button--white" href="${sl.href}">${sl.cta}</a>
+        <a class="button" href="${sl.href}">${sl.cta}</a>
       </div>
     </div>`;
   }).join('');
@@ -154,7 +157,7 @@ function callout(html) {
 }
 
 function banner({ title, titleTag = 'h2', text, buttons = [], img: im, alt, badge, bold = false }) {
-  const btns = buttons.map(([l, h]) => `<a class="button button--outline-light" href="${h}">${l}</a>`).join('');
+  const btns = buttons.map(([l, h]) => `<a class="button" href="${h}">${l}</a>`).join('');
   return `<section class="banner${bold ? ' banner--bold' : ''}">
   ${picture(im, alt || '')}
   <div class="banner__content">
@@ -181,12 +184,51 @@ function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = fal
 </section>`;
 }
 
-function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your in-home consultation.', id = 'estimate', button = 'Request My Estimate', message = false, promo = false, picker = promo, bare = false } = {}) {
+// Estimate form picker tiles: [label, icon file]
+const PICKS = {
+  bath: ['Bath<br>Installation', 'icon-bath.png'],
+  'tub-to-shower': ['Tub-to-Shower<br>Conversion', 'icon-tub-to-shower.png'],
+  walkin: ['Walk-in Tub<br>Installation', 'icon-walkin.png'],
+  accessibility: ['Accessibility<br>Products', 'icon-accessibility.svg'],
+  enclosure: ['Shower<br>Enclosure', 'icon-enclosure.svg'],
+  vanity: ['Bathroom<br>Vanity', 'icon-vanity.svg'],
+  accessories: ['Bath<br>Accessories', 'icon-accessories.svg'],
+  cabinets: ['Cabinet<br>Installation', 'icon-cabinets.svg'],
+  countertops: ['Countertop<br>Installation', 'icon-countertops.svg'],
+  backsplash: ['Backsplash<br>Installation', 'icon-backsplash.svg'],
+  sinks: ['Sinks &amp;<br>Faucets', 'icon-sinks.svg'],
+  organizers: ['Kitchen<br>Organizers', 'icon-organizers.svg'],
+};
+// The three tiles shown on each product page, the page's own product first (and preselected)
+const PICK_SETS = {
+  'tub-to-shower-conversions': ['tub-to-shower', 'bath', 'walkin'],
+  'walk-in-tubs': ['walkin', 'bath', 'tub-to-shower'],
+  accessibility: ['accessibility', 'walkin', 'tub-to-shower'],
+  'shower-enclosures': ['enclosure', 'tub-to-shower', 'bath'],
+  vanities: ['vanity', 'bath', 'tub-to-shower'],
+  accessories: ['accessories', 'bath', 'tub-to-shower'],
+  cabinets: ['cabinets', 'countertops', 'backsplash'],
+  countertops: ['countertops', 'cabinets', 'backsplash'],
+  backsplash: ['backsplash', 'countertops', 'cabinets'],
+  'sinks-faucets': ['sinks', 'countertops', 'cabinets'],
+  'organizers-accessories': ['organizers', 'cabinets', 'countertops'],
+};
+// Every product, for the "View all products" dropdown under the tiles
+const ALL_PRODUCTS = {
+  Bath: ['Bath installation', 'Shower installation', 'Tub-to-shower conversion', 'Bathtub', 'Walk-in tub', 'Accessibility products', 'Shower enclosure', 'Bathroom vanity', 'Bath accessories'],
+  Kitchen: ['Kitchen cabinets', 'Countertops', 'Backsplash', 'Sinks &amp; faucets', 'Kitchen organizers &amp; accessories'],
+};
+
+function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text = 'Tell us about your project and we\'ll reach out to schedule your in-home consultation.', id = 'estimate', button = 'Request My Estimate', message = false, promo = false, picker = promo, bare = false, kitchen = false, product } = {}) {
+  // Kitchen pages offer kitchen products in the picker and promo line; everything else offers bath products
+  const keys = PICK_SETS[product] || (kitchen ? ['cabinets', 'countertops', 'backsplash'] : ['bath', 'tub-to-shower', 'walkin']);
+  const others = Object.entries(ALL_PRODUCTS).map(([g, list]) => `<optgroup label="${g}">${list.map((o) => `<option>${o}</option>`).join('')}</optgroup>`).join('');
   const interest = picker ?`<fieldset class="interest"><legend>I'm interested in:</legend>
-      ${[['bath', 'Bath<br>Installation'], ['shower', 'Shower<br>Installation'], ['walkin', 'Walk-in Tub<br>Installation']].map(([v, l], i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}><img src="/assets/img/icon-${v}.png" alt="" width="50" height="51"><span>${l}</span></label>`).join('')}
+      ${keys.map((v, i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}><img src="/assets/img/${PICKS[v][1]}" alt="" width="50" height="51"><span>${PICKS[v][0]}</span></label>`).join('')}
+      <div class="interest__more"><label class="sr-only" for="${id}-other">Or choose from all products</label><select id="${id}-other" name="other_product"><option value="">View all products</option>${others}</select></div>
     </fieldset>` : '';
   const head = bare ? '' : promo
-    ?`<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>and transform your bathroom in as little as one day.*</p></div>`
+    ?`<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>${kitchen ? 'and upgrade your kitchen in as little as three days.*' : 'and transform your bathroom in as little as one day.*'}</p></div>`
     : `<h2>${heading}</h2>${text ? `<p>${text}</p>` : ''}`;
   return `<div class="form-card${promo ? ' form-card--promo' : ''}">
   ${head}
@@ -199,7 +241,7 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
       <div class="field"><label for="${id}-zip">ZIP code <span class="req">*</span></label><input id="${id}-zip" name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
       <div class="field full"><label for="${id}-email">Email <span class="req">*</span></label><input id="${id}-email" name="email" type="email" autocomplete="email" required></div>
       ${picker ? '' : `<div class="field full"><label for="${id}-project">Product of interest</label><select id="${id}-project" name="project">
-        <option>Bath installation</option><option>Shower installation</option><option>Walk-in tub installation</option><option>Accessibility products</option><option>Shower enclosure</option><option>Kitchen cabinets</option><option>Countertops</option><option>Backsplash</option><option>Sinks &amp; faucets</option><option>Not sure yet</option>
+        <option>Bath installation</option><option>Shower installation</option><option>Walk-in tub installation</option><option>Tub-to-shower conversion</option><option>Accessibility products</option><option>Shower enclosure</option><option>Bathroom vanity</option><option>Kitchen cabinets</option><option>Countertops</option><option>Backsplash</option><option>Sinks &amp; faucets</option><option>Kitchen organizers &amp; accessories</option><option>Not sure yet</option>
       </select></div>`}
       ${message ? `<div class="field full"><label for="${id}-msg">How can we help?</label><textarea id="${id}-msg" name="message"></textarea></div>` : ''}
     </div>
@@ -210,12 +252,12 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
 </div>`;
 }
 
-function hero({ img: im, alt, title, lead, form = true }) {
+function hero({ img: im, alt, title, lead, form = true, kitchen = false, product }) {
   return `<section class="hero">
   <img src="${img(im)}" alt="${esc(alt || '')}" fetchpriority="high">
   <div class="container hero__inner${form ? '' : ' hero__inner--solo'}">
     <div><h1>${title}</h1>${lead ? `<p class="hero__lead">${lead}</p>` : ''}</div>
-    ${form ? estimateForm({ id: 'hero', promo: true }) : ''}
+    ${form ? estimateForm({ id: 'hero', promo: true, kitchen, product }) : ''}
   </div>
 </section>`;
 }
@@ -225,7 +267,7 @@ function pageBand({ title, lead, extra = '' }) {
 }
 
 function sideBySide({ title, titleTag = 'h2', text = '', img: im, alt, media, reverse = false, grey = false, dark = false, spot = false, buttons = [], id }) {
-  const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : (dark ? ' button--outline-light' : '')}" href="${h}">${l}</a>`).join('')}</div>` : '';
+  const btns = buttons.length ? `<div class="button-row">${buttons.map(([l, h, cls]) => `<a class="button${cls ? ' ' + cls : ''}" href="${h}">${l}</a>`).join('')}</div>` : '';
   const mediaHtml = media || (im ? picture(im, alt || '') : '');
   return `<section class="sbs${reverse ? ' sbs--reverse' : ''}${grey ? ' section--grey' : ''}${dark ? ' sbs--dark' : ''}${spot ? ' sbs--spot' : ''}"${id ? ` id="${id}"` : ''}><div class="sbs__grid">
   <div class="sbs__media${media ? ' sbs__media--pad' : ''}">${mediaHtml}</div>
@@ -305,10 +347,11 @@ function steps({ title, items, grey = true }) {
 // Option swatches: photos (img), flat colors (color) or CSS-drawn samples (bg).
 // "wide" lays four landscape samples edge to edge with a centered bold heading (glass options).
 // "lead" is a short sentence shown above the heading.
-function swatches({ title, intro, lead, items, grey = false, wide = false, flush = false }) {
+// `cards` shows landscape photo cards with an optional short description under each name
+function swatches({ title, intro, lead, items, grey = false, wide = false, flush = false, cards = false }) {
   const html = items.map((s) => {
     const fill = s.img ? picture(s.img, s.name) : `<span style="background:${esc(s.bg || s.color)}"></span>`;
-    return `<div class="swatch${s.img ? '' : ' swatch--drawn'}">${fill}<h3>${s.name}</h3></div>`;
+    return `<div class="swatch${s.img ? '' : ' swatch--drawn'}">${fill}<h3>${s.name}</h3>${s.text ? `<p>${s.text}</p>` : ''}</div>`;
   }).join('');
   const head = wide
     ? `<header class="section-head section-head--center"><div><h2 class="swatch-title--bold">${title}</h2>${intro ? `<p>${intro}</p>` : ''}</div></header>`
@@ -316,7 +359,7 @@ function swatches({ title, intro, lead, items, grey = false, wide = false, flush
   const cls = `section swatch-section${flush ? ' swatch-section--flush' : ''}${grey ? ' section--grey' : ''}`;
   return wide
     ? `<section class="${cls}">${head}<div class="swatch-grid swatch-grid--wide">${html}</div></section>`
-    : `<section class="${cls}"><div class="container">${lead ? `<p class="swatch-lead">${lead}</p>` : ''}${head}<div class="swatch-grid">${html}</div></div></section>`;
+    : `<section class="${cls}"><div class="container">${lead ? `<p class="swatch-lead">${lead}</p>` : ''}${head}<div class="swatch-grid${cards ? ' swatch-grid--cards' : ''}"${cards ? ` style="--cols:${({ 3: 3, 5: 5, 6: 3 })[items.length] || 4}"` : ''}>${html}</div></div></section>`;
 }
 
 function benefitList(items) {
