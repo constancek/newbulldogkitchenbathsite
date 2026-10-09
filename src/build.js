@@ -75,6 +75,7 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
   bulldogDifference(),
   processSteps(),
   exploreBath(),
+  C.anatomy(extras.cabinets.anatomy),
   C.beforeAfter({ title: 'What your space could look like', text: 'Done in as little as 1 day', items: [
     { img: 'before-after-before', alt: 'Before: an outdated bathroom', label: 'Before' },
     { img: 'before-after-after', alt: 'After: a remodeled bathroom', label: 'After' },

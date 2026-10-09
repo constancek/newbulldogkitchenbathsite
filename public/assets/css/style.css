@@ -667,13 +667,13 @@ form.sent .form-success { display: block; }
 
 
 /* 5. Cabinet anatomy: cabinet grows in, then the details slide in from each side with their rings popping */
-.js .anatomy__unit { opacity: 0; scale: .9; transition: opacity .7s ease-out, scale .7s cubic-bezier(.34, 1.56, .64, 1); }
+.js .anatomy__unit { opacity: 0; scale: .9; transition: opacity 1.05s ease-out, scale 1.05s cubic-bezier(.34, 1.56, .64, 1); }
 .js .anatomy__grid.is-visible .anatomy__unit { opacity: 1; scale: 1; }
-.js .anatomy__item { opacity: 0; transition: opacity .5s ease-out, translate .5s ease-out; transition-delay: calc(.35s + var(--i) * .13s); }
+.js .anatomy__item { opacity: 0; transition: opacity .75s ease-out, translate .75s ease-out; transition-delay: calc(.53s + var(--i) * .2s); }
 .js .anatomy__list--left .anatomy__item { translate: -36px 0; }
 .js .anatomy__list--right .anatomy__item { translate: 36px 0; }
 .js .anatomy__grid.is-visible .anatomy__item { opacity: 1; translate: 0 0; }
-.js .anatomy__thumb { scale: .4; transition: transform .25s ease, scale .5s cubic-bezier(.34, 1.56, .64, 1); transition-delay: 0s, calc(.45s + var(--i) * .13s); }
+.js .anatomy__thumb { scale: .4; transition: transform .25s ease, scale .75s cubic-bezier(.34, 1.56, .64, 1); transition-delay: 0s, calc(.68s + var(--i) * .2s); }
 .js .anatomy__grid.is-visible .anatomy__thumb { scale: 1; }
 
 /* 6. Cabinet solutions: cards slide in from the right one after another */
