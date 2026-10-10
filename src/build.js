@@ -80,16 +80,13 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     { img: 'home-before', alt: 'Before: an outdated bathroom', label: 'Before' },
     { img: 'home-after', alt: 'After: a remodeled bathroom', label: 'After' },
   ] }),
-  // PLACEHOLDER reviews: replace with real customer reviews before launch
   C.reviews([
-    { img: 'shower-enclosures-feature', alt: 'Remodeled bathroom with a tub and shower', side: 'right', name: 'Jane D.',
-      quote: 'The crew was on time, kept our house clean, and the new bathroom looks <strong>amazing</strong>. We could not be happier!' },
-    { img: 'tub-to-shower-header', alt: 'Walk-in shower with a glass door', side: 'left', name: 'John D.',
-      quote: 'Our old tub is gone and the new shower is so much <strong>easier</strong> to use. It was done faster than we expected.' },
-    { img: 'vanities-header', alt: 'Double vanity with white cabinets', side: 'right', name: 'Mary S.',
-      quote: 'From the design visit to the final walkthrough, everything was <strong>simple</strong> and stress-free.' },
-    { img: 'shower-enclosures-header', alt: 'Bathroom with a soaking tub and glass shower', side: 'left', name: 'Mike R.',
-      quote: 'Great quality products and a team that <strong>truly cares</strong>. We already recommended them to our neighbors.' },
+    { img: 'home-review-1', alt: 'Woman in a robe sitting on the edge of a new bathtub', side: 'left', pos: '65% center', name: 'Sarah Miller',
+      quote: 'Fantastic job! Our bathroom turned out absolutely <strong>beautiful</strong>, and we couldn\'t be thrilled with the final result.' },
+    { img: 'home-review-2', alt: 'Woman at a new wood double vanity', side: 'left', pos: '45% center', name: 'Emily Johnson',
+      quote: 'I was truly <strong>speechless</strong> when I walked through the door and saw how incredible everything looked.' },
+    { img: 'home-review-3', alt: 'Woman sitting on a shower seat holding a grab bar', side: 'right', pos: '55% center', name: 'Jennifer Smith',
+      quote: 'Top-quality materials paired with <strong>outstanding craftsmanship</strong> guarantee an exceptional outcome every single time.' },
   ]),
   C.sideBySide({
     title: 'Quality Products for <strong>Your Home</strong>', img: 'home-quality-products', alt: 'Remodeled kitchen',

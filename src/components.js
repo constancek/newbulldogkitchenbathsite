@@ -495,7 +495,7 @@ function solutions({ title, items }) {
 function reviews(items) {
   const stars = Array.from({ length: 5 }, (_, i) => `<span style="--s:${i}">${icon.starSolid}</span>`).join('');
   const slides = items.map((r, i) => `<div class="reviews__slide reviews__slide--${r.side || 'right'}${i === 0 ? ' is-active' : ''}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${items.length}"${i === 0 ? '' : ' aria-hidden="true"'}>
-    ${picture(r.img, r.alt)}
+    ${picture(r.img, r.alt, r.pos ? ` style="object-position:${r.pos}"` : '')}
     <figure class="reviews__card">
       <div class="reviews__stars" role="img" aria-label="5 out of 5 stars">${stars}</div>
       <blockquote class="reviews__quote"><p>${r.quote}</p></blockquote>
@@ -505,11 +505,13 @@ function reviews(items) {
   const dots = items.map((_, i) => `<button type="button" aria-label="Show review ${i + 1}"${i === 0 ? ' aria-current="true"' : ''}></button>`).join('');
   return `<section class="reviews" aria-roledescription="carousel" aria-label="Customer reviews">
   <h2 class="sr-only">Customer Reviews</h2>
+  <div class="reviews__frame">
   <div class="reviews__track">${slides}</div>
   <div class="reviews__controls">
     <button class="reviews__nav" type="button" data-dir="prev" aria-label="Previous review">${icon.left}</button>
     <div class="reviews__dots">${dots}</div>
     <button class="reviews__nav" type="button" data-dir="next" aria-label="Next review">${icon.right}</button>
+  </div>
   </div>
 </section>`;
 }
