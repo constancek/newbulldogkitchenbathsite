@@ -1,7 +1,7 @@
 // Starter blog posts (placeholder content).
 const posts = [
   {
-    slug: 'tub-to-shower-conversion-guide', date: 'October 1, 2026', img: 'shower-2',
+    slug: 'tub-to-shower-conversion-guide', date: 'October 1, 2026', img: 'blog-tub-to-shower',
     title: 'Is a Tub-to-Shower Conversion Right for You?',
     excerpt: 'Thinking about trading your bathtub for a walk-in shower? Here\'s what to weigh before you decide.',
     body: `<p>Swapping a rarely used bathtub for a spacious walk-in shower is one of the most popular bathroom upgrades, and for good reason. It makes the room feel bigger, safer, and easier to clean.</p>
@@ -13,7 +13,7 @@ const posts = [
 <p>Most conversions are completed in as little as one day once your products are ready.</p>`,
   },
   {
-    slug: 'kitchen-cabinet-refacing-vs-replacement', date: 'September 15, 2026', img: 'cabinets-2',
+    slug: 'kitchen-cabinet-refacing-vs-replacement', date: 'September 15, 2026', img: 'blog-cabinet-refacing',
     title: 'Cabinet Refacing vs. Replacement: Which Should You Choose?',
     excerpt: 'Both can transform your kitchen. The right choice depends on your cabinet boxes, layout, and budget.',
     body: `<p>Cabinets set the look of your kitchen, and they're usually the largest part of the budget. Here's how to decide between refacing and replacing.</p>
@@ -24,7 +24,7 @@ const posts = [
 <p>Not sure? A design consultation will tell you which option makes sense for your kitchen.</p>`,
   },
   {
-    slug: 'aging-in-place-bathroom-upgrades', date: 'August 28, 2026', img: 'access-2',
+    slug: 'aging-in-place-bathroom-upgrades', date: 'August 28, 2026', img: 'blog-aging-in-place',
     title: '5 Bathroom Upgrades for Aging in Place',
     excerpt: 'Simple changes that make your bathroom safer and more comfortable for years to come.',
     body: `<p>The bathroom is where many falls at home happen. These upgrades help you stay safe and independent without making the room feel clinical.</p>

@@ -3,7 +3,8 @@ const SITE = require('./site');
 const icon = require('./icons');
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const img = (name) => `/assets/img/${name}.jpg`;
+// Photos are WebP files named <page>-<section>[-<detail>]
+const img = (name) => `/assets/img/${name}.webp`;
 const picture = (name, alt, attrs = '') => `<img src="${img(name)}" alt="${esc(alt)}" loading="lazy" decoding="async"${attrs}>`;
 
 function logo() {
@@ -192,7 +193,7 @@ const PICKS = {
   accessibility: ['Accessibility<br>Products', 'icon-accessibility.svg'],
   enclosure: ['Shower<br>Enclosure', 'icon-enclosure.svg'],
   vanity: ['Bathroom<br>Vanity', 'icon-vanity.svg'],
-  accessories: ['Bath<br>Accessories', 'icon-accessories.svg'],
+  accessories: ['Bath<br>Accessories', 'icon-accessories.png'],
   cabinets: ['Cabinet<br>Installation', 'icon-cabinets.svg'],
   countertops: ['Countertop<br>Installation', 'icon-countertops.svg'],
   backsplash: ['Backsplash<br>Installation', 'icon-backsplash.svg'],
@@ -247,7 +248,7 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
     </div>
     <p class="form-legal">By submitting, you agree that ${SITE.name} may contact you by phone, text, or email about your project. Consent is not a condition of purchase. Message &amp; data rates may apply.</p>
     <button class="button button--block" type="submit">${promo ? 'Submit' : button}</button>
-    <div class="form-success" role="status">Thank you! A ${SITE.short} design consultant will be in touch shortly.</div>
+    <div class="form-success" role="status">Thank you! A ${SITE.name} design consultant will be in touch shortly.</div>
   </form>
 </div>`;
 }
@@ -490,7 +491,30 @@ function solutions({ title, items }) {
 </section>`;
 }
 
+// Review slideshow: full-width photo with a review card on one side; slides sideways to the next (behaviour in main.js)
+function reviews(items) {
+  const stars = Array.from({ length: 5 }, (_, i) => `<span style="--s:${i}">${icon.starSolid}</span>`).join('');
+  const slides = items.map((r, i) => `<div class="reviews__slide reviews__slide--${r.side || 'right'}${i === 0 ? ' is-active' : ''}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${items.length}"${i === 0 ? '' : ' aria-hidden="true"'}>
+    ${picture(r.img, r.alt)}
+    <figure class="reviews__card">
+      <div class="reviews__stars" role="img" aria-label="5 out of 5 stars">${stars}</div>
+      <blockquote class="reviews__quote"><p>${r.quote}</p></blockquote>
+      <figcaption class="reviews__name">${r.name}</figcaption>
+    </figure>
+  </div>`).join('');
+  const dots = items.map((_, i) => `<button type="button" aria-label="Show review ${i + 1}"${i === 0 ? ' aria-current="true"' : ''}></button>`).join('');
+  return `<section class="reviews" aria-roledescription="carousel" aria-label="Customer reviews">
+  <h2 class="sr-only">Customer Reviews</h2>
+  <div class="reviews__track">${slides}</div>
+  <div class="reviews__controls">
+    <button class="reviews__nav" type="button" data-dir="prev" aria-label="Previous review">${icon.left}</button>
+    <div class="reviews__dots">${dots}</div>
+    <button class="reviews__nav" type="button" data-dir="next" aria-label="Next review">${icon.right}</button>
+  </div>
+</section>`;
+}
+
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, anatomy, solutions, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, reviews, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, anatomy, solutions, icon,
 };

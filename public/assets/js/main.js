@@ -62,6 +62,58 @@
     g.querySelector('[data-dir="next"]').addEventListener('click', function () { step(1); });
   });
 
+  // Review slideshow: starts when scrolled into view, auto-advances, always slides forward. A copy of the
+  // first review sits at the end; after sliding onto it the track jumps back to the real first review.
+  document.querySelectorAll('.reviews').forEach(function (r) {
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var track = r.querySelector('.reviews__track');
+    var real = Array.prototype.slice.call(track.children);
+    var n = real.length;
+    var copy = real[0].cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    track.appendChild(copy);
+    var slides = Array.prototype.slice.call(track.children);
+    var dots = Array.prototype.slice.call(r.querySelectorAll('.reviews__dots button'));
+    var i = 0, busy = false, timer = null, paused = false;
+    slides.forEach(function (s) { s.classList.remove('is-active'); });
+    function place(k, animate) {
+      if (!animate) track.style.transition = 'none';
+      track.style.transform = 'translateX(' + (-100 * k) + '%)';
+      if (!animate) { void track.offsetWidth; track.style.transition = ''; }
+    }
+    function activate(k) {
+      slides.forEach(function (s, j) {
+        s.classList.toggle('is-active', j === k);
+        if (j < n) s.setAttribute('aria-hidden', j === k % n ? 'false' : 'true');
+      });
+      dots.forEach(function (d, j) { if (j === k % n) d.setAttribute('aria-current', 'true'); else d.removeAttribute('aria-current'); });
+    }
+    function go(k) {
+      if (busy || k === i) return;
+      if (k < 0) { place(n, false); activate(n); i = n; k = n - 1; }
+      busy = true;
+      if (!still) r.classList.add('is-moving');
+      place(k, !still);
+      setTimeout(function () {
+        r.classList.remove('is-moving');
+        if (k === n) { place(0, false); k = 0; }
+        i = k; activate(k); busy = false;
+      }, still ? 0 : 900);
+    }
+    function auto() { clearInterval(timer); if (!paused) timer = setInterval(function () { go(i + 1); }, 7000); }
+    r.querySelector('[data-dir="prev"]').addEventListener('click', function () { go(i - 1); auto(); });
+    r.querySelector('[data-dir="next"]').addEventListener('click', function () { go(i + 1); auto(); });
+    dots.forEach(function (d, j) { d.addEventListener('click', function () { go(j); auto(); }); });
+    r.addEventListener('mouseenter', function () { paused = true; clearInterval(timer); });
+    r.addEventListener('mouseleave', function () { paused = false; auto(); });
+    var started = false;
+    function start() { if (started) return; started = true; activate(0); auto(); }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { start(); io.disconnect(); } }, { threshold: .35 });
+      io.observe(r);
+    } else start();
+  });
+
   // Cabinet solutions slider: loops endlessly. A copy of the cards sits on each side of the originals;
   // once scrolling settles outside the middle set, the track jumps one set back to the same-looking spot.
   document.querySelectorAll('.solutions').forEach(function (s) {
