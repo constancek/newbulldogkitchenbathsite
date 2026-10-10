@@ -91,7 +91,7 @@ const showerBases = [
 const wallStyles = [...pick(colors, ['Calcutta Marble', 'Travertine', 'Arctic Ice', 'Gray']), ...pick(patterns, ['3x6 Subway', 'Hexagonal'])];
 
 const tubStyles = [
-  { name: 'Standard Tub', img: 'tub-6', text: 'A classic alcove tub with a matching wall surround, made for tub and shower combos.' },
+  { name: 'Standard Tub', img: 'hero-bath-1', text: 'A classic alcove tub with a matching wall surround, made for tub and shower combos.' },
   { name: 'Deep Soaker', img: 'tub-8', text: 'Extra depth for a full, relaxing soak.' },
   { name: 'Whirlpool', img: 'tub-5', text: 'Water jets that massage tired muscles.' },
   { name: 'Air Bath', img: 'tub-1', text: 'Gentle air bubbles for a soothing, spa-like soak.' },
@@ -108,7 +108,7 @@ const safetyAddOns = [
   { name: 'Grab Bars', img: 'acc-grab-bar', text: 'Sturdy bars placed exactly where you need support.' },
   { name: 'Shower Seat', img: 'acc-seat', text: 'A built-in or fold-down seat for sitting while you shower.' },
   { name: 'Handheld Shower', img: 'acc-handheld', text: 'A slide-bar handheld you can raise, lower, or hold.' },
-  { name: 'Slip-Resistant Floor', img: 'tts-6', text: 'A textured base floor for steadier footing.' },
+  { name: 'Slip-Resistant Floor', img: 'tts-4', text: 'A textured base floor for steadier footing.' },
 ];
 
 const accessibilityProducts = [
@@ -204,7 +204,7 @@ const kitchenSinks = [
 const faucetTypes = [
   { name: 'Pull-Down', img: 'faucet-5', text: 'A spray head that pulls down into the sink.' },
   { name: 'Single-Handle', img: 'faucet-1', text: 'One lever controls temperature and flow.' },
-  { name: 'Bridge', img: 'faucet-3', text: 'Two handles joined by a bridge for a vintage look.' },
+  { name: 'Two-Handle', img: 'faucet-3', text: 'Separate hot and cold handles for a classic look.' },
   { name: 'Touchless', img: 'opt-faucet-touchless', text: 'Turns on with a wave when your hands are full.' },
 ];
 

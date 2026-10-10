@@ -164,25 +164,23 @@ function productPage(p, base) {
   // Close the first intro paragraph with "Since <year>, Bulldog Kitchen & Bath ..." like Bath Concepts
   const introText = x.since ? p.intro.text.replace('</p>', ` ${sinceLine(x.since)}</p>`) : p.intro.text;
   const benefits = x.benefits ? C.benefitList(x.benefits) : '';
-  // Like Bath Concepts: no gallery on Accessories or Colors & Patterns; on Shower Enclosures it sits right under the header
+  // Like Bath Concepts: no gallery on Accessories or Colors & Patterns
   const showGallery = !p.swatches && !x.accessories;
   const gallery = showGallery ? C.imageGallery({ images: p.gallery, alt: title, wide: ['shower-enclosures', 'bathtubs'].includes(p.slug) }) : '';
-  const galleryFirst = p.slug === 'shower-enclosures';
   const feature = C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/contact/']] });
   // On Colors & Patterns, "See It Before You Buy" comes right after The Bulldog Difference
   const featureFirst = p.slug === 'colors-patterns';
   const body = [
     C.hero({ img: p.hero, alt: title, title: heroTitle, lead: p.lead, kitchen: base === '/kitchens/', product: p.slug }),
-    galleryFirst ? gallery : '',
     C.sideBySide({ ...p.intro, text: introText, alt: title }),
     x.anatomy ? C.anatomy(x.anatomy) : '',
     x.solutions ? C.solutions(x.solutions) : '',
     bulldogDifference(),
     featureFirst ? feature : '',
-    galleryFirst ? '' : gallery,
+    gallery,
+    processSteps(),
     ...(optionSections[p.slug] || []),
     featureFirst ? '' : feature,
-    processSteps(),
     x.accessories ? C.productGrid({ title: 'Shop <strong>Accessories</strong>', ...x.accessories }) : '',
     learnMore(x.learn),
   ].join('\n');
