@@ -59,15 +59,33 @@ const processSteps = (custom = {}) => C.processSteps({
   ],
 });
 
-// Customer reviews slideshow (Home and One Day Remodel)
-const homeReviews = () => C.reviews([
+// Bath reviews (One Day Remodel, Bath Products and every bath product page)
+const bathReviewItems = [
   { img: 'home-review-1', alt: 'Bathroom with a marble-look walk-in shower and a navy double vanity', side: 'right', pos: 'center', name: 'Sarah Miller',
     quote: 'Fantastic job! Our bathroom turned out absolutely <strong>beautiful</strong>, and we couldn\'t be thrilled with the final result.' },
   { img: 'home-review-2', alt: 'Bathroom with a sliding glass shower door and a built-in seat', side: 'left', pos: 'center 40%', name: 'Emily Johnson',
     quote: 'I was truly <strong>speechless</strong> when I walked through the door and saw how incredible everything looked.' },
   { img: 'home-review-3', alt: 'Glass walk-in shower with patterned tile and a floating vanity', side: 'left', pos: 'center', name: 'Jennifer Smith',
     quote: 'Top-quality materials paired with <strong>outstanding craftsmanship</strong> guarantee an exceptional outcome every single time.' },
-]);
+];
+
+// Kitchen reviews (Kitchens overview and every kitchen product page)
+const kitchenReviewItems = [
+  { img: 'kitchens-gallery-8', alt: 'Modern kitchen with wood-look cabinets, a white island and a dark wood breakfast bar', side: 'right', pos: 'center', name: 'Michael Anderson',
+    quote: 'The crew offered <strong>inventive ideas</strong> from start to finish, and our kitchen has a fresh new look!' },
+  { img: 'kitchen-cabinets-gallery-2', alt: 'White raised-panel kitchen cabinets with glass-front uppers and dark countertops', side: 'left', pos: 'center', name: 'Jennifer Thompson',
+    quote: 'We\'re <strong>absolutely delighted</strong> with our cabinet installation, and we\'d gladly hire them again.' },
+  { img: 'countertops-gallery-1', alt: 'Marble-look kitchen island with an undermount sink and a chrome faucet', side: 'right', pos: 'center', name: 'David Miller',
+    quote: 'They refinished my cabinets and replaced my countertops. <strong>Great quality</strong> and great service.' },
+  { img: 'kitchens-gallery-2', alt: 'Kitchen with teal shaker cabinets, a wood-top island and carved wood pantry doors', side: 'left', pos: 'center', name: 'Sarah Johnson',
+    quote: 'Simple, rewarding, and <strong>outstanding work</strong>. I\'m overjoyed with my "new" kitchen. Thank you!' },
+  { img: 'kitchens-gallery-4', alt: 'Glossy cream and taupe kitchen cabinets with a mosaic tile backsplash and built-in ovens', side: 'left', pos: 'center', name: 'Emily Wilson',
+    quote: 'They kept us <strong>within our budget</strong> and never pressured us to spend more. Highly recommend!' },
+];
+const bathReviews = () => C.reviews(bathReviewItems);
+const kitchenReviews = () => C.reviews(kitchenReviewItems);
+// Home: one slideshow with bath and kitchen reviews taking turns
+const homeReviews = () => C.reviews([0, 1, 2, 3, 4].flatMap((i) => [bathReviewItems[i], kitchenReviewItems[i]]).filter(Boolean));
 
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
@@ -187,6 +205,7 @@ function productPage(p, base) {
     bulldogDifference(),
     featureFirst ? feature : '',
     gallery,
+    base === '/kitchens/' ? kitchenReviews() : bathReviews(),
     processSteps(),
     ...(optionSections[p.slug] || []),
     featureFirst ? '' : feature,
@@ -207,6 +226,7 @@ page('/bathrooms/', 'Bath Products', `Explore showers, tub-to-shower conversions
   C.tiles({ tall: true,
     items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/bathrooms/${b.slug}/`, img: b.card })),
       { title: 'Kitchens', href: '/kitchens/', img: 'products-card' }] }),
+  bathReviews(),
   processSteps(),
   learnMore(),
 ].join('\n'));
@@ -227,6 +247,7 @@ page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: ca
   C.tiles({ title: 'Explore <strong>Kitchen Products</strong>', tall: true,
     items: kitchen.map((k) => ({ title: k.plainTitle || k.title, href: `/kitchens/${k.slug}/`, img: k.card })) }),
   C.gallery({ title: 'Kitchen <strong>Gallery</strong>', images: ['kitchens-gallery-1', 'kitchens-gallery-2', 'kitchens-gallery-3', 'kitchens-gallery-4', 'kitchens-gallery-5', 'kitchens-gallery-6', 'kitchens-gallery-7', 'kitchens-gallery-8'] }),
+  kitchenReviews(),
   processSteps(),
   learnMore(),
 ].join('\n'));
@@ -285,7 +306,7 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
   C.sideBySide({ title: 'Quality Products for Your <strong>One Day Remodel</strong>', img: 'financing-header', alt: 'Bathroom remodel',
     text: '<p>Fast doesn\'t mean cutting corners. Our tubs, showers, and wall systems are built from durable, non-porous materials that resist mold, mildew, and stains, and they\'re backed by our lifetime warranty.</p>',
     buttons: [['View Bath Products', '/bathrooms/']] }),
-  homeReviews(),
+  bathReviews(),
 ].join('\n'));
 
 // ---------- Promos & forms ----------
