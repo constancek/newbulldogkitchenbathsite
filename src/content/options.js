@@ -118,20 +118,6 @@ const accessibilityProducts = [
   { name: 'Handheld Shower', img: 'bath-accessories-shop-handheld-shower', text: 'An adjustable slide bar for seated or standing use.' },
 ];
 
-// Walk-in tub feature cards (icon names from icons.js)
-const walkInTherapy = [
-  { icon: 'droplet', title: 'Soaker', text: 'Deep, warm water and a contoured seat for a simple, relaxing soak.' },
-  { icon: 'sparkles', title: 'Hydrotherapy Jets', text: 'Water jets that target your back, legs, and feet.' },
-  { icon: 'sparkle', title: 'Air Jets', text: 'Gentle air bubbles that massage your whole body.' },
-  { icon: 'star', title: 'Combination', text: 'Water and air jets together for the full spa experience.' },
-];
-const walkInComfort = [
-  { icon: 'heart', title: 'Heated Seat', text: 'Stays warm while the tub fills and drains.' },
-  { icon: 'clock', title: 'Fast Drain', text: 'Empties quickly, so you are not waiting to step out.' },
-  { icon: 'droplet', title: 'Handheld Shower', text: 'Rinse off before you open the door.' },
-  { icon: 'home', title: 'Door Direction', text: 'An inward or outward swinging door on the side that fits your bathroom.' },
-];
-
 const vanityStyles = [
   { name: 'Single Vanity', img: 'vanities-option-single-vanity', text: 'One sink with drawers and doors, sized for smaller bathrooms.' },
   { name: 'Double Vanity', img: 'vanities-card', text: 'Two sinks and more storage for shared bathrooms.' },
@@ -221,7 +207,7 @@ const organizerTypes = [
 
 module.exports = {
   finishes, glass, vGroove, colors, patterns,
-  showerBases, wallStyles, tubStyles, showerDoors, safetyAddOns, accessibilityProducts, walkInTherapy, walkInComfort,
+  showerBases, wallStyles, tubStyles, showerDoors, safetyAddOns, accessibilityProducts,
   vanityStyles, cabinetFinishes, vanityTops, vanitySinks, doorStyles, counterMaterials, counterColors,
   backsplashPatterns, backsplashMaterials, kitchenSinks, faucetTypes, kitchenFinishes, organizerTypes,
 };

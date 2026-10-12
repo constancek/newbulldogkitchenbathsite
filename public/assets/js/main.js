@@ -124,14 +124,36 @@
     originals.forEach(function (card) { track.appendChild(copy(card)); });
     originals.slice().reverse().forEach(function (card) { track.insertBefore(copy(card), track.firstChild); });
     function setWidth() { return track.children[2 * n].offsetLeft - track.children[n].offsetLeft; }
+    // Scroll position that puts a card in the middle of the track
+    function centerOf(card) {
+      var t = track.getBoundingClientRect(), c = card.getBoundingClientRect();
+      return track.scrollLeft + (c.left + c.width / 2) - (t.left + t.width / 2);
+    }
+    // Light up whichever card sits closest to the middle; the rest stay faded
+    function markCenter() {
+      var mid = track.getBoundingClientRect(), x = mid.left + mid.width / 2, best, dist = Infinity;
+      Array.prototype.forEach.call(track.children, function (c) {
+        var r = c.getBoundingClientRect(), d = Math.abs(r.left + r.width / 2 - x);
+        if (d < dist) { dist = d; best = c; }
+      });
+      Array.prototype.forEach.call(track.children, function (c) { c.classList.toggle('is-center', c === best); });
+    }
     function jumpTo(left) {
       track.style.scrollSnapType = 'none';
       track.scrollLeft = left;
       track.style.scrollSnapType = '';
     }
-    jumpTo(setWidth());
+    jumpTo(centerOf(track.children[n]));
+    markCenter();
+    // Entrance order: distance from the center card, sliding outward from it
+    Array.prototype.forEach.call(track.children, function (c, k) {
+      var d = k - n;
+      c.style.setProperty('--d', Math.abs(d));
+      c.style.setProperty('--dx', (d < 0 ? 80 : d > 0 ? -80 : 0) + 'px');
+    });
     var settle;
     track.addEventListener('scroll', function () {
+      markCenter();
       clearTimeout(settle);
       settle = setTimeout(function () {
         var w = setWidth();
@@ -139,7 +161,10 @@
         else if (track.scrollLeft >= w * 1.5) jumpTo(track.scrollLeft - w);
       }, 140);
     }, { passive: true });
-    window.addEventListener('resize', function () { jumpTo(setWidth() + (track.scrollLeft % setWidth())); });
+    window.addEventListener('resize', function () {
+      var cur = track.querySelector('.is-center') || track.children[n];
+      jumpTo(centerOf(cur)); markCenter();
+    });
     function step(dir) {
       var card = track.children[n];
       track.scrollBy({ left: dir * (card.offsetWidth + parseFloat(getComputedStyle(track).columnGap || 20)), behavior: 'smooth' });

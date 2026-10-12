@@ -18,7 +18,8 @@ function navItem(item, current) {
     const cur = current === item.href ? ' aria-current="page"' : '';
     return `<li><a class="main-nav__link" href="${item.href}"${cur}>${item.label}</a></li>`;
   }
-  const subs = item.children.map((c) => `<li><a href="${c.href}">${c.label}</a></li>`).join('');
+  const subs = item.children.map((c) => `<li><a href="${c.href}">${c.label}</a></li>`).join('')
+    + (item.all ? `<li><a href="${item.href}">${item.all}</a></li>` : '');
   if (item.href) {
     // Parent is its own link; the small arrow button opens the dropdown on touch and keyboard
     const cur = current === item.href ? ' aria-current="page"' : '';
@@ -337,14 +338,6 @@ function columns({ title, items, grey = true }) {
 </div></section>`;
 }
 
-function steps({ title, items, grey = true }) {
-  const html = items.map((s, i) => `<div class="step"><div class="step__num">0${i + 1}</div><h3>${s.title}</h3><p>${s.text}</p></div>`).join('');
-  return `<section class="section${grey ? ' section--grey' : ''}"><div class="container">
-  <header class="section-head"><h2>${title}</h2></header>
-  <div class="steps">${html}</div>
-</div></section>`;
-}
-
 // Option swatches: photos (img), flat colors (color) or CSS-drawn samples (bg).
 // "wide" lays four landscape samples edge to edge with a centered bold heading (glass options).
 // "lead" is a short sentence shown above the heading.
@@ -480,7 +473,7 @@ function anatomy({ title, lead, img: im, alt, items, tagline }) {
 
 // Sideways slider of square photo cards with titles; arrows sit over the photos (behaviour in main.js)
 function solutions({ title, items }) {
-  const cards = items.map((it, i) => `<figure class="solutions__card" style="--i:${i}"><div class="solutions__photo">${picture(it.img, it.alt)}</div><figcaption>${it.title}</figcaption></figure>`).join('');
+  const cards = items.map((it) => `<figure class="solutions__card"><div class="solutions__photo">${picture(it.img, it.alt)}</div><figcaption>${it.title}</figcaption></figure>`).join('');
   return `<section class="section solutions">
   <div class="container"><header class="materials__head"><h2>${title}</h2></header></div>
   <div class="solutions__wrap">
@@ -518,5 +511,5 @@ function reviews(items) {
 
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, imageGallery, columns, steps, swatches, ctaBlock, beforeAfter, reviews, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, anatomy, solutions, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, swatches, ctaBlock, beforeAfter, reviews, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, anatomy, solutions, icon,
 };

@@ -86,7 +86,9 @@ ul { margin: 0 0 1rem; }
 .logo__img { width: auto; height: 100px; flex: none; }
 @media (max-width: 1260px) { .logo__img { height: 80px; } }
 /* Desktop: slimmer header (about 93px tall); the full-size logo hangs a little below it */
-@media (min-width: 1261px) { .site-header__inner { min-height: 92px; } .logo { align-self: flex-start; height: 92px; padding-block: 0; } .logo__img { position: relative; z-index: 2; height: 100px; top: 14px; } .header-cta { padding-block: .75rem; } }
+@media (min-width: 1261px) { .site-header__inner { min-height: 92px; } .logo { align-self: flex-start; height: 92px; padding-block: 0; } .logo__img { position: relative; z-index: 2; height: 100px; top: 14px; } .header-cta { padding-block: .75rem; }
+  /* Menu sits centered in the space between the logo and the phone number */
+  .logo { margin-right: 0; } .main-nav { flex: 1; } .main-nav > ul { justify-content: center; } }
 @media (max-width: 420px) { .logo__img { height: 64px; } }
 @media (max-width: 374px) { .logo { padding-right: .5rem; } .logo__img { height: 56px; } }
 .main-nav > ul { display: flex; align-items: center; gap: clamp(.5rem, 1.6vw, 2rem); list-style: none; margin: 0; padding: 0; }
@@ -360,13 +362,6 @@ form.sent .form-success { display: block; }
 .column h3 { font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem; }
 .column p { color: var(--text-muted); font-size: .95rem; margin: 0; }
 
-/* Steps */
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1.5rem; counter-reset: step; }
-.step { background: #fff; padding: 2rem 1.5rem; border-top: 4px solid var(--red); }
-.step__num { font-size: 2.5rem; font-weight: 200; color: var(--red); line-height: 1; margin-bottom: .75rem; }
-.step h3 { font-size: 1.15rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem; }
-.step p { color: var(--text-muted); font-size: .95rem; margin: 0; }
-
 /* Swatches */
 .swatch-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 187px)); gap: 1.5rem .95rem; }
 @media (max-width: 1000px) { .swatch-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
@@ -481,12 +476,14 @@ form.sent .form-success { display: block; }
 .feature-image__frame { margin: 0 auto; max-width: 1152px; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, .12); }
 .feature-image__frame img { display: block; width: 100%; height: auto; }
 
-/* Cabinet solutions: sideways slider of square photo cards, arrows centered on the photos */
+/* Cabinet solutions: looping slider with the active card centered and both sides faded out */
 .solutions { --card: clamp(250px, 29vw, 420px); }
 .solutions__wrap { position: relative; }
-.solutions__track { display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+.solutions__track { display: flex; gap: 1.25rem; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: calc(50% - var(--card) / 2);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,.35), #000 10%, #000 90%, rgba(0,0,0,.35)); mask-image: linear-gradient(to right, rgba(0,0,0,.35), #000 10%, #000 90%, rgba(0,0,0,.35)); }
 .solutions__track::-webkit-scrollbar { display: none; }
-.solutions__card { flex: 0 0 var(--card); margin: 0; scroll-snap-align: start; }
+.solutions__card { flex: 0 0 var(--card); margin: 0; scroll-snap-align: center; opacity: .65; scale: .86; transition: opacity .35s ease, scale .35s ease; }
+.solutions__card.is-center { opacity: 1; scale: 1; }
 .solutions__photo { aspect-ratio: 1; overflow: hidden; border-radius: 8px; }
 .solutions__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
 .solutions__card:hover .solutions__photo img { transform: scale(1.06); }
@@ -496,7 +493,7 @@ form.sent .form-success { display: block; }
 .solutions__nav svg { width: 20px; height: 20px; }
 .solutions__nav--prev { left: calc(var(--gutter) + .75rem); }
 .solutions__nav--next { right: calc(var(--gutter) + .75rem); }
-@media (max-width: 640px) { .solutions { --card: 78vw; } .solutions__nav { width: 2.75rem; height: 2.75rem; } }
+@media (max-width: 640px) { .solutions { --card: 72vw; } .solutions__track { -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,.35), #000 6%, #000 94%, rgba(0,0,0,.35)); mask-image: linear-gradient(to right, rgba(0,0,0,.35), #000 6%, #000 94%, rgba(0,0,0,.35)); } .solutions__nav { width: 2.75rem; height: 2.75rem; } }
 
 /* Cabinet anatomy: product photo in the middle, detail photos in red rings on both sides */
 .anatomy { overflow-x: clip; }
@@ -711,8 +708,8 @@ form.sent .form-success { display: block; }
 .js .anatomy__thumb { scale: .4; transition: transform .25s ease, scale .75s cubic-bezier(.34, 1.56, .64, 1); transition-delay: 0s, calc(.68s + var(--i) * .2s); }
 .js .anatomy__grid.is-visible .anatomy__thumb { scale: 1; }
 
-/* 6. Cabinet solutions: cards slide in from the right one after another */
-.js .solutions__card > * { opacity: 0; translate: 48px 0; transition: opacity .8s ease-out, translate .8s ease-out; transition-delay: calc(.23s + var(--i) * .15s); }
+/* 6. Cabinet solutions: the center card rises in first, then the side cards slide out from behind it (--d and --dx set in main.js) */
+.js .solutions__card > * { opacity: 0; translate: var(--dx, 0px) 24px; transition: opacity .7s ease-out, translate .7s ease-out; transition-delay: calc(.2s + var(--d, 0) * .18s); }
 .js .solutions.is-visible .solutions__card > * { opacity: 1; translate: 0 0; }
 
 /* 7. Review slideshow: full-width photo, review card on one side, slides sideways with a motion blur */

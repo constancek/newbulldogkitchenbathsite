@@ -31,10 +31,10 @@ const bath = [
     slug: 'walk-in-tubs', title: 'Walk-In Tubs', card: 'walk-in-tubs-card',
     hero: 'walk-in-tubs-header', lead: 'Bathe safely and comfortably with a low-entry, door-sealed walk-in tub and optional hydrotherapy.',
     intro: { title: 'Safety and Comfort, <strong>Every Day</strong>', img: 'promos-senior',
-      text: '<p>A walk-in tub lets you step in instead of climbing over a high wall. Built-in seating, a leak-proof door, and grab bars help you stay independent at home longer.</p><p>Features include a low step-in threshold, an ADA-height seat, a leak-tight door seal, a handheld shower wand, and optional air and water jets.</p>' },
+      text: '<p>A walk-in tub lets you step in instead of climbing over a high wall. Built-in seating, a leak-proof door, and grab bars help you stay independent at home longer.</p><p>Features include a low step-in threshold, an ADA-height seat, a leak-tight door seal, a handheld shower wand so you can rinse off before you open the door, and a door that swings inward or outward on whichever side fits your bathroom.</p>' },
     gallery: ['walk-in-tubs-card', 'accessibility-intro', 'blog-aging-in-place', 'bathtubs-gallery-2'],
     feature: { title: 'Affordable <strong>Walk-In Tubs</strong>', img: 'walk-in-tubs-feature',
-      text: '<p>Optional air and water jet systems, heated backrests, and fast-drain valves turn your daily bath into a soothing routine that can ease sore muscles and joints. With minimal disruption and no major remodeling, installation often takes as little as one day, making a walk-in tub a smart, affordable investment.</p>' },
+      text: '<p>Choose a simple soaker with deep, warm water, or add a therapy package: water jets that target your back, legs, and feet, air jets that massage your whole body with gentle bubbles, or a combination of both for the full spa experience.</p><p>Heated seats and backrests keep you warm while the tub fills, and fast-drain valves mean less waiting before you step out. Together they turn your daily bath into a soothing routine that can ease sore muscles and joints. With minimal disruption and no major remodeling, installation often takes as little as one day, making a walk-in tub a smart, affordable investment.</p>' },
   },
   {
     slug: 'accessibility', title: 'Accessibility', card: 'accessibility-card',

@@ -34,11 +34,12 @@ const learnMore = (custom = {}) => C.banner({
   buttons: [['Schedule an Estimate', '/about/#contact']],
 });
 
-const bulldogDifference = () => C.difference({
-  title: '<strong>The Bulldog Difference</strong>',
-  tagline: 'Leave the Worry to Us',
+// Pass title/tagline/items to tailor the section to a page (One Day Remodel)
+const bulldogDifference = (custom = {}) => C.difference({
+  title: custom.title || '<strong>The Bulldog Difference</strong>',
+  tagline: custom.tagline || 'Leave the Worry to Us',
   img: 'difference-background',
-  items: [
+  items: custom.items || [
     { icon: 'sparkles', title: 'Designed Around Your Life', text: 'Every detail is thoughtfully managed to simplify decisions, reduce disruption, and respect everyday life.' },
     { icon: 'homeShield', title: 'Built on Certainty', text: 'Careful planning, guaranteed commitments, and clear communication help homeowners know what to expect.' },
     { icon: 'calendarCheck', title: 'Done In Days, Not Months', text: 'Efficient systems and dedicated project focus help reduce time spent living through construction.' },
@@ -46,16 +47,27 @@ const bulldogDifference = () => C.difference({
   ],
 });
 
-const processSteps = () => C.processSteps({
-  title: 'A Thoughtfully Managed Experience <strong>From Start to Finish</strong>',
-  text: 'From your first consultation to the final walkthrough, every step is planned with care to keep your renovation organized, efficient, and designed around your life.',
-  items: [
+// Pass title/text/items to tailor the steps to a page (One Day Remodel)
+const processSteps = (custom = {}) => C.processSteps({
+  title: custom.title || 'A Thoughtfully Managed Experience <strong>From Start to Finish</strong>',
+  text: custom.text || 'From your first consultation to the final walkthrough, every step is planned with care to keep your renovation organized, efficient, and designed around your life.',
+  items: custom.items || [
     { title: 'Discover', text: 'We learn about your home, goals, priorities, and vision.', img: 'steps-discover', alt: 'Finished bathroom with freestanding tub' },
     { title: 'Design', text: 'We guide the layout, selections, investment, and project plan.', img: 'steps-design', alt: 'Reviewing floor plans' },
     { title: 'Build', text: 'Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.', img: 'steps-build', alt: 'Tools laid out on project plans' },
     { title: 'Enjoy', text: 'Return to everyday life in a space thoughtfully designed for you.', img: 'steps-enjoy', alt: 'Relaxing in a new bathtub' },
   ],
 });
+
+// Customer reviews slideshow (Home and One Day Remodel)
+const homeReviews = () => C.reviews([
+  { img: 'home-review-1', alt: 'Bathroom with a marble-look walk-in shower and a navy double vanity', side: 'right', pos: 'center', name: 'Sarah Miller',
+    quote: 'Fantastic job! Our bathroom turned out absolutely <strong>beautiful</strong>, and we couldn\'t be thrilled with the final result.' },
+  { img: 'home-review-2', alt: 'Bathroom with a sliding glass shower door and a built-in seat', side: 'left', pos: 'center 40%', name: 'Emily Johnson',
+    quote: 'I was truly <strong>speechless</strong> when I walked through the door and saw how incredible everything looked.' },
+  { img: 'home-review-3', alt: 'Glass walk-in shower with patterned tile and a floating vanity', side: 'left', pos: 'center', name: 'Jennifer Smith',
+    quote: 'Top-quality materials paired with <strong>outstanding craftsmanship</strong> guarantee an exceptional outcome every single time.' },
+]);
 
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
@@ -80,14 +92,7 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     { img: 'home-before', alt: 'Before: an outdated bathroom', label: 'Before' },
     { img: 'home-after', alt: 'After: a remodeled bathroom', label: 'After' },
   ] }),
-  C.reviews([
-    { img: 'home-review-1', alt: 'Bathroom with a marble-look walk-in shower and a navy double vanity', side: 'right', pos: 'center', name: 'Sarah Miller',
-      quote: 'Fantastic job! Our bathroom turned out absolutely <strong>beautiful</strong>, and we couldn\'t be thrilled with the final result.' },
-    { img: 'home-review-2', alt: 'Bathroom with a sliding glass shower door and a built-in seat', side: 'left', pos: 'center 40%', name: 'Emily Johnson',
-      quote: 'I was truly <strong>speechless</strong> when I walked through the door and saw how incredible everything looked.' },
-    { img: 'home-review-3', alt: 'Glass walk-in shower with patterned tile and a floating vanity', side: 'left', pos: 'center', name: 'Jennifer Smith',
-      quote: 'Top-quality materials paired with <strong>outstanding craftsmanship</strong> guarantee an exceptional outcome every single time.' },
-  ]),
+  homeReviews(),
   C.sideBySide({
     title: 'Quality Products for <strong>Your Home</strong>', img: 'home-quality-products', alt: 'Remodeled kitchen',
     text: '<p>Outdated kitchens and bathrooms can feel cramped, hard to clean, and inefficient. We fix that with durable, low-maintenance products, smart layouts, and an installation process built around your schedule, so you can enjoy your home again.</p>',
@@ -123,10 +128,6 @@ const optionSections = {
     C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit the space your old tub leaves behind.', items: options.showerBases, cards: true, flush: true }),
     C.swatches({ title: 'Doors &amp; Curtain Rods', intro: 'Choose glass or a rod, in the finish that matches your fixtures.', items: options.showerDoors, cards: true, flush: true }),
     C.swatches({ title: 'Safety Add-Ons', intro: 'Small upgrades that make your new shower safer for everyone.', items: options.safetyAddOns, cards: true }),
-  ],
-  'walk-in-tubs': [
-    C.columns({ title: 'Therapy <strong>Packages</strong>', items: options.walkInTherapy, grey: false }),
-    C.columns({ title: 'Comfort <strong>Add-Ons</strong>', items: options.walkInComfort }),
   ],
   accessibility: [
     C.swatches({ title: 'Accessibility Products', intro: 'Mix and match the safety features your household needs.', items: options.accessibilityProducts, cards: true }),
@@ -261,15 +262,30 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
   C.banner({ titleTag: 'h1', bold: true, title: 'A Brand-New Bath in As Little As One Day', img: 'home-one-day-banner', alt: 'Finished one-day bathroom remodel',
     text: 'Most bathroom remodels drag on for weeks. Ours don\'t. Because every product is custom-measured and prepared before install day, our crew can remove your old tub or shower and install your new one, often in a single visit.',
     buttons: [['Schedule an Estimate', '/about/#contact']] }),
-  C.steps({ title: 'How It <strong>Works</strong>', items: [
-    { title: 'Consultation', text: 'We measure your space and help you choose products and finishes.' },
-    { title: 'Custom Fabrication', text: 'Your base, walls, and trim are prepared to your exact measurements.' },
-    { title: 'Install Day', text: 'Our crew removes the old and installs the new, usually in one day.' },
-    { title: 'Enjoy', text: 'We clean up, walk you through care, and register your warranty.' },
-  ] }),
+  bulldogDifference({
+    title: '<strong>The Bulldog Difference in Just One Day</strong>',
+    tagline: 'A New Bath Without the Wait',
+    items: [
+      { icon: 'sparkles', title: 'Little Disruption', text: 'No weeks of torn-up rooms. Your bathroom is out of service for as little as one day, and we clean up before we leave.' },
+      { icon: 'homeShield', title: 'Measured Before Install Day', text: 'Your base, walls, and trim are custom-measured and prepared ahead of time, so install day goes to plan.' },
+      { icon: 'calendarCheck', title: 'Done in As Little As One Day', text: 'Our own crew removes your old tub or shower and installs the new one, often in a single visit.' },
+      { icon: 'diamond', title: 'Quality That Lasts', text: 'Durable, non-porous products resist mold, mildew, and stains, and they are backed by our lifetime warranty.*' },
+    ],
+  }),
+  processSteps({
+    title: 'Your New Bath <strong>in Four Simple Steps</strong>',
+    text: 'Most of the work happens before install day, so the part you live through is short.',
+    items: [
+      { title: 'Consultation', text: 'We measure your bathroom and help you choose your tub or shower, walls, and finishes.', img: 'steps-discover', alt: 'Finished bathroom with freestanding tub' },
+      { title: 'Custom Prep', text: 'Your base, walls, and trim are made to your exact measurements before we arrive.', img: 'steps-design', alt: 'Reviewing floor plans' },
+      { title: 'Install Day', text: 'Our crew removes the old tub or shower and installs the new one, usually in one day.', img: 'steps-build', alt: 'Tools laid out on project plans' },
+      { title: 'Enjoy', text: 'We clean up, show you how to care for your new bath, and register your warranty.', img: 'steps-enjoy', alt: 'Relaxing in a new bathtub' },
+    ],
+  }),
   C.sideBySide({ title: 'Quality Products for Your <strong>One Day Remodel</strong>', img: 'financing-header', alt: 'Bathroom remodel',
     text: '<p>Fast doesn\'t mean cutting corners. Our tubs, showers, and wall systems are built from durable, non-porous materials that resist mold, mildew, and stains, and they\'re backed by our lifetime warranty.*</p>',
     buttons: [['View Bath Products', '/products/']] }),
+  homeReviews(),
 ].join('\n'));
 
 // ---------- Promos & forms ----------
@@ -289,7 +305,7 @@ page('/financing/', 'Financing', `Flexible financing for your kitchen or bathroo
 page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and bathroom remodeling team, and how to reach us for an estimate.`, [
   C.hero({ img: 'about-header', alt: 'Kitchen remodel', title: 'About <strong>Bulldog Kitchen &amp; Bath</strong>', lead: 'Tough on quality. Easy to work with.' }),
   C.sideBySide({ title: 'Who <strong>We Are</strong>', img: 'about-installer', alt: 'Installer laying tile',
-    text: `<h3>We design and install high-quality, affordable showers, tubs, wall systems, cabinets, and countertops, with many bath remodels finished in as little as one day.</h3><p>${SITE.name} was built on a simple idea: remodeling should be stress-free. Since ${SITE.founded} we've helped homeowners in ${SITE.serviceArea} update their kitchens and baths with durable products, honest pricing, and crews who treat your home like their own.</p>` }),
+    text: `<p>We design and install high-quality, affordable showers, tubs, wall systems, cabinets, and countertops, with many bath remodels finished in as little as one day.</p><p>${SITE.name} was built on a simple idea: remodeling should be stress-free. Since ${SITE.founded} we've helped homeowners in ${SITE.serviceArea} update their kitchens and baths with durable products, honest pricing, and crews who treat your home like their own.</p>` }),
   bulldogDifference(),
   C.sideBySide({ title: 'Our <strong>Promise</strong>', img: 'about-family', alt: 'Family cooking together in a bright kitchen', reverse: true, grey: true,
     text: '<p>Every project comes with a design consultation, clear written pricing, a dedicated project coordinator, and a lifetime warranty on our products and workmanship.* If something isn\'t right, we make it right. Great craftsmanship should be affordable, and every project is built to deliver exceptional value.</p><p>We\'re licensed and insured, every installer is background-checked, and our pricing is clear and upfront.</p>' }),

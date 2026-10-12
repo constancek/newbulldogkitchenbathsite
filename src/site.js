@@ -9,7 +9,7 @@ module.exports = {
   email: 'info@bulldogkitchenbath.com', // PLACEHOLDER
   address: '1776 Mentor Ave Ste 315, Cincinnati, OH 45212',
   hours: 'Mon–Sun, 8am–8pm',
-  serviceArea: 'Cincinnati, OH and the surrounding OH, KY & IN tri-state area',
+  serviceArea: 'Cincinnati, Ohio and the surrounding Ohio, KY & IN tri-state area',
   founded: 1993,
   years: new Date().getFullYear() - 1993, // recalculated on every build
   social: { facebook: '#', instagram: '#', youtube: '#' }, // PLACEHOLDER
@@ -18,7 +18,7 @@ module.exports = {
 
   nav: [
     {
-      label: 'Bath', href: '/products/',
+      label: 'Bath', href: '/products/', all: 'All Bath Products',
       children: [
         { label: 'Showers', href: '/products/showers/' },
         { label: 'Bathtubs', href: '/products/bathtubs/' },
@@ -32,7 +32,7 @@ module.exports = {
       ],
     },
     {
-      label: 'Kitchen', href: '/kitchens/',
+      label: 'Kitchen', href: '/kitchens/', all: 'All Kitchen Products',
       children: [
         { label: 'Cabinets', href: '/kitchens/cabinets/' },
         { label: 'Countertops', href: '/kitchens/countertops/' },
@@ -50,10 +50,9 @@ module.exports = {
     },
     { label: 'One Day Remodel', href: '/one-day-bathroom-remodel/' },
     {
-      label: 'About', href: '/about/',
+      label: 'More',
       children: [
         { label: 'About Us', href: '/about/' },
-        { label: 'Contact Us', href: '/about/#contact' },
         { label: 'Blog', href: '/blog/' },
         { label: 'FAQ', href: '/faqs/' },
         { label: 'Warranty', href: '/warranty/' },
