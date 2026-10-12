@@ -15,7 +15,7 @@ const page = (p, title, description, body) => pages.push({ path: p, title, descr
 
 // ---------- Shared blocks ----------
 const promos = {
-  dollarsOff: { title: 'Get $1,250 OFF', text: 'Your full kitchen or bathroom remodel, and a new bath in as little as one day.*', img: 'promos-dollars-off', alt: 'Remodeled bathroom', icon: 'tag' },
+  dollarsOff: { title: 'Get $1,250 OFF', text: 'Your full kitchen or bathroom remodel, and a new bath in as little as one day.*', img: 'promos-dollars-off', alt: 'Bathroom with white subway tile, a red tile stripe and a sliding glass shower door', icon: 'tag' },
   financing: { title: 'FREE Financing', text: 'No interest for 24 months on approved credit.*', img: 'promos-financing', alt: 'Couple planning a remodel budget', icon: 'percent' },
   senior: { title: 'Senior Discounts', text: 'Special savings for homeowners 65 and up. See a design consultant for details.*', img: 'promos-senior', alt: 'Senior couple smiling over paperwork', icon: 'heart' },
   military: { title: 'Military Discounts', text: 'Thank you for your service. Extra savings for active-duty military and veterans.*', img: 'promos-military', alt: 'Military service member', icon: 'flag' },
@@ -52,10 +52,10 @@ const processSteps = (custom = {}) => C.processSteps({
   title: custom.title || 'A Thoughtfully Managed Experience <strong>From Start to Finish</strong>',
   text: custom.text || 'From your first consultation to the final walkthrough, every step is planned with care to keep your renovation organized, efficient, and designed around your life.',
   items: custom.items || [
-    { title: 'Discover', text: 'We learn about your home, goals, priorities, and vision.', img: 'steps-discover', alt: 'Finished bathroom with freestanding tub' },
-    { title: 'Design', text: 'We guide the layout, selections, investment, and project plan.', img: 'steps-design', alt: 'Reviewing floor plans' },
-    { title: 'Build', text: 'Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.', img: 'steps-build', alt: 'Tools laid out on project plans' },
-    { title: 'Enjoy', text: 'Return to everyday life in a space thoughtfully designed for you.', img: 'steps-enjoy', alt: 'Relaxing in a new bathtub' },
+    { title: 'Discover', text: 'We learn about your home, goals, priorities, and vision.', img: 'steps-discover', alt: 'Taking notes on a notepad in a bathroom' },
+    { title: 'Design', text: 'We guide the layout, selections, investment, and project plan.', img: 'steps-design', alt: 'Sketch of a bathroom design with a glass shower and a vanity' },
+    { title: 'Build', text: 'Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.', img: 'steps-build', alt: 'Installing a glass shower enclosure' },
+    { title: 'Enjoy', text: 'Return to everyday life in a space thoughtfully designed for you.', img: 'steps-enjoy', alt: 'Finished bathroom with a floating wood vanity and a tall storage cabinet' },
   ],
 });
 
@@ -90,15 +90,15 @@ const homeReviews = () => C.reviews([0, 1, 2, 3, 4].flatMap((i) => [bathReviewIt
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
   C.carousel([
-    { img: 'home-slide-new-bath', alt: 'Bathtub with a marble-look wall surround and a window', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
+    { img: 'home-slide-new-bath', alt: 'Bathroom with a gray vanity and marble top, a white subway tile walk-in shower with a glass door and a built-in bench', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
     { img: 'home-slide-kitchen', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
-    { img: 'home-slide-promo', alt: 'Bathroom with a tub and shower, granite vanity and shower curtain', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
+    { img: 'home-slide-promo', alt: 'Glass walk-in shower with marble-look wall panels, a built-in niche and a white base', pos: 'center 35%', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
     { img: 'home-slide-quality', alt: 'Bathroom with a gray vanity, tiled glass shower and wood-look floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },
   ]),
   C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
   C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
   C.banner({
-    title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'home-one-day-banner', alt: 'Finished bathroom remodel', badge: '1-DAY',
+    title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'home-one-day-banner', alt: 'Walk-in shower with marble-look wall panels, a grab bar and a glass panel', badge: '1-DAY',
     text: 'Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up, often in a single visit.',
     buttons: [['Schedule an Estimate', '/about/#contact']],
   }),
@@ -280,7 +280,7 @@ page('/inspiration-design-spotlight/', 'Design Spotlight', `Real kitchen and bat
 
 // ---------- One day remodel ----------
 page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful new bathroom in as little as one day with ${SITE.name}.`, [
-  C.banner({ titleTag: 'h1', bold: true, title: 'A Brand-New Bath in As Little As One Day', img: 'home-one-day-banner', alt: 'Finished one-day bathroom remodel',
+  C.banner({ titleTag: 'h1', bold: true, title: 'A Brand-New Bath in As Little As One Day', img: 'home-one-day-banner', alt: 'Walk-in shower with marble-look wall panels, a grab bar and a glass panel',
     text: 'Most bathroom remodels drag on for weeks. Ours don\'t. Because every product is custom-measured and prepared before install day, our crew can remove your old tub or shower and install your new one, often in a single visit.',
     buttons: [['Schedule an Estimate', '/about/#contact']] }),
   bulldogDifference({
@@ -297,10 +297,10 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
     title: 'Your New Bath <strong>in Four Simple Steps</strong>',
     text: 'Most of the work happens before install day, so the part you live through is short.',
     items: [
-      { title: 'Consultation', text: 'We measure your bathroom and help you choose your tub or shower, walls, and finishes.', img: 'steps-discover', alt: 'Finished bathroom with freestanding tub' },
-      { title: 'Custom Prep', text: 'Your base, walls, and trim are made to your exact measurements before we arrive.', img: 'steps-design', alt: 'Reviewing floor plans' },
-      { title: 'Install Day', text: 'Our crew removes the old tub or shower and installs the new one, usually in one day.', img: 'steps-build', alt: 'Tools laid out on project plans' },
-      { title: 'Enjoy', text: 'We clean up, show you how to care for your new bath, and register your warranty.', img: 'steps-enjoy', alt: 'Relaxing in a new bathtub' },
+      { title: 'Consultation', text: 'We measure your bathroom and help you choose your tub or shower, walls, and finishes.', img: 'steps-discover', alt: 'Taking notes on a notepad in a bathroom' },
+      { title: 'Custom Prep', text: 'Your base, walls, and trim are made to your exact measurements before we arrive.', img: 'steps-design', alt: 'Sketch of a bathroom design with a glass shower and a vanity' },
+      { title: 'Install Day', text: 'Our crew removes the old tub or shower and installs the new one, usually in one day.', img: 'steps-build', alt: 'Installing a glass shower enclosure' },
+      { title: 'Enjoy', text: 'We clean up, show you how to care for your new bath, and register your warranty.', img: 'steps-enjoy', alt: 'Finished bathroom with a floating wood vanity and a tall storage cabinet' },
     ],
   }),
   C.sideBySide({ title: 'Quality Products for Your <strong>One Day Remodel</strong>', img: 'financing-header', alt: 'Bathroom remodel',

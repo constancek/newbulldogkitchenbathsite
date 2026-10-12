@@ -127,17 +127,19 @@ ${footer()}
 
 // ---------- Sections ----------
 
+// Each slide: text on the left and the whole photo on the right with rounded corners, over the same photo faded on black (like banner)
 function carousel(slides) {
   const s = slides.map((sl, i) => {
     const H = i === 0 ? 'h1' : 'h2';
     return `<div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${slides.length}">
-      <img src="${img(sl.img)}" alt="${esc(sl.alt)}"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}>
+      <img class="carousel__bg" src="${img(sl.img)}" alt="" aria-hidden="true"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}>
       <div class="carousel__content">
         ${sl.eyebrow ? `<span class="carousel__eyebrow">${sl.eyebrow}</span>` : ''}
         <${H}>${sl.title}</${H}>
         ${sl.text ? `<p>${sl.text}</p>` : ''}
         <a class="button" href="${sl.href}">${sl.cta}</a>
       </div>
+      <div class="carousel__photo"><img src="${img(sl.img)}" alt="${esc(sl.alt)}"${sl.pos ? ` style="object-position:${sl.pos}"` : ''}${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}></div>
     </div>`;
   }).join('');
   const dots = slides.map((_, i) => `<button type="button" aria-label="Go to slide ${i + 1}"></button>`).join('');
@@ -158,16 +160,18 @@ function callout(html) {
 </div></section>`;
 }
 
-function banner({ title, titleTag = 'h2', text, buttons = [], img: im, alt, badge, bold = false }) {
+// split (default): text on the left and the whole photo on the right with rounded corners, over the same photo faded on black as the background
+function banner({ title, titleTag = 'h2', text, buttons = [], img: im, alt, badge, bold = false, split = true }) {
   const btns = buttons.map(([l, h]) => `<a class="button" href="${h}">${l}</a>`).join('');
-  return `<section class="banner${bold ? ' banner--bold' : ''}">
-  ${picture(im, alt || '')}
+  return `<section class="banner${bold ? ' banner--bold' : ''}${split ? ' banner--split' : ''}">
+  ${split ? picture(im, '', ' class="banner__bg" aria-hidden="true"') : picture(im, alt || '')}
   <div class="banner__content">
     ${badge ? `<div class="diamond-badge" aria-hidden="true"><span>${badge}</span></div>` : ''}
     <${titleTag}>${title}</${titleTag}>
     ${text ? `<p>${text}</p>` : ''}
     <div class="button-row">${btns}</div>
   </div>
+  ${split ? `<div class="banner__photo">${picture(im, alt || '')}</div>` : ''}
 </section>`;
 }
 

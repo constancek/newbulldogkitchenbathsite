@@ -47,37 +47,41 @@
 <main id="main">
 <section class="carousel" aria-roledescription="carousel" aria-label="Featured">
   <div class="carousel__track"><div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
-      <img src="/assets/img/home-slide-new-bath.webp" alt="Bathtub with a marble-look wall surround and a window" fetchpriority="high">
+      <img class="carousel__bg" src="/assets/img/home-slide-new-bath.webp" alt="" aria-hidden="true" fetchpriority="high">
       <div class="carousel__content">
         <span class="carousel__eyebrow">Transform Your Bathroom</span>
         <h1>A New Bath in <strong>As Little As One Day</strong></h1>
         <p>Custom showers, tubs, and wall systems installed by our own crews.</p>
         <a class="button" href="/about/#contact">Request an Estimate</a>
       </div>
+      <div class="carousel__photo"><img src="/assets/img/home-slide-new-bath.webp" alt="Bathroom with a gray vanity and marble top, a white subway tile walk-in shower with a glass door and a built-in bench" fetchpriority="high"></div>
     </div><div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
-      <img src="/assets/img/home-slide-kitchen.webp" alt="White kitchen with an island, pendant lights and a breakfast table" loading="lazy">
+      <img class="carousel__bg" src="/assets/img/home-slide-kitchen.webp" alt="" aria-hidden="true" loading="lazy">
       <div class="carousel__content">
         <span class="carousel__eyebrow">Now Remodeling Kitchens</span>
         <h2>The Kitchen <strong>You've Been Waiting For</strong></h2>
         <p>Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.</p>
         <a class="button" href="/kitchens/">Explore Kitchens</a>
       </div>
+      <div class="carousel__photo"><img src="/assets/img/home-slide-kitchen.webp" alt="White kitchen with an island, pendant lights and a breakfast table" loading="lazy"></div>
     </div><div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
-      <img src="/assets/img/home-slide-promo.webp" alt="Bathroom with a tub and shower, granite vanity and shower curtain" loading="lazy">
+      <img class="carousel__bg" src="/assets/img/home-slide-promo.webp" alt="" aria-hidden="true" loading="lazy">
       <div class="carousel__content">
         <span class="carousel__eyebrow">Limited-Time Offer</span>
         <h2>Save <strong>$1,250</strong> on Your Remodel</h2>
         <p>Plus free financing for 24 months on approved credit.*</p>
         <a class="button" href="/current-promos/">Claim Discount Now</a>
       </div>
+      <div class="carousel__photo"><img src="/assets/img/home-slide-promo.webp" alt="Glass walk-in shower with marble-look wall panels, a built-in niche and a white base" style="object-position:center 35%" loading="lazy"></div>
     </div><div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
-      <img src="/assets/img/home-slide-quality.webp" alt="Bathroom with a gray vanity, tiled glass shower and wood-look floor" loading="lazy">
+      <img class="carousel__bg" src="/assets/img/home-slide-quality.webp" alt="" aria-hidden="true" loading="lazy">
       <div class="carousel__content">
         <span class="carousel__eyebrow">Built to Last</span>
         <h2>Affordable Remodels, <strong>Quality You Can Count On</strong></h2>
         <p>Proudly serving Cincinnati, Ohio and the surrounding Ohio, KY & IN tri-state area for over 33 years.</p>
         <a class="button" href="/about/#contact">Book a Design Consultation</a>
       </div>
+      <div class="carousel__photo"><img src="/assets/img/home-slide-quality.webp" alt="Bathroom with a gray vanity, tiled glass shower and wood-look floor" loading="lazy"></div>
     </div></div>
   <div class="carousel__controls">
     <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="stroke-width:2.5"><path d="m15 18-6-6 6-6"/></svg></button>
@@ -92,7 +96,7 @@
 <section class="section bleed">
   <header class="section-head"><h2>Current <strong>Promos</strong></h2><a class="button button--outline" href="/current-promos/">View All Promos</a></header>
   <div class="offer-grid offer-grid--slider"><article class="offer-card">
-    <div class="offer-card__image"><img src="/assets/img/promos-dollars-off.webp" alt="Remodeled bathroom" loading="lazy" decoding="async"><span class="offer-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></span></div>
+    <div class="offer-card__image"><img src="/assets/img/promos-dollars-off.webp" alt="Bathroom with white subway tile, a red tile stripe and a sliding glass shower door" loading="lazy" decoding="async"><span class="offer-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></span></div>
     <div class="offer-card__content">
       <h3 class="offer-card__title">Get $1,250 OFF</h3>
       <div class="offer-card__text">Your full kitchen or bathroom remodel, and a new bath in as little as one day.*</div>
@@ -114,14 +118,15 @@
     </div>
   </article></div>
 </section>
-<section class="banner">
-  <img src="/assets/img/home-one-day-banner.webp" alt="Finished bathroom remodel" loading="lazy" decoding="async">
+<section class="banner banner--split">
+  <img src="/assets/img/home-one-day-banner.webp" alt="" loading="lazy" decoding="async" class="banner__bg" aria-hidden="true">
   <div class="banner__content">
     <div class="diamond-badge" aria-hidden="true"><span>1-DAY</span></div>
     <h2>A Brand-New Bath in <strong>As Little As One Day</strong></h2>
     <p>Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up, often in a single visit.</p>
     <div class="button-row"><a class="button" href="/about/#contact">Schedule an Estimate</a></div>
   </div>
+  <div class="banner__photo"><img src="/assets/img/home-one-day-banner.webp" alt="Walk-in shower with marble-look wall panels, a grab bar and a glass panel" loading="lazy" decoding="async"></div>
 </section>
 <section class="difference">
   <img src="/assets/img/difference-background.webp" alt="" loading="lazy" decoding="async">
@@ -132,8 +137,8 @@
 </section>
 <section class="section process"><div class="container">
   <header class="process__head"><h2>A Thoughtfully Managed Experience <strong>From Start to Finish</strong></h2><p>From your first consultation to the final walkthrough, every step is planned with care to keep your renovation organized, efficient, and designed around your life.</p></header>
-  <ol class="process__steps"><li class="process__step"><span class="process__num">01</span><div class="process__body"><h3>Discover</h3><p>We learn about your home, goals, priorities, and vision.</p><div class="process__step-photo"><img src="/assets/img/steps-discover.webp" alt="Finished bathroom with freestanding tub" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">02</span><div class="process__body"><h3>Design</h3><p>We guide the layout, selections, investment, and project plan.</p><div class="process__step-photo"><img src="/assets/img/steps-design.webp" alt="Reviewing floor plans" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">03</span><div class="process__body"><h3>Build</h3><p>Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.</p><div class="process__step-photo"><img src="/assets/img/steps-build.webp" alt="Tools laid out on project plans" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">04</span><div class="process__body"><h3>Enjoy</h3><p>Return to everyday life in a space thoughtfully designed for you.</p><div class="process__step-photo"><img src="/assets/img/steps-enjoy.webp" alt="Relaxing in a new bathtub" loading="lazy" decoding="async"></div></div></li></ol>
-  <div class="process__photos"><div class="process__photo"><img src="/assets/img/steps-discover.webp" alt="Finished bathroom with freestanding tub" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/steps-design.webp" alt="Reviewing floor plans" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/steps-build.webp" alt="Tools laid out on project plans" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/steps-enjoy.webp" alt="Relaxing in a new bathtub" loading="lazy" decoding="async"></div></div>
+  <ol class="process__steps"><li class="process__step"><span class="process__num">01</span><div class="process__body"><h3>Discover</h3><p>We learn about your home, goals, priorities, and vision.</p><div class="process__step-photo"><img src="/assets/img/steps-discover.webp" alt="Taking notes on a notepad in a bathroom" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">02</span><div class="process__body"><h3>Design</h3><p>We guide the layout, selections, investment, and project plan.</p><div class="process__step-photo"><img src="/assets/img/steps-design.webp" alt="Sketch of a bathroom design with a glass shower and a vanity" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">03</span><div class="process__body"><h3>Build</h3><p>Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.</p><div class="process__step-photo"><img src="/assets/img/steps-build.webp" alt="Installing a glass shower enclosure" loading="lazy" decoding="async"></div></div></li><li class="process__step"><span class="process__num">04</span><div class="process__body"><h3>Enjoy</h3><p>Return to everyday life in a space thoughtfully designed for you.</p><div class="process__step-photo"><img src="/assets/img/steps-enjoy.webp" alt="Finished bathroom with a floating wood vanity and a tall storage cabinet" loading="lazy" decoding="async"></div></div></li></ol>
+  <div class="process__photos"><div class="process__photo"><img src="/assets/img/steps-discover.webp" alt="Taking notes on a notepad in a bathroom" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/steps-design.webp" alt="Sketch of a bathroom design with a glass shower and a vanity" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/steps-build.webp" alt="Installing a glass shower enclosure" loading="lazy" decoding="async"></div><div class="process__photo"><img src="/assets/img/steps-enjoy.webp" alt="Finished bathroom with a floating wood vanity and a tall storage cabinet" loading="lazy" decoding="async"></div></div>
 </div></section>
 <section class="section bleed">
   <header class="section-head"><h2>Explore Our <strong>Products</strong></h2></header>

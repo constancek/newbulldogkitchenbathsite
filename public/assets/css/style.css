@@ -161,22 +161,27 @@ ul { margin: 0 0 1rem; }
 /* Home carousel */
 .carousel { position: relative; overflow: hidden; background: #000; }
 .carousel__track { display: flex; transition: transform .7s ease; }
-.carousel__slide { position: relative; flex: 0 0 100%; min-height: clamp(520px, 68vh, 640px); display: flex; align-items: center; overflow: hidden; }
+.carousel__slide { position: relative; flex: 0 0 100%; min-height: clamp(520px, 68vh, 640px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 4vw, 4rem); align-items: center; padding: 3rem max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter))) 5.5rem; overflow: hidden; }
 .carousel__slide > img, .hero > img, .banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.carousel__slide::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.3) 45%, rgba(0,0,0,0) 75%); }
-.carousel__content { position: relative; z-index: 2; color: #fff; max-width: 580px; margin: 2rem var(--gutter) 5rem; padding: clamp(1.25rem, 2.4vw, 2rem); background: rgba(0,0,0,.6); border-radius: 8px; }
+.carousel__slide > .carousel__bg { opacity: .2; }
+.carousel__photo { position: relative; z-index: 2; aspect-ratio: 3 / 2; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.carousel__photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.carousel__content { position: relative; z-index: 2; color: #fff; max-width: 600px; }
 .carousel__content > :last-child { margin-bottom: 0; }
 .carousel__eyebrow { display: block; font-size: clamp(1rem, 1.65vw, 1.3rem); font-weight: 300; margin-bottom: .35rem; }
 .carousel__content h1, .carousel__content h2 { color: #fff; font-weight: 200; font-size: clamp(2.15rem, 3.75vw, 3.28rem); letter-spacing: -2.5px; line-height: 1.1; margin-bottom: 1rem; }
 .carousel__content h1 strong, .carousel__content h2 strong { font-weight: 500; }
 .carousel__content p { font-size: clamp(1rem, 1.5vw, 1.17rem); font-weight: 400; line-height: 1.6; margin-bottom: 1.4rem; }
-.carousel__controls { position: absolute; left: var(--gutter); bottom: 1.75rem; z-index: 3; display: flex; gap: .6rem; }
+.carousel__controls { position: absolute; left: max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter))); bottom: 1.75rem; z-index: 3; display: flex; gap: .6rem; }
 .carousel__nav { width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 2px solid #fff; background: transparent; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: all .2s; }
 .carousel__nav:hover { background: #fff; color: var(--ink); }
 .carousel__nav svg { width: 14px; height: 14px; }
 .carousel__dots { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; gap: .55rem; }
 .carousel__dots button { width: 8px; height: 8px; border-radius: 50%; border: 0; padding: 0; background: rgba(255,255,255,.5); cursor: pointer; }
 .carousel__dots button[aria-current="true"] { background: #fff; }
+@media (max-width: 900px) {
+  .carousel__slide { grid-template-columns: 1fr; align-content: start; min-height: 0; }
+}
 
 /* Strip under hero */
 .callout { background: var(--ink); color: #fff; }
@@ -253,6 +258,17 @@ ul { margin: 0 0 1rem; }
 .banner--bold h1, .banner--bold h2 { font-size: clamp(2.1rem, 3.6vw, 2.7rem); font-weight: 700; line-height: 1; }
 .banner h2 strong, .banner h1 strong { font-weight: 600; }
 .banner p { font-size: 1.1rem; font-weight: 400; margin-bottom: 2rem; }
+/* Split banner: text on the left, whole photo on the right with rounded corners, the same photo at 20% opacity on black behind */
+.banner--split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 4vw, 4rem); min-height: 0; padding: clamp(3rem, 6vw, 5rem) max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter))); }
+.banner--split::after { display: none; }
+.banner--split > .banner__bg { opacity: .2; }
+.banner--split .banner__content, .banner--split .banner__photo { position: relative; z-index: 1; }
+.banner--split .banner__content { padding: 0; max-width: 600px; }
+.banner__photo { aspect-ratio: 3 / 2; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.banner__photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 900px) {
+  .banner--split { grid-template-columns: 1fr; }
+}
 .diamond-badge { width: 64px; height: 64px; margin: 0 0 1.5rem 8px; border: 2px solid #fff; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; }
 .diamond-badge span { transform: rotate(-45deg); font-weight: 700; font-size: .78rem; white-space: nowrap; }
 
@@ -686,8 +702,8 @@ form.sent .form-success { display: block; }
 .js .process__step:nth-child(3)::after { transition-delay: 1.4s; }
 
 /* 4. Homepage slideshow: slow zoom on the photo, text fades up when a slide becomes active */
-.carousel__slide > img { transition: transform 8s ease-out; }
-.carousel__slide[aria-hidden="false"] > img { transform: scale(1.08); }
+.carousel__slide > img, .carousel__photo img { transition: transform 8s ease-out; }
+.carousel__slide[aria-hidden="false"] > img, .carousel__slide[aria-hidden="false"] .carousel__photo img { transform: scale(1.08); }
 .js .carousel__content > * { opacity: 0; translate: 0 18px; transition: opacity .7s ease-out, translate .7s ease-out; }
 .js .carousel__slide[aria-hidden="false"] .carousel__content > * { opacity: 1; translate: 0 0; }
 .js .carousel__slide[aria-hidden="false"] .carousel__content > :nth-child(2) { transition-delay: .15s; }
@@ -778,7 +794,7 @@ form.sent .form-success { display: block; }
 @media (prefers-reduced-motion: reduce) {
   .js .reveal, .js .process__num, .js .carousel__content > *, .js .anatomy__unit, .js .anatomy__item, .js .anatomy__thumb, .js .solutions__card > * { opacity: 1 !important; translate: none !important; scale: none !important; transition: none !important; }
   .js .process__step::after { transform: none !important; transition: none !important; }
-  .carousel__slide > img { transform: none !important; transition: none !important; }
+  .carousel__slide > img, .carousel__photo img { transform: none !important; transition: none !important; }
   .js .reviews__stars span, .js .reviews__name { opacity: 1 !important; scale: none !important; transition: none !important; }
   .js .reviews__quote p { -webkit-mask-image: none !important; mask-image: none !important; }
   .js .reviews__name::before { transform: none !important; }
