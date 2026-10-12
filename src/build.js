@@ -28,7 +28,7 @@ const promos = {
 };
 
 const exploreBath = (grey = false) => C.tiles({
-  title: 'Explore Our <strong>Products</strong>', grey,
+  title: 'Explore Our <strong>Services</strong>', grey,
   items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/bathrooms/${b.slug}/`, img: b.card })), { title: 'Kitchens', href: '/kitchens/', img: 'products-card-kitchens' }],
 });
 
@@ -248,7 +248,7 @@ page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: ca
     { title: 'MDF / HDF', img: 'kitchens-material-mdf', alt: 'Stack of fiberboard panels', text: 'Engineered from compressed wood fibers, it resists water, warping, and cracking.' },
     { title: 'Particle Board', no: true, img: 'kitchens-material-particle-board', alt: 'Close-up of particle board', text: 'It soaks up water, cracks easily, and wears out sooner, so we don\'t use it.' },
   ] }),
-  C.tiles({ title: 'Explore <strong>Kitchen Products</strong>', tall: true,
+  C.tiles({ title: 'Explore <strong>Kitchen Services</strong>', tall: true,
     items: kitchen.map((k) => ({ title: k.plainTitle || k.title, href: `/kitchens/${k.slug}/`, img: k.card })) }),
   C.gallery({ title: 'Kitchen <strong>Gallery</strong>', images: ['kitchens-gallery-1', 'kitchens-gallery-2', 'kitchens-gallery-3', 'kitchens-gallery-4', 'kitchens-gallery-5', 'kitchens-gallery-6', 'kitchens-gallery-7', 'kitchens-gallery-8'] }),
   kitchenReviews(),
