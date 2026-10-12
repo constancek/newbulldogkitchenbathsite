@@ -1,0 +1,23 @@
+HOW TO REPLACE A PHOTO ON THE WEBSITE
+
+Every photo on the site is in this folder, sorted by page
+(home, promos, process-steps, bathrooms/showers, kitchens/cabinets, and so on).
+
+1. Find the photo you want to change and note its file name,
+   for example: home/home-slide-new-bath.webp
+
+2. Delete it and put your new photo in the same folder with the SAME name.
+   The ending can be .jpg, .png or .webp, for example: home-slide-new-bath.jpg
+
+3. Run the build (npm run build), or ask Claude to rebuild.
+   Your photo is resized if needed, turned into a WebP file and used everywhere
+   the old one appeared.
+
+Tips
+- Wide (landscape) photos work best for sliders and banners.
+- Use photos at least 1200 pixels wide so they look sharp.
+- Keep only one file per name. If two files share a name
+  (like home-slide-new-bath.jpg and home-slide-new-bath.webp) the build stops
+  and tells you which one to delete.
+- Do not edit or delete .converted.json. It remembers which photos are
+  already converted.

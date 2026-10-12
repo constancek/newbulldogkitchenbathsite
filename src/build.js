@@ -8,6 +8,10 @@ const options = require('./content/options');
 const extras = require('./content/product-extras');
 const { pageFaqs } = require('./content/page-faqs');
 const { posts } = require('./content/blog');
+const { syncImages } = require('./images');
+
+// New or replaced photos in images/ become WebP files in public/assets/img
+syncImages();
 
 const OUT = path.join(__dirname, '..', 'public');
 const pages = [];
@@ -90,7 +94,7 @@ const homeReviews = () => C.reviews([0, 1, 2, 3, 4].flatMap((i) => [bathReviewIt
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
   C.carousel([
-    { img: 'home-slide-new-bath', alt: 'Bathroom with a gray vanity and marble top, a white subway tile walk-in shower with a glass door and a built-in bench', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
+    { img: 'home-slide-new-bath', alt: 'Glass corner shower with beige tile, a built-in niche and black fixtures, beside a dark wood vanity', pos: 'center 40%', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
     { img: 'home-slide-kitchen', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
     { img: 'home-slide-promo', alt: 'Glass walk-in shower with marble-look wall panels, a built-in niche and a white base', pos: 'center 35%', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
     { img: 'home-slide-quality', alt: 'Bathroom with a gray vanity, tiled glass shower and wood-look floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },

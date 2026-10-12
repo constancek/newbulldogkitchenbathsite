@@ -9,7 +9,9 @@ src/
   components.js      # shared header/footer + section components
   icons.js           # inline SVG icons
   build.js           # every page is defined here
+  images.js          # turns new or replaced photos in images/ into WebP
   content/           # product, FAQ, blog and legal copy
+images/              # every site photo, sorted by page: replace photos here
 public/              # generated site (deploy this folder)
   assets/css, assets/js, assets/img
 image-credits.json   # Pexels photographer credits for placeholder photos
@@ -25,7 +27,7 @@ Requires Node 18+. Links are root-relative (`/products/showers/`), so preview th
 ## Before launch
 - Replace placeholders in `src/site.js` (phone, address, email, hours, service area, years in business, social links), then `npm run build`.
 - Forms are front-end only (`data-placeholder-form`). Connect them to HubSpot, Formspree, Zapier, etc.
-- Replace Pexels placeholder photos in `public/assets/img/` with real project photos (keep the same filenames, or update references in `src/`).
+- Replace placeholder photos in `images/` with real project photos (same file name, any of .jpg/.png/.webp), then `npm run build`. See `images/HOW TO REPLACE PHOTOS.txt`. Converting needs ffmpeg installed.
 - Review promo/financing copy and the placeholder legal pages (privacy, terms, accessibility, warranty).
 
 ## Deploy
