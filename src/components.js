@@ -431,9 +431,18 @@ function ctaBlock({ title, text, buttons = [] }) {
 </div></section>`;
 }
 
-function faqGroups(groups, intro = '') {
-  const html = groups.map((g, i) => `<div class="faq-group"><div>${i === 0 && intro ? `<p class="faq-group__intro">${intro}</p>` : ''}<h2>${g.title}</h2></div><div class="faq-list">${g.items.map(([q, a]) => `<details class="faq"><summary>${q}</summary><div class="faq__body"><p>${a}</p></div></details>`).join('')}</div></div>`).join('');
-  return `<section class="section"><div class="container">${html}</div></section>`;
+// Page FAQs (last section of a page): heading on the left, open/close questions on the right,
+// plus FAQPage structured data so search engines can show the answers. items: [question, answer] in plain text.
+function faqSection(items) {
+  const list = items.map(([q, a]) => `<details class="faq"><summary>${esc(q)}</summary><div class="faq__body"><p>${esc(a)}</p></div></details>`).join('');
+  const schema = { '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: items.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
+  return `<section class="section"><div class="container"><div class="faq-group">
+  <div><h2>Frequently Asked <strong>Questions</strong></h2></div>
+  <div class="faq-list">${list}</div>
+</div></div>
+<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>
+</section>`;
 }
 
 function formPage({ title, text, media = '', form, bold = false }) {
@@ -511,5 +520,5 @@ function reviews(items) {
 
 module.exports = {
   esc, img, picture, layout, carousel, callout, banner, offerCards, estimateForm, hero, pageBand,
-  sideBySide, cards, tiles, gallery, imageGallery, columns, swatches, ctaBlock, beforeAfter, reviews, benefitList, productGrid, difference, materials, processSteps, faqGroups, formPage, photoStrip, featureImage, anatomy, solutions, icon,
+  sideBySide, cards, tiles, gallery, imageGallery, columns, swatches, ctaBlock, beforeAfter, reviews, benefitList, productGrid, difference, materials, processSteps, faqSection, formPage, photoStrip, featureImage, anatomy, solutions, icon,
 };

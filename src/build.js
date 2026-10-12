@@ -6,7 +6,7 @@ const C = require('./components');
 const { bath, kitchen } = require('./content/products');
 const options = require('./content/options');
 const extras = require('./content/product-extras');
-const { faqs } = require('./content/faqs');
+const { pageFaqs } = require('./content/page-faqs');
 const { posts } = require('./content/blog');
 
 const OUT = path.join(__dirname, '..', 'public');
@@ -25,7 +25,7 @@ const promos = {
 
 const exploreBath = (grey = false) => C.tiles({
   title: 'Explore Our <strong>Products</strong>', grey,
-  items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/products/${b.slug}/`, img: b.card })), { title: 'Kitchens', href: '/kitchens/', img: 'products-card-kitchens' }],
+  items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/bathrooms/${b.slug}/`, img: b.card })), { title: 'Kitchens', href: '/kitchens/', img: 'products-card-kitchens' }],
 });
 
 const learnMore = (custom = {}) => C.banner({
@@ -118,11 +118,11 @@ const optionSections = {
   ],
   showers: [
     C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit your space.', items: options.showerBases, cards: true, flush: true }),
-    C.swatches({ title: 'Wall Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/products/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
+    C.swatches({ title: 'Wall Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/bathrooms/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
   ],
   bathtubs: [
     C.swatches({ title: 'Tub Styles', intro: 'Pick the tub that fits how you like to bathe.', items: options.tubStyles, cards: true, flush: true }),
-    C.swatches({ title: 'Wall Surround Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/products/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
+    C.swatches({ title: 'Wall Surround Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/bathrooms/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
   ],
   'tub-to-shower-conversions': [
     C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit the space your old tub leaves behind.', items: options.showerBases, cards: true, flush: true }),
@@ -195,17 +195,17 @@ function productPage(p, base) {
   ].join('\n');
   page(`${base}${p.slug}/`, title, `${title} from ${SITE.name}. ${p.lead}`, body);
 }
-bath.forEach((p) => productPage(p, '/products/'));
+bath.forEach((p) => productPage(p, '/bathrooms/'));
 kitchen.forEach((p) => productPage(p, '/kitchens/'));
 
 // ---------- Products overview ----------
-page('/products/', 'Bath Products', `Explore showers, tub-to-shower conversions, bathtubs, walk-in tubs, accessibility products, enclosures, vanities, and accessories from ${SITE.name}.`, [
+page('/bathrooms/', 'Bath Products', `Explore showers, tub-to-shower conversions, bathtubs, walk-in tubs, accessibility products, enclosures, vanities, and accessories from ${SITE.name}.`, [
   C.hero({ img: 'products-header', alt: 'Remodeled bathroom', title: 'Our <strong>Products</strong>', lead: 'Durable, beautiful, low-maintenance bath products, custom-fit and installed by our own team.' }),
   C.sideBySide({ title: 'Beautiful, <strong>Durable Products</strong>', img: 'products-feature', alt: 'Bathroom with glass shower',
-    text: '<p>Every product we install is chosen to look great on day one and stay that way for years. Non-porous surfaces resist mold and mildew, colors won\'t fade, and there\'s no grout to scrub. ' + sinceLine('has been installing durable, low-maintenance bath products for homeowners across the area.') + '</p><p>Every product is custom-measured for your space and backed by our lifetime warranty.*</p>' }),
+    text: '<p>Every product we install is chosen to look great on day one and stay that way for years. Non-porous surfaces resist mold and mildew, colors won\'t fade, and there\'s no grout to scrub. ' + sinceLine('has been installing durable, low-maintenance bath products for homeowners across the area.') + '</p><p>Every product is custom-measured for your space and backed by our lifetime warranty.</p>' }),
   bulldogDifference(),
   C.tiles({ tall: true,
-    items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/products/${b.slug}/`, img: b.card })),
+    items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/bathrooms/${b.slug}/`, img: b.card })),
       { title: 'Kitchens', href: '/kitchens/', img: 'products-card' }] }),
   processSteps(),
   learnMore(),
@@ -269,7 +269,7 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
       { icon: 'sparkles', title: 'Little Disruption', text: 'No weeks of torn-up rooms. Your bathroom is out of service for as little as one day, and we clean up before we leave.' },
       { icon: 'homeShield', title: 'Measured Before Install Day', text: 'Your base, walls, and trim are custom-measured and prepared ahead of time, so install day goes to plan.' },
       { icon: 'calendarCheck', title: 'Done in As Little As One Day', text: 'Our own crew removes your old tub or shower and installs the new one, often in a single visit.' },
-      { icon: 'diamond', title: 'Quality That Lasts', text: 'Durable, non-porous products resist mold, mildew, and stains, and they are backed by our lifetime warranty.*' },
+      { icon: 'diamond', title: 'Quality That Lasts', text: 'Durable, non-porous products resist mold, mildew, and stains, and they are backed by our lifetime warranty.' },
     ],
   }),
   processSteps({
@@ -283,8 +283,8 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
     ],
   }),
   C.sideBySide({ title: 'Quality Products for Your <strong>One Day Remodel</strong>', img: 'financing-header', alt: 'Bathroom remodel',
-    text: '<p>Fast doesn\'t mean cutting corners. Our tubs, showers, and wall systems are built from durable, non-porous materials that resist mold, mildew, and stains, and they\'re backed by our lifetime warranty.*</p>',
-    buttons: [['View Bath Products', '/products/']] }),
+    text: '<p>Fast doesn\'t mean cutting corners. Our tubs, showers, and wall systems are built from durable, non-porous materials that resist mold, mildew, and stains, and they\'re backed by our lifetime warranty.</p>',
+    buttons: [['View Bath Products', '/bathrooms/']] }),
   homeReviews(),
 ].join('\n'));
 
@@ -307,16 +307,14 @@ page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and ba
   C.sideBySide({ title: 'Who <strong>We Are</strong>', img: 'about-installer', alt: 'Installer laying tile',
     text: `<p>We design and install high-quality, affordable showers, tubs, wall systems, cabinets, and countertops, with many bath remodels finished in as little as one day.</p><p>${SITE.name} was built on a simple idea: remodeling should be stress-free. Since ${SITE.founded} we've helped homeowners in ${SITE.serviceArea} update their kitchens and baths with durable products, honest pricing, and crews who treat your home like their own.</p>` }),
   bulldogDifference(),
-  C.sideBySide({ title: 'Our <strong>Promise</strong>', img: 'about-family', alt: 'Family cooking together in a bright kitchen', reverse: true, grey: true,
-    text: '<p>Every project comes with a design consultation, clear written pricing, a dedicated project coordinator, and a lifetime warranty on our products and workmanship.* If something isn\'t right, we make it right. Great craftsmanship should be affordable, and every project is built to deliver exceptional value.</p><p>We\'re licensed and insured, every installer is background-checked, and our pricing is clear and upfront.</p>' }),
-  `<section class="section"><div class="container">
-  <header class="section-head section-head--center"><h2>Our <strong>Team</strong></h2></header>
-  <div class="team-grid">
-    ${[['Owner Name', 'Founder &amp; Owner'], ['Team Member', 'Lead Designer'], ['Team Member', 'Installation Manager'], ['Team Member', 'Customer Care']].map(([n, r]) => `<div class="team-card"><div class="team-card__avatar">${n.split(' ').map((w) => w[0]).join('')}</div><h3>${n}</h3><p>${r}</p></div>`).join('')}
-  </div>
-  <p style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:.9rem">Team photos and bios coming soon.</p>
-</div></section>`,
+  C.sideBySide({ title: 'Our <strong>Promise</strong>', img: 'about-family', alt: 'Family preparing food at a granite kitchen island', reverse: true, grey: true,
+    text: '<p>Every project comes with a design consultation, clear written pricing, a dedicated project coordinator, and a lifetime warranty on our products and workmanship. If something isn\'t right, we make it right. Great craftsmanship should be affordable, and every project is built to deliver exceptional value.</p><p>We\'re licensed and insured, every installer is background-checked, and our pricing is clear and upfront.</p>' }),
   processSteps(),
+  // Service area: map centered on the showroom, zoomed out to show the tri-state area (keyless Google Maps embed)
+  C.sideBySide({ title: 'Our <strong>Service Area</strong>', grey: true,
+    media: `<iframe class="map-embed" title="Map of the ${SITE.name} service area around Cincinnati" src="https://www.google.com/maps?q=${encodeURIComponent(SITE.address)}&amp;z=9&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>`,
+    text: `<p>${SITE.name} serves ${SITE.serviceArea}. Our showroom is at ${SITE.address}, and our own crews come to your home for the consultation and the install.</p><p>Not sure if we cover your address? Call us or request an estimate and we will confirm.</p>`,
+    buttons: [['Request an Estimate', '#contact'], [SITE.phone, `tel:${SITE.phoneHref}`, 'button--outline']] }),
   // Contact details and estimate form (the old Contact page); menu and buttons link here as /about/#contact
   C.sideBySide({ id: 'contact', title: 'Get in <strong>Touch</strong>',
     text: `<p>Ready to start, or just have a question? Reach out and a ${SITE.name} design consultant will get back to you quickly.</p>
@@ -328,30 +326,6 @@ page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and ba
 </ul>`,
     media: C.estimateForm({ id: 'contact', heading: 'Request <strong>an Estimate</strong>', message: true }), reverse: true, grey: true }),
   learnMore(),
-].join('\n'));
-
-// ---------- FAQ ----------
-page('/faqs/', 'Frequently Asked Questions', `Answers to common questions about kitchen and bathroom remodeling with ${SITE.name}.`, [
-  C.hero({ img: 'faqs-header', alt: 'Bathroom', title: 'Frequently Asked <strong>Questions</strong>', lead: 'Everything you need to know about remodeling with Bulldog Kitchen &amp; Bath.' }),
-  C.faqGroups(faqs, `At ${SITE.name}, we work hard to make remodeling simple. Here are answers to common questions. To learn more, give us a call and speak with a knowledgeable design consultant.`),
-].join('\n'));
-
-// ---------- Warranty ----------
-page('/warranty/', 'Warranty', `${SITE.name} lifetime warranty information.`, [
-  C.hero({ img: 'warranty-header', alt: 'Happy family in their kitchen', title: '<strong>Warranty</strong>', lead: 'We stand behind every product we install and every job we complete.' }),
-  `<section class="section"><div class="container prose">
-  <div class="notice">Placeholder warranty summary: replace with your official warranty terms before launch.</div>
-  <h2>Lifetime Limited Warranty</h2>
-  <p>Bath products installed by ${SITE.name}, including shower bases, bathtubs, and wall systems, are covered against defects in materials and workmanship for as long as you own your home.</p>
-  <h2>Workmanship Guarantee</h2>
-  <p>Our installation is guaranteed. If a problem is caused by our workmanship, we'll return and fix it at no charge.</p>
-  <h2>Kitchen Products</h2>
-  <p>Cabinets, countertops, sinks, and faucets carry the manufacturer's warranty, plus our own workmanship guarantee on installation.</p>
-  <h2>What's Not Covered</h2>
-  <ul><li>Damage from misuse, abuse, or harsh/abrasive cleaners</li><li>Normal wear, fading from direct sunlight, or minor color variation</li><li>Modifications or repairs made by others</li><li>Pre-existing structural, plumbing, or electrical issues outside our scope of work</li></ul>
-  <h2>Making a Claim</h2>
-  <p>Call us at <a href="tel:${SITE.phoneHref}">${SITE.phone}</a> or email <a href="mailto:${SITE.email}">${SITE.email}</a> with your name, address, and a description or photo of the issue.</p>
-</div></section>`,
 ].join('\n'));
 
 // ---------- Blog ----------
@@ -376,11 +350,22 @@ page('/404', 'Page Not Found', 'The page you were looking for could not be found
 for (const p of pages) {
   const file = p.path === '/404' ? path.join(OUT, '404.html') : path.join(OUT, p.path, 'index.html');
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, C.layout(p));
+  // Every page with FAQs gets them as its last section
+  const faqs = pageFaqs[p.path];
+  fs.writeFileSync(file, C.layout(faqs ? { ...p, body: p.body + '\n' + C.faqSection(faqs) } : p));
 }
 const urls = pages.filter((p) => p.path !== '/404').map((p) => `  <url><loc>https://${SITE.domain}${p.path}</loc></url>`).join('\n');
-fs.mkdirSync(path.join(OUT, 'contact'), { recursive: true });
-fs.writeFileSync(path.join(OUT, 'contact', 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Contact Us | ${SITE.name}</title><link rel="canonical" href="https://${SITE.domain}/about/#contact"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=/about/#contact"><script>location.replace('/about/#contact')</script></head><body><p><a href="/about/#contact">Contact ${SITE.name}</a></p></body></html>\n`);
+// Retired pages forward old links: Contact moved onto About, FAQs moved onto each page, Warranty removed, bath pages moved
+const redirect = (from, to, title) => {
+  fs.mkdirSync(path.join(OUT, from), { recursive: true });
+  fs.writeFileSync(path.join(OUT, from, 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${title} | ${SITE.name}</title><link rel="canonical" href="https://${SITE.domain}${to}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${to}"><script>location.replace('${to}')</script></head><body><p><a href="${to}">${title}</a></p></body></html>\n`);
+};
+redirect('contact', '/about/#contact', 'Contact Us');
+redirect('faqs', '/', 'Frequently Asked Questions');
+redirect('warranty', '/', 'Warranty');
+// Bath pages moved from /products/ to /bathrooms/ to match /kitchens/
+redirect('products', '/bathrooms/', 'Bath Products');
+bath.forEach((p) => redirect(path.join('products', p.slug), `/bathrooms/${p.slug}/`, p.plainTitle || p.title));
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://${SITE.domain}/sitemap.xml\n`);
 console.log(`Built ${pages.length} pages into ${OUT}`);

@@ -18,17 +18,17 @@ module.exports = {
 
   nav: [
     {
-      label: 'Bath', href: '/products/', all: 'All Bath Products',
+      label: 'Bath', href: '/bathrooms/', all: 'All Bath Products',
       children: [
-        { label: 'Showers', href: '/products/showers/' },
-        { label: 'Bathtubs', href: '/products/bathtubs/' },
-        { label: 'Tub-to-Shower Conversions', href: '/products/tub-to-shower-conversions/' },
-        { label: 'Walk-In Tubs', href: '/products/walk-in-tubs/' },
-        { label: 'Accessibility', href: '/products/accessibility/' },
-        { label: 'Shower Enclosures', href: '/products/shower-enclosures/' },
-        { label: 'Vanities', href: '/products/vanities/' },
-        { label: 'Accessories', href: '/products/accessories/' },
-        { label: 'Colors & Patterns', href: '/products/colors-patterns/' },
+        { label: 'Showers', href: '/bathrooms/showers/' },
+        { label: 'Bathtubs', href: '/bathrooms/bathtubs/' },
+        { label: 'Tub-to-Shower Conversions', href: '/bathrooms/tub-to-shower-conversions/' },
+        { label: 'Walk-In Tubs', href: '/bathrooms/walk-in-tubs/' },
+        { label: 'Accessibility', href: '/bathrooms/accessibility/' },
+        { label: 'Shower Enclosures', href: '/bathrooms/shower-enclosures/' },
+        { label: 'Vanities', href: '/bathrooms/vanities/' },
+        { label: 'Accessories', href: '/bathrooms/accessories/' },
+        { label: 'Colors & Patterns', href: '/bathrooms/colors-patterns/' },
       ],
     },
     {
@@ -54,8 +54,6 @@ module.exports = {
       children: [
         { label: 'About Us', href: '/about/' },
         { label: 'Blog', href: '/blog/' },
-        { label: 'FAQ', href: '/faqs/' },
-        { label: 'Warranty', href: '/warranty/' },
       ],
     },
   ],
@@ -63,15 +61,13 @@ module.exports = {
   footerLinks: [
     ['About Us', '/about/'],
     ['Contact Us', '/about/#contact'],
-    ['FAQ', '/faqs/'],
     ['Blog', '/blog/'],
-    ['Warranty Info', '/warranty/'],
-    ['Bath Products', '/products/'],
+    ['Bath Products', '/bathrooms/'],
     ['Kitchen Remodeling', '/kitchens/'],
     ['Current Promos', '/current-promos/'],
     ['Financing', '/financing/'],
   ],
   disclaimer:
-    '*Offers shown are placeholders. Promotions apply to qualifying full remodel projects, cannot be combined with other offers, and must be presented at time of estimate. Financing subject to credit approval. See a ' +
+    '*Promotions apply to qualifying full remodel projects, cannot be combined with other offers, and must be presented at time of estimate. Financing subject to credit approval. See a ' +
     'Bulldog Kitchen &amp; Bath representative for complete details.',
 };
