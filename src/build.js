@@ -17,7 +17,7 @@ const page = (p, title, description, body) => pages.push({ path: p, title, descr
 const promos = {
   dollarsOff: { title: 'Get $1,250 OFF', text: 'Your full kitchen or bathroom remodel, and a new bath in as little as one day.*', img: 'promos-dollars-off', alt: 'Remodeled bathroom', icon: 'tag' },
   financing: { title: 'FREE Financing', text: 'No interest for 24 months on approved credit.*', img: 'promos-financing', alt: 'Couple planning a remodel budget', icon: 'percent' },
-  senior: { title: 'Senior Discounts', text: 'Special savings for homeowners 65 and up. See a design consultant for details.*', img: 'promos-senior', alt: 'Senior couple smiling over paperwork in their kitchen', icon: 'heart' },
+  senior: { title: 'Senior Discounts', text: 'Special savings for homeowners 65 and up. See a design consultant for details.*', img: 'promos-senior', alt: 'Senior couple smiling over paperwork', icon: 'heart' },
   military: { title: 'Military Discounts', text: 'Thank you for your service. Extra savings for active-duty military and veterans.*', img: 'promos-military', alt: 'Military service member', icon: 'flag' },
   sixty: { title: 'Up to 60-Month Financing', text: 'Low monthly payments with flexible terms on approved credit.*', img: 'promos-planning', alt: 'Couple planning on a laptop in their kitchen', icon: 'calendar', href: '/financing/' },
   design: { title: '3D Design Preview', text: 'See your new kitchen or bath in 3D before you commit.', img: 'promos-design', alt: 'Designer reviewing samples', icon: 'pencil' },
@@ -31,7 +31,7 @@ const exploreBath = (grey = false) => C.tiles({
 const learnMore = (custom = {}) => C.banner({
   title: custom.title || 'Learn More About <strong>Bulldog Kitchen &amp; Bath Products</strong>', img: 'colors-patterns-card', alt: 'Stone and tile finish samples',
   text: custom.text || 'Explore every finish, fixture, and layout option we offer for kitchens and baths. Bulldog Kitchen &amp; Bath stands out as the affordable choice for lasting quality and style.',
-  buttons: [['Schedule an Estimate', '/contact/']],
+  buttons: [['Schedule an Estimate', '/about/#contact']],
 });
 
 const bulldogDifference = () => C.difference({
@@ -60,18 +60,18 @@ const processSteps = () => C.processSteps({
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
   C.carousel([
-    { img: 'home-slide-new-bath', alt: 'Bathtub with a marble-look wall surround and a window', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/contact/' },
+    { img: 'home-slide-new-bath', alt: 'Bathtub with a marble-look wall surround and a window', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
     { img: 'home-slide-kitchen', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
     { img: 'home-slide-promo', alt: 'Bathroom with a tub and shower, granite vanity and shower curtain', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
-    { img: 'home-slide-quality', alt: 'Bathroom with a gray vanity, tiled glass shower and wood-look floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/contact/' },
+    { img: 'home-slide-quality', alt: 'Bathroom with a gray vanity, tiled glass shower and wood-look floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },
   ]),
   C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
+  C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
   C.banner({
     title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'home-one-day-banner', alt: 'Finished bathroom remodel', badge: '1-DAY',
     text: 'Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up, often in a single visit.',
-    buttons: [['Schedule an Estimate', '/contact/']],
+    buttons: [['Schedule an Estimate', '/about/#contact']],
   }),
-  C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
   bulldogDifference(),
   processSteps(),
   exploreBath(),
@@ -81,11 +81,11 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     { img: 'home-after', alt: 'After: a remodeled bathroom', label: 'After' },
   ] }),
   C.reviews([
-    { img: 'home-review-1', alt: 'Woman in a robe sitting on the edge of a new bathtub', side: 'left', pos: '65% center', name: 'Sarah Miller',
+    { img: 'home-review-1', alt: 'Bathroom with a marble-look walk-in shower and a navy double vanity', side: 'right', pos: 'center', name: 'Sarah Miller',
       quote: 'Fantastic job! Our bathroom turned out absolutely <strong>beautiful</strong>, and we couldn\'t be thrilled with the final result.' },
-    { img: 'home-review-2', alt: 'Woman at a new wood double vanity', side: 'left', pos: '45% center', name: 'Emily Johnson',
+    { img: 'home-review-2', alt: 'Bathroom with a sliding glass shower door and a built-in seat', side: 'left', pos: 'center 40%', name: 'Emily Johnson',
       quote: 'I was truly <strong>speechless</strong> when I walked through the door and saw how incredible everything looked.' },
-    { img: 'home-review-3', alt: 'Woman sitting on a shower seat holding a grab bar', side: 'right', pos: '55% center', name: 'Jennifer Smith',
+    { img: 'home-review-3', alt: 'Glass walk-in shower with patterned tile and a floating vanity', side: 'left', pos: 'center', name: 'Jennifer Smith',
       quote: 'Top-quality materials paired with <strong>outstanding craftsmanship</strong> guarantee an exceptional outcome every single time.' },
   ]),
   C.sideBySide({
@@ -175,7 +175,7 @@ function productPage(p, base) {
   // Like Bath Concepts: no gallery on Accessories or Colors & Patterns
   const showGallery = !p.swatches && !x.accessories;
   const gallery = showGallery ? C.imageGallery({ images: p.gallery, alt: title, wide: ['shower-enclosures', 'bathtubs'].includes(p.slug) }) : '';
-  const feature = C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/contact/']] });
+  const feature = C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/about/#contact']] });
   // On Colors & Patterns, "See It Before You Buy" comes right after The Bulldog Difference
   const featureFirst = p.slug === 'colors-patterns';
   const body = [
@@ -239,7 +239,7 @@ const styles = [
 page('/inspiration-shop-the-room/', 'Shop the Room', `Browse kitchen and bathroom styles from ${SITE.name} and get the look for your home.`, [
   C.hero({ img: 'shop-the-room-header', alt: 'Styled bathroom', title: 'Shop <strong>The Room</strong>', lead: 'Find a look you love, then request an estimate to bring it home.' }),
   C.cards({ title: 'Get <strong>The Look</strong>', perRow: 3, link: 'Get This Look',
-    items: styles.map(([t, im]) => ({ title: t, img: im, href: '/contact/' })) }),
+    items: styles.map(([t, im]) => ({ title: t, img: im, href: '/about/#contact' })) }),
   exploreBath(),
 ].join('\n'));
 
@@ -252,7 +252,7 @@ const spotlights = [
 page('/inspiration-design-spotlight/', 'Design Spotlight', `Real kitchen and bathroom design ideas from ${SITE.name}.`, [
   C.hero({ img: 'design-spotlight-header', alt: 'Featured bathroom design', title: 'Design <strong>Spotlight</strong>', lead: 'A closer look at finished spaces and the details that make them work.' }),
   ...spotlights.map((s, i) => C.sideBySide({ title: s.title.replace(/<\/?strong>/g, ''), img: s.imgs[0], alt: s.sub, reverse: i % 2 === 1, spot: true,
-    text: `<h3>${s.sub}</h3><p>${s.text}</p>`, buttons: [['Get This Look', '/contact/']] })
+    text: `<h3>${s.sub}</h3><p>${s.text}</p>`, buttons: [['Get This Look', '/about/#contact']] })
     + C.gallery({ images: s.imgs.slice(1), spot: true })),
 ].join('\n'));
 
@@ -260,7 +260,7 @@ page('/inspiration-design-spotlight/', 'Design Spotlight', `Real kitchen and bat
 page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful new bathroom in as little as one day with ${SITE.name}.`, [
   C.banner({ titleTag: 'h1', bold: true, title: 'A Brand-New Bath in As Little As One Day', img: 'home-one-day-banner', alt: 'Finished one-day bathroom remodel',
     text: 'Most bathroom remodels drag on for weeks. Ours don\'t. Because every product is custom-measured and prepared before install day, our crew can remove your old tub or shower and install your new one, often in a single visit.',
-    buttons: [['Schedule an Estimate', '/contact/']] }),
+    buttons: [['Schedule an Estimate', '/about/#contact']] }),
   C.steps({ title: 'How It <strong>Works</strong>', items: [
     { title: 'Consultation', text: 'We measure your space and help you choose products and finishes.' },
     { title: 'Custom Fabrication', text: 'Your base, walls, and trim are prepared to your exact measurements.' },
@@ -285,23 +285,8 @@ page('/financing/', 'Financing', `Flexible financing for your kitchen or bathroo
     form: C.estimateForm({ id: 'fin', promo: true, bare: true }) }),
 ].join('\n'));
 
-page('/contact/', 'Contact Us', `Contact ${SITE.name} for a kitchen or bathroom remodeling estimate.`, [
-  C.banner({ titleTag: 'h1', bold: true, title: 'Contact Us', img: 'contact-banner', alt: 'Remodeled bathroom',
-    text: `Reach out to ${SITE.name} today! Our team is here to answer your questions and help you create the kitchen or bathroom you've been wanting.`,
-    buttons: [[SITE.phone, `tel:${SITE.phoneHref}`]] }),
-  C.sideBySide({ title: 'Get in <strong>Touch</strong>',
-    text: `<p>Ready to start, or just have a question? Reach out and a Bulldog Kitchen &amp; Bath design consultant will get back to you quickly.</p>
-<ul class="contact-list">
-  <li>${C.icon.phone}<div><strong>Call</strong><br><a href="tel:${SITE.phoneHref}">${SITE.phone}</a></div></li>
-  <li>${C.icon.mail}<div><strong>Email</strong><br><a href="mailto:${SITE.email}">${SITE.email}</a></div></li>
-  <li>${C.icon.pin}<div><strong>Showroom</strong><br>${SITE.address}</div></li>
-  <li>${C.icon.clock}<div><strong>Hours</strong><br>${SITE.hours}</div></li>
-</ul>`,
-    media: C.estimateForm({ id: 'contact', heading: 'Request <strong>an Estimate</strong>', message: true }), reverse: true }),
-].join('\n'));
-
 // ---------- About ----------
-page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and bathroom remodeling team.`, [
+page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and bathroom remodeling team, and how to reach us for an estimate.`, [
   C.hero({ img: 'about-header', alt: 'Kitchen remodel', title: 'About <strong>Bulldog Kitchen &amp; Bath</strong>', lead: 'Tough on quality. Easy to work with.' }),
   C.sideBySide({ title: 'Who <strong>We Are</strong>', img: 'about-installer', alt: 'Installer laying tile',
     text: `<h3>We design and install high-quality, affordable showers, tubs, wall systems, cabinets, and countertops, with many bath remodels finished in as little as one day.</h3><p>${SITE.name} was built on a simple idea: remodeling should be stress-free. Since ${SITE.founded} we've helped homeowners in ${SITE.serviceArea} update their kitchens and baths with durable products, honest pricing, and crews who treat your home like their own.</p>` }),
@@ -316,6 +301,16 @@ page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and ba
   <p style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:.9rem">Team photos and bios coming soon.</p>
 </div></section>`,
   processSteps(),
+  // Contact details and estimate form (the old Contact page); menu and buttons link here as /about/#contact
+  C.sideBySide({ id: 'contact', title: 'Get in <strong>Touch</strong>',
+    text: `<p>Ready to start, or just have a question? Reach out and a ${SITE.name} design consultant will get back to you quickly.</p>
+<ul class="contact-list">
+  <li>${C.icon.phone}<div><strong>Call</strong><br><a href="tel:${SITE.phoneHref}">${SITE.phone}</a></div></li>
+  <li>${C.icon.mail}<div><strong>Email</strong><br><a href="mailto:${SITE.email}">${SITE.email}</a></div></li>
+  <li>${C.icon.pin}<div><strong>Showroom</strong><br>${SITE.address}</div></li>
+  <li>${C.icon.clock}<div><strong>Hours</strong><br>${SITE.hours}</div></li>
+</ul>`,
+    media: C.estimateForm({ id: 'contact', heading: 'Request <strong>an Estimate</strong>', message: true }), reverse: true, grey: true }),
   learnMore(),
 ].join('\n'));
 
@@ -351,7 +346,7 @@ page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, 
 posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.excerpt, [
   C.pageBand({ title: p.title, extra: `<p class="post-meta">${p.date} · ${SITE.name}</p>` }),
   `<section class="section"><div class="container prose">${C.picture(p.img, p.title)}${p.body}
-  <p><a class="button" href="/contact/">Request an Estimate</a></p>
+  <p><a class="button" href="/about/#contact">Request an Estimate</a></p>
   <p><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></p></div></section>`,
 ].join('\n')));
 
@@ -368,6 +363,8 @@ for (const p of pages) {
   fs.writeFileSync(file, C.layout(p));
 }
 const urls = pages.filter((p) => p.path !== '/404').map((p) => `  <url><loc>https://${SITE.domain}${p.path}</loc></url>`).join('\n');
+fs.mkdirSync(path.join(OUT, 'contact'), { recursive: true });
+fs.writeFileSync(path.join(OUT, 'contact', 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Contact Us | ${SITE.name}</title><link rel="canonical" href="https://${SITE.domain}/about/#contact"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=/about/#contact"><script>location.replace('/about/#contact')</script></head><body><p><a href="/about/#contact">Contact ${SITE.name}</a></p></body></html>\n`);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://${SITE.domain}/sitemap.xml\n`);
 console.log(`Built ${pages.length} pages into ${OUT}`);

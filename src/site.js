@@ -52,17 +52,18 @@ module.exports = {
     {
       label: 'About', href: '/about/',
       children: [
+        { label: 'About Us', href: '/about/' },
+        { label: 'Contact Us', href: '/about/#contact' },
         { label: 'Blog', href: '/blog/' },
         { label: 'FAQ', href: '/faqs/' },
         { label: 'Warranty', href: '/warranty/' },
-        { label: 'Contact Us', href: '/contact/' },
       ],
     },
   ],
 
   footerLinks: [
     ['About Us', '/about/'],
-    ['Contact Us', '/contact/'],
+    ['Contact Us', '/about/#contact'],
     ['FAQ', '/faqs/'],
     ['Blog', '/blog/'],
     ['Warranty Info', '/warranty/'],

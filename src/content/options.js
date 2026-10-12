@@ -93,7 +93,7 @@ const wallStyles = [...pick(colors, ['Calcutta Marble', 'Travertine', 'Arctic Ic
 const tubStyles = [
   { name: 'Standard Tub', img: 'home-slide-new-bath', text: 'A classic alcove tub with a matching wall surround, made for tub and shower combos.' },
   { name: 'Deep Soaker', img: 'bathtubs-card', text: 'Extra depth for a full, relaxing soak.' },
-  { name: 'Whirlpool', img: 'walk-in-tubs-card', text: 'Water jets that massage tired muscles.' },
+  { name: 'Whirlpool', img: 'bathtubs-whirlpool', text: 'Water jets that massage tired muscles.' },
   { name: 'Air Bath', img: 'bathtubs-header', text: 'Gentle air bubbles for a soothing, spa-like soak.' },
 ];
 

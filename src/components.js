@@ -35,16 +35,16 @@ function header(current) {
     <nav class="main-nav" id="main-nav" aria-label="Main">
       <ul>${SITE.nav.map((n) => navItem(n, current)).join('')}</ul>
       <div class="mobile-only">
-        <a class="button button--block" href="/contact/">Request an Estimate</a>
+        <a class="button button--block" href="/about/#contact">Request an Estimate</a>
         <p style="margin-top:1rem"><a class="header-phone" href="tel:${SITE.phoneHref}">${icon.phone}${SITE.phone}</a></p>
       </div>
     </nav>
     <div class="header-actions">
       <a class="header-phone" href="tel:${SITE.phoneHref}">${icon.phoneSolid}${SITE.phone}</a>
-      <a class="header-cta" href="/contact/">Request an Estimate</a>
+      <a class="header-cta" href="/about/#contact">Request an Estimate</a>
       <div class="header-quick">
         <a class="header-quick__call" href="tel:${SITE.phoneHref}">${icon.phoneSolid}${SITE.phone}</a>
-        <a class="header-quick__cta" href="/contact/">Request Estimate</a>
+        <a class="header-quick__cta" href="/about/#contact">Request Estimate</a>
       </div>
       <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle menu">${icon.menu}</button>
     </div>
@@ -176,7 +176,7 @@ function offerCards({ title, titleTag = 'h2', offers, allLink = true, grey = fal
     <div class="offer-card__content">
       <h3 class="offer-card__title">${o.title}</h3>
       <div class="offer-card__text">${o.text}</div>
-      <a class="offer-card__link" href="${o.href || '/contact/'}">Claim Promo</a>
+      <a class="offer-card__link" href="${o.href || '/about/#contact'}">Claim Promo</a>
     </div>
   </article>`).join('');
   return `<section class="section bleed${grey ? ' section--grey' : ''}">
@@ -257,7 +257,7 @@ function hero({ img: im, alt, title, lead, form = true, kitchen = false, product
   return `<section class="hero">
   <img src="${img(im)}" alt="${esc(alt || '')}" fetchpriority="high">
   <div class="container hero__inner${form ? '' : ' hero__inner--solo'}">
-    <div><h1>${title}</h1>${lead ? `<p class="hero__lead">${lead}</p>` : ''}</div>
+    <div class="hero__text"><h1>${title}</h1>${lead ? `<p class="hero__lead">${lead}</p>` : ''}</div>
     ${form ? estimateForm({ id: 'hero', promo: true, kitchen, product }) : ''}
   </div>
 </section>`;
