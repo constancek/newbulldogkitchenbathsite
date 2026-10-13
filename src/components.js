@@ -309,8 +309,8 @@ function tiles({ title, items, grey = false, tall = false }) {
 </section>`;
 }
 
-// Galleries show at most 5 photos (the first 5 in each list)
-const GALLERY_MAX = 5;
+// Galleries show at most 4 photos (the first 4 in each list)
+const GALLERY_MAX = 4;
 
 function gallery({ title, images, grey = false, spot = false }) {
   images = images.slice(0, GALLERY_MAX);
@@ -325,17 +325,15 @@ function gallery({ title, images, grey = false, spot = false }) {
 </section>`;
 }
 
-// Product photo viewer: one large photo with arrows, thumbnails below (behaviour in main.js)
+// Product photo viewer: one large photo with arrows (behaviour in main.js)
 function imageGallery({ images, alt = 'Project photo', wide = false }) {
   images = images.slice(0, GALLERY_MAX);
-  const thumbs = images.map((g, i) => `<button class="image-gallery__thumb" type="button" data-src="${img(g)}" aria-label="Show photo ${i + 1}"${i === 0 ? ' aria-current="true"' : ''}>${picture(g, '')}</button>`).join('');
   return `<section class="image-gallery${wide ? ' image-gallery--wide' : ''}" aria-label="Photo gallery">
-  <div class="image-gallery__main">
+  <div class="image-gallery__main" data-photos="${images.map(img).join(' ')}">
     <img src="${img(images[0])}" alt="${esc(alt)}" loading="lazy" decoding="async">
     <button class="image-gallery__nav image-gallery__nav--prev" type="button" aria-label="Previous photo">${icon.left}</button>
     <button class="image-gallery__nav image-gallery__nav--next" type="button" aria-label="Next photo">${icon.right}</button>
   </div>
-  <div class="image-gallery__thumbs">${thumbs}</div>
 </section>`;
 }
 

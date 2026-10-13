@@ -627,14 +627,6 @@ form.sent .form-success { display: block; }
 .image-gallery__nav svg { width: 18px; height: 18px; }
 .image-gallery__nav--prev { left: 1rem; }
 .image-gallery__nav--next { right: 1rem; }
-.image-gallery__thumbs { position: relative; display: flex; justify-content: safe center; gap: 1rem; max-width: 728px; margin: 2.5rem auto 0; padding: 4px; overflow-x: auto; scrollbar-width: none; }
-.image-gallery--wide .image-gallery__thumbs { max-width: 1000px; }
-.image-gallery__thumbs::-webkit-scrollbar { display: none; }
-.image-gallery__thumb { flex: none; }
-.image-gallery__thumb { width: 76px; height: 76px; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: pointer; opacity: .75; transition: opacity .2s; }
-.image-gallery__thumb img { width: 100%; height: 100%; object-fit: cover; }
-.image-gallery__thumb:hover, .image-gallery__thumb[aria-current="true"] { opacity: 1; outline: 2px solid var(--ink); outline-offset: 2px; }
-@media (max-width: 560px) { .image-gallery__thumb { width: 56px; height: 56px; } .image-gallery__thumbs { gap: .6rem; margin-top: 1.5rem; } }
 
 /* Menu items that are links and also have a dropdown */
 .main-nav__parent { display: flex; align-items: center; gap: .4rem; }
