@@ -29,3 +29,12 @@ Tips
   and tells you which one to delete.
 - Do not edit or delete .converted.json. It remembers which photos are
   already converted.
+
+Automatic option (drop folder)
+- Run: npm run watch-photos  (or ask Claude to start it) and leave it running.
+- Put a new photo in the "replace donot push" folder with the SAME name as the
+  site photo, for example showers-card.jpg.
+- Within a few seconds it is swapped into images/, the site is rebuilt and the
+  change is pushed to GitHub. "replace donot push/replace-log.txt" says what
+  happened. Photos with a name that does not match are skipped and listed there.
+- The folder itself is never pushed.
