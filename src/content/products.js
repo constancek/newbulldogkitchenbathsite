@@ -68,10 +68,9 @@ const kitchen = [
     hero: 'countertops-header', lead: 'Quartz, granite, and solid-surface countertops, plus the backsplash, sink, and faucet that finish them, installed by our team.',
     intro: { title: 'Surfaces That <strong>Work Hard</strong>', img: 'countertops-intro',
       text: '<p>Your countertop takes daily abuse. We help you choose a surface that stands up to heat, stains, and scratches while matching your cabinets and floors.</p><p>Choose quartz, granite, or solid surface, with undermount sink cutouts, islands and breakfast bars, and an edge profile that suits your style.</p>' },
-    // 4 from Countertops + 4 each from the folded-in Backsplash and Sinks & Faucets pages
+    // 4 from Countertops + 2 each from the folded-in Backsplash and Sinks & Faucets pages
     gallery: ['countertops-gallery-1', 'countertops-gallery-2', 'countertops-gallery-3', 'countertops-gallery-4',
-      'backsplash-gallery-1', 'backsplash-gallery-2', 'backsplash-gallery-3', 'backsplash-gallery-4',
-      'sinks-faucets-gallery-1', 'sinks-faucets-gallery-2', 'sinks-faucets-gallery-3', 'sinks-faucets-gallery-4'],
+      'backsplash-gallery-1', 'backsplash-gallery-2', 'sinks-faucets-gallery-1', 'sinks-faucets-gallery-2'],
     feature: { title: 'Precise <strong>Templating &amp; Install</strong>', img: 'countertops-feature',
       text: '<p>We digitally template your existing layout for a tight, accurate fit, then install with minimal downtime so you can get back to cooking quickly.</p>' },
   },
