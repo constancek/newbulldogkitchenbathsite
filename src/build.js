@@ -210,7 +210,8 @@ function productPage(p, base) {
   const body = [
     C.hero({ img: p.hero, alt: title, title: heroTitle, lead: p.lead, kitchen: base === '/kitchens/', product: p.slug }),
     C.sideBySide({ ...p.intro, text: introText, alt: title }),
-    x.anatomy ? C.anatomy(x.anatomy) : '',
+    // Every kitchen page shows What's Inside Every Cabinet (content lives with Cabinets)
+    x.anatomy || base === '/kitchens/' ? C.anatomy(x.anatomy || extras.cabinets.anatomy) : '',
     x.solutions ? C.solutions(x.solutions) : '',
     bulldogDifference(),
     featureFirst ? feature : '',
@@ -248,6 +249,7 @@ page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: ca
   C.hero({ img: 'kitchens-header', alt: 'Remodeled kitchen', kitchen: true, title: 'Kitchen <strong>Remodeling</strong>', lead: 'From a quick refresh to a full transformation, we design and install kitchens that fit the way you cook and gather.' }),
   C.sideBySide({ title: 'One Team, <strong>Start to Finish</strong>', img: 'kitchens-intro', alt: 'Kitchen with island',
     text: '<p>Juggling separate cabinet, countertop, and plumbing contractors is stressful. With Bulldog Kitchen &amp; Bath, one design consultant and one installation crew handle your entire kitchen, on one schedule and one warranty. ' + sinceLine('has been designing and installing kitchens that fit the way families cook and gather.') + '</p><p>It starts with an in-home design consultation. From there we handle cabinet replacement or refacing, countertops fabricated to fit, and the backsplash, sinks, faucets, and lighting.</p>' }),
+  C.anatomy(extras.cabinets.anatomy),
   C.featureImage({ title: 'Cabinet Styles <strong>&amp; Finishes</strong>', lead: 'Mix and match door styles and finishes to create a kitchen that is all your own.', img: 'kitchens-cabinet-styles',
     alt: 'Kitchen showing cabinet finishes: Graphite Shaker, White Shaker, Light Sage, White Oak, and Sierra Cherry' }),
   C.materials({ title: 'What Our Cabinets <strong>Are Made Of</strong>', lead: 'Quality you can see, built from materials that last.', items: [
