@@ -207,16 +207,30 @@
     mark();
   });
 
-  // Product photo viewer: arrows swap the large photo and the faded copy behind it
+  // Product photo viewer: arrows fade the large photo and the faded copy behind it to the next photo
   document.querySelectorAll('.image-gallery').forEach(function (g) {
     var box = g.querySelector('.image-gallery__main');
     var main = box.querySelector('img');
     var photos = box.getAttribute('data-photos').split(' ');
     var i = 0;
+    var turn = 0;
+    var FADE = 450; // keep in step with the opacity transition in style.css
+    // Load the other photos ahead so each fade is smooth
+    photos.slice(1).forEach(function (src) { new Image().src = src; });
     function show(n) {
       i = (n + photos.length) % photos.length;
-      main.src = photos[i];
-      g.style.setProperty('--gallery-bg', "url('" + photos[i] + "')");
+      var mine = ++turn;
+      g.classList.add('is-fading');
+      setTimeout(function () {
+        var next = new Image();
+        next.onload = next.onerror = function () {
+          if (mine !== turn) return; // a newer click took over
+          main.src = photos[i];
+          g.style.setProperty('--gallery-bg', "url('" + photos[i] + "')");
+          g.classList.remove('is-fading');
+        };
+        next.src = photos[i];
+      }, FADE);
     }
     g.querySelector('.image-gallery__nav--prev').addEventListener('click', function () { show(i - 1); });
     g.querySelector('.image-gallery__nav--next').addEventListener('click', function () { show(i + 1); });
