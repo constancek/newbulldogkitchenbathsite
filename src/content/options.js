@@ -117,7 +117,7 @@ const accessibilityProducts = [
   { name: 'Shower Seat', img: 'bath-accessories-shop-shower-seat', text: 'Built-in and fold-down seating that blends into your walls.' },
   { name: 'Handheld Shower', img: 'bath-accessories-shop-handheld-shower', text: 'An adjustable slide bar for seated or standing use.' },
   { name: 'Tub Grab Bar', img: 'accessibility-card', text: 'A bar at the tub edge for steady support stepping in and out.' },
-  { name: 'Toilet Grab Bar', img: 'accessibility-gallery-1', text: 'Support beside the toilet for sitting down and standing up.' },
+  { name: 'Toilet Grab Bar', img: 'accessibility-toilet-grab-bar', text: 'Support beside the toilet for sitting down and standing up.' },
 ];
 
 const tubAddOns = [
