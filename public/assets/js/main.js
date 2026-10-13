@@ -207,7 +207,7 @@
     mark();
   });
 
-  // Product photo viewer: arrows swap the large photo
+  // Product photo viewer: arrows swap the large photo and the faded copy behind it
   document.querySelectorAll('.image-gallery').forEach(function (g) {
     var box = g.querySelector('.image-gallery__main');
     var main = box.querySelector('img');
@@ -216,6 +216,7 @@
     function show(n) {
       i = (n + photos.length) % photos.length;
       main.src = photos[i];
+      g.style.setProperty('--gallery-bg', "url('" + photos[i] + "')");
     }
     g.querySelector('.image-gallery__nav--prev').addEventListener('click', function () { show(i - 1); });
     g.querySelector('.image-gallery__nav--next').addEventListener('click', function () { show(i + 1); });

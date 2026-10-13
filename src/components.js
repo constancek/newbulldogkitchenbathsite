@@ -325,10 +325,10 @@ function gallery({ title, images, grey = false, spot = false }) {
 </section>`;
 }
 
-// Product photo viewer: one large photo with arrows (behaviour in main.js)
+// Product photo viewer: one large photo with arrows, the same photo faded behind it (behaviour in main.js)
 function imageGallery({ images, alt = 'Project photo', wide = false }) {
   images = images.slice(0, GALLERY_MAX);
-  return `<section class="image-gallery${wide ? ' image-gallery--wide' : ''}" aria-label="Photo gallery">
+  return `<section class="image-gallery${wide ? ' image-gallery--wide' : ''}" aria-label="Photo gallery" style="--gallery-bg: url('${img(images[0])}')">
   <div class="image-gallery__main" data-photos="${images.map(img).join(' ')}">
     <img src="${img(images[0])}" alt="${esc(alt)}" loading="lazy" decoding="async">
     <button class="image-gallery__nav image-gallery__nav--prev" type="button" aria-label="Previous photo">${icon.left}</button>
