@@ -618,7 +618,7 @@ form.sent .form-success { display: block; }
 }
 
 /* Product photo viewer (large photo + thumbnails), like Bath Concepts */
-.image-gallery { padding: clamp(2.5rem, 5vw, 4rem) var(--gutter); }
+.image-gallery { padding: clamp(2.5rem, 5vw, 4rem) var(--gutter); background: var(--ink); }
 .image-gallery__main { position: relative; max-width: 728px; aspect-ratio: 728 / 600; margin: 0 auto; border-radius: 8px; overflow: hidden; background: #eee; }
 .image-gallery--wide .image-gallery__main { max-width: 1000px; aspect-ratio: 1000 / 600; }
 .image-gallery__main img { width: 100%; height: 100%; object-fit: cover; }
