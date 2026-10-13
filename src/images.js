@@ -1,6 +1,7 @@
 // Site photos: the images/ folder holds every photo, sorted into subfolders by page.
 // Replace a file there (same name, as .jpg, .png or .webp) and run the build: changed photos are
-// converted to WebP into public/assets/img. images/.converted.json remembers what is already converted.
+// converted to WebP into public/assets/img, in the same subfolders. Logo and form icons are in
+// public/assets/img/brand and public/assets/img/form-icons. images/.converted.json remembers what is already converted.
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
@@ -61,9 +62,31 @@ function seed() {
   console.log(`Copied ${Object.keys(manifest).length} photos into images/`);
 }
 
-// Convert any new or replaced photo in images/ to public/assets/img/<name>.webp
+// Which folder of images/ each photo is in, by name (for example 'showers-header' -> 'bathrooms/showers')
+let dirs = null;
+function photoDirs() {
+  if (dirs) return dirs;
+  dirs = {};
+  walk(SRC).filter((f) => EXT.test(f)).forEach((f) => {
+    dirs[path.basename(f).replace(EXT, '')] = path.relative(SRC, path.dirname(f)).split(path.sep).join('/');
+  });
+  return dirs;
+}
+const outFile = (name) => path.join(DEST, photoDirs()[name], name + '.webp');
+
+// Site URL of a photo, for example /assets/img/bathrooms/showers/showers-header.webp
+function imgUrl(name) {
+  const dir = photoDirs()[name];
+  if (dir === undefined) {
+    console.warn(`Warning: no photo named "${name}" in images/`);
+    return `/assets/img/${name}.webp`;
+  }
+  return `/assets/img/${dir ? dir + '/' : ''}${name}.webp`;
+}
+
+// Convert any new or replaced photo in images/ to public/assets/img/<same folder>/<name>.webp
 function syncImages() {
-  if (!fs.existsSync(SRC)) return seed();
+  if (!fs.existsSync(SRC)) seed();
   const files = walk(SRC).filter((f) => EXT.test(f));
   const byName = {};
   files.forEach((f) => (byName[path.basename(f).replace(EXT, '')] ||= []).push(f));
@@ -72,11 +95,19 @@ function syncImages() {
     throw new Error('Two photos share a name in images/, delete the old one:\n' +
       dupes.map(([, list]) => list.map((f) => '  ' + path.relative(ROOT, f)).join('\n')).join('\n'));
   }
+  dirs = null;
   const manifest = readManifest();
+  // Converted photos already in public/assets/img, wherever they sit now
+  const existing = {};
+  walk(DEST).filter((f) => f.endsWith('.webp')).forEach((f) => (existing[path.basename(f, '.webp')] ||= []).push(f));
   const changed = [];
   for (const [name, [file]] of Object.entries(byName)) {
     const h = hash(file);
-    const out = path.join(DEST, name + '.webp');
+    const out = outFile(name);
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    // Same photo, new folder: move the converted file instead of converting again
+    const old = (existing[name] || []).find((f) => f !== out);
+    if (manifest[name] === h && !fs.existsSync(out) && old) fs.renameSync(old, out);
     if (manifest[name] === h && fs.existsSync(out)) continue;
     try {
       execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', file, '-vf', "scale='min(2000,iw)':-2", '-c:v', 'libwebp', '-quality', '85', out]);
@@ -86,8 +117,22 @@ function syncImages() {
     manifest[name] = h;
     changed.push(name);
   }
+  // Remove converted photos that are gone from images/ or left in an old folder, then empty folders
+  let removed = 0;
+  walk(DEST).filter((f) => f.endsWith('.webp')).forEach((f) => {
+    const name = path.basename(f, '.webp');
+    if (!byName[name] || f !== outFile(name)) { fs.unlinkSync(f); removed++; }
+  });
+  const prune = (dir) => fs.readdirSync(dir, { withFileTypes: true }).filter((e) => e.isDirectory()).forEach((e) => {
+    const sub = path.join(dir, e.name);
+    prune(sub);
+    if (!fs.readdirSync(sub).length) fs.rmdirSync(sub);
+  });
+  prune(DEST);
+  Object.keys(manifest).forEach((name) => { if (!byName[name]) delete manifest[name]; });
   writeManifest(manifest);
   if (changed.length) console.log(`Updated ${changed.length} photo(s): ${changed.join(', ')}`);
+  if (removed) console.log(`Removed ${removed} old photo file(s) from public/assets/img`);
 }
 
-module.exports = { syncImages };
+module.exports = { syncImages, imgUrl };

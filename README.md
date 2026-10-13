@@ -13,7 +13,8 @@ src/
   content/           # product, FAQ, blog and legal copy
 images/              # every site photo, sorted by page: replace photos here
 public/              # generated site (deploy this folder)
-  assets/css, assets/js, assets/img
+  assets/css, assets/js
+  assets/img/        # converted photos in the same folders as images/, plus brand/ (logo, home-screen icon, badge) and form-icons/
 image-credits.json   # Pexels photographer credits for placeholder photos
 ```
 

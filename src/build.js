@@ -56,10 +56,10 @@ const processSteps = (custom = {}) => C.processSteps({
   title: custom.title || 'A Thoughtfully Managed Experience <strong>From Start to Finish</strong>',
   text: custom.text || 'From your first consultation to the final walkthrough, every step is planned with care to keep your renovation organized, efficient, and designed around your life.',
   items: custom.items || [
-    { title: 'Discover', text: 'We learn about your home, goals, priorities, and vision.', img: 'steps-discover', alt: 'Taking notes on a notepad in a bathroom' },
-    { title: 'Design', text: 'We guide the layout, selections, investment, and project plan.', img: 'steps-design', alt: 'Sketch of a bathroom design with a glass shower and a vanity' },
-    { title: 'Build', text: 'Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.', img: 'steps-build', alt: 'Installing a glass shower enclosure' },
-    { title: 'Enjoy', text: 'Return to everyday life in a space thoughtfully designed for you.', img: 'steps-enjoy', alt: 'Finished bathroom with a floating wood vanity and a tall storage cabinet' },
+    { title: 'Discover', text: 'We learn about your home, goals, priorities, and vision.' },
+    { title: 'Design', text: 'We guide the layout, selections, investment, and project plan.' },
+    { title: 'Build', text: 'Your dedicated team coordinates and manages the renovation with clear communication and minimal disruption.' },
+    { title: 'Enjoy', text: 'Return to everyday life in a space thoughtfully designed for you.' },
   ],
 });
 
@@ -301,10 +301,10 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
     title: 'Your New Bath <strong>in Four Simple Steps</strong>',
     text: 'Most of the work happens before install day, so the part you live through is short.',
     items: [
-      { title: 'Consultation', text: 'We measure your bathroom and help you choose your tub or shower, walls, and finishes.', img: 'steps-discover', alt: 'Taking notes on a notepad in a bathroom' },
-      { title: 'Custom Prep', text: 'Your base, walls, and trim are made to your exact measurements before we arrive.', img: 'steps-design', alt: 'Sketch of a bathroom design with a glass shower and a vanity' },
-      { title: 'Install Day', text: 'Our crew removes the old tub or shower and installs the new one, usually in one day.', img: 'steps-build', alt: 'Installing a glass shower enclosure' },
-      { title: 'Enjoy', text: 'We clean up, show you how to care for your new bath, and register your warranty.', img: 'steps-enjoy', alt: 'Finished bathroom with a floating wood vanity and a tall storage cabinet' },
+      { title: 'Consultation', text: 'We measure your bathroom and help you choose your tub or shower, walls, and finishes.' },
+      { title: 'Custom Prep', text: 'Your base, walls, and trim are made to your exact measurements before we arrive.' },
+      { title: 'Install Day', text: 'Our crew removes the old tub or shower and installs the new one, usually in one day.' },
+      { title: 'Enjoy', text: 'We clean up, show you how to care for your new bath, and register your warranty.' },
     ],
   }),
   C.sideBySide({ title: 'Quality Products for Your <strong>One Day Remodel</strong>', img: 'financing-header', alt: 'Bathroom remodel',

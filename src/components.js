@@ -3,13 +3,13 @@ const SITE = require('./site');
 const icon = require('./icons');
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-// Photos are WebP files named <page>-<section>[-<detail>]
-const img = (name) => `/assets/img/${name}.webp`;
+// Photos are WebP files named <page>-<section>[-<detail>], in public/assets/img/<page folder>/
+const { imgUrl: img } = require('./images');
 const picture = (name, alt, attrs = '') => `<img src="${img(name)}" alt="${esc(alt)}" loading="lazy" decoding="async"${attrs}>`;
 
 function logo() {
   return `<a class="logo" href="/" aria-label="${SITE.name} home">
-    <img class="logo__img" src="/assets/img/logo.png" alt="${SITE.name}" width="560" height="297">
+    <img class="logo__img" src="/assets/img/brand/logo.png" alt="${SITE.name}" width="560" height="297">
   </a>`;
 }
 
@@ -78,7 +78,7 @@ function footer() {
       <div><a href="tel:${SITE.phoneHref}">${SITE.phone}</a></div>
       <div><a href="mailto:${SITE.email}">${SITE.email}</a></div>
       <div>${SITE.hours}</div>
-      <img class="footer__badge" src="/assets/img/made-in-usa.png" alt="Made in the USA" width="122" height="30">
+      <img class="footer__badge" src="/assets/img/brand/made-in-usa.png" alt="Made in the USA" width="122" height="30">
     </div>
     <ul class="footer__links">${links}</ul>
   </div>
@@ -105,7 +105,7 @@ function layout({ path, title, description, body }) {
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/assets/img/brand/apple-touch-icon.png">
 <meta name="theme-color" content="#111111">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,7 +230,7 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
   const keys = PICK_SETS[product] || (kitchen ? ['cabinets', 'countertops', 'backsplash'] : ['bath', 'tub-to-shower', 'walkin']);
   const others = Object.entries(ALL_PRODUCTS).map(([g, list]) => `<optgroup label="${g}">${list.map((o) => `<option>${o}</option>`).join('')}</optgroup>`).join('');
   const interest = picker ?`<fieldset class="interest"><legend>I'm interested in:</legend>
-      ${keys.map((v, i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}><img src="/assets/img/${PICKS[v][1]}" alt="" width="50" height="51"><span>${PICKS[v][0]}</span></label>`).join('')}
+      ${keys.map((v, i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}><img src="/assets/img/form-icons/${PICKS[v][1]}" alt="" width="50" height="51"><span>${PICKS[v][0]}</span></label>`).join('')}
       <div class="interest__more"><label class="sr-only" for="${id}-other">Or choose from all products</label><select id="${id}-other" name="other_product"><option value="">View all products</option>${others}</select></div>
     </fieldset>` : '';
   const head = bare ? '' : promo
@@ -404,13 +404,10 @@ function materials({ title, lead, items }) {
 
 // Numbered process steps joined by a line, with a photo per step
 function processSteps({ title, text, items }) {
-  // Each step also carries its own photo, shown beside the text on phones (the photo row is hidden there)
-  const steps = items.map((s, i) => `<li class="process__step"><span class="process__num">${String(i + 1).padStart(2, '0')}</span><div class="process__body"><h3>${s.title}</h3><p>${s.text}</p><div class="process__step-photo">${picture(s.img, s.alt)}</div></div></li>`).join('');
-  const photos = items.map((s) => `<div class="process__photo">${picture(s.img, s.alt)}</div>`).join('');
+  const steps = items.map((s, i) => `<li class="process__step"><span class="process__num">${String(i + 1).padStart(2, '0')}</span><div class="process__body"><h3>${s.title}</h3><p>${s.text}</p></div></li>`).join('');
   return `<section class="section process"><div class="container">
   <header class="process__head"><h2>${title}</h2>${text ? `<p>${text}</p>` : ''}</header>
   <ol class="process__steps">${steps}</ol>
-  <div class="process__photos">${photos}</div>
 </div></section>`;
 }
 

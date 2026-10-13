@@ -596,23 +596,18 @@ form.sent .form-success { display: block; }
 .process__head h2 { font-size: clamp(1.9rem, 3.4vw, 2.5rem); line-height: 1.15; margin-bottom: 1.25rem; }
 .process__head h2 strong { display: block; }
 .process__head p { margin: 0; }
-.process__steps { list-style: none; padding: 0; margin: 0 0 3rem; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; counter-reset: none; }
+.process__steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; counter-reset: none; }
 .process__step { position: relative; text-align: center; padding: 1.25rem 1rem 1.5rem; background: rgba(255,255,255,.88); border-radius: 12px; box-shadow: 0 0 30px 12px rgba(255,255,255,.6); }
-.process__step:not(:last-child)::after { content: ""; position: absolute; top: calc(1.25rem + 24px); z-index: 1; left: calc(50% + 48px); right: calc(-50% + 48px - 1.5rem); height: 3px; border-radius: 2px; background: rgba(17,17,17,.45); }
-.process__num { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; margin: 0 auto 1.25rem; border-radius: 50%; border: 1px solid var(--red); background: var(--red); box-shadow: 0 0 0 4px #fff, 0 0 0 5px rgba(215,25,32,.35); color: #fff; font-size: 1.15rem; font-weight: 400; }
+.process__step:not(:last-child)::after { content: ""; position: absolute; top: calc(1.25rem + 29px); z-index: 1; left: calc(50% + 53px); right: calc(-50% + 53px - 1.5rem); height: 3px; border-radius: 2px; background: rgba(17,17,17,.45); }
+.process__num { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; margin: 0 auto 1.25rem; border-radius: 50%; border: 1px solid var(--red); background: var(--red); box-shadow: 0 0 0 4px #fff, 0 0 0 5px rgba(215,25,32,.35); color: #fff; font-size: 1.38rem; font-weight: 400; }
 .process__step h3 { font-size: 1.35rem; font-weight: 500; margin-bottom: .6rem; }
 .process__step p { font-size: .9rem; max-width: 240px; margin: 0 auto; }
-.process__photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
-.process__photo { aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; }
-.process__photo img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 900px) {
-  .process__steps, .process__photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .process__step::after { display: none; }
 }
-.process__step-photo { display: none; }
 @media (max-width: 640px) {
-  /* Phones: one list, number on the left, title, text and photo beside it, thin dividers between steps */
-  .process__photos { display: none; }
+  /* Phones: one list, number on the left, title and text beside it, thin dividers between steps */
   .process__steps { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
   .process__step { display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: start; column-gap: 1rem; text-align: left; padding: 1.4rem 1rem; border-radius: 0; box-shadow: none; border-bottom: 1px solid var(--grey-line); }
   .process__step:last-child { border-bottom: 0; }
@@ -620,8 +615,6 @@ form.sent .form-success { display: block; }
   .process__num { grid-column: 1; grid-row: 1 / 3; align-self: center; width: 46px; height: 46px; margin: 0 0 0 5px; font-size: 1rem; }
   .process__step h3 { grid-column: 2; grid-row: 1; font-size: 1.2rem; line-height: 1.2; margin: 0 0 .4rem; }
   .process__step p { grid-column: 2; grid-row: 2; max-width: none; margin: 0; }
-  .process__step-photo { grid-column: 2; grid-row: 3; display: block; width: 75%; margin-top: 1rem; border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; }
-  .process__step-photo img { width: 100%; height: 100%; object-fit: cover; }
 }
 
 /* Product photo viewer (large photo + thumbnails), like Bath Concepts */

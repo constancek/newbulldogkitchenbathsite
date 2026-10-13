@@ -13,6 +13,14 @@ Every photo on the site is in this folder, sorted by page
    Your photo is resized if needed, turned into a WebP file and used everywhere
    the old one appeared.
 
+Where the website copies live
+- After the build, each photo is also in public/assets/img, in the same
+  folder (for example public/assets/img/bathrooms/showers/). Those are made by
+  the build, so always replace photos here in images/, not there.
+- The logo, phone home-screen icon and Made in USA badge are in public/assets/img/brand.
+  The small icons on the estimate form are in public/assets/img/form-icons.
+  To change one of those, replace the file there with the same name and type.
+
 Tips
 - Wide (landscape) photos work best for sliders and banners.
 - Use photos at least 1200 pixels wide so they look sharp.
