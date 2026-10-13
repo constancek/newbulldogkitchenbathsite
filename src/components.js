@@ -309,7 +309,11 @@ function tiles({ title, items, grey = false, tall = false }) {
 </section>`;
 }
 
+// Galleries show at most 5 photos (the first 5 in each list)
+const GALLERY_MAX = 5;
+
 function gallery({ title, images, grey = false, spot = false }) {
+  images = images.slice(0, GALLERY_MAX);
   const items = images.map((g) => `<div class="gallery__item">${picture(g, 'Project photo')}</div>`).join('');
   return `<section class="section gallery${grey ? ' section--grey' : ''}${spot ? ' gallery--spot' : ''}">
   ${title ? `<div class="container"><header class="section-head"><h2>${title}</h2></header></div>` : ''}
@@ -323,6 +327,7 @@ function gallery({ title, images, grey = false, spot = false }) {
 
 // Product photo viewer: one large photo with arrows, thumbnails below (behaviour in main.js)
 function imageGallery({ images, alt = 'Project photo', wide = false }) {
+  images = images.slice(0, GALLERY_MAX);
   const thumbs = images.map((g, i) => `<button class="image-gallery__thumb" type="button" data-src="${img(g)}" aria-label="Show photo ${i + 1}"${i === 0 ? ' aria-current="true"' : ''}>${picture(g, '')}</button>`).join('');
   return `<section class="image-gallery${wide ? ' image-gallery--wide' : ''}" aria-label="Photo gallery">
   <div class="image-gallery__main">

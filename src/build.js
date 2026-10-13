@@ -329,7 +329,7 @@ page('/financing/', 'Financing', `Flexible financing for your kitchen or bathroo
 // ---------- About ----------
 page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and bathroom remodeling team, and how to reach us for an estimate.`, [
   C.hero({ img: 'about-header', alt: 'Kitchen remodel', title: 'About <strong>Bulldog Kitchen &amp; Bath</strong>', lead: 'Tough on quality. Easy to work with.' }),
-  C.sideBySide({ title: 'Who <strong>We Are</strong>', img: 'about-installer', alt: 'Installer laying tile',
+  C.sideBySide({ title: 'Who <strong>We Are</strong>', img: 'about-installer', alt: 'Finished walk-in shower with marble-look walls and a sliding glass door',
     text: `<p>We design and install high-quality, affordable showers, tubs, wall systems, cabinets, and countertops, with many bath remodels finished in as little as one day.</p><p>${SITE.name} was built on a simple idea: remodeling should be stress-free. Since ${SITE.founded} we've helped homeowners in ${SITE.serviceArea} update their kitchens and baths with durable products, honest pricing, and crews who treat your home like their own.</p>` }),
   bulldogDifference(),
   C.sideBySide({ title: 'Our <strong>Promise</strong>', img: 'about-family', alt: 'Family preparing food at a granite kitchen island', reverse: true, grey: true,
