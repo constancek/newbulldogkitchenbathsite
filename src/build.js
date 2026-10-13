@@ -250,7 +250,7 @@ page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: ca
   ] }),
   C.tiles({ title: 'Explore <strong>Kitchen Services</strong>', tall: true,
     items: kitchen.map((k) => ({ title: k.plainTitle || k.title, href: `/kitchens/${k.slug}/`, img: k.card })) }),
-  C.gallery({ title: 'Kitchen <strong>Gallery</strong>', images: ['kitchens-gallery-1', 'kitchens-gallery-2', 'kitchens-gallery-3', 'kitchens-gallery-4', 'kitchens-gallery-5', 'kitchens-gallery-6', 'kitchens-gallery-7', 'kitchens-gallery-8'] }),
+  C.gallery({ title: 'Kitchen <strong>Gallery</strong>', images: ['kitchens-gallery-1', 'kitchens-gallery-2', 'kitchens-gallery-3', 'kitchens-gallery-4', 'kitchens-gallery-8'] }),
   kitchenReviews(),
   processSteps(),
   learnMore(),
