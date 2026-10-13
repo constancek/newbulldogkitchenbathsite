@@ -2,7 +2,7 @@
 //   since:   ending of the "Since <year>, Bulldog Kitchen & Bath ..." sentence in the intro
 //   benefits: labelled points shown in the feature section
 //   learn:   closing "Learn More" banner text for that product
-//   accessories: named accessory grid with category filters (accessories page)
+//   accessories: named accessory grid with category filters (Showers page)
 //   anatomy: cabinet photo with labeled construction details, shown right after the intro
 //   solutions: sideways slider of photo cards, shown after the anatomy section
 
@@ -19,7 +19,18 @@ module.exports = {
     since: 'has been helping homeowners replace worn-out tubs and showers with durable, easy-care shower systems built to last.',
     benefits: standard('shower'),
     learn: { title: 'Learn More About <strong>Bulldog Showers</strong>',
-      text: 'Whether you\'re replacing an old shower or converting a tub, Bulldog Kitchen &amp; Bath builds showers that combine solid craftsmanship with thoughtful design, so you can count on dependable quality and lasting value. Request an estimate or call us to talk through your options.' },
+      text: 'Whether you\'re replacing an old shower or converting a tub, Bulldog Kitchen &amp; Bath builds showers, glass doors, and the storage that goes with them, combining solid craftsmanship with thoughtful design. Request an estimate or call us to talk through your options.' },
+    accessories: {
+      filters: [['storage', 'Storage'], ['fixtures', 'Shower Heads & Fixtures']],
+      items: [
+        { name: 'Recessed Niche', img: 'bath-accessories-shop-recessed-niche', cat: 'storage' },
+        { name: 'Shower Shelf', img: 'bath-accessories-shop-shower-shelf', cat: 'storage' },
+        { name: 'Built-In Shelving', img: 'bath-accessories-card', cat: 'storage' },
+        { name: 'Towel Bars', img: 'bath-accessories-shop-towel-bars', cat: 'storage' },
+        { name: 'Rain Shower Head', img: 'bath-accessories-shop-rain-shower-head', cat: 'fixtures' },
+        { name: 'Handheld Shower', img: 'bath-accessories-shop-handheld-shower', cat: 'fixtures' },
+      ],
+    },
   },
   bathtubs: {
     since: 'has been installing bathtubs that stand up to everyday family life while staying easy to clean.',
@@ -36,9 +47,10 @@ module.exports = {
       ['Heated Backrest', 'Stay warm and comfortable while the tub fills and drains.'],
       ['Quick Drain', 'Faster draining means less time waiting before you step out.'],
     ],
-    learn: { title: 'Learn More About <strong>Bulldog Walk-In Tubs</strong>',
-      text: 'Enjoy bathing again with a safe, comfortable walk-in tub that fits your existing space. Call us or request an estimate to learn about affordable accessibility options.' },
+    learn: { title: 'Learn More About <strong>Walk-In Tubs &amp; Accessibility</strong>',
+      text: 'Enjoy bathing again with a safe, comfortable walk-in tub that fits your existing space, and make the rest of your bathroom safer without it looking clinical. Call us or request an estimate to plan your upgrade.' },
   },
+  // Benefit list shown on Walk-In Tubs & Accessibility
   accessibility: {
     since: 'has been designing accessible bathrooms that help seniors and people with limited mobility bathe safely at home.',
     benefits: [
@@ -50,48 +62,6 @@ module.exports = {
     ],
     learn: { title: 'Learn More About <strong>Accessible Bathrooms</strong>',
       text: 'Our accessible designs help you stay safe and independent at home without giving up a beautiful bathroom. Call us or request an estimate to plan your upgrade.' },
-  },
-  'shower-enclosures': {
-    since: 'has been finishing showers with glass doors and enclosures that are measured, fitted, and sealed by our own crews.',
-    benefits: [
-      ['Sliding & Bypass Doors', 'Space-saving doors that glide open, ideal for tubs and wide showers.'],
-      ['Pivot & Hinged Doors', 'A clean, frameless-style look for walk-in showers.'],
-      ['Curtain Rods', 'Straight and curved rods in the same four finishes as our doors.'],
-      ['Protective Glass Coating', 'Helps water bead off so spots and soap scum wipe away.'],
-      ['Custom-Measured', 'Every enclosure is sized to your opening for a precise, watertight fit.'],
-    ],
-    learn: { title: 'Learn More About <strong>Bulldog Shower Enclosures</strong>',
-      text: 'The right door finishes your new shower and keeps water where it belongs, and Bulldog Kitchen &amp; Bath is the affordable choice for lasting quality and style. Request an estimate or call us to see glass and finish samples.' },
-  },
-  accessories: {
-    since: 'has been helping homeowners add the storage, safety, and finishing touches that make a bathroom work every day.',
-    benefits: [
-      ['Faucets & Spouts', 'Coordinated finishes from the tub spout to the sink.'],
-      ['Shower Heads', 'Rain heads, handheld wands, and multi-setting massage heads.'],
-      ['Grab Bars', 'Decorative bars that add safety without looking clinical.'],
-      ['Shower Seats', 'Built-in and fold-down seating that blends into your wall system.'],
-      ['Storage', 'Recessed niches, corner shelves, and caddies that keep everything in reach.'],
-      ['Foot Rests & Soap Dishes', 'Small details in colors and patterns that match your walls.'],
-    ],
-    learn: { title: 'Learn More About <strong>Bulldog Accessories</strong>',
-      text: 'Make your new bath or shower fit the way your family lives. Request an estimate or call us to choose accessories during your design consultation.' },
-    accessories: {
-      filters: [['storage', 'Storage'], ['safety', 'Safety & Seating'], ['fixtures', 'Shower Heads & Fixtures']],
-      items: [
-        { name: 'Recessed Niche', img: 'bath-accessories-shop-recessed-niche', cat: 'storage' },
-        { name: 'Shower Shelf', img: 'bath-accessories-shop-shower-shelf', cat: 'storage' },
-        { name: 'Built-In Shelving', img: 'bath-accessories-card', cat: 'storage' },
-        { name: 'Towel Bars', img: 'bath-accessories-shop-towel-bars', cat: 'storage' },
-        { name: 'Grab Bar', img: 'bath-accessories-shop-grab-bar', cat: 'safety' },
-        { name: 'Tub Grab Bar', img: 'accessibility-card', cat: 'safety' },
-        { name: 'Toilet Grab Bar', img: 'accessibility-gallery-1', cat: 'safety' },
-        { name: 'Shower Seat', img: 'bath-accessories-shop-shower-seat', cat: 'safety' },
-        { name: 'Rain Shower Head', img: 'bath-accessories-shop-rain-shower-head', cat: 'fixtures' },
-        { name: 'Handheld Shower', img: 'bath-accessories-shop-handheld-shower', cat: 'fixtures' },
-        { name: 'Tub Spout', img: 'bath-accessories-shop-tub-spout', cat: 'fixtures' },
-        { name: 'Shower Curtain Rod', img: 'bath-accessories-shop-shower-curtain-rod', cat: 'fixtures' },
-      ],
-    },
   },
   'colors-patterns': {
     since: 'has been helping homeowners choose colors and patterns that make a new bathroom feel like their own.',
@@ -128,12 +98,6 @@ module.exports = {
   countertops: {
     since: 'has been fabricating and installing countertops that stand up to busy kitchens.',
   },
-  backsplash: {
-    since: 'has been installing backsplashes that protect kitchen walls and pull the whole room together.',
-  },
-  'sinks-faucets': {
-    since: 'has been matching sinks and faucets to the way homeowners cook, clean, and entertain.',
-  },
   'tub-to-shower-conversions': {
     since: 'has been turning hard-to-use tubs into safe, easy-entry showers.',
     benefits: [
@@ -158,6 +122,7 @@ module.exports = {
     learn: { title: 'Learn More About <strong>Bulldog Vanities</strong>',
       text: 'See cabinet colors, tops, and sinks in person during your design consultation. Request an estimate or call us to get started.' },
   },
+  // Benefit list shown on Cabinets
   'organizers-accessories': {
     since: 'has been fitting kitchen cabinets with organizers that make everyday cooking easier.',
     benefits: [

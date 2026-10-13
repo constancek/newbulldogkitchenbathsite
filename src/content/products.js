@@ -1,7 +1,7 @@
 // Product category pages (bath + kitchen). Each entry renders with the product page template.
 const bath = [
   {
-    slug: 'showers', title: 'Showers', card: 'showers-card',
+    slug: 'showers', title: 'Showers &amp; Enclosures', plainTitle: 'Showers & Enclosures', card: 'showers-card',
     hero: 'showers-header', lead: 'Low-maintenance, custom-fit showers designed around the way you live, installed fast by our own crews.',
     intro: { title: 'A Shower for <strong>Every Lifestyle</strong>', img: 'blog-tub-to-shower',
       text: '<p>Whether you want a sleek walk-in, a tub-to-shower conversion, or a safer low-threshold base, we build a cost-effective shower that fits your space and your routine. Our solid-surface wall systems go up over a properly prepared substrate with no grout lines to scrub.</p><p>Every base and wall panel is custom-measured for your space, and we can add built-in seats, niches, and shelving, plus a slip-resistant textured floor for safer footing. It all adds up to a convenient, affordable upgrade with long-term value.</p>' },
@@ -28,32 +28,13 @@ const bath = [
       text: '<p>A low step-in base, a slip-resistant floor, and well-placed grab bars make a converted shower safer for everyone, and a smart choice if you plan to stay in your home for years.</p>' },
   },
   {
-    slug: 'walk-in-tubs', title: 'Walk-In Tubs', card: 'walk-in-tubs-card',
-    hero: 'walk-in-tubs-header', lead: 'Bathe safely and comfortably with a low-entry, door-sealed walk-in tub and optional hydrotherapy.',
+    slug: 'walk-in-tubs', title: 'Walk-In Tubs &amp; Accessibility', plainTitle: 'Walk-In Tubs & Accessibility', card: 'walk-in-tubs-card',
+    hero: 'walk-in-tubs-header', lead: 'Bathe safely and comfortably with a low-entry walk-in tub, and make the whole bathroom safer with grab bars, seats, and easy-entry showers.',
     intro: { title: 'Safety and Comfort, <strong>Every Day</strong>', img: 'promos-senior',
       text: '<p>A walk-in tub lets you step in instead of climbing over a high wall. Built-in seating, a leak-proof door, and grab bars help you stay independent at home longer.</p><p>Features include a low step-in threshold, an ADA-height seat, a leak-tight door seal, a handheld shower wand so you can rinse off before you open the door, and a door that swings inward or outward on whichever side fits your bathroom.</p>' },
-    gallery: ['walk-in-tubs-card', 'accessibility-intro', 'blog-aging-in-place', 'bathtubs-gallery-2'],
+    gallery: ['walk-in-tubs-card', 'accessibility-card', 'blog-aging-in-place', 'bathtubs-gallery-2'],
     feature: { title: 'Affordable <strong>Walk-In Tubs</strong>', img: 'walk-in-tubs-feature',
       text: '<p>Choose a simple soaker with deep, warm water, or add a therapy package: water jets that target your back, legs, and feet, air jets that massage your whole body with gentle bubbles, or a combination of both for the full spa experience.</p><p>Heated seats and backrests keep you warm while the tub fills, and fast-drain valves mean less waiting before you step out. Together they turn your daily bath into a soothing routine that can ease sore muscles and joints. With minimal disruption and no major remodeling, installation often takes as little as one day, making a walk-in tub a smart, affordable investment.</p>' },
-  },
-  {
-    slug: 'accessibility', title: 'Accessibility', card: 'accessibility-card',
-    hero: 'blog-aging-in-place', lead: 'Aging-in-place upgrades that make your bathroom safer for everyone, without looking clinical.',
-    intro: { title: 'Safer Bathrooms, <strong>Beautiful Design</strong>', img: 'accessibility-intro',
-      text: '<p>We design accessible bathrooms that look like any other upscale remodel. Barrier-free bases, fold-down seats, and well-placed grab bars reduce fall risk for seniors, people with limited mobility, and growing families.</p><p>We also add handheld showers and easy-reach controls, and every grab bar comes in a decorative finish that matches the rest of your fixtures.</p>' },
-    gallery: ['accessibility-card', 'accessibility-gallery-1', 'accessibility-gallery-2', 'accessibility-gallery-3'],
-    feature: { title: 'Designed for <strong>Aging in Place</strong>', img: 'accessibility-feature',
-      text: '<p>Planning ahead? Our consultants walk through your daily routine and recommend the right mix of safety features so your bathroom keeps working for you for years to come.</p>' },
-  },
-  {
-    slug: 'shower-enclosures', title: 'Shower Enclosures', card: 'shower-enclosures-card',
-    hero: 'shower-enclosures-header', lead: 'Glass doors and enclosures that finish your shower and keep water where it belongs.',
-    intro: { title: 'Quality Bath and <strong>Shower Enclosures</strong>', img: 'shower-enclosures-intro',
-      text: '<p>The finishing details are what make a new bath or shower feel complete, and the enclosure is one of the most important. The right glass door or curtain rod frames your new wall pattern, keeps water where it belongs, and gives you the privacy you want, while making the whole bathroom feel brighter and more open. At Bulldog Kitchen &amp; Bath, we offer a full range of shower doors, tub enclosures, and curtain rods, and we measure every opening so your enclosure fits precisely and seals properly.</p>'
-        + '<p>Choose clear glass to show off your walls and let light flow through the room, or pick rain, frosted, or corrugated glass when you want more privacy with a decorative touch. Etched V-groove patterns add a custom look to most doors. Depending on your layout, we can install sliding and bypass doors that save space on tubs and wide showers, or pivot and hinged doors for a clean, frameless-style walk-in. Every door and rod comes in four coordinating finishes (matte black, brushed nickel, oil-rubbed bronze, and chrome) and a protective glass coating helps water bead off so cleanup stays quick.</p>' },
-    gallery: ['shower-enclosures-gallery-1', 'shower-enclosures-gallery-2', 'shower-enclosures-gallery-3', 'shower-enclosures-gallery-4'],
-    feature: { title: 'Light, Open, and <strong>Easy to Clean</strong>', img: 'shower-enclosures-feature',
-      text: '<p>Clear glass lets light flow through the room and shows off your new wall pattern. A protective coating helps water bead off so spots and soap scum wipe away.</p>' },
   },
   {
     slug: 'vanities', title: 'Bathroom Vanities', card: 'vanities-card',
@@ -64,29 +45,11 @@ const bath = [
     feature: { title: 'Single or <strong>Double Vanities</strong>', img: 'vanities-feature',
       text: '<p>Share a bathroom? A double vanity gives everyone their own sink and drawer space. Short on room? A compact single vanity with smart drawers keeps the counter clear.</p>' },
   },
-  {
-    slug: 'accessories', title: 'Accessories', card: 'bath-accessories-card',
-    hero: 'bath-accessories-header', lead: 'The finishing touches that make your new bathroom more useful every day.',
-    intro: { title: 'Storage and Style <strong>Built In</strong>', img: 'bath-accessories-intro',
-      text: '<p>Add the details that make a bathroom work: corner shelves, recessed niches, soap dishes, towel bars, and coordinated faucets and shower heads.</p><p>Grab bars, hooks, and valves are available in designer finishes, so every piece matches and safety never looks clinical.</p>' },
-    gallery: ['bath-accessories-card', 'accessory-3', 'accessory-4', 'bath-accessories-gallery-1'],
-    feature: { title: 'Fixtures in <strong>Four Finishes</strong>', img: 'design-spotlight-header',
-      text: '<p>Coordinate every fixture in chrome, brushed nickel, matte black, or brushed gold for a polished, consistent look from the shower to the sink.</p>' },
-  },
-  {
-    slug: 'colors-patterns', title: 'Colors &amp; Patterns', plainTitle: 'Colors & Patterns', card: 'colors-patterns-card',
-    hero: 'financing-header', lead: 'Stone-look, tile-look, and solid finishes to match any style, from classic to modern.',
-    intro: { title: 'Find <strong>Your Finish</strong>', img: 'colors-patterns-intro',
-      text: '<p>Our wall systems come in a wide range of marble, granite, travertine, and solid colors, with optional tile patterns like subway, hexagon, and herringbone. Bring samples home during your consultation.</p><p>Solid colors come in matte or gloss, and accent trim and borders let you finish the look your way.</p>' },
-    swatches: true,
-    feature: { title: 'See It <strong>Before You Buy</strong>', img: 'colors-patterns-feature',
-      text: '<p>Not sure what will work? Our designers can show you a 3D rendering of your bathroom with your chosen colors and patterns before anything is ordered.</p>' },
-  },
 ];
 
 const kitchen = [
   {
-    slug: 'cabinets', title: 'Cabinets', card: 'kitchen-cabinets-card',
+    slug: 'cabinets', title: 'Cabinets &amp; Organizers', plainTitle: 'Cabinets & Organizers', card: 'kitchen-cabinets-card',
     hero: 'blog-cabinet-refacing', lead: 'New, refaced, or refinished cabinets that bring order and style to the heart of your home.',
     intro: { title: 'Cabinets Built for <strong>Real Life</strong>', img: 'kitchen-cabinets-intro',
       text: '<p>Choose from shaker, flat-panel, and raised-panel doors in painted and wood finishes. We add the organizers you\'ll actually use: pull-outs, drawer dividers, and soft-close hardware throughout.</p><p>We offer full replacement or cabinet refacing, with painted, stained, and two-tone finishes and pull-out pantry and trash organizers.</p>' },
@@ -95,41 +58,25 @@ const kitchen = [
       text: '<p>If your cabinet boxes are solid, refacing replaces doors, drawer fronts, and veneers for a brand-new look at a fraction of the time and cost of a full tear-out.</p>' },
   },
   {
-    slug: 'countertops', title: 'Countertops', card: 'countertops-card',
-    hero: 'countertops-header', lead: 'Quartz, granite, and solid-surface countertops fabricated and installed by our team.',
+    slug: 'countertops', title: 'Countertops &amp; Backsplash', plainTitle: 'Countertops & Backsplash', card: 'countertops-card',
+    hero: 'countertops-header', lead: 'Quartz, granite, and solid-surface countertops, plus the backsplash, sink, and faucet that finish them, installed by our team.',
     intro: { title: 'Surfaces That <strong>Work Hard</strong>', img: 'countertops-intro',
       text: '<p>Your countertop takes daily abuse. We help you choose a surface that stands up to heat, stains, and scratches while matching your cabinets and floors.</p><p>Choose quartz, granite, or solid surface, with undermount sink cutouts, islands and breakfast bars, and an edge profile that suits your style.</p>' },
     gallery: ['countertops-gallery-1', 'countertops-gallery-2', 'countertops-gallery-3', 'countertops-gallery-4'],
     feature: { title: 'Precise <strong>Templating &amp; Install</strong>', img: 'countertops-feature',
       text: '<p>We digitally template your existing layout for a tight, accurate fit, then install with minimal downtime so you can get back to cooking quickly.</p>' },
   },
-  {
-    slug: 'backsplash', title: 'Backsplash', card: 'backsplash-card',
-    hero: 'backsplash-header', lead: 'A new backsplash is one of the fastest ways to transform your kitchen.',
-    intro: { title: 'Add <strong>Personality</strong>', img: 'backsplash-intro',
-      text: '<p>Subway tile, mosaics, natural stone, or large-format panels: your backsplash protects your walls and sets the tone for the whole room.</p><p>Options include ceramic, porcelain, and glass tile, natural stone and mosaics, and grout-free panels, all coordinated with your countertops.</p>' },
-    gallery: ['backsplash-gallery-1', 'backsplash-gallery-2', 'backsplash-gallery-3', 'backsplash-gallery-4'],
-    feature: { title: 'Easy-Care <strong>Panel Backsplashes</strong>', img: 'backsplash-feature',
-      text: '<p>Prefer less cleaning? Our grout-free backsplash panels give you the look of tile with a smooth surface that wipes clean in seconds.</p>' },
-  },
-  {
-    slug: 'sinks-faucets', title: 'Sinks &amp; Faucets', plainTitle: 'Sinks & Faucets', card: 'sinks-faucets-card',
-    hero: 'sinks-faucets-header', lead: 'Upgrade the most-used spot in your kitchen with a sink and faucet that make cleanup easier.',
-    intro: { title: 'Function Meets <strong>Finish</strong>', img: 'sinks-faucets-intro',
-      text: '<p>From deep single-bowl stainless sinks to farmhouse apron-front styles, we\'ll match your sink to your counters and cooking habits, then add a faucet that fits your workflow.</p><p>Choose an undermount, drop-in, or farmhouse sink and a pull-down or touchless faucet, then add filtered water, a pot filler, a garbage disposal, or a soap dispenser.</p>' },
-    gallery: ['sinks-faucets-gallery-1', 'sinks-faucets-gallery-2', 'sinks-faucets-gallery-3', 'sinks-faucets-gallery-4'],
-    feature: { title: 'Finishes That <strong>Tie It Together</strong>', img: 'sinks-faucets-feature',
-      text: '<p>Match your faucet, cabinet pulls, and lighting in stainless, matte black, brushed gold, or polished chrome for a cohesive, designer look.</p>' },
-  },
-  {
-    slug: 'organizers-accessories', title: 'Organizers &amp; Accessories', plainTitle: 'Organizers & Accessories', card: 'kitchen-organizers-card',
-    hero: 'kitchen-organizers-header', lead: 'Pull-outs, drawer inserts, and racks that give everything in your kitchen a place, added in hours, not weeks.',
-    intro: { title: 'A Place for <strong>Everything</strong>', img: 'kitchen-organizers-intro',
-      text: '<p>Most kitchens don\'t need more cabinets, they need smarter ones. We fit your new or existing cabinets with organizers that make every inch easy to reach, from deep base cabinets to awkward corners.</p><p>Choose pull-out shelves, spice and tray pull-outs, trash and recycling pull-outs, cutlery and utensil inserts, lazy Susans for corners, and plate racks, plus pulls and knobs to finish the look.</p>' },
-    gallery: ['kitchen-organizers-gallery-1', 'kitchen-organizers-gallery-2', 'kitchen-organizers-gallery-3', 'kitchen-organizers-gallery-4'],
-    feature: { title: 'Pantry &amp; <strong>Cabinet Upgrades</strong>', img: 'kitchen-organizers-feature',
-      text: '<p>Turn a cluttered pantry or upper cabinet into organized storage with roll-out shelves and racks sized to what you keep there, so nothing gets lost in the back.</p>' },
-  },
 ];
 
-module.exports = { bath, kitchen };
+// Design guide shown under Inspiration (built with the product page template)
+const colorsPatterns = {
+    slug: 'colors-patterns', title: 'Colors &amp; Patterns', plainTitle: 'Colors & Patterns', card: 'colors-patterns-card',
+    hero: 'financing-header', lead: 'Stone-look, tile-look, and solid finishes to match any style, from classic to modern.',
+    intro: { title: 'Find <strong>Your Finish</strong>', img: 'colors-patterns-intro',
+      text: '<p>Our wall systems come in a wide range of marble, granite, travertine, and solid colors, with optional tile patterns like subway, hexagon, and herringbone. Bring samples home during your consultation.</p><p>Solid colors come in matte or gloss, and accent trim and borders let you finish the look your way.</p>' },
+    swatches: true,
+    feature: { title: 'See It <strong>Before You Buy</strong>', img: 'colors-patterns-feature',
+      text: '<p>Not sure what will work? Our designers can show you a 3D rendering of your bathroom with your chosen colors and patterns before anything is ordered.</p>' },
+  };
+
+module.exports = { bath, kitchen, colorsPatterns };

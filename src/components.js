@@ -208,16 +208,11 @@ const PICKS = {
 // The three tiles shown on each product page, the page's own product first (and preselected)
 const PICK_SETS = {
   'tub-to-shower-conversions': ['tub-to-shower', 'bath', 'walkin'],
-  'walk-in-tubs': ['walkin', 'bath', 'tub-to-shower'],
-  accessibility: ['accessibility', 'walkin', 'tub-to-shower'],
-  'shower-enclosures': ['enclosure', 'tub-to-shower', 'bath'],
+  showers: ['bath', 'enclosure', 'tub-to-shower'],
+  'walk-in-tubs': ['walkin', 'accessibility', 'tub-to-shower'],
   vanities: ['vanity', 'bath', 'tub-to-shower'],
-  accessories: ['accessories', 'bath', 'tub-to-shower'],
-  cabinets: ['cabinets', 'countertops', 'backsplash'],
-  countertops: ['countertops', 'cabinets', 'backsplash'],
-  backsplash: ['backsplash', 'countertops', 'cabinets'],
-  'sinks-faucets': ['sinks', 'countertops', 'cabinets'],
-  'organizers-accessories': ['organizers', 'cabinets', 'countertops'],
+  cabinets: ['cabinets', 'organizers', 'countertops'],
+  countertops: ['countertops', 'backsplash', 'sinks'],
 };
 // Every product, for the "View all products" dropdown under the tiles
 const ALL_PRODUCTS = {
@@ -302,10 +297,12 @@ function cards({ title, intro, items, perRow = 4, grey = false, center = false, 
 }
 
 function tiles({ title, items, grey = false, tall = false }) {
+  // Up to 4 across; 6 tiles sit in two even rows of 3
+  const cols = items.length <= 4 ? items.length : items.length % 3 === 0 ? 3 : 4;
   const html = items.map((t) => `<a class="tile" href="${t.href}"><div class="tile__img">${picture(t.img, t.title)}</div><h3 class="tile__title">${t.title}</h3></a>`).join('');
   return `<section class="section bleed${grey ? ' section--grey' : ''}">
   ${title ? `<header class="section-head"><h2>${title}</h2></header>` : ''}
-  <div class="tile-grid${tall ? ' tile-grid--tall' : ''}">${html}</div>
+  <div class="tile-grid${tall ? ' tile-grid--tall' : ''}" style="--cols: ${cols}">${html}</div>
 </section>`;
 }
 

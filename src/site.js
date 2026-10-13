@@ -20,25 +20,18 @@ module.exports = {
     {
       label: 'Bath', href: '/bathrooms/', all: 'All Bath Products',
       children: [
-        { label: 'Showers', href: '/bathrooms/showers/' },
+        { label: 'Showers & Enclosures', href: '/bathrooms/showers/' },
         { label: 'Bathtubs', href: '/bathrooms/bathtubs/' },
         { label: 'Tub-to-Shower Conversions', href: '/bathrooms/tub-to-shower-conversions/' },
-        { label: 'Walk-In Tubs', href: '/bathrooms/walk-in-tubs/' },
-        { label: 'Accessibility', href: '/bathrooms/accessibility/' },
-        { label: 'Shower Enclosures', href: '/bathrooms/shower-enclosures/' },
+        { label: 'Walk-In Tubs & Accessibility', href: '/bathrooms/walk-in-tubs/' },
         { label: 'Vanities', href: '/bathrooms/vanities/' },
-        { label: 'Accessories', href: '/bathrooms/accessories/' },
-        { label: 'Colors & Patterns', href: '/bathrooms/colors-patterns/' },
       ],
     },
     {
       label: 'Kitchen', href: '/kitchens/', all: 'All Kitchen Products',
       children: [
-        { label: 'Cabinets', href: '/kitchens/cabinets/' },
-        { label: 'Countertops', href: '/kitchens/countertops/' },
-        { label: 'Backsplash', href: '/kitchens/backsplash/' },
-        { label: 'Sinks & Faucets', href: '/kitchens/sinks-faucets/' },
-        { label: 'Organizers & Accessories', href: '/kitchens/organizers-accessories/' },
+        { label: 'Cabinets & Organizers', href: '/kitchens/cabinets/' },
+        { label: 'Countertops & Backsplash', href: '/kitchens/countertops/' },
       ],
     },
     {
@@ -46,6 +39,7 @@ module.exports = {
       children: [
         { label: 'Shop the Room', href: '/inspiration-shop-the-room/' },
         { label: 'Design Spotlight', href: '/inspiration-design-spotlight/' },
+        { label: 'Colors & Patterns', href: '/inspiration-colors-patterns/' },
       ],
     },
     { label: 'One Day Remodel', href: '/one-day-bathroom-remodel/' },

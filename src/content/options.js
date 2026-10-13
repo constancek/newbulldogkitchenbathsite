@@ -116,6 +116,13 @@ const accessibilityProducts = [
   { name: 'Grab Bars', img: 'bath-accessories-shop-grab-bar', text: 'Decorative bars that add support without looking clinical.' },
   { name: 'Shower Seat', img: 'bath-accessories-shop-shower-seat', text: 'Built-in and fold-down seating that blends into your walls.' },
   { name: 'Handheld Shower', img: 'bath-accessories-shop-handheld-shower', text: 'An adjustable slide bar for seated or standing use.' },
+  { name: 'Tub Grab Bar', img: 'accessibility-card', text: 'A bar at the tub edge for steady support stepping in and out.' },
+  { name: 'Toilet Grab Bar', img: 'accessibility-gallery-1', text: 'Support beside the toilet for sitting down and standing up.' },
+];
+
+const tubAddOns = [
+  { name: 'Tub Spout', img: 'bath-accessories-shop-tub-spout', text: 'A matching spout in the same finish as your faucet and shower head.' },
+  { name: 'Shower Curtain Rod', img: 'bath-accessories-shop-shower-curtain-rod', text: 'A straight or curved rod in a finish that matches your fixtures.' },
 ];
 
 const vanityStyles = [
@@ -207,7 +214,7 @@ const organizerTypes = [
 
 module.exports = {
   finishes, glass, vGroove, colors, patterns,
-  showerBases, wallStyles, tubStyles, showerDoors, safetyAddOns, accessibilityProducts,
+  showerBases, wallStyles, tubStyles, tubAddOns, showerDoors, safetyAddOns, accessibilityProducts,
   vanityStyles, cabinetFinishes, vanityTops, vanitySinks, doorStyles, counterMaterials, counterColors,
   backsplashPatterns, backsplashMaterials, kitchenSinks, faucetTypes, kitchenFinishes, organizerTypes,
 };

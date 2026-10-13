@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const SITE = require('./site');
 const C = require('./components');
-const { bath, kitchen } = require('./content/products');
+const { bath, kitchen, colorsPatterns } = require('./content/products');
 const options = require('./content/options');
 const extras = require('./content/product-extras');
 const { pageFaqs } = require('./content/page-faqs');
@@ -125,33 +125,40 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
 const sinceLine = (rest) => `Since ${SITE.founded}, <strong>${SITE.name}</strong> ${rest}`;
 
 // ---------- Product option sections ----------
+const colorsLink = 'A few popular colors and tile looks. See every option in our <a class="link-arrow" href="/inspiration-colors-patterns/">Colors &amp; Patterns</a> guide.';
 const optionSections = {
-  'shower-enclosures': [
-    C.swatches({ title: 'Doors &amp; Rods – Finishes', items: options.finishes, flush: true,
-      lead: 'You want options when creating your look, so our shower doors, enclosures, and curtain rods all come in a choice of finishes that coordinate with your faucets and accessories, including:' }),
-    C.swatches({ title: 'Glass Options', intro: 'Size and glass finish options vary by model: 1/4″, 5/16″, and 3/8″.', items: options.glass, wide: true, flush: true }),
-    C.swatches({ title: 'V-Groove Glass', intro: 'Etched V-groove patterns are available on most shower doors in 1/4″ and 5/16″ glass, depending on the model.', items: options.vGroove }),
-  ],
   'colors-patterns': [
     C.swatches({ title: 'Colors', intro: 'Color availability varies by product. See real samples during your design consultation.', items: options.colors, flush: true }),
     C.swatches({ title: 'Patterns', items: options.patterns }),
     C.sideBySide({ title: '<strong>Grout-Free</strong> Tile Looks', img: 'colors-patterns-pattern-3x6-subway', alt: 'Subway tile-look wall pattern',
       text: '<p>Our tile-look wall patterns have realistic grout lines without the porous grout. They\'re made from the same durable, non-porous material as our standard wall systems, so cleanup is just as easy: no scrubbing, sealing, or regrouting.</p>' }),
   ],
+  // Showers also covers glass doors and enclosures (was Shower Enclosures) and shower add-ons (was Accessories)
   showers: [
     C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit your space.', items: options.showerBases, cards: true, flush: true }),
-    C.swatches({ title: 'Wall Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/bathrooms/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
+    C.swatches({ title: 'Wall Styles', intro: colorsLink, items: options.wallStyles }),
+    C.sideBySide({ title: 'Glass Doors <strong>&amp; Enclosures</strong>', img: 'shower-enclosures-intro', alt: 'Glass shower enclosure', reverse: true,
+      text: '<p>The right glass door or curtain rod frames your new walls, keeps water where it belongs, and makes the whole bathroom feel brighter and more open. We measure every opening so your enclosure fits precisely and seals properly.</p><p>Choose clear glass to show off your walls, or rain, frosted, or corrugated glass for more privacy. Sliding and bypass doors save space on wide showers, and pivot and hinged doors give a clean, frameless-style look. A protective coating helps water bead off so cleanup stays quick.</p>' }),
+    C.swatches({ title: 'Doors &amp; Curtain Rods', intro: 'Choose glass or a rod, in the finish that matches your fixtures.', items: options.showerDoors, cards: true, flush: true }),
+    C.swatches({ title: 'Doors &amp; Rods – Finishes', items: options.finishes, flush: true,
+      lead: 'Our shower doors, enclosures, and curtain rods all come in finishes that coordinate with your faucets and accessories, including:' }),
+    C.swatches({ title: 'Glass Options', intro: 'Size and glass finish options vary by model: 1/4″, 5/16″, and 3/8″.', items: options.glass, wide: true, flush: true }),
+    C.swatches({ title: 'V-Groove Glass', intro: 'Etched V-groove patterns are available on most shower doors in 1/4″ and 5/16″ glass, depending on the model.', items: options.vGroove }),
   ],
   bathtubs: [
     C.swatches({ title: 'Tub Styles', intro: 'Pick the tub that fits how you like to bathe.', items: options.tubStyles, cards: true, flush: true }),
-    C.swatches({ title: 'Wall Surround Styles', intro: 'A few popular colors and tile looks. See every option on <a class="link-arrow" href="/bathrooms/colors-patterns/">Colors &amp; Patterns</a>.', items: options.wallStyles }),
+    C.swatches({ title: 'Wall Surround Styles', intro: colorsLink, items: options.wallStyles }),
+    C.swatches({ title: 'Tub Add-Ons', intro: 'Finishing pieces in the same finish as your faucet and shower head.', items: options.tubAddOns, cards: true }),
   ],
   'tub-to-shower-conversions': [
     C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit the space your old tub leaves behind.', items: options.showerBases, cards: true, flush: true }),
     C.swatches({ title: 'Doors &amp; Curtain Rods', intro: 'Choose glass or a rod, in the finish that matches your fixtures.', items: options.showerDoors, cards: true, flush: true }),
     C.swatches({ title: 'Safety Add-Ons', intro: 'Small upgrades that make your new shower safer for everyone.', items: options.safetyAddOns, cards: true }),
   ],
-  accessibility: [
+  // Walk-In Tubs also covers aging-in-place safety (was Accessibility, plus the safety items from Accessories)
+  'walk-in-tubs': [
+    C.sideBySide({ title: 'Safer Bathrooms, <strong>Beautiful Design</strong>', img: 'accessibility-intro', alt: 'Accessible bathroom', reverse: true,
+      text: '<p>We design accessible bathrooms that look like any other upscale remodel. Barrier-free bases, fold-down seats, and well-placed grab bars reduce fall risk for seniors, people with limited mobility, and growing families.</p><p>We also add handheld showers and easy-reach controls, and every grab bar comes in a decorative finish that matches the rest of your fixtures. Our consultants walk through your daily routine and recommend the right mix of safety features so your bathroom keeps working for you for years to come.</p>' + C.benefitList(extras.accessibility.benefits) }),
     C.swatches({ title: 'Accessibility Products', intro: 'Mix and match the safety features your household needs.', items: options.accessibilityProducts, cards: true }),
   ],
   vanities: [
@@ -160,29 +167,28 @@ const optionSections = {
     C.swatches({ title: 'Vanity Tops', intro: 'Durable tops that resist water, stains, and scratches.', items: options.vanityTops, flush: true }),
     C.swatches({ title: 'Sink Styles', items: options.vanitySinks, cards: true }),
   ],
-  accessories: [
-    C.swatches({ title: 'Fixture Finishes', intro: 'Every accessory comes in finishes that match your faucets and shower heads.', items: options.finishes }),
-  ],
+  // Cabinets also covers organizers (was Organizers & Accessories)
   cabinets: [
     C.swatches({ title: 'Door Styles', intro: 'Choose a door style for new cabinets or refacing.', items: options.doorStyles, cards: true, flush: true }),
     C.swatches({ title: 'Finishes', intro: 'Painted and wood finishes. See real samples during your design consultation.', items: options.cabinetFinishes }),
+    C.sideBySide({ title: 'A Place for <strong>Everything</strong>', img: 'kitchen-organizers-intro', alt: 'Organized kitchen cabinet', reverse: true,
+      text: '<p>Most kitchens don\'t need more cabinets, they need smarter ones. We fit your new or existing cabinets with organizers that make every inch easy to reach, from deep base cabinets to awkward corners, often added in hours, not weeks.</p>' + C.benefitList(extras['organizers-accessories'].benefits) }),
+    C.swatches({ title: 'Organizer Options', intro: 'Fit new or existing cabinets with storage that works the way you cook.', items: options.organizerTypes, cards: true, flush: true }),
+    C.swatches({ title: 'Hardware Finishes', intro: 'Pulls and knobs in finishes that match your faucet and lighting.', items: options.finishes }),
   ],
+  // Countertops also covers backsplash and sinks & faucets (were their own pages)
   countertops: [
     C.swatches({ title: 'Countertop Materials', intro: 'Every top is measured and fabricated to fit your kitchen.', items: options.counterMaterials, cards: true, flush: true }),
     C.swatches({ title: 'Popular Colors', intro: 'A few favorites. Color choices vary by material, so see real samples during your design consultation.', items: options.counterColors }),
-  ],
-  backsplash: [
-    C.swatches({ title: 'Tile Patterns', intro: 'Popular layouts for a backsplash that pulls the room together.', items: options.backsplashPatterns, flush: true }),
-    C.swatches({ title: 'Tile Materials', items: options.backsplashMaterials, cards: true }),
-  ],
-  'sinks-faucets': [
+    C.sideBySide({ title: 'A Backsplash That <strong>Adds Personality</strong>', img: 'backsplash-intro', alt: 'Kitchen backsplash', reverse: true,
+      text: '<p>Subway tile, mosaics, natural stone, or large-format panels: your backsplash protects your walls and sets the tone for the whole room. We coordinate it with your countertops, or add it on its own as one of the fastest ways to transform your kitchen.</p><p>Prefer less cleaning? Our grout-free backsplash panels give you the look of tile with a smooth surface that wipes clean in seconds.</p>' }),
+    C.swatches({ title: 'Backsplash Patterns', intro: 'Popular layouts for a backsplash that pulls the room together.', items: options.backsplashPatterns, flush: true }),
+    C.swatches({ title: 'Backsplash Materials', items: options.backsplashMaterials, cards: true }),
+    C.sideBySide({ title: 'Sinks &amp; Faucets <strong>to Match</strong>', img: 'sinks-faucets-intro', alt: 'Kitchen sink and faucet',
+      text: '<p>From deep single-bowl stainless sinks to farmhouse apron-front styles, we match your sink to your counters and cooking habits, then add a faucet that fits your workflow.</p><p>Choose an undermount, drop-in, or farmhouse sink and a pull-down or touchless faucet, then add filtered water, a pot filler, a garbage disposal, or a soap dispenser.</p>' }),
     C.swatches({ title: 'Sink Styles', intro: 'Matched to your countertop and the way you cook and clean.', items: options.kitchenSinks, cards: true, flush: true }),
     C.swatches({ title: 'Faucet Styles', items: options.faucetTypes, cards: true, flush: true }),
-    C.swatches({ title: 'Finishes', intro: 'Coordinate your faucet with cabinet pulls and lighting.', items: options.kitchenFinishes }),
-  ],
-  'organizers-accessories': [
-    C.swatches({ title: 'Organizer Options', intro: 'Fit new or existing cabinets with storage that works the way you cook.', items: options.organizerTypes, cards: true, flush: true }),
-    C.swatches({ title: 'Hardware Finishes', intro: 'Pulls and knobs in finishes that match your faucet and lighting.', items: options.finishes }),
+    C.swatches({ title: 'Faucet Finishes', intro: 'Coordinate your faucet with cabinet pulls and lighting.', items: options.kitchenFinishes }),
   ],
 };
 
@@ -195,9 +201,8 @@ function productPage(p, base) {
   // Close the first intro paragraph with "Since <year>, Bulldog Kitchen & Bath ..." like Bath Concepts
   const introText = x.since ? p.intro.text.replace('</p>', ` ${sinceLine(x.since)}</p>`) : p.intro.text;
   const benefits = x.benefits ? C.benefitList(x.benefits) : '';
-  // Like Bath Concepts: no gallery on Accessories or Colors & Patterns
-  const showGallery = !p.swatches && !x.accessories;
-  const gallery = showGallery ? C.imageGallery({ images: p.gallery, alt: title, wide: ['shower-enclosures', 'bathtubs'].includes(p.slug) }) : '';
+  // Like Bath Concepts: no gallery on Colors & Patterns
+  const gallery = p.swatches ? '' : C.imageGallery({ images: p.gallery, alt: title, wide: p.slug === 'bathtubs' });
   const feature = C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/about/#contact']] });
   // On Colors & Patterns, "See It Before You Buy" comes right after The Bulldog Difference
   const featureFirst = p.slug === 'colors-patterns';
@@ -213,16 +218,18 @@ function productPage(p, base) {
     processSteps(),
     ...(optionSections[p.slug] || []),
     featureFirst ? '' : feature,
-    x.accessories ? C.productGrid({ title: 'Shop <strong>Accessories</strong>', ...x.accessories }) : '',
+    x.accessories ? C.productGrid({ title: 'Shower <strong>Add-Ons &amp; Accessories</strong>', ...x.accessories }) : '',
     learnMore(x.learn),
   ].join('\n');
   page(`${base}${p.slug}/`, title, `${title} from ${SITE.name}. ${p.lead}`, body);
 }
 bath.forEach((p) => productPage(p, '/bathrooms/'));
 kitchen.forEach((p) => productPage(p, '/kitchens/'));
+// Colors & Patterns is a design guide under Inspiration: /inspiration-colors-patterns/
+productPage(colorsPatterns, '/inspiration-');
 
 // ---------- Products overview ----------
-page('/bathrooms/', 'Bath Products', `Explore showers, tub-to-shower conversions, bathtubs, walk-in tubs, accessibility products, enclosures, vanities, and accessories from ${SITE.name}.`, [
+page('/bathrooms/', 'Bath Products', `Explore showers and glass enclosures, tub-to-shower conversions, bathtubs, walk-in tubs and accessibility products, and vanities from ${SITE.name}.`, [
   C.hero({ img: 'products-header', alt: 'Remodeled bathroom', title: 'Our <strong>Products</strong>', lead: 'Durable, beautiful, low-maintenance bath products, custom-fit and installed by our own team.' }),
   C.sideBySide({ title: 'Beautiful, <strong>Durable Products</strong>', img: 'products-feature', alt: 'Bathroom with glass shower',
     text: '<p>Every product we install is chosen to look great on day one and stay that way for years. Non-porous surfaces resist mold and mildew, colors won\'t fade, and there\'s no grout to scrub. ' + sinceLine('has been installing durable, low-maintenance bath products for homeowners across the area.') + '</p><p>Every product is custom-measured for your space and backed by our lifetime warranty.</p>' }),
@@ -391,6 +398,20 @@ redirect('warranty', '/', 'Warranty');
 // Bath pages moved from /products/ to /bathrooms/ to match /kitchens/
 redirect('products', '/bathrooms/', 'Bath Products');
 bath.forEach((p) => redirect(path.join('products', p.slug), `/bathrooms/${p.slug}/`, p.plainTitle || p.title));
+// Pages folded into others: their old addresses forward to the page that took in their content
+const folded = [
+  ['bathrooms/accessibility', '/bathrooms/walk-in-tubs/', 'Accessibility'],
+  ['bathrooms/shower-enclosures', '/bathrooms/showers/', 'Shower Enclosures'],
+  ['bathrooms/accessories', '/bathrooms/showers/', 'Accessories'],
+  ['bathrooms/colors-patterns', '/inspiration-colors-patterns/', 'Colors & Patterns'],
+  ['kitchens/backsplash', '/kitchens/countertops/', 'Backsplash'],
+  ['kitchens/sinks-faucets', '/kitchens/countertops/', 'Sinks & Faucets'],
+  ['kitchens/organizers-accessories', '/kitchens/cabinets/', 'Organizers & Accessories'],
+];
+folded.forEach(([from, to, title]) => {
+  redirect(from, to, title);
+  if (from.startsWith('bathrooms/')) redirect(path.join('products', from.slice('bathrooms/'.length)), to, title);
+});
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://${SITE.domain}/sitemap.xml\n`);
 console.log(`Built ${pages.length} pages into ${OUT}`);
