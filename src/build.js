@@ -202,7 +202,8 @@ function productPage(p, base) {
   const introText = x.since ? p.intro.text.replace('</p>', ` ${sinceLine(x.since)}</p>`) : p.intro.text;
   const benefits = x.benefits ? C.benefitList(x.benefits) : '';
   // Like Bath Concepts: no gallery on Colors & Patterns
-  const gallery = p.swatches ? '' : C.imageGallery({ images: p.gallery, alt: title, wide: p.slug === 'bathtubs' });
+  // Merged pages list 4 photos per page they took in, so the whole list shows
+  const gallery = p.swatches ? '' : C.imageGallery({ images: p.gallery, alt: title, wide: p.slug === 'bathtubs', max: p.gallery.length });
   const feature = C.sideBySide({ ...p.feature, text: p.feature.text + benefits, alt: title, reverse: true, buttons: [['Request an Estimate', '/about/#contact']] });
   // On Colors & Patterns, "See It Before You Buy" comes right after The Bulldog Difference
   const featureFirst = p.slug === 'colors-patterns';

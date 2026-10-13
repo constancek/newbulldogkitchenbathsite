@@ -306,7 +306,7 @@ function tiles({ title, items, grey = false, tall = false }) {
 </section>`;
 }
 
-// Galleries show at most 4 photos (the first 4 in each list)
+// Galleries show at most 4 photos (the first 4 in each list); a product page that took in other pages shows 4 per page
 const GALLERY_MAX = 4;
 
 function gallery({ title, images, grey = false, spot = false }) {
@@ -323,8 +323,8 @@ function gallery({ title, images, grey = false, spot = false }) {
 }
 
 // Product photo viewer: one large photo with arrows, the same photo faded behind it (behaviour in main.js)
-function imageGallery({ images, alt = 'Project photo', wide = false }) {
-  images = images.slice(0, GALLERY_MAX);
+function imageGallery({ images, alt = 'Project photo', wide = false, max = GALLERY_MAX }) {
+  images = images.slice(0, max);
   return `<section class="image-gallery${wide ? ' image-gallery--wide' : ''}" aria-label="Photo gallery" style="--gallery-bg: url('${img(images[0])}')">
   <div class="image-gallery__main" data-photos="${images.map(img).join(' ')}">
     <img src="${img(images[0])}" alt="${esc(alt)}" loading="lazy" decoding="async">
