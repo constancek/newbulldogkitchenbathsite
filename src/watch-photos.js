@@ -28,8 +28,14 @@ function log(msg) {
 function processDrop() {
   const site = {};
   walk(IMAGES).filter((f) => EXT.test(f)).forEach((f) => (site[baseName(f)] = f));
+  // If a name is in the folder twice (showers-card.jpg and showers-card.webp), only the newest file counts
+  const newest = {};
+  fs.readdirSync(DROP).map((f) => path.join(DROP, f)).filter((f) => EXT.test(f) && fs.statSync(f).isFile()).forEach((f) => {
+    const n = baseName(f);
+    if (!newest[n] || fs.statSync(f).mtimeMs > fs.statSync(newest[n]).mtimeMs) newest[n] = f;
+  });
   const replaced = [];
-  for (const file of fs.readdirSync(DROP).map((f) => path.join(DROP, f)).filter((f) => EXT.test(f) && fs.statSync(f).isFile())) {
+  for (const file of Object.values(newest)) {
     const old = site[baseName(file)];
     if (!old) { log(`Skipped ${path.basename(file)}: no site photo has that name`); continue; }
     if (hash(old) === hash(file)) continue; // already on the site

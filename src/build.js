@@ -258,9 +258,9 @@ page('/kitchens/', 'Kitchen Remodeling', `Kitchen remodeling by ${SITE.name}: ca
 
 // ---------- Inspiration ----------
 const styles = [
-  ['Riverstone with Classic Tile Pattern', 'showers-gallery-3'], ['Tundra Solid Stone', 'showers-gallery-4'], ['Concrete with Block Pattern', 'bathtubs-gallery-4'],
-  ['Tuscan Warmth', 'walk-in-tubs-gallery-1'], ['Travertine Classic', 'accessibility-gallery-6'], ['Calacatta-Style Marble', 'accessibility-gallery-8'],
-  ['White Shaker Kitchen', 'kitchen-cabinets-gallery-4'], ['Two-Tone Modern Kitchen', 'countertops-gallery-5'], ['Warm Wood Kitchen', 'backsplash-gallery-5'],
+  ['Riverstone with Classic Tile Pattern', 'shop-the-room-riverstone'], ['Tundra Solid Stone', 'shop-the-room-tundra'], ['Concrete with Block Pattern', 'shop-the-room-concrete'],
+  ['Tuscan Warmth', 'shop-the-room-tuscan'], ['Travertine Classic', 'shop-the-room-travertine'], ['Calacatta-Style Marble', 'shop-the-room-calacatta'],
+  ['White Shaker Kitchen', 'shop-the-room-white-shaker'], ['Two-Tone Modern Kitchen', 'shop-the-room-two-tone'], ['Warm Wood Kitchen', 'shop-the-room-warm-wood'],
 ];
 page('/inspiration-shop-the-room/', 'Shop the Room', `Browse kitchen and bathroom styles from ${SITE.name} and get the look for your home.`, [
   C.hero({ img: 'shop-the-room-header', alt: 'Styled bathroom', title: 'Shop <strong>The Room</strong>', lead: 'Find a look you love, then request an estimate to bring it home.' }),
@@ -270,10 +270,10 @@ page('/inspiration-shop-the-room/', 'Shop the Room', `Browse kitchen and bathroo
 ].join('\n'));
 
 const spotlights = [
-  { title: 'Peaceful <strong>Sanctuary</strong> Style', sub: 'Travertine-look walls with brushed nickel', text: 'Soft, warm stone tones and a frameless-style glass door create a calm, spa-like retreat. A built-in niche and corner bench keep the space uncluttered.', imgs: ['showers-feature', 'bathtubs-gallery-3', 'bathtubs-feature', 'walk-in-tubs-gallery-2', 'accessibility-gallery-7'] },
-  { title: 'Warm and Earthy <strong>Attic</strong> Style', sub: 'Stone walls under a sloped ceiling', text: 'Smart planning turned an awkward attic bath into a cozy, functional room. Earthy finishes and wood accents tie it to the rest of the home.', imgs: ['shower-enclosures-gallery-9', 'shower-enclosures-gallery-10', 'shower-enclosures-gallery-11', 'shower-enclosures-feature'] },
-  { title: 'Traditional Style with <strong>Industrial Edge</strong>', sub: 'Concrete-look panels and matte black hardware', text: 'Cool gray walls, bold black fixtures, and clean lines give a classic layout a fresh, modern attitude.', imgs: ['bath-accessories-header', 'bath-accessories-gallery-1', 'bath-accessories-gallery-2', 'faqs-header'] },
-  { title: 'Bright <strong>Family Kitchen</strong>', sub: 'White shaker cabinets with quartz counters', text: 'An open layout, an oversized island, and durable, easy-clean surfaces make this kitchen the hub of a busy household.', imgs: ['kitchen-cabinets-gallery-5', 'kitchen-cabinets-feature', 'countertops-gallery-4', 'countertops-gallery-6', 'countertops-feature'] },
+  { title: 'Peaceful <strong>Sanctuary</strong> Style', sub: 'Travertine-look walls with brushed nickel', text: 'Soft, warm stone tones and a frameless-style glass door create a calm, spa-like retreat. A built-in niche and corner bench keep the space uncluttered.', imgs: ['showers-feature', 'design-spotlight-sanctuary-1', 'bathtubs-feature', 'design-spotlight-sanctuary-2', 'design-spotlight-sanctuary-3'] },
+  { title: 'Warm and Earthy <strong>Attic</strong> Style', sub: 'Stone walls under a sloped ceiling', text: 'Smart planning turned an awkward attic bath into a cozy, functional room. Earthy finishes and wood accents tie it to the rest of the home.', imgs: ['design-spotlight-attic-1', 'design-spotlight-attic-2', 'design-spotlight-attic-3', 'shower-enclosures-feature'] },
+  { title: 'Traditional Style with <strong>Industrial Edge</strong>', sub: 'Concrete-look panels and matte black hardware', text: 'Cool gray walls, bold black fixtures, and clean lines give a classic layout a fresh, modern attitude.', imgs: ['bath-accessories-header', 'design-spotlight-industrial-1', 'design-spotlight-industrial-2', 'design-spotlight-industrial-3'] },
+  { title: 'Bright <strong>Family Kitchen</strong>', sub: 'White shaker cabinets with quartz counters', text: 'An open layout, an oversized island, and durable, easy-clean surfaces make this kitchen the hub of a busy household.', imgs: ['design-spotlight-family-kitchen-1', 'kitchen-cabinets-feature', 'countertops-gallery-4', 'design-spotlight-family-kitchen-2', 'countertops-feature'] },
 ];
 page('/inspiration-design-spotlight/', 'Design Spotlight', `Real kitchen and bathroom design ideas from ${SITE.name}.`, [
   C.hero({ img: 'design-spotlight-header', alt: 'Featured bathroom design', title: 'Design <strong>Spotlight</strong>', lead: 'A closer look at finished spaces and the details that make them work.' }),
