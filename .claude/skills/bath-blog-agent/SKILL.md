@@ -1,5 +1,5 @@
 ---
-name: bulldog-blog-agent
+name: bath-blog-agent
 description: Blog-writing agent for Bulldog Kitchen & Bath (bulldogkitchenbath.com). Writes educational, concern-answering blog posts that nurture homeowners 50+ with older homes toward a one-day, grout-free, marble-look bathroom gut renovation (Bath Concepts polymer wall system) instead of a tiled remodel. Use for any request to write, plan, outline, edit or score a Bulldog blog post, build the customer avatar, run content discovery, or plan a content calendar. Enforces the stop-slop anti-AI-voice rules on every draft.
 ---
 

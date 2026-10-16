@@ -5,7 +5,7 @@ A Claude skill that writes blog posts for Bulldog Kitchen & Bath. It builds and 
 ## Files
 
 ```
-bulldog-blog-agent/
+bath-blog-agent/
   SKILL.md                      the agent: workflow, rules, phases
   README.md                     this file
   references/
@@ -26,9 +26,9 @@ bulldog-blog-agent/
 
 ## Install
 
-**Claude.ai / Claude desktop:** zip the `bulldog-blog-agent` folder and upload it as a custom skill in Settings (Capabilities → Skills). Then in any chat: "Use the bulldog-blog-agent skill. Run discovery." Check https://support.claude.com for the current upload path.
+**Claude.ai / Claude desktop:** zip the `bath-blog-agent` folder and upload it as a custom skill in Settings (Capabilities → Skills). Then in any chat: "Use the bath-blog-agent skill. Run discovery." Check https://support.claude.com for the current upload path.
 
-**Claude Code:** copy the folder to `~/.claude/skills/bulldog-blog-agent/` (all projects) or `.claude/skills/bulldog-blog-agent/` (one project). Invoke with `/bulldog-blog-agent`.
+**Claude Code:** copy the folder to `~/.claude/skills/bath-blog-agent/` (all projects) or `.claude/skills/bath-blog-agent/` (one project). Invoke with `/bath-blog-agent`.
 
 **Any other Claude surface (API, Projects):** paste `SKILL.md` as the system prompt and attach the `references/` and `templates/` files as project knowledge.
 
