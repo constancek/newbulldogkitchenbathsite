@@ -56,7 +56,11 @@ Three buckets. Use the labels when you write.
 - **No prices online. Ever.** The owner does not want a dollar figure for the job in any post. (Internal only, so the agent can reason about what's in a quote: most one-day wet-area guts land between $10K and $16K. That number never appears in a draft, a meta description, a table or an FAQ.)
 - **What to say instead, the owner's words:** with promotional financing, a qualified customer can get a new mold-resistant, grout-free shower for as low as $150 a month, or 12 months no interest. "Get your new shower now and pay later."
   - Always attach "on approved credit" or "for qualified buyers" to the $150 and to the no-interest line, the same way the site does. Financing claims without that qualifier are a compliance problem, not a style choice.
-  - The new site's financing page says 24 months no interest; the owner says 12. Use 12 and keep a `[CONFIRM WITH OWNER: 12 or 24 months]` tag in the header block until one of them changes. Date-check the promo before every publish.
+  - **12 months no interest** is confirmed by the owner (Oct 16, 2026). The site's financing page still says 24; the owner knows. Use 12 and date-check the promo before every publish.
+- **Install day** (owner, Oct 16, 2026): the shower area is gutted and the new walls, base and fixtures are in by evening. Customers do not shower that night; first shower is the next day once the caulk has set. Write "in by evening, first shower the next morning."
+- **Top two finishes** customers pick: marble looks and travertine. Safe to write "the marble and travertine looks most of our customers pick."
+- **Age of showers replaced:** typically 20 years and older. Use 20 as the line where regrouting stops being worth it.
+- **Towns:** give Kentucky towns their state ("Fort Thomas, Kentucky") since the Ohio ones go without.
   - Cost posts still get written, since "how much does a one-day shower cost" is the most-searched question. They explain what sets the price (footprint, base type, door, fixtures, what's under the old tub), say a consultant measures and gives a written quote, and land on the monthly-payment line and the estimate CTA. They do not give a range. Readers who want a number are told, honestly, that it depends on the measurements and that the quote is written and free.
 - **No tile.** Bulldog no longer sells tiled showers. Tile in the blog is what a tile contractor installs. Tile-look patterns in solid-surface are the answer for a reader who wants the look.
 - **The testimonials on the new site are not real customers.** Never quote them, in any post, ever. Say so to the owner if a post would benefit from a quote, and ask for a real review.
@@ -68,7 +72,6 @@ Three buckets. Use the labels when you write.
 - Whether the price is fixed after signing. The new site says "written quote" and "guaranteed commitments," not "fixed price." Confirm before writing "the number doesn't move."
 - Panel thickness, seam method, whether caulk is used at corners and base.
 - Warranty exclusions.
-- "Shower that evening" after install (cure or caulk time).
 - Real customer reviews (Google, Facebook) with permission to quote.
 - Founder or owner names, number of baths per year, named past projects, before/after photos with permission.
 - Which Indiana towns.
