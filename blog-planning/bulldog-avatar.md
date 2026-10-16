@@ -8,7 +8,8 @@ A draft, built from the owner's brief and the website. Phase 1 of the skill refi
 - 2026-10-16: No tile sold anymore. Tile in posts is what a tile contractor installs.
 - 2026-10-16: The testimonials on the new site are not real customers. Never quote them.
 - 2026-10-16: No prices online. Instead: "with promotional financing, qualified customers can get a new shower, mold resistant and grout free, for as low as $150 a month. Or enjoy 12 months no interest. Get your new shower now and pay later." (Site financing page says 24 months; confirm which is live.)
-- Still open: what moves a quote up or down; whether the quote is fixed after signing; what's included when the wall is open; real reviews with permission; founder names; top two colors customers pick; "shower that night" after install.
+- 2026-10-16: Install day ends with the new shower in by evening; customers do not shower that night (first shower next day). Top two finishes: marble and travertine. Showers replaced are typically 20 years and older. 12 months no interest confirmed. Write "Fort Thomas, Kentucky."
+- Still open: what moves a quote up or down; whether the quote is fixed after signing; what's included when the wall is open; real reviews with permission; founder names.
 
 ## Installer lines (things an installer says that a marketer wouldn't; add as you hear them)
 
