@@ -11,7 +11,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 0 | 2026-08-28 | 5 Bathroom Upgrades for Aging in Place | awareness | Margaret | aging in place bathroom | published (starter) | /blog/aging-in-place-bathroom-upgrades/ |
 | 0 | 2026-09-15 | Cabinet Refacing vs. Replacement | consideration | (kitchen) | cabinet refacing vs replacement | published (starter) | /blog/kitchen-cabinet-refacing-vs-replacement/ |
 | 0 | 2026-10-01 | Is a Tub-to-Shower Conversion Right for You? | consideration | Linda | tub to shower conversion | published (starter) | /blog/tub-to-shower-conversion-guide/ |
-| 1 | | Why your shower grout turns gray again a year after you clean it | awareness | Linda | shower grout turns gray | planned | |
+| 1 | 2026-10-17 | Why your shower grout turns gray again a year after you clean it | awareness | Linda | shower grout turns gray | drafted | blog/shower-grout-turns-gray |
 | 2 | | What's behind the tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | planned | |
 | 3 | | Tile shower vs. solid-surface walls: an honest comparison | consideration | all | tile vs acrylic shower walls | planned | |
 | 4 | | Install day, hour by hour | decision | all | one day bathroom remodel what to expect | planned | |
