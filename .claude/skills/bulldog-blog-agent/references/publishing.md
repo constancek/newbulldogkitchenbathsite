@@ -48,7 +48,17 @@ The deliverable block from `post-templates.md` (target phrase, stage, CTA, image
 5. Commit the `.md` and the calendar. Push the branch. Open a PR against `main` titled with the post title, body = the header block, and request a review from `markx645-cell`. Add the label `blog` if it exists.
 6. Reply in the session with the PR link and one line on what the post does.
 
-If `gh` is available: `gh pr create --base main --title "<title>" --body-file <file> --reviewer markx645-cell --label blog`. Otherwise push and give the owner the compare URL.
+In Claude's cloud sessions `gh pr create` fails (it needs GitHub's GraphQL API, which those sessions block). Use the REST API instead; the Discord notice fires on PR open regardless of how it was opened:
+
+```
+node -e 'const fs=require("fs");console.log(JSON.stringify({title:process.argv[1],head:"blog/"+process.argv[2],base:"main",body:fs.readFileSync(process.argv[3],"utf8")}))' "<title>" "<slug>" /tmp/pr-body.md > /tmp/pr.json
+gh api repos/constancek/newbulldogkitchenbathsite/pulls --input /tmp/pr.json --jq '.html_url,.number'
+gh api repos/constancek/newbulldogkitchenbathsite/pulls/<number>/requested_reviewers -f 'reviewers[]=markx645-cell'
+```
+
+To check for stale open drafts first: `gh api 'repos/constancek/newbulldogkitchenbathsite/pulls?state=open&per_page=50' --jq '.[] | select(.head.ref|startswith("blog/")) | "\(.number) \(.updated_at) \(.title)"'`. To leave the nudge comment: `gh api repos/constancek/newbulldogkitchenbathsite/issues/<number>/comments -f body='@markx645-cell this draft has been waiting a week; could you review it?'`.
+
+In Claude Code on the owner's machine, plain `gh pr create --base main --reviewer markx645-cell` works.
 
 ## What the Action does after the push
 
