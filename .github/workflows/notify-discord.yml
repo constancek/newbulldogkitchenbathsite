@@ -1,0 +1,54 @@
+# Posts to the #bath-blog Discord channel when a blog pull request opens (a new draft is
+# ready to review) and when it is merged (the post is live).
+#
+# Setup, once: in Discord, open #bath-blog → Edit Channel → Integrations → Webhooks →
+# New Webhook → Copy Webhook URL. In GitHub: repo Settings → Secrets and variables →
+# Actions → New repository secret, name DISCORD_WEBHOOK_URL, value = that URL.
+# Optional: a repository *variable* DISCORD_REVIEWER_ID with the reviewer's Discord user ID
+# (Discord → User Settings → Advanced → Developer Mode, then right-click the user → Copy User ID)
+# so the message pings them.
+name: Notify Discord
+
+on:
+  pull_request:
+    types: [opened, reopened, closed]
+    branches: [main]
+
+jobs:
+  notify:
+    if: startsWith(github.head_ref, 'blog/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: New draft to review
+        if: github.event.action == 'opened' || github.event.action == 'reopened'
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          REVIEWER: ${{ vars.DISCORD_REVIEWER_ID }}
+          TITLE: ${{ github.event.pull_request.title }}
+          URL: ${{ github.event.pull_request.html_url }}
+          NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -z "$WEBHOOK" ]; then echo "DISCORD_WEBHOOK_URL secret not set; skipping"; exit 0; fi
+          PING=""; [ -n "$REVIEWER" ] && PING="<@$REVIEWER> "
+          node -e '
+            const [ping, title, url, number] = process.argv.slice(1);
+            const content = `${ping}**New blog draft to review** (#${number})\n**${title}**\n${url}\nThe Vercel preview link appears as a comment on that page within a few minutes. Steps are in BLOG-REVIEW.md: read the preview, edit the text, upload the photos, set draft: false, merge.`;
+            fetch(process.env.WEBHOOK, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ content, allowed_mentions: { parse: ["users"] } }) })
+              .then((r) => { if (!r.ok) { console.error("Discord returned " + r.status); process.exit(1); } });
+          ' "$PING" "$TITLE" "$URL" "$NUMBER"
+
+      - name: Post published
+        if: github.event.action == 'closed' && github.event.pull_request.merged == true
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TITLE: ${{ github.event.pull_request.title }}
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          if [ -z "$WEBHOOK" ]; then echo "DISCORD_WEBHOOK_URL secret not set; skipping"; exit 0; fi
+          SLUG="${BRANCH#blog/}"
+          node -e '
+            const [title, slug] = process.argv.slice(1);
+            const content = `**Merged:** ${title}\nhttps://bulldogkitchenbath.com/blog/${slug}/ (live within a few minutes, if draft was set to false before merging)`;
+            fetch(process.env.WEBHOOK, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ content }) })
+              .then((r) => { if (!r.ok) { console.error("Discord returned " + r.status); process.exit(1); } });
+          ' "$TITLE" "$SLUG"

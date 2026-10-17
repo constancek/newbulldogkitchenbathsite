@@ -1,39 +1,138 @@
-// Starter blog posts (placeholder content).
-const posts = [
-  {
-    slug: 'tub-to-shower-conversion-guide', date: 'October 1, 2026', img: 'blog-tub-to-shower',
-    title: 'Is a Tub-to-Shower Conversion Right for You?',
-    excerpt: 'Thinking about trading your bathtub for a walk-in shower? Here\'s what to weigh before you decide.',
-    body: `<p>Swapping a rarely used bathtub for a spacious walk-in shower is one of the most popular bathroom upgrades, and for good reason. It makes the room feel bigger, safer, and easier to clean.</p>
-<h2>Benefits of converting</h2>
-<ul><li><strong>Easier access:</strong> a low-threshold base removes the need to climb over a tub wall.</li><li><strong>More space:</strong> a glass door and open layout make small bathrooms feel larger.</li><li><strong>Less cleaning:</strong> seamless wall panels mean no grout lines to scrub.</li></ul>
-<h2>When to keep a tub</h2>
-<p>If you have young children or it's the only tub in the house, it may make sense to keep one. Your design consultant can help you weigh daily use against resale.</p>
-<h2>How long does it take?</h2>
-<p>Most conversions are completed in as little as one day once your products are ready.</p>`,
-  },
-  {
-    slug: 'kitchen-cabinet-refacing-vs-replacement', date: 'September 15, 2026', img: 'blog-cabinet-refacing',
-    title: 'Cabinet Refacing vs. Replacement: Which Should You Choose?',
-    excerpt: 'Both can transform your kitchen. The right choice depends on your cabinet boxes, layout, and budget.',
-    body: `<p>Cabinets set the look of your kitchen, and they're usually the largest part of the budget. Here's how to decide between refacing and replacing.</p>
-<h2>Choose refacing if…</h2>
-<ul><li>Your cabinet boxes are solid and free of water damage.</li><li>You like your current layout.</li><li>You want a faster project with less disruption.</li></ul>
-<h2>Choose replacement if…</h2>
-<ul><li>You want to change the layout or add an island.</li><li>Boxes are damaged, sagging, or poorly built.</li><li>You want specialized storage throughout.</li></ul>
-<p>Not sure? A design consultation will tell you which option makes sense for your kitchen.</p>`,
-  },
-  {
-    slug: 'aging-in-place-bathroom-upgrades', date: 'August 28, 2026', img: 'blog-aging-in-place',
-    title: '5 Bathroom Upgrades for Aging in Place',
-    excerpt: 'Simple changes that make your bathroom safer and more comfortable for years to come.',
-    body: `<p>The bathroom is where many falls at home happen. These upgrades help you stay safe and independent without making the room feel clinical.</p>
-<h2>1. Low-threshold shower base</h2><p>Removing the step into the shower is the single biggest safety improvement for most homes.</p>
-<h2>2. Grab bars</h2><p>Today's grab bars come in designer finishes that match your faucets and towel bars.</p>
-<h2>3. Built-in or fold-down seating</h2><p>A seat makes showering easier and safer, especially for people with balance concerns.</p>
-<h2>4. Handheld shower</h2><p>A handheld head on a slide bar works for every height and seated bathing.</p>
-<h2>5. Slip-resistant surfaces</h2><p>Textured shower floors provide grip without being hard to clean.</p>`,
-  },
-];
+// Blog posts live as Markdown files in src/content/blog/<slug>.md
+//
+// Each file starts with a front-matter block, then the post body in Markdown:
+//
+//   ---
+//   title: Why your shower grout turns gray again a year after you clean it
+//   date: 2026-10-20
+//   excerpt: One or two sentences shown on the blog index card.
+//   description: Meta description for search engines, under 155 characters.
+//   img: blog-shower-grout-gray         (photo name in images/blog/, no extension; optional)
+//   draft: true                         (true = hidden from the live site, shown on previews)
+//   ---
+//   Body in Markdown...
+//
+// Drafts are left out of the build unless INCLUDE_DRAFTS=1 is set, or the build runs on a
+// Vercel preview deployment (VERCEL_ENV=preview). Published posts are sorted newest first.
+const fs = require('fs');
+const path = require('path');
 
-module.exports = { posts };
+const DIR = path.join(__dirname, 'blog');
+const INCLUDE_DRAFTS = process.env.INCLUDE_DRAFTS === '1' || process.env.VERCEL_ENV === 'preview';
+
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+// ---------- Front matter ----------
+function parseFrontMatter(text, file) {
+  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!m) throw new Error(`${file}: missing front matter block (--- ... ---) at the top`);
+  const meta = {};
+  m[1].split(/\r?\n/).forEach((line) => {
+    const kv = line.match(/^([A-Za-z_]+):\s*(.*)$/);
+    if (!kv) return;
+    let v = kv[2].trim();
+    if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) v = v.slice(1, -1);
+    meta[kv[1]] = v;
+  });
+  return { meta, body: m[2] };
+}
+
+// ---------- Markdown (the small subset posts use) ----------
+function inline(s) {
+  return esc(s)
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, src) => inlineImage(src, alt))
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>');
+}
+// ![alt](blog-photo-name) uses a site photo from images/blog/; ![alt](/assets/...) or a full URL is used as is
+let imgUrl = (name) => `/assets/img/blog/${name}.webp`;
+function inlineImage(src, alt) {
+  const url = /^(\/|https?:)/.test(src) ? src : imgUrl(src);
+  return `<img src="${url}" alt="${alt}" loading="lazy" decoding="async">`;
+}
+
+function table(lines) {
+  const cells = (l) => l.replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => inline(c.trim()));
+  const head = cells(lines[0]);
+  const rows = lines.slice(2).map(cells);
+  return `<div class="table-wrap"><table><thead><tr>${head.map((h) => `<th>${h}</th>`).join('')}</tr></thead><tbody>${
+    rows.map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+
+function markdown(md) {
+  const lines = md.replace(/\r\n/g, '\n').split('\n');
+  const out = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim()) { i++; continue; }
+    let m;
+    if ((m = line.match(/^(#{1,4})\s+(.*)$/))) {
+      const level = Math.max(m[1].length, 2); // the page title is the H1, so a lone "# " in a post is still an H2
+      out.push(`<h${level}>${inline(m[2])}</h${level}>`); i++; continue;
+    }
+    if (/^(-{3,}|\*{3,})$/.test(line.trim())) { out.push('<hr>'); i++; continue; }
+    if (/^\|/.test(line) && /^\|?\s*:?-{2,}/.test(lines[i + 1] || '')) {
+      const block = [];
+      while (i < lines.length && /^\|/.test(lines[i])) block.push(lines[i++]);
+      out.push(table(block)); continue;
+    }
+    if (/^>\s?/.test(line)) {
+      const block = [];
+      while (i < lines.length && /^>\s?/.test(lines[i])) block.push(lines[i++].replace(/^>\s?/, ''));
+      out.push(`<blockquote>${markdown(block.join('\n'))}</blockquote>`); continue;
+    }
+    if (/^\s*[-*]\s+/.test(line) || /^\s*\d+[.)]\s+/.test(line)) {
+      const ordered = /^\s*\d+[.)]\s+/.test(line);
+      const re = ordered ? /^\s*\d+[.)]\s+/ : /^\s*[-*]\s+/;
+      const items = [];
+      while (i < lines.length && re.test(lines[i])) {
+        let item = lines[i++].replace(re, '');
+        while (i < lines.length && /^\s{2,}\S/.test(lines[i]) && !re.test(lines[i])) item += ' ' + lines[i++].trim();
+        items.push(`<li>${inline(item)}</li>`);
+      }
+      out.push(ordered ? `<ol>${items.join('')}</ol>` : `<ul>${items.join('')}</ul>`); continue;
+    }
+    if (/^!\[[^\]]*\]\([^)]+\)\s*$/.test(line.trim())) { out.push(`<figure>${inline(line.trim())}</figure>`); i++; continue; }
+    // Paragraph: consecutive non-empty lines that aren't another block
+    const para = [];
+    while (i < lines.length && lines[i].trim() && !/^(#{1,4}\s|>|\||\s*[-*]\s|\s*\d+[.)]\s|-{3,}$)/.test(lines[i])) para.push(lines[i++].trim());
+    out.push(`<p>${inline(para.join(' '))}</p>`);
+  }
+  return out.join('\n');
+}
+
+// ---------- Load ----------
+function loadPosts() {
+  if (!fs.existsSync(DIR)) return [];
+  const files = fs.readdirSync(DIR).filter((f) => f.endsWith('.md')).sort();
+  const all = files.map((f) => {
+    const file = path.join(DIR, f);
+    const { meta, body } = parseFrontMatter(fs.readFileSync(file, 'utf8'), path.relative(process.cwd(), file));
+    const slug = f.replace(/\.md$/, '');
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) throw new Error(`${f}: file name must be lowercase words joined by hyphens (it becomes the web address)`);
+    if (!meta.title) throw new Error(`${f}: front matter needs a title:`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(meta.date || '')) throw new Error(`${f}: front matter needs date: YYYY-MM-DD`);
+    const draft = /^(true|yes|1)$/i.test(meta.draft || '');
+    const d = new Date(meta.date + 'T12:00:00');
+    return {
+      slug, title: meta.title, draft, sortKey: meta.date,
+      date: d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+      excerpt: meta.excerpt || '',
+      description: meta.description || meta.excerpt || '',
+      img: meta.img || '',
+      body: markdown(body),
+    };
+  });
+  const posts = all.filter((p) => !p.draft || INCLUDE_DRAFTS).sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
+  const skipped = all.length - posts.length;
+  if (skipped) console.log(`Blog: ${skipped} draft post(s) left out of this build (set INCLUDE_DRAFTS=1 to include them)`);
+  return posts;
+}
+
+// build.js passes the real photo-URL helper in so inline images resolve to the right folder
+function configure({ imgUrl: fn }) { if (fn) imgUrl = fn; }
+
+module.exports = { loadPosts, configure, markdown };
