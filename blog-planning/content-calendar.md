@@ -13,7 +13,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 0 | 2026-10-01 | Is a Tub-to-Shower Conversion Right for You? | consideration | Linda | tub to shower conversion | published (starter) | /blog/tub-to-shower-conversion-guide/ |
 | 1 | 2026-10-17 | Why your shower grout turns gray again a year after you clean it | awareness | Linda | shower grout turns gray | drafted | blog/shower-grout-turns-gray |
 | 2 | | What's behind the tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | planned | |
-| 3 | | Tile shower vs. solid-surface walls: an honest comparison | consideration | all | tile vs acrylic shower walls | planned | |
+| 3 | 2026-10-31 | Tile vs. acrylic shower walls: what each one asks of you over 20 years | consideration | all | tile vs acrylic shower walls | drafted | blog/tile-vs-acrylic-shower-walls |
 | 4 | | Install day, hour by hour | decision | all | one day bathroom remodel what to expect | planned | |
 | 5 | | The soft spot in the floor next to your tub | awareness | Linda | soft floor next to bathtub | planned | |
 | 6 | | What sets the price of a one-day shower gut in Cincinnati | consideration | Dave & Karen | one day bathroom remodel cost Cincinnati | planned | |
