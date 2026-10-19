@@ -14,7 +14,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 1 | 2026-10-17 | Why your shower grout turns gray again a year after you clean it | awareness | Linda | shower grout turns gray | drafted | blog/shower-grout-turns-gray |
 | 2 | | What's behind the tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | planned | |
 | 3 | | Tile shower vs. solid-surface walls: an honest comparison | consideration | all | tile vs acrylic shower walls | planned | |
-| 4 | | Install day, hour by hour | decision | all | one day bathroom remodel what to expect | planned | |
+| 4 | 2026-11-07 | One-day bathroom remodel: what to expect, hour by hour | decision | all | one day bathroom remodel what to expect | drafted | blog/one-day-bathroom-remodel-what-to-expect |
 | 5 | | The soft spot in the floor next to your tub | awareness | Linda | soft floor next to bathtub | planned | |
 | 6 | | What sets the price of a one-day shower gut in Cincinnati | consideration | Dave & Karen | one day bathroom remodel cost Cincinnati | planned | |
 | 7 | | "Won't it look like a plastic insert?" | consideration | Linda | acrylic shower walls look cheap | planned | |
