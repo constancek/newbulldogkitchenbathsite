@@ -15,7 +15,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 2 | | What's behind the tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | planned | |
 | 3 | | Tile shower vs. solid-surface walls: an honest comparison | consideration | all | tile vs acrylic shower walls | planned | |
 | 4 | | Install day, hour by hour | decision | all | one day bathroom remodel what to expect | planned | |
-| 5 | | The soft spot in the floor next to your tub | awareness | Linda | soft floor next to bathtub | planned | |
+| 5 | 2026-11-14 | Soft floor next to your bathtub: what it is and what waiting costs | awareness | Linda | soft floor next to bathtub | drafted | blog/soft-floor-next-to-bathtub |
 | 6 | | What sets the price of a one-day shower gut in Cincinnati | consideration | Dave & Karen | one day bathroom remodel cost Cincinnati | planned | |
 | 7 | | "Won't it look like a plastic insert?" | consideration | Linda | acrylic shower walls look cheap | planned | |
 | 8 | | Grab bars and walk-in showers are for old people (and other things we hear) | awareness | Margaret | walk in shower for seniors | planned | |
