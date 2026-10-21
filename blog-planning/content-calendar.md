@@ -19,7 +19,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 6 | | What sets the price of a one-day shower gut in Cincinnati | consideration | Dave & Karen | one day bathroom remodel cost Cincinnati | planned | |
 | 7 | | "Won't it look like a plastic insert?" | consideration | Linda | acrylic shower walls look cheap | planned | |
 | 8 | | Grab bars and walk-in showers are for old people (and other things we hear) | awareness | Margaret | walk in shower for seniors | planned | |
-| 9 | | The three questions to ask every bathroom contractor before a deposit | decision | all | questions to ask bathroom contractor | planned | |
+| 9 | 2026-11-21 | Three questions to ask a bathroom contractor before a deposit | decision | all | questions to ask bathroom contractor | drafted | blog/questions-to-ask-bathroom-contractor |
 | 10 | | How to clean your new grout-free shower | post-purchase | all | how to clean acrylic shower walls | planned | |
 | 11 | | A new grout-free shower for about the cost of a cable bill | consideration | Linda, Margaret | bathroom remodel financing | planned | |
 | 12 | | Bathroom mildew that keeps coming back: where it lives | awareness | Linda | shower mildew keeps coming back | planned | |
