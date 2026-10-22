@@ -20,7 +20,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 7 | | "Won't it look like a plastic insert?" | consideration | Linda | acrylic shower walls look cheap | planned | |
 | 8 | | Grab bars and walk-in showers are for old people (and other things we hear) | awareness | Margaret | walk in shower for seniors | planned | |
 | 9 | | The three questions to ask every bathroom contractor before a deposit | decision | all | questions to ask bathroom contractor | planned | |
-| 10 | | How to clean your new grout-free shower | post-purchase | all | how to clean acrylic shower walls | planned | |
+| 10 | 2026-11-28 | How to clean your new grout-free shower (and what to keep off it) | post-purchase | all | how to clean acrylic shower walls | drafted | blog/how-to-clean-grout-free-shower |
 | 11 | | A new grout-free shower for about the cost of a cable bill | consideration | Linda, Margaret | bathroom remodel financing | planned | |
 | 12 | | Bathroom mildew that keeps coming back: where it lives | awareness | Linda | shower mildew keeps coming back | planned | |
 
