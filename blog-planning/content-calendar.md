@@ -18,7 +18,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 5 | | The soft spot in the floor next to your tub | awareness | Linda | soft floor next to bathtub | planned | |
 | 6 | | What sets the price of a one-day shower gut in Cincinnati | consideration | Dave & Karen | one day bathroom remodel cost Cincinnati | planned | |
 | 7 | | "Won't it look like a plastic insert?" | consideration | Linda | acrylic shower walls look cheap | planned | |
-| 8 | | Grab bars and walk-in showers are for old people (and other things we hear) | awareness | Margaret | walk in shower for seniors | planned | |
+| 8 | 2026-12-12 | "Grab bars are for old people," and four other things we hear | awareness | Margaret | walk in shower for seniors | drafted | blog/grab-bars-are-for-old-people |
 | 9 | | The three questions to ask every bathroom contractor before a deposit | decision | all | questions to ask bathroom contractor | planned | |
 | 10 | | How to clean your new grout-free shower | post-purchase | all | how to clean acrylic shower walls | planned | |
 | 11 | | A new grout-free shower for about the cost of a cable bill | consideration | Linda, Margaret | bathroom remodel financing | planned | |
