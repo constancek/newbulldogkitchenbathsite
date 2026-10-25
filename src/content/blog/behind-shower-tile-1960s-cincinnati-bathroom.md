@@ -6,7 +6,7 @@ description: What is behind shower tile in a 1960s house? Mortar or greenboard, 
 img: blog-behind-shower-tile-1960s-cincinnati-bathroom
 photoCredit: Tomás Asurmendi on Pexels, https://www.pexels.com/photo/elegant-bathroom-decor-with-floral-elements-33362147/
 photo: vintage 1960s bathroom with pink tile walls
-draft: true
+draft: false
 ---
 Tap the almond tile on the tub wall, a foot above the rim, and you get a solid click. Tap the bottom row, where the grout keeps going gray, and in a lot of the ranches our crews open in Anderson Township and Fort Thomas, Kentucky, the sound goes dull. The tile is fine. This is what is behind shower tile in a house built around 1965, in the order our installers meet it on demo day.
 
