@@ -13,6 +13,9 @@ on:
       - 'src/**'
       - 'images/**'
       - '.github/workflows/build.yml'
+  # Run by hand from the Actions tab (for example after adding the PEXELS_API_KEY secret, to
+  # fetch photos for posts that are still on the placeholder)
+  workflow_dispatch:
 
 permissions:
   contents: write
