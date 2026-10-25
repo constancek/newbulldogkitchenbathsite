@@ -7,7 +7,7 @@ The site is a static build. Posts are Markdown files; a GitHub Action renders th
 | Path | What |
 |---|---|
 | `src/content/blog/<slug>.md` | One file per post. The file name is the URL (`/blog/<slug>/`). |
-| `images/blog/blog-<slug>.jpg` (or .png/.webp) | The post's photo. The assistant uploads it; the Action converts it. |
+| `images/blog/blog-<slug>.jpg` (or .png/.webp) | The post's one photo. The Action fetches it from Pexels on the first push (using the post's `photo:` phrase) and converts it; the assistant can replace it with a real photo under the same name. |
 | `blog-planning/content-calendar.md` | Every post planned, drafted or published, with its stage. Read it before choosing a topic. Append to it when you draft. |
 | `blog-planning/bulldog-avatar.md` | The avatar and the owner's discovery answers. |
 | `BLOG-REVIEW.md` | The assistant's instructions. Don't edit it in a post PR. |
@@ -21,16 +21,18 @@ date: 2026-10-20
 excerpt: One or two sentences for the blog index card. Under 160 characters.
 description: Meta description for search. Under 155 characters. Different from the excerpt.
 img: blog-shower-grout-gray
+photo: gray grout lines on white shower tile
 draft: true
 ---
 Body in Markdown. H2s with "##". Short paragraphs. One table at most, in pipe syntax.
-Inline photos as ![alt text](blog-shower-grout-gray-2) using a photo name, no extension.
+No images in the body: the post's one photo is the header photo named by img.
 ```
 
 Rules:
 - Slug: lowercase words joined by hyphens, 3 to 8 words, built from the title. No dates, no stop words at the start.
 - `date`: the planned publish date, YYYY-MM-DD. Posts sort newest first, so use the next open slot on the calendar, not today.
 - `img`: always `blog-<slug>`. The build shows a placeholder until the photo exists, so the preview works without it.
+- `photo`: the Pexels search phrase for the one header photo. Five to eight words that describe a picture ("older couple looking at bathroom tile samples"), not the topic. `src/fetch-blog-photo.js` runs in the Action with the `PEXELS_API_KEY` secret, saves the first wide result as `images/blog/blog-<slug>.jpg`, and writes a `photoCredit:` line (photographer and Pexels link) into the post's front matter. Leave that line alone. One photo per post, so never put `![...]` images in the body.
 - `draft: true` always. The agent never publishes. The assistant flips it.
 - Markdown subset the build understands: `##`/`###` headings, paragraphs, `-` and `1.` lists, `**bold**`, `*italic*`, `[links](url)`, `![images](photo-name)`, pipe tables, `>` quotes, `---` rules. No raw HTML, no footnotes, no nested lists.
 - Links to site pages are root-relative: `/one-day-bathroom-remodel/`, `/inspiration-colors-patterns/`, `/financing/`, `/current-promos/`, `/about/#contact`, `/blog/<other-slug>/`.
@@ -41,7 +43,7 @@ The owner does not want "Generated with Claude Code" or session links in PR desc
 
 ## The header block goes in the PR, not the file
 
-The deliverable block from `post-templates.md` (target phrase, stage, CTA, image suggestions, confirm-with-owner items, stop-slop score) goes in the pull request description. The `.md` file holds only front matter and the post. The assistant reads the PR description to know what photos to shoot and what to check.
+The deliverable block from `post-templates.md` (target phrase, stage, CTA, photo line, confirm-with-owner items, stop-slop score) goes in the pull request description. The `.md` file holds only front matter and the post. The assistant reads the PR description to know what to check and what real photo could replace the Pexels one.
 
 ## Opening the PR (scheduled runs and Claude Code sessions)
 
