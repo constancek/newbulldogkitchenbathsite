@@ -75,7 +75,7 @@ Good: "You regrouted the master shower in the spring. By October the lines along
 - One table maximum per post.
 - Define the first use of any trade term in the same sentence: "backerboard, the waterproof panel that goes behind the wall surface."
 - Numbers as numerals ($150 not one hundred fifty dollars). The only dollar figures that appear in posts are the financing line and the promo amount.
-- Images: suggest two or three. A real finished Bulldog job in an ordinary house, a mid-install photo (demo with the subfloor visible), and one detail shot (a seam, a shelf, a grab bar). Describe each in one line for the owner. Never generate or fabricate images.
+- One photo per post, the header photo, and none inside the body. It comes from Pexels via the `photo:` search phrase in the front matter (see `publishing.md`), so write a phrase that describes a picture, not a topic: "older couple looking at bathroom tile samples", not "bathroom remodel cost". Also describe, in one line, the real Bulldog photo the owner could swap in later (a finished job in an ordinary house, or a mid-install shot). Never generate or fabricate images.
 
 ## SEO, enough and no more
 
@@ -83,7 +83,7 @@ Good: "You regrouted the master shower in the spring. By October the lines along
 - Local phrase variants when the post is local: "Cincinnati," "Northern Kentucky," one or two suburb names in the body.
 - Two internal links to other posts or site pages, with descriptive anchor text ("our walk-in shower packages" not "click here").
 - One or two external links to cited sources, opened in the same sentence that uses the fact.
-- Alt text for each suggested image, written as a description of the picture.
+- The photo's alt text is the post title (the build sets it), so no alt text to write.
 - Schema and technical SEO are the site builder's job; do not add JSON-LD to a post.
 
 ## The deliverable block (top of every post, for the owner to delete)
@@ -97,7 +97,7 @@ Avatar variant:
 Primary CTA:
 Internal links:   1) ... 2) ...
 Sources cited:
-Images to add:    1) ... 2) ... 3) ...
+Photo:            Pexels phrase "..." / real photo to swap in later: ...
 Confirm with owner:
   - ...
 Stop-slop score:  xx/50 (Directness x, Rhythm x, Trust x, Authenticity x, Density x)
