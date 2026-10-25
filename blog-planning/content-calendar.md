@@ -2,7 +2,7 @@
 
 One row per post. The agent reads this before picking a topic (stage mix: about 4 awareness, 3 consideration, 2 decision, 1 post-purchase per ten) and appends a row when it drafts. The assistant updates Status when they publish.
 
-Status: `planned` → `drafted` (PR open) → `published` (merged with draft: false) · `skipped`
+Status: `planned` → `drafted` (PR open) → `published` (PR merged) · `skipped`
 
 Stage: awareness · consideration · decision · post-purchase
 
@@ -12,7 +12,7 @@ Stage: awareness · consideration · decision · post-purchase
 | 0 | 2026-09-15 | Cabinet Refacing vs. Replacement | consideration | (kitchen) | cabinet refacing vs replacement | published (starter) | /blog/kitchen-cabinet-refacing-vs-replacement/ |
 | 0 | 2026-10-01 | Is a Tub-to-Shower Conversion Right for You? | consideration | Linda | tub to shower conversion | published (starter) | /blog/tub-to-shower-conversion-guide/ |
 | 1 | 2026-10-17 | Why your shower grout turns gray again a year after you clean it | awareness | Linda | shower grout turns gray | drafted | blog/shower-grout-turns-gray |
-| 2 | | What's behind the tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | planned | |
+| 2 | 2026-10-24 | What's behind the shower tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | drafted | blog/behind-shower-tile-1960s-cincinnati-bathroom |
 | 3 | | Tile shower vs. solid-surface walls: an honest comparison | consideration | all | tile vs acrylic shower walls | planned | |
 | 4 | | Install day, hour by hour | decision | all | one day bathroom remodel what to expect | planned | |
 | 5 | 2026-11-14 | Soft floor next to your bathtub: what it is and what waiting costs | awareness | Linda | soft floor next to bathtub | drafted | blog/soft-floor-next-to-bathtub |

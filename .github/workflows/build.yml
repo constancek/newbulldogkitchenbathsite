@@ -3,8 +3,9 @@
 # folder (plus any fetched photo) back. Nobody needs Node or ffmpeg on their own
 # computer: edit a Markdown post or upload a photo on GitHub, and this does the rest.
 #
-# Branches other than main are built WITH draft blog posts, so a pull request's Vercel
-# preview shows the draft. main is built without drafts, so a draft can never go live.
+# Merging a blog post's pull request publishes it: on main, src/publish-posts.js first stamps
+# any newly merged post with the day it went live. On other branches the build is marked as a
+# preview, so the Vercel preview of a pull request says so on every post.
 name: Build site
 
 on:
@@ -49,9 +50,13 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: node src/fetch-blog-photo.js
 
+      - name: Stamp newly published posts with today's date (main only)
+        if: github.ref_name == 'main'
+        run: node src/publish-posts.js
+
       - name: Build
         env:
-          INCLUDE_DRAFTS: ${{ github.ref_name == 'main' && '0' || '1' }}
+          PREVIEW_BUILD: ${{ github.ref_name == 'main' && '0' || '1' }}
         run: node src/build.js
 
       - name: Commit the generated site

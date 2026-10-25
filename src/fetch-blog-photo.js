@@ -89,13 +89,16 @@ async function main() {
   }
   const used = usedUrls();
   for (const { file, img, query } of todo) {
-    // First wide photo not already used elsewhere on the site, at least 1200px across
-    let pick = null;
-    for (let page = 1; page <= 3 && !pick; page++) {
+    // Wide photos not already used elsewhere on the site, at least 1200px across. Among the
+    // first few good ones the post's name decides which, so two posts with similar phrases
+    // fetched at the same time (each on its own branch) do not usually land on the same photo.
+    const good = [];
+    for (let page = 1; page <= 3 && good.length < 4; page++) {
       const photos = await search(query, page);
-      pick = photos.find((p) => p.width >= 1200 && p.width > p.height && !used.has(p.url));
+      good.push(...photos.filter((p) => p.width >= 1200 && p.width > p.height && !used.has(p.url)));
       if (photos.length < 20) break;
     }
+    const pick = good.length ? good[[...img].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 9973, 7) % Math.min(good.length, 4)] : null;
     if (!pick) { console.warn(`Blog photos: nothing on Pexels for "${query}" (${file}); keeping the placeholder.`); continue; }
     const dest = path.join(PHOTOS, `${img}.jpg`);
     await download(pick.src.large2x || pick.src.original, dest);

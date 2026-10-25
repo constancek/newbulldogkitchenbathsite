@@ -11,8 +11,9 @@ src/
   build.js           # every page is defined here
   images.js          # turns new or replaced photos in images/ into WebP
   fetch-blog-photo.js # gets a new blog post's photo from Pexels (run by the Action)
+  publish-posts.js   # on main, dates a newly merged post the day it went live (run by the Action)
   content/           # product, FAQ and legal copy
-  content/blog/      # one Markdown file per blog post (front matter + body; draft: true hides it from the live site)
+  content/blog/      # one Markdown file per blog post (front matter + body); on main it is live
 images/              # every site photo, sorted by page: replace photos here
   blog/              # blog photos, named blog-<post-file-name>
 public/              # generated site (deploy this folder)
@@ -26,7 +27,7 @@ BLOG-REVIEW.md       # how to review, photograph and publish a blog post on GitH
 ```
 
 ## Blog
-Posts are Markdown files in `src/content/blog/`. Claude drafts them (scheduled task or `/bath-blog-agent` in Claude Code) as pull requests with `draft: true`; the Action fetches each post's one photo from Pexels (`src/fetch-blog-photo.js`, needs the `PEXELS_API_KEY` secret) and a reviewer edits, checks the photo and flips `draft: false` before merging. See `BLOG-REVIEW.md`. The GitHub Action builds branches with drafts included (so Vercel previews show them) and `main` without, so a draft can't go live. Locally, `INCLUDE_DRAFTS=1 npm run build` includes drafts.
+Posts are Markdown files in `src/content/blog/`. Claude drafts them (scheduled task or `/bath-blog-agent` in Claude Code) as pull requests; the Action fetches each post's one photo from Pexels (`src/fetch-blog-photo.js`, needs the `PEXELS_API_KEY` secret). Merging the pull request publishes the post: the Action stamps it with that day's date and rebuilds `main`. Branch builds are marked as previews. See `BLOG-REVIEW.md`.
 
 ## Build & preview
 ```
