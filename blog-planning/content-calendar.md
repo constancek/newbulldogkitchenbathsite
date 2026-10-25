@@ -2,7 +2,7 @@
 
 One row per post. The agent reads this before picking a topic (stage mix: about 4 awareness, 3 consideration, 2 decision, 1 post-purchase per ten) and appends a row when it drafts. The assistant updates Status when they publish.
 
-Status: `planned` → `drafted` (PR open) → `published` (merged with draft: false) · `skipped`
+Status: `planned` → `drafted` (PR open) → `published` (PR merged) · `skipped`
 
 Stage: awareness · consideration · decision · post-purchase
 

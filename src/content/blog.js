@@ -11,17 +11,18 @@
 //   photo: gray grout tiled shower      (Pexels search phrase; src/fetch-blog-photo.js fetches the
 //                                        post's one photo with it when images/blog/ has none)
 //   photoCredit: Jane Doe on Pexels, https://www.pexels.com/photo/...   (written by that script)
-//   draft: true                         (true = hidden from the live site, shown on previews)
 //   ---
 //   Body in Markdown...
 //
-// Drafts are left out of the build unless INCLUDE_DRAFTS=1 is set, or the build runs on a
-// Vercel preview deployment (VERCEL_ENV=preview). Published posts are sorted newest first.
+// A post is live as soon as it is on main: merging its pull request publishes it, and the
+// Action then sets its date to the day it went live (src/publish-posts.js). There is no draft
+// switch; an old `draft:` line is ignored. On a branch or a Vercel preview (PREVIEW_BUILD=1 or
+// VERCEL_ENV=preview) every post carries a "not on the live site yet" note. Newest first.
 const fs = require('fs');
 const path = require('path');
 
 const DIR = path.join(__dirname, 'blog');
-const INCLUDE_DRAFTS = process.env.INCLUDE_DRAFTS === '1' || process.env.VERCEL_ENV === 'preview';
+const PREVIEW = process.env.PREVIEW_BUILD === '1' || process.env.VERCEL_ENV === 'preview';
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -118,10 +119,9 @@ function loadPosts() {
     if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) throw new Error(`${f}: file name must be lowercase words joined by hyphens (it becomes the web address)`);
     if (!meta.title) throw new Error(`${f}: front matter needs a title:`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(meta.date || '')) throw new Error(`${f}: front matter needs date: YYYY-MM-DD`);
-    const draft = /^(true|yes|1)$/i.test(meta.draft || '');
     const d = new Date(meta.date + 'T12:00:00');
     return {
-      slug, title: meta.title, draft, sortKey: meta.date,
+      slug, title: meta.title, preview: PREVIEW, sortKey: meta.date,
       date: d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
       excerpt: meta.excerpt || '',
       description: meta.description || meta.excerpt || '',
@@ -129,10 +129,7 @@ function loadPosts() {
       body: markdown(body),
     };
   });
-  const posts = all.filter((p) => !p.draft || INCLUDE_DRAFTS).sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
-  const skipped = all.length - posts.length;
-  if (skipped) console.log(`Blog: ${skipped} draft post(s) left out of this build (set INCLUDE_DRAFTS=1 to include them)`);
-  return posts;
+  return all.sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));
 }
 
 // build.js passes the real photo-URL helper in so inline images resolve to the right folder
