@@ -373,7 +373,7 @@ page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, 
   C.cards({ perRow: 3, link: 'Read More', items: posts.map((p) => ({ title: p.title, img: p.img, href: `/blog/${p.slug}/`, text: p.excerpt, meta: p.date })) }),
 ].join('\n'));
 posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.description || p.excerpt, [
-  C.pageBand({ title: p.title, extra: `<p class="post-meta">${p.date} · ${SITE.name}${p.draft ? ' · <strong>DRAFT, not on the live site</strong>' : ''}</p>` }),
+  C.pageBand({ title: p.title, extra: `<p class="post-meta">${p.date} · ${SITE.name}${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>` }),
   `<section class="section"><div class="container prose">${C.picture(p.img, p.title)}${p.body}
   <p><a class="button" href="/about/#contact">Request an Estimate</a></p>
   <p><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></p></div></section>`,
@@ -386,6 +386,9 @@ page('/404', 'Page Not Found', 'The page you were looking for could not be found
 ].join('\n'));
 
 // ---------- Write ----------
+// Blog pages are regenerated from scratch so a post that is no longer in this build (a post
+// previewed on a branch, a renamed slug, a deleted post) does not linger as a stale page.
+fs.rmSync(path.join(OUT, 'blog'), { recursive: true, force: true });
 for (const p of pages) {
   const file = p.path === '/404' ? path.join(OUT, '404.html') : path.join(OUT, p.path, 'index.html');
   fs.mkdirSync(path.dirname(file), { recursive: true });
