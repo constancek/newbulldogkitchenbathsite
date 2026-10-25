@@ -33,11 +33,11 @@ const promos = {
 
 const exploreBath = (grey = false) => C.tiles({
   title: 'Explore Our <strong>Services</strong>', grey,
-  items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/bathrooms/${b.slug}/`, img: b.card })), { title: 'Kitchens', href: '/kitchens/', img: 'products-card-kitchens' }],
+  items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/bathrooms/${b.slug}/`, img: b.card })), { title: 'Kitchens', href: '/kitchens/', img: 'services-card-kitchens' }],
 });
 
 const learnMore = (custom = {}) => C.banner({
-  title: custom.title || 'Learn More About <strong>Bulldog Kitchen &amp; Bath Products</strong>', img: 'colors-patterns-card', alt: 'Stone and tile finish samples',
+  title: custom.title || 'Learn More About <strong>Bulldog Kitchen &amp; Bath</strong>', img: 'colors-patterns-card', alt: 'Stone and tile finish samples',
   text: custom.text || 'Explore every finish, fixture, and layout option we offer for kitchens and baths. Bulldog Kitchen &amp; Bath stands out as the affordable choice for lasting quality and style.',
   buttons: [['Schedule an Estimate', '/about/#contact']],
 });
@@ -67,7 +67,7 @@ const processSteps = (custom = {}) => C.processSteps({
   ],
 });
 
-// Bath reviews (One Day Remodel, Bath Products and every bath product page)
+// Bath reviews (One Day Remodel, Bath Services and every bath product page)
 const bathReviewItems = [
   { img: 'home-review-1', alt: 'Bathroom with a marble-look walk-in shower and a navy double vanity', side: 'right', pos: 'center', name: 'Sarah Miller',
     quote: 'Fantastic job! Our bathroom turned out absolutely <strong>beautiful</strong>, and we couldn\'t be thrilled with the final result.' },
@@ -101,7 +101,7 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
     { img: 'home-slide-new-bath', alt: 'Glass corner shower with beige tile, a built-in niche and black fixtures, beside a dark wood vanity', pos: 'center 40%', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
     { img: 'home-slide-kitchen', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
     { img: 'home-slide-promo', alt: 'Glass walk-in shower with marble-look wall panels, a built-in niche and a white base', pos: 'center 35%', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
-    { img: 'home-slide-quality', alt: 'Bathroom with a gray vanity, tiled glass shower and wood-look floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },
+    { img: 'home-slide-quality', alt: 'Walk-in shower with marble-look walls, black sliding glass door and black hex tile floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },
   ]),
   C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
   C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
@@ -120,8 +120,8 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
   ] }),
   homeReviews(),
   C.sideBySide({
-    title: 'Quality Products for <strong>Your Home</strong>', img: 'home-quality-products', alt: 'Remodeled kitchen',
-    text: '<p>Outdated kitchens and bathrooms can feel cramped, hard to clean, and inefficient. We fix that with durable, low-maintenance products, smart layouts, and an installation process built around your schedule, so you can enjoy your home again.</p>',
+    title: 'Quality Work for <strong>Your Home</strong>', img: 'home-quality-work', alt: 'Remodeled kitchen',
+    text: '<p>Outdated kitchens and bathrooms can feel cramped, hard to clean, and inefficient. We fix that with durable, low-maintenance materials, smart layouts, and an installation process built around your schedule, so you can enjoy your home again.</p>',
     buttons: [['About Bulldog Kitchen &amp; Bath', '/about/']],
   }),
 ].join('\n'));
@@ -132,7 +132,7 @@ const sinceLine = (rest) => `Since ${SITE.founded}, <strong>${SITE.name}</strong
 const colorsLink = 'A few popular colors and tile looks. See every option in our <a class="link-arrow" href="/inspiration-colors-patterns/">Colors &amp; Patterns</a> guide.';
 const optionSections = {
   'colors-patterns': [
-    C.swatches({ title: 'Colors', intro: 'Color availability varies by product. See real samples during your design consultation.', items: options.colors, flush: true }),
+    C.swatches({ title: 'Colors', intro: 'Color availability varies by style. See real samples during your design consultation.', items: options.colors, flush: true }),
     C.swatches({ title: 'Patterns', items: options.patterns }),
     C.sideBySide({ title: '<strong>Grout-Free</strong> Tile Looks', img: 'colors-patterns-pattern-3x6-subway', alt: 'Subway tile-look wall pattern',
       text: '<p>Our tile-look wall patterns have realistic grout lines without the porous grout. They\'re made from the same durable, non-porous material as our standard wall systems, so cleanup is just as easy: no scrubbing, sealing, or regrouting.</p>' }),
@@ -163,7 +163,7 @@ const optionSections = {
   'walk-in-tubs': [
     C.sideBySide({ title: 'Safer Bathrooms, <strong>Beautiful Design</strong>', img: 'accessibility-intro', alt: 'Accessible bathroom', reverse: true,
       text: '<p>We design accessible bathrooms that look like any other upscale remodel. Barrier-free bases, fold-down seats, and well-placed grab bars reduce fall risk for seniors, people with limited mobility, and growing families.</p><p>We also add handheld showers and easy-reach controls, and every grab bar comes in a decorative finish that matches the rest of your fixtures. Our consultants walk through your daily routine and recommend the right mix of safety features so your bathroom keeps working for you for years to come.</p>' + C.benefitList(extras.accessibility.benefits) }),
-    C.swatches({ title: 'Accessibility Products', intro: 'Mix and match the safety features your household needs.', items: options.accessibilityProducts, cards: true }),
+    C.swatches({ title: 'Accessibility Features', intro: 'Mix and match the safety features your household needs.', items: options.accessibilityProducts, cards: true }),
   ],
   vanities: [
     C.swatches({ title: 'Vanity Styles', intro: 'Sized and measured for your bathroom.', items: options.vanityStyles, cards: true, flush: true }),
@@ -235,14 +235,14 @@ kitchen.forEach((p) => productPage(p, '/kitchens/'));
 productPage(colorsPatterns, '/inspiration-');
 
 // ---------- Products overview ----------
-page('/bathrooms/', 'Bath Products', `Explore showers and glass enclosures, tub-to-shower conversions, bathtubs, walk-in tubs and accessibility products, and vanities from ${SITE.name}.`, [
-  C.hero({ img: 'products-header', alt: 'Remodeled bathroom', title: 'Our <strong>Products</strong>', lead: 'Durable, beautiful, low-maintenance bath products, custom-fit and installed by our own team.' }),
-  C.sideBySide({ title: 'Beautiful, <strong>Durable Products</strong>', img: 'products-feature', alt: 'Bathroom with glass shower',
-    text: '<p>Every product we install is chosen to look great on day one and stay that way for years. Non-porous surfaces resist mold and mildew, colors won\'t fade, and there\'s no grout to scrub. ' + sinceLine('has been installing durable, low-maintenance bath products for homeowners across the area.') + '</p><p>Every product is custom-measured for your space and backed by our lifetime warranty.</p>' }),
+page('/bathrooms/', 'Bath Services', `Explore showers and glass enclosures, tub-to-shower conversions, bathtubs, walk-in tubs and accessibility features, and vanities from ${SITE.name}.`, [
+  C.hero({ img: 'services-header', alt: 'Remodeled bathroom', title: 'Our <strong>Services</strong>', lead: 'Durable, beautiful, low-maintenance bath upgrades, custom-fit and installed by our own team.' }),
+  C.sideBySide({ title: 'Beautiful, <strong>Durable Results</strong>', img: 'services-feature', alt: 'Bathroom with glass shower',
+    text: '<p>Everything we install is chosen to look great on day one and stay that way for years. Non-porous surfaces resist mold and mildew, colors won\'t fade, and there\'s no grout to scrub. ' + sinceLine('has been installing durable, low-maintenance bath upgrades for homeowners across the area.') + '</p><p>Everything is custom-measured for your space and backed by our lifetime warranty.</p>' }),
   bulldogDifference(),
   C.tiles({ tall: true,
     items: [...bath.map((b) => ({ title: b.plainTitle || b.title, href: `/bathrooms/${b.slug}/`, img: b.card })),
-      { title: 'Kitchens', href: '/kitchens/', img: 'products-card' }] }),
+      { title: 'Kitchens', href: '/kitchens/', img: 'services-card' }] }),
   bathReviews(),
   processSteps(),
   learnMore(),
@@ -299,7 +299,7 @@ page('/inspiration-design-spotlight/', 'Design Spotlight', `Real kitchen and bat
 // ---------- One day remodel ----------
 page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful new bathroom in as little as one day with ${SITE.name}.`, [
   C.banner({ titleTag: 'h1', bold: true, title: 'A Brand-New Bath in As Little As One Day', img: 'home-one-day-banner', alt: 'Walk-in shower with marble-look wall panels, a grab bar and a glass panel',
-    text: 'Most bathroom remodels drag on for weeks. Ours don\'t. Because every product is custom-measured and prepared before install day, our crew can remove your old tub or shower and install your new one, often in a single visit.',
+    text: 'Most bathroom remodels drag on for weeks. Ours don\'t. Because everything is custom-measured and prepared before install day, our crew can remove your old tub or shower and install your new one, often in a single visit.',
     buttons: [['Schedule an Estimate', '/about/#contact']] }),
   bulldogDifference({
     title: '<strong>The Bulldog Difference in Just One Day</strong>',
@@ -308,7 +308,7 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
       { icon: 'sparkles', title: 'Little Disruption', text: 'No weeks of torn-up rooms. Your bathroom is out of service for as little as one day, and we clean up before we leave.' },
       { icon: 'homeShield', title: 'Measured Before Install Day', text: 'Your base, walls, and trim are custom-measured and prepared ahead of time, so install day goes to plan.' },
       { icon: 'calendarCheck', title: 'Done in As Little As One Day', text: 'Our own crew removes your old tub or shower and installs the new one, often in a single visit.' },
-      { icon: 'diamond', title: 'Quality That Lasts', text: 'Durable, non-porous products resist mold, mildew, and stains, and they are backed by our lifetime warranty.' },
+      { icon: 'diamond', title: 'Quality That Lasts', text: 'Durable, non-porous materials resist mold, mildew, and stains, and they are backed by our lifetime warranty.' },
     ],
   }),
   processSteps({
@@ -321,9 +321,9 @@ page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful 
       { title: 'Enjoy', text: 'We clean up, show you how to care for your new bath, and register your warranty.' },
     ],
   }),
-  C.sideBySide({ title: 'Quality Products for Your <strong>One Day Remodel</strong>', img: 'financing-header', alt: 'Bathroom remodel',
+  C.sideBySide({ title: 'Quality Materials for Your <strong>One Day Remodel</strong>', img: 'financing-header', alt: 'Bathroom remodel',
     text: '<p>Fast doesn\'t mean cutting corners. Our tubs, showers, and wall systems are built from durable, non-porous materials that resist mold, mildew, and stains, and they\'re backed by our lifetime warranty.</p>',
-    buttons: [['View Bath Products', '/bathrooms/']] }),
+    buttons: [['View Bath Services', '/bathrooms/']] }),
   bathReviews(),
 ].join('\n'));
 
@@ -344,10 +344,10 @@ page('/financing/', 'Financing', `Flexible financing for your kitchen or bathroo
 page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and bathroom remodeling team, and how to reach us for an estimate.`, [
   C.hero({ img: 'about-header', alt: 'Walk-in shower with stone-look walls, a window and a black-framed sliding glass door', title: 'About <strong>Bulldog Kitchen &amp; Bath</strong>', lead: 'Tough on quality. Easy to work with.' }),
   C.sideBySide({ title: 'Who <strong>We Are</strong>', img: 'about-installer', alt: 'Finished walk-in shower with marble-look walls and a sliding glass door',
-    text: `<p>We design and install high-quality, affordable showers, tubs, wall systems, cabinets, and countertops, with many bath remodels finished in as little as one day.</p><p>${SITE.name} was built on a simple idea: remodeling should be stress-free. Since ${SITE.founded} we've helped homeowners in ${SITE.serviceArea} update their kitchens and baths with durable products, honest pricing, and crews who treat your home like their own.</p>` }),
+    text: `<p>We design and install high-quality, affordable showers, tubs, wall systems, cabinets, and countertops, with many bath remodels finished in as little as one day.</p><p>${SITE.name} was built on a simple idea: remodeling should be stress-free. Since ${SITE.founded} we've helped homeowners in ${SITE.serviceArea} update their kitchens and baths with durable materials, honest pricing, and crews who treat your home like their own.</p>` }),
   bulldogDifference(),
   C.sideBySide({ title: 'Our <strong>Promise</strong>', img: 'about-family', alt: 'Family preparing food at a granite kitchen island', reverse: true, grey: true,
-    text: '<p>Every project comes with a design consultation, clear written pricing, a dedicated project coordinator, and a lifetime warranty on our products and workmanship. If something isn\'t right, we make it right. Great craftsmanship should be affordable, and every project is built to deliver exceptional value.</p><p>We\'re licensed and insured, every installer is background-checked, and our pricing is clear and upfront.</p>' }),
+    text: '<p>Every project comes with a design consultation, clear written pricing, a dedicated project coordinator, and a lifetime warranty on our materials and workmanship. If something isn\'t right, we make it right. Great craftsmanship should be affordable, and every project is built to deliver exceptional value.</p><p>We\'re licensed and insured, every installer is background-checked, and our pricing is clear and upfront.</p>' }),
   processSteps(),
   // Service area: map centered on the showroom, zoomed out to show the tri-state area (keyless Google Maps embed)
   C.sideBySide({ title: 'Our <strong>Service Area</strong>', grey: true,
@@ -402,9 +402,6 @@ const redirect = (from, to, title) => {
 redirect('contact', '/about/#contact', 'Contact Us');
 redirect('faqs', '/', 'Frequently Asked Questions');
 redirect('warranty', '/', 'Warranty');
-// Bath pages moved from /products/ to /bathrooms/ to match /kitchens/
-redirect('products', '/bathrooms/', 'Bath Products');
-bath.forEach((p) => redirect(path.join('products', p.slug), `/bathrooms/${p.slug}/`, p.plainTitle || p.title));
 // Pages folded into others: their old addresses forward to the page that took in their content
 const folded = [
   ['bathrooms/accessibility', '/bathrooms/walk-in-tubs/', 'Accessibility'],
@@ -417,7 +414,6 @@ const folded = [
 ];
 folded.forEach(([from, to, title]) => {
   redirect(from, to, title);
-  if (from.startsWith('bathrooms/')) redirect(path.join('products', from.slice('bathrooms/'.length)), to, title);
 });
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://${SITE.domain}/sitemap.xml\n`);
