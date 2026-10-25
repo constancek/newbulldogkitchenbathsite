@@ -1,12 +1,11 @@
 ---
 title: Tile vs. acrylic shower walls: what each one asks of you over 20 years
-date: 2026-10-31
+date: 2026-10-25
 excerpt: A tile contractor's quote on one side, a one-day solid-surface shower on the other. What each one asks of you, from a company that stopped selling tile.
 description: Tile vs acrylic shower walls, compared by install time, grout, cleaning and warranty over 20 years, from a Cincinnati remodeler that no longer sells tile.
 img: blog-tile-vs-acrylic-shower-walls
 photoCredit: Max Vakhtbovych on Pexels, https://www.pexels.com/photo/a-white-ceramic-sink-and-toilet-bowl-8142058/
 photo: modern walk-in shower with marble look wall panels
-draft: true
 ---
 You have a tile contractor's card on the refrigerator and you're reading up on the other option on the iPad after dinner. The master shower in your ranch is original, you've regrouted it twice, and at some point you typed "tile vs acrylic shower walls" into Google. Bulldog used to sell tiled showers and stopped, and you should know that before you read a comparison we wrote. We'll give tile its due anyway, because a tile shower built right is a good shower.
 
