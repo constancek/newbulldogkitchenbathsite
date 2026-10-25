@@ -4,7 +4,6 @@ date: 2026-09-15
 excerpt: Both can transform your kitchen. The right choice depends on your cabinet boxes, layout, and budget.
 description: How to decide between refacing and replacing kitchen cabinets, based on the condition of your boxes, your layout and your budget.
 img: blog-cabinet-refacing
-draft: false
 ---
 Cabinets set the look of your kitchen, and they're usually the largest part of the budget. Here's how to decide between refacing and replacing.
 
