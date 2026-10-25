@@ -349,14 +349,14 @@ form.sent .form-success { display: block; }
 .card__text { color: var(--card-text); font-size: .95rem; flex-grow: 1; margin-bottom: 1rem; }
 .card__link { color: var(--red); font-weight: 500; text-decoration: underline; text-underline-offset: .25rem; font-size: .95rem; }
 .card__meta { font-size: .8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .4rem; }
-/* Alternating card colors (blog list): light grey, then black */
-.card-grid--alternate .card { background: var(--grey-light); }
+/* Alternating card colors (blog list): white, then red */
+.card-grid--alternate .card { background: #fff; border: 1px solid var(--grey-line); }
 .card-grid--alternate .card__body { padding: 1.25rem 1.25rem 1.5rem; }
-.card-grid--alternate .card:nth-child(even) { background: var(--ink); }
-.card-grid--alternate .card:nth-child(even) .card__title { color: #fff; }
+.card-grid--alternate .card:nth-child(even) { background: var(--red); border-color: var(--red); }
+.card-grid--alternate .card:nth-child(even) .card__title,
 .card-grid--alternate .card:nth-child(even) .card__text,
-.card-grid--alternate .card:nth-child(even) .card__meta { color: #c9c9cf; }
-.card-grid--alternate .card:nth-child(even) .card__link { color: #fff; text-decoration-color: var(--red); }
+.card-grid--alternate .card:nth-child(even) .card__meta,
+.card-grid--alternate .card:nth-child(even) .card__link { color: #fff; }
 
 /* Product gallery cards (image + label) */
 .tile { display: block; color: var(--text); text-decoration: none; }
