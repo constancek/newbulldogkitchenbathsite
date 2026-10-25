@@ -4,6 +4,7 @@ date: 2026-10-24
 excerpt: Tap the tile by the tub and the sound goes dull. Layer by layer, what sits behind the tile in a house built around 1965, and what each layer is doing now.
 description: What is behind shower tile in a 1960s house? Mortar or greenboard, studs, subfloor and galvanized pipe, and how to check each without opening the wall.
 img: blog-behind-shower-tile-1960s-cincinnati-bathroom
+photoCredit: Strange Happenings on Pexels, https://www.pexels.com/photo/interior-of-abandoned-house-18865369/
 photo: bathroom demolition old tile wall exposed studs
 draft: true
 ---
