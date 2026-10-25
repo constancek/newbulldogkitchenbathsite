@@ -280,7 +280,7 @@ function sideBySide({ title, titleTag = 'h2', text = '', img: im, alt, media, re
 </div></section>`;
 }
 
-function cards({ title, intro, items, perRow = 4, grey = false, center = false, link = 'Learn More' }) {
+function cards({ title, intro, items, perRow = 4, grey = false, center = false, link = 'Learn More', alternate = false }) {
   const html = items.map((c) => `<a class="card" href="${c.href}">
     <div class="card__image">${picture(c.img, c.alt || c.title)}</div>
     <div class="card__body">
@@ -292,7 +292,7 @@ function cards({ title, intro, items, perRow = 4, grey = false, center = false, 
   </a>`).join('');
   return `<section class="section${grey ? ' section--grey' : ''}"><div class="container">
   ${title ? `<header class="section-head${center ? ' section-head--center' : ''}"><div><h2>${title}</h2>${intro ? `<p>${intro}</p>` : ''}</div></header>` : ''}
-  <div class="card-grid" style="--per-row:${perRow}">${html}</div>
+  <div class="card-grid${alternate ? ' card-grid--alternate' : ''}" style="--per-row:${perRow}">${html}</div>
 </div></section>`;
 }
 
