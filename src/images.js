@@ -101,6 +101,7 @@ function syncImages() {
   const existing = {};
   walk(DEST).filter((f) => f.endsWith('.webp')).forEach((f) => (existing[path.basename(f, '.webp')] ||= []).push(f));
   const changed = [];
+  const pending = [];
   for (const [name, [file]] of Object.entries(byName)) {
     const h = hash(file);
     const out = outFile(name);
@@ -112,11 +113,15 @@ function syncImages() {
     try {
       execFileSync('ffmpeg', ['-loglevel', 'error', '-y', '-i', file, '-vf', "scale='min(2000,iw)':-2", '-c:v', 'libwebp', '-quality', '85', out]);
     } catch (e) {
-      throw new Error(`Could not convert ${path.relative(ROOT, file)}. Is ffmpeg installed?\n${e.message}`);
+      // Without ffmpeg (for example on Vercel's build machines) leave the photo for the GitHub
+      // Action to convert, and keep the previous converted file if there is one.
+      if (e.code === 'ENOENT') { pending.push(name); continue; }
+      throw new Error(`Could not convert ${path.relative(ROOT, file)}.\n${e.message}`);
     }
     manifest[name] = h;
     changed.push(name);
   }
+  if (pending.length) console.warn(`ffmpeg is not installed here, so ${pending.length} photo(s) were not converted (the GitHub Action will): ${pending.join(', ')}`);
   // Remove converted photos that are gone from images/ or left in an old folder, then empty folders
   let removed = 0;
   walk(DEST).filter((f) => f.endsWith('.webp')).forEach((f) => {
@@ -135,4 +140,7 @@ function syncImages() {
   if (removed) console.log(`Removed ${removed} old photo file(s) from public/assets/img`);
 }
 
-module.exports = { syncImages, imgUrl };
+// Whether a photo with this name exists in images/ (used to fall back to a placeholder)
+const hasPhoto = (name) => photoDirs()[name] !== undefined;
+
+module.exports = { syncImages, imgUrl, hasPhoto };

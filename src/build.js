@@ -7,11 +7,15 @@ const { bath, kitchen, colorsPatterns } = require('./content/products');
 const options = require('./content/options');
 const extras = require('./content/product-extras');
 const { pageFaqs } = require('./content/page-faqs');
-const { posts } = require('./content/blog');
-const { syncImages } = require('./images');
+const blog = require('./content/blog');
+const { syncImages, imgUrl, hasPhoto } = require('./images');
 
 // New or replaced photos in images/ become WebP files in public/assets/img
 syncImages();
+
+// Blog posts are Markdown files in src/content/blog/ (see that folder's README.md)
+blog.configure({ imgUrl });
+const posts = blog.loadPosts().map((p) => ({ ...p, img: p.img && hasPhoto(p.img) ? p.img : 'blog-placeholder' }));
 
 const OUT = path.join(__dirname, '..', 'public');
 const pages = [];
@@ -368,8 +372,8 @@ page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, 
   C.pageBand({ title: 'The Bulldog Kitchen &amp; Bath <strong>Blog</strong>', lead: 'Ideas, tips, and guides for your next kitchen or bathroom project.' }),
   C.cards({ perRow: 3, link: 'Read More', items: posts.map((p) => ({ title: p.title, img: p.img, href: `/blog/${p.slug}/`, text: p.excerpt, meta: p.date })) }),
 ].join('\n'));
-posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.excerpt, [
-  C.pageBand({ title: p.title, extra: `<p class="post-meta">${p.date} · ${SITE.name}</p>` }),
+posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.description || p.excerpt, [
+  C.pageBand({ title: p.title, extra: `<p class="post-meta">${p.date} · ${SITE.name}${p.draft ? ' · <strong>DRAFT, not on the live site</strong>' : ''}</p>` }),
   `<section class="section"><div class="container prose">${C.picture(p.img, p.title)}${p.body}
   <p><a class="button" href="/about/#contact">Request an Estimate</a></p>
   <p><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></p></div></section>`,

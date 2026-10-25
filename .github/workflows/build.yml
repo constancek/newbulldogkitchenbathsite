@@ -1,0 +1,55 @@
+# Rebuilds the site whenever the source (src/) or a photo (images/) changes, on any branch,
+# and commits the generated public/ folder back. Nobody needs Node or ffmpeg on their own
+# computer: edit a Markdown post or upload a photo on GitHub, and this does the rest.
+#
+# Branches other than main are built WITH draft blog posts, so a pull request's Vercel
+# preview shows the draft. main is built without drafts, so a draft can never go live.
+name: Build site
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'images/**'
+      - '.github/workflows/build.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Skip the commit this workflow itself makes
+    if: "!contains(github.event.head_commit.message, '[skip build]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install ffmpeg (converts photos to WebP)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Build
+        env:
+          INCLUDE_DRAFTS: ${{ github.ref_name == 'main' && '0' || '1' }}
+        run: node src/build.js
+
+      - name: Commit the generated site
+        run: |
+          git config user.name "site-build"
+          git config user.email "site-build@users.noreply.github.com"
+          git add -A public images/.converted.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Build site [skip build]"
+            git push
+          fi
