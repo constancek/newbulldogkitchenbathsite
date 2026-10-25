@@ -31,6 +31,7 @@ excerpt: ...              ← the short text on the blog index page
 description: ...          ← what Google shows under the title
 img: blog-the-post-name   ← the photo name (see step 3). Leave as is.
 photo: ...                ← the words the stock photo was searched with (see step 3)
+photoCredit: ...          ← who took the stock photo; filled in automatically, leave it
 draft: true               ← change to false when it's ready to go live
 ---
 The post, in plain text. Headings start with ##. Lists start with -.
