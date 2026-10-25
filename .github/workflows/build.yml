@@ -1,9 +1,11 @@
 # Rebuilds the site whenever the source (src/) or a photo (images/) changes, on any branch,
-# and commits the generated public/ folder back. Nobody needs Node or ffmpeg on their own
+# fetches the photo for any new blog post from Pexels, and commits the generated public/
+# folder (plus any fetched photo) back. Nobody needs Node or ffmpeg on their own
 # computer: edit a Markdown post or upload a photo on GitHub, and this does the rest.
 #
-# Branches other than main are built WITH draft blog posts, so a pull request's Vercel
-# preview shows the draft. main is built without drafts, so a draft can never go live.
+# Merging a blog post's pull request publishes it: on main, src/publish-posts.js first stamps
+# any newly merged post with the day it went live. On other branches the build is marked as a
+# preview, so the Vercel preview of a pull request says so on every post.
 name: Build site
 
 on:
@@ -12,6 +14,9 @@ on:
       - 'src/**'
       - 'images/**'
       - '.github/workflows/build.yml'
+  # Run by hand from the Actions tab (for example after adding the PEXELS_API_KEY secret, to
+  # fetch photos for posts that are still on the placeholder)
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -37,16 +42,28 @@ jobs:
       - name: Install ffmpeg (converts photos to WebP)
         run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
 
+      # A new post gets its one photo from Pexels (searched by the post's photo: line) the first
+      # time it is pushed. Needs the PEXELS_API_KEY repository secret; without it the post keeps
+      # the placeholder and the build still passes.
+      - name: Fetch blog photos from Pexels
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node src/fetch-blog-photo.js
+
+      - name: Stamp newly published posts with today's date (main only)
+        if: github.ref_name == 'main'
+        run: node src/publish-posts.js
+
       - name: Build
         env:
-          INCLUDE_DRAFTS: ${{ github.ref_name == 'main' && '0' || '1' }}
+          PREVIEW_BUILD: ${{ github.ref_name == 'main' && '0' || '1' }}
         run: node src/build.js
 
       - name: Commit the generated site
         run: |
           git config user.name "site-build"
           git config user.email "site-build@users.noreply.github.com"
-          git add -A public images/.converted.json
+          git add -A public images src/content/blog
           if git diff --cached --quiet; then
             echo "Nothing changed."
           else

@@ -1,70 +1,39 @@
-# Reviewing and publishing a blog post
+# Publishing a blog post
 
-Claude writes a draft post and opens a pull request. Nothing goes on the website until you merge it. Everything happens on github.com; you don't need to install anything.
+Claude writes a post and opens a pull request. **Merging the pull request is what publishes it.** Nothing else to flip, no file to edit, no photo to upload.
 
-## When a new draft arrives
+## When a new post arrives
 
-A message appears in the **#bath-blog** Discord channel with the post title and a link to its pull request. (You'll also get a GitHub email requesting your review. Or go to the repo → **Pull requests** → anything starting with `blog/`.) When you merge, a second Discord message posts the live address.
+A message appears in the **#bath-blog** Discord channel with the post title and a link to its pull request. (You'll also get a GitHub email asking for your review.)
 
-The pull request description lists:
-- what the post is for and who it's written to,
-- two or three **photos to add**, each described in one line,
-- anything marked **Confirm with owner** (a fact Claude wasn't sure of). Check those with Constance before publishing.
+## 1. Look at it
 
-## 1. Read it on the preview
+Open the link. Scroll down the pull request to the **vercel** comment and click **Preview** to see the post exactly as it will look on the site, photo included. (The "Preview, not on the live site yet" note disappears once it's live.) If the preview link isn't there yet, give it two or three minutes.
 
-A few minutes after the pull request opens, Vercel adds a comment with a **Preview** link. Click it, go to `/blog/`, and open the post. It will show a placeholder photo and a "DRAFT" note until you finish the steps below. That's expected.
+Read it as if you were a 60-year-old homeowner in Anderson Township. If a sentence sounds like an ad or a robot, see step 2. If it reads fine, go to step 3.
 
-Read the whole post as if you were a 60-year-old homeowner in Anderson Township. If a sentence sounds like an ad or like a robot, fix it (step 2) or leave a comment on the pull request asking Claude to rewrite it.
+## 2. Fix anything (optional)
 
-## 2. Edit the words
+**Words:** in the pull request click **Files changed**, find the file ending in `.md`, click the **three dots (⋯)** on it → **Edit file**. Edit the text, keep the `---` lines and the `name: value` lines at the top as they are, then **Commit changes** (keep "Commit directly to the blog/… branch" selected). The preview updates in a couple of minutes.
 
-In the pull request, click **Files changed**. The post is the file ending in `.md` under `src/content/blog/`. Click the **three dots** on that file → **Edit file**.
+**Photo:** the post has one photo, picked from Pexels with the `photo:` words at the top of the file. To get a different one, edit those words to describe the picture you want ("older couple looking at tile samples"), then open the branch's `images/blog` folder, click the `.jpg`, delete it (trash icon → **Commit changes**). A new photo is fetched in a few minutes. To use a real Bulldog photo instead, delete the `.jpg` the same way, then **Add file** → **Upload files** with yours, named exactly like the one you deleted.
 
-The file has two parts:
+**Bigger changes:** leave a comment on the pull request saying what you want. Constance can run Claude on it.
 
-```
----
-title: ...
-date: 2026-10-20          ← the day it should appear. Change if needed.
-excerpt: ...              ← the short text on the blog index page
-description: ...          ← what Google shows under the title
-img: blog-the-post-name   ← the photo name (see step 3). Leave as is.
-draft: true               ← change to false when it's ready to go live
----
-The post, in plain text. Headings start with ##. Lists start with -.
-```
+## 3. Publish
 
-Edit anything you like in the text. Keep the `---` lines and the `name: value` lines at the top intact. When done, click **Commit changes** (keep "Commit directly to the blog/... branch" selected).
+Scroll to the bottom of the pull request's **Conversation** tab and click the green **Merge pull request** button, then **Confirm merge**. That's it.
 
-## 3. Add the photos
+The site rebuilds itself, the post is dated the day you merged it, and it is live at `bulldogkitchenbath.com/blog/<post-name>/` within a few minutes. A second Discord message posts the live address.
 
-Each post needs one main photo. The pull request description tells you what to shoot or pick, and the file name to use. It's always `blog-` plus the post's file name, for example `blog-shower-grout-gray`.
+If the merge button is gray and says the checks haven't finished, wait a minute and refresh. If it says there is a conflict, don't try to resolve it; leave a comment on the pull request and Claude will sort it out.
 
-1. Pick or take the photo. Landscape (wider than tall), at least 1200 pixels wide. A phone photo is fine; it gets resized automatically.
-2. Rename the file on your computer to the name from the description plus the ending it has, for example `blog-shower-grout-gray.jpg`.
-3. In the pull request, click **Files changed** → scroll to the top → there's a link to the branch name (`blog/...`). Click it to open the branch. Then open the `images` folder → `blog`.
-4. Click **Add file** → **Upload files**. Drag the photo in. Click **Commit changes**.
+## Not publishing a post
 
-For a second photo inside the post, name it with `-2`, `-3` and so on (`blog-shower-grout-gray-2.jpg`), upload it the same way, and in the post text put `![describe the photo](blog-shower-grout-gray-2)` on its own line where it should appear.
-
-A few minutes after you upload, the site rebuilds itself and the preview link shows the real photo. Refresh to check.
-
-## 4. Publish
-
-1. Edit the `.md` file once more and change `draft: true` to `draft: false`. Commit.
-2. Wait for the two checks at the bottom of the pull request to turn green (the build, and Vercel).
-3. Click **Merge pull request** → **Confirm merge**.
-
-The live site updates within a few minutes. The post appears at `bulldogkitchenbath.com/blog/<post-name>/`.
-
-## 5. Mark it done
-
-Open `blog-planning/content-calendar.md` on the `main` branch, edit the post's row: Status → `published`, PR/URL → the post's address. Commit.
+Just don't merge it. To drop it for good, click **Close pull request** at the bottom.
 
 ## If something looks wrong
 
-- **Preview shows no new post:** the branch build may still be running. Check the **Actions** tab; a red X means the post file has a typo in the top section (a missing `---` line, or a date not written as 2026-10-20). Open the failed run to see the message, fix the file, commit.
-- **Photo doesn't show:** check the file name matches `img:` exactly, lowercase, no spaces, and that it's in `images/blog/`, not somewhere else.
-- **You want Claude to change something:** leave a comment on the pull request saying what. Constance can run Claude on it, or Claude Code can pick it up.
-- **You merged by mistake with `draft: true`:** nothing is on the live site; drafts never build on `main`. Open a new pull request from `main`, change `draft` to `false`, merge again.
+- **Preview still shows the gray placeholder photo:** check the **Actions** tab for the `Fetch blog photos from Pexels` step; a missing `PEXELS_API_KEY` secret keeps the placeholder.
+- **Preview doesn't show the post at all:** the build may still be running. A red X in the **Actions** tab means a typo at the top of the post file (a missing `---` line, or a date not written as 2026-10-20). Open the failed run to see the message, fix the file, commit.
+- **Merged, but not on the live site after ten minutes:** check the **Actions** tab on `main` for a red X, and tell Constance.
