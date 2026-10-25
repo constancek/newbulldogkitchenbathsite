@@ -2,8 +2,9 @@
 //
 // For every post in src/content/blog/ whose `img:` photo is not yet in images/blog/, this
 // searches Pexels for the post's `photo:` phrase (or its title when there is none), saves the
-// first wide result as images/blog/<img>.jpg and records the photographer in image-credits.json.
-// The normal build then converts it to WebP like any other photo.
+// first wide result as images/blog/<img>.jpg and writes the photographer into the post's own
+// front matter as `photoCredit:` (so two posts in flight never edit the same file). The normal
+// build then converts it to WebP like any other photo.
 //
 // It needs PEXELS_API_KEY in the environment. The GitHub Action gets it from the repository
 // secret of the same name; without it the script only lists what it would fetch and exits 0,
@@ -15,7 +16,6 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const POSTS = path.join(ROOT, 'src', 'content', 'blog');
 const PHOTOS = path.join(ROOT, 'images', 'blog');
-const CREDITS = path.join(ROOT, 'image-credits.json');
 const EXT = /\.(jpe?g|png|webp)$/i;
 const KEY = process.env.PEXELS_API_KEY;
 
@@ -34,8 +34,24 @@ function frontMatter(text) {
   return meta;
 }
 
-function readCredits() {
-  try { return JSON.parse(fs.readFileSync(CREDITS, 'utf8')); } catch { return []; }
+// Pexels photos already on the site, so a post never repeats one: the site-wide credits file
+// plus every post's photoCredit line
+function usedUrls() {
+  const urls = new Set();
+  try { JSON.parse(fs.readFileSync(path.join(ROOT, 'image-credits.json'), 'utf8')).forEach((c) => urls.add(c.url)); } catch {}
+  fs.readdirSync(POSTS).filter((f) => f.endsWith('.md')).forEach((f) => {
+    const m = (frontMatter(fs.readFileSync(path.join(POSTS, f), 'utf8')).photoCredit || '').match(/https?:\S+/);
+    if (m) urls.add(m[0]);
+  });
+  return urls;
+}
+
+// Adds (or replaces) the photoCredit: line right after img: in the post's front matter
+function writeCredit(file, photo) {
+  const text = fs.readFileSync(file, 'utf8');
+  const line = `photoCredit: ${photo.photographer.replace(/\s+/g, ' ').trim()} on Pexels, ${photo.url}`;
+  const out = /^photoCredit:.*$/m.test(text) ? text.replace(/^photoCredit:.*$/m, line) : text.replace(/^(img:.*\n)/m, `$1${line}\n`);
+  fs.writeFileSync(file, out);
 }
 
 // Posts that still need a photo: have an img name, and no file by that name in images/blog/
@@ -71,8 +87,7 @@ async function main() {
     console.log(`Blog photos: PEXELS_API_KEY is not set, so ${todo.length} post(s) keep the placeholder for now: ${todo.map((t) => t.img).join(', ')}`);
     return;
   }
-  const credits = readCredits();
-  const used = new Set(credits.map((c) => c.url));
+  const used = usedUrls();
   for (const { file, img, query } of todo) {
     // First wide photo not already used elsewhere on the site, at least 1200px across
     let pick = null;
@@ -85,10 +100,9 @@ async function main() {
     const dest = path.join(PHOTOS, `${img}.jpg`);
     await download(pick.src.large2x || pick.src.original, dest);
     used.add(pick.url);
-    credits.push({ file: `${img}.webp`, photographer: pick.photographer, url: pick.url });
+    writeCredit(path.join(POSTS, file), pick);
     console.log(`Blog photos: ${img}.jpg from Pexels (${pick.photographer}) for "${query}"`);
   }
-  fs.writeFileSync(CREDITS, JSON.stringify(credits, null, 2) + '\n');
 }
 
 main().catch((e) => { console.error(e.message); process.exit(1); });
