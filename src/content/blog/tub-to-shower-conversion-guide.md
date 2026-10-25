@@ -6,7 +6,6 @@ description: What to weigh before trading a bathtub for a walk-in shower, from a
 img: blog-tub-to-shower
 photoCredit: Curtis Adams on Pexels, https://www.pexels.com/photo/interior-of-bathroom-4940614/
 photo: walk-in shower with glass door replacing bathtub
-draft: false
 ---
 Swapping a rarely used bathtub for a spacious walk-in shower is one of the most popular bathroom upgrades, and for good reason. It makes the room feel bigger, safer, and easier to clean.
 
