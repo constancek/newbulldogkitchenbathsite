@@ -10,7 +10,7 @@ const posts = [
 <h2>When to keep a tub</h2>
 <p>If you have young children or it's the only tub in the house, it may make sense to keep one. Your design consultant can help you weigh daily use against resale.</p>
 <h2>How long does it take?</h2>
-<p>Most conversions are completed in as little as one day once your products are ready.</p>`,
+<p>Most conversions are completed in as little as one day once your materials are ready.</p>`,
   },
   {
     slug: 'kitchen-cabinet-refacing-vs-replacement', date: 'September 15, 2026', img: 'blog-cabinet-refacing',

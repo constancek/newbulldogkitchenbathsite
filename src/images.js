@@ -22,7 +22,7 @@ const FOLDERS = [
   ['blog-', 'blog'],
   ['design-spotlight', 'inspiration'], ['shop-the-', 'inspiration'],
   ['faqs-', 'other-pages'], ['financing-', 'other-pages'], ['warranty-', 'other-pages'],
-  ['products-', 'bathrooms/overview'],
+  ['services-', 'bathrooms/overview'],
   ['showers-', 'bathrooms/showers'],
   ['tub-to-', 'bathrooms/tub-to-shower-conversions'],
   ['bathtubs-', 'bathrooms/bathtubs'],
