@@ -4,7 +4,6 @@ date: 2026-08-28
 excerpt: Simple changes that make your bathroom safer and more comfortable for years to come.
 description: Five bathroom changes that make the room safer and easier to use for years to come, without making it feel clinical.
 img: blog-aging-in-place
-draft: false
 ---
 The bathroom is where many falls at home happen. These upgrades help you stay safe and independent without making the room feel clinical.
 

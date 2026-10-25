@@ -1,4 +1,4 @@
-# Posts to the #bath-blog Discord channel when a blog pull request opens (a new draft is
+# Posts to the #bath-blog Discord channel when a blog pull request opens (a new post is
 # ready to review) and when it is merged (the post is live).
 #
 # Setup, once: in Discord, open #bath-blog → Edit Channel → Integrations → Webhooks →
@@ -32,7 +32,7 @@ jobs:
           PING=""; [ -n "$REVIEWER" ] && PING="<@$REVIEWER> "
           node -e '
             const [ping, title, url, number] = process.argv.slice(1);
-            const content = `${ping}**New blog draft to review** (#${number})\n**${title}**\n${url}\nThe Vercel preview link appears as a comment on that page within a few minutes. Steps are in BLOG-REVIEW.md: read the preview, edit the text, upload the photos, set draft: false, merge.`;
+            const content = `${ping}**New blog draft to review** (#${number})\n**${title}**\n${url}\nThe Vercel preview link appears as a comment on that page within a few minutes. Read the preview; when it looks right, click Merge pull request and it goes live. Details in BLOG-REVIEW.md.`;
             fetch(process.env.WEBHOOK, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ content, allowed_mentions: { parse: ["users"] } }) })
               .then((r) => { if (!r.ok) { console.error("Discord returned " + r.status); process.exit(1); } });
           ' "$PING" "$TITLE" "$URL" "$NUMBER"
