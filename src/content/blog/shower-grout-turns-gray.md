@@ -4,7 +4,7 @@ date: 2026-10-17
 excerpt: You regrouted in the spring and the bottom row is gray again by fall. Here's what's going on inside the grout, and when the fix stops being worth it.
 description: Regrouted or scrubbed your shower and the gray came back? What happens inside the grout, which fixes last a season, and when it stops being worth it.
 img: blog-shower-grout-turns-gray
-draft: true
+draft: false
 ---
 You regrouted the master shower last spring, or paid a handyman to. By fall the lines along the bottom row are gray again, and a pink stripe is back where the tub meets the wall. You did the work right. The grout is doing what grout does. The gray comes from three things happening inside it, in this order, and the order tells you which fixes last and which don't.
 

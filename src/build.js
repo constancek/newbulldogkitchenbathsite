@@ -386,6 +386,9 @@ page('/404', 'Page Not Found', 'The page you were looking for could not be found
 ].join('\n'));
 
 // ---------- Write ----------
+// Blog pages are regenerated from scratch so a post that is no longer in this build (a draft
+// built on a preview branch, a renamed slug, a deleted post) does not linger as a stale page.
+fs.rmSync(path.join(OUT, 'blog'), { recursive: true, force: true });
 for (const p of pages) {
   const file = p.path === '/404' ? path.join(OUT, '404.html') : path.join(OUT, p.path, 'index.html');
   fs.mkdirSync(path.dirname(file), { recursive: true });
