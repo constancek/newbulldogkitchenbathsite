@@ -6,6 +6,8 @@
 # Merging a blog post's pull request publishes it: on main, src/publish-posts.js first stamps
 # any newly merged post with the day it went live. On other branches the build is marked as a
 # preview, so the Vercel preview of a pull request says so on every post.
+# After a main build, the sync-drafts job below merges main into every open blog/ branch, so
+# a waiting post never shows "This branch has conflicts" over the generated files.
 name: Build site
 
 on:
@@ -70,3 +72,52 @@ jobs:
             git commit -m "Build site [skip build]"
             git push
           fi
+
+  # After main changes, bring every open blog/ pull request up to date with it, so the generated
+  # public/ files (blog index, sitemap) never conflict when the reviewer clicks Merge. Each
+  # branch gets main merged in and its preview rebuilt here, since a push made with the
+  # workflow token does not start another run.
+  sync-drafts:
+    needs: build
+    if: github.ref_name == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install ffmpeg (converts photos to WebP)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Merge main into open blog branches and rebuild their previews
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: |
+          git config user.name "site-build"
+          git config user.email "site-build@users.noreply.github.com"
+          for b in $(gh pr list --state open --limit 100 --json headRefName --jq '.[].headRefName | select(startswith("blog/"))'); do
+            echo "== $b"
+            git checkout -q -B "$b" "origin/$b"
+            if git merge-base --is-ancestor origin/main HEAD; then echo "already up to date"; continue; fi
+            if ! git merge --no-ff --no-commit --no-edit origin/main >/dev/null 2>&1; then
+              conflicts=$(git diff --name-only --diff-filter=U)
+              if echo "$conflicts" | grep -qv '^public/\|^images/.converted.json$'; then
+                echo "::warning::$b conflicts with main outside the generated files; leaving it for a person:"; echo "$conflicts"
+                git merge --abort; continue
+              fi
+              # Only generated files conflict: take main's copy, the rebuild below replaces them anyway
+              echo "$conflicts" | xargs git checkout --theirs --
+              echo "$conflicts" | xargs git add --
+            fi
+            node src/fetch-blog-photo.js
+            PREVIEW_BUILD=1 node src/build.js
+            git add -A public images src/content/blog
+            git commit -q -m "Merge main into $b [skip build]"
+            git push -q origin "$b"
+            echo "updated"
+          done
