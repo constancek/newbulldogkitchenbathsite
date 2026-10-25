@@ -58,7 +58,7 @@ jobs:
         run: |
           git config user.name "site-build"
           git config user.email "site-build@users.noreply.github.com"
-          git add -A public images image-credits.json
+          git add -A public images src/content/blog
           if git diff --cached --quiet; then
             echo "Nothing changed."
           else
