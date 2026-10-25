@@ -150,12 +150,12 @@
     "url": "https://www.pexels.com/photo/spacious-bathroom-interior-with-shower-cabin-and-shiny-tiled-walls-6585765/"
   },
   {
-    "file": "products-header.webp",
+    "file": "services-header.webp",
     "photographer": "Max Vakhtbovych",
     "url": "https://www.pexels.com/photo/elegant-looking-lavatory-7746618/"
   },
   {
-    "file": "products-feature.webp",
+    "file": "services-feature.webp",
     "photographer": "Max Vakhtbovych",
     "url": "https://www.pexels.com/photo/bathroom-with-toilet-and-bathtub-near-sink-on-counter-6588585/"
   },
@@ -178,11 +178,6 @@
     "file": "showers-header.webp",
     "photographer": "Max Vakhtbovych",
     "url": "https://www.pexels.com/photo/interior-of-modern-bathroom-with-shower-cabin-and-sink-6934184/"
-  },
-  {
-    "file": "blog-tub-to-shower.webp",
-    "photographer": "Curtis Adams",
-    "url": "https://www.pexels.com/photo/white-and-blue-ceramic-bathtub-14495939/"
   },
   {
     "file": "showers-gallery-1.webp",
@@ -241,12 +236,12 @@
   },
   {
     "file": "bathtubs-gallery-2.webp",
-    "photographer": "Руслана Стельмах",
+    "photographer": "\u0420\u0443\u0441\u043b\u0430\u043d\u0430 \u0421\u0442\u0435\u043b\u044c\u043c\u0430\u0445",
     "url": "https://www.pexels.com/photo/close-up-of-bathtub-15776280/"
   },
   {
     "file": "bathtubs-gallery-14.webp",
-    "photographer": "Vinícius Vieira ft",
+    "photographer": "Vin\u00edcius Vieira ft",
     "url": "https://www.pexels.com/photo/elegant-modern-bathtub-in-spa-setting-30615188/"
   },
   {
@@ -361,21 +356,21 @@
   },
   {
     "file": "sinks-faucets-feature.webp",
-    "photographer": "浪宣 张",
+    "photographer": "\u6d6a\u5ba3 \u5f20",
     "url": "https://www.pexels.com/photo/modern-kitchen-sink-with-herb-spiced-decor-37468213/"
   },
   {
-    "file": "products-card-kitchens.webp",
+    "file": "services-card-kitchens.webp",
     "photographer": "edithub pro",
     "url": "https://www.pexels.com/photo/luxury-kitchen-in-a-house-18285887/"
   },
   {
-    "file": "home-quality-products.webp",
+    "file": "home-quality-work.webp",
     "photographer": "Max Vakhtbovych",
     "url": "https://www.pexels.com/photo/interior-of-kitchen-with-modern-furniture-and-appliances-6265836/"
   },
   {
-    "file": "products-card.webp",
+    "file": "services-card.webp",
     "photographer": "Max Vakhtbovych",
     "url": "https://www.pexels.com/photo/an-interior-of-a-kitchen-7535019/"
   },
@@ -426,7 +421,7 @@
   },
   {
     "file": "kitchens-gallery-8.webp",
-    "photographer": "Alan Quirván",
+    "photographer": "Alan Quirv\u00e1n",
     "url": "https://www.pexels.com/photo/modern-kitchen-interior-4030908/"
   },
   {
@@ -541,7 +536,7 @@
   },
   {
     "file": "sinks-faucets-gallery-1.webp",
-    "photographer": "Алексей Вечерин",
+    "photographer": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0435\u0447\u0435\u0440\u0438\u043d",
     "url": "https://www.pexels.com/photo/sink-and-faucet-in-the-kitchen-9551374/"
   },
   {
@@ -681,7 +676,7 @@
   },
   {
     "file": "family-3.jpg",
-    "photographer": "Trần Thiên Ưng",
+    "photographer": "Tr\u1ea7n Thi\u00ean \u01afng",
     "url": "https://www.pexels.com/photo/woman-holding-hands-with-her-daughter-16825058/"
   },
   {
@@ -741,7 +736,7 @@
   },
   {
     "file": "bath-accessories-shop-rain-shower-head.webp",
-    "photographer": "Augustinus Martinus Noppé",
+    "photographer": "Augustinus Martinus Nopp\u00e9",
     "url": "https://www.pexels.com/photo/close-up-shot-of-a-shower-head-14334053/"
   },
   {
@@ -1486,17 +1481,17 @@
   },
   {
     "file": "vanities-option-sink-integrated.webp",
-    "photographer": "Đỗ Huy Hoàng",
+    "photographer": "\u0110\u1ed7 Huy Ho\u00e0ng",
     "url": "https://www.pexels.com/photo/photo-of-a-bathroom-10847190/"
   },
   {
     "file": "vanities-option-single-vanity.webp",
-    "photographer": "Pușcaș Adryan",
+    "photographer": "Pu\u0219ca\u0219 Adryan",
     "url": "https://www.pexels.com/photo/elegant-marble-bathroom-interior-with-vanity-30369258/"
   },
   {
     "file": "kitchen-organizers-option-corner-pull-outs.webp",
-    "photographer": "Алексей Вечерин",
+    "photographer": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0435\u0447\u0435\u0440\u0438\u043d",
     "url": "https://www.pexels.com/photo/black-gas-stove-on-kitchen-counter-9551376/"
   },
   {
@@ -1513,5 +1508,10 @@
     "file": "option-cabinet-finish-sierra-cherry.webp",
     "photographer": "Sergio Maldonado",
     "url": "https://www.pexels.com/photo/close-up-shot-of-a-red-wooden-surface-13025809/"
+  },
+  {
+    "file": "blog-shower-grout-turns-gray.webp",
+    "photographer": "Peter  Vang",
+    "url": "https://www.pexels.com/photo/modern-bathroom-interior-with-gray-tiled-wall-35493894/"
   }
 ]
