@@ -8,6 +8,8 @@
 //   excerpt: One or two sentences shown on the blog index card.
 //   description: Meta description for search engines, under 155 characters.
 //   img: blog-shower-grout-gray         (photo name in images/blog/, no extension; optional)
+//   photo: gray grout tiled shower      (Pexels search phrase; src/fetch-blog-photo.js fetches the
+//                                        post's one photo with it when images/blog/ has none)
 //   draft: true                         (true = hidden from the live site, shown on previews)
 //   ---
 //   Body in Markdown...

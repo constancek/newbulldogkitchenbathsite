@@ -11,7 +11,7 @@ const standard = (thing) => [
   ['Customizable Style', 'Choose from stone looks, tile patterns, solid colors, trim, and fixtures to match any bathroom.'],
   ['Exceptional Durability', 'Scratch-, chip-, stain-, and fade-resistant materials keep looking new for years.'],
   ['Fast Installation', 'Every piece is custom-measured before install day, so our own crews can often finish in a single day.'],
-  ['Lifetime Warranty', 'Products and workmanship are backed for as long as you own your home.*'],
+  ['Lifetime Warranty', 'Materials and workmanship are backed for as long as you own your home.*'],
 ];
 
 module.exports = {
@@ -105,7 +105,7 @@ module.exports = {
       ['Fast Installation', 'Everything is custom-measured before install day, so our own crews can often finish in a single day.'],
       ['No Grout to Scrub', 'Non-porous wall panels resist mold and mildew and clean up with a quick wipe.'],
       ['Built-In Safety', 'Add grab bars, a seat, a handheld shower, and a slip-resistant floor.'],
-      ['Lifetime Warranty', 'Products and workmanship are backed for as long as you own your home.*'],
+      ['Lifetime Warranty', 'Materials and workmanship are backed for as long as you own your home.*'],
     ],
     learn: { title: 'Learn More About <strong>Tub-to-Shower Conversions</strong>',
       text: 'Ready to step into a shower instead of over a tub? Request an estimate or call us, and a design consultant will measure your space and show you base, wall, and door options.' },
