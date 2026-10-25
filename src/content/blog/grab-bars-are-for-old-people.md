@@ -4,6 +4,7 @@ date: 2026-12-12
 excerpt: Five lines our installers hear about grab bars and walk-in showers, what is true inside each one, and what the height of your tub wall has to do with it.
 description: Grab bars and a walk-in shower read as "nursing home" to many homeowners over 50. What our installers say back, with tub-wall heights and CDC figures.
 img: blog-grab-bars-are-for-old-people
+photoCredit: https://kaboompics.com/ on Pexels, https://www.pexels.com/photo/stainless-steel-pipe-on-ceramic-wall-4194862/
 photo: stainless steel grab bar in walk-in shower
 draft: true
 ---
