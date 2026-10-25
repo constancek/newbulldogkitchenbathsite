@@ -4,6 +4,7 @@ date: 2026-11-28
 excerpt: The crew left yesterday and the care sheet is on the vanity. The ten-minute routine, the Cincinnati hard-water trick, and the two cleaners that can dull the walls.
 description: How to clean acrylic shower walls and solid-surface panels after a one-day install: the weekly routine, what hard water does, and the two cleaners to keep off them.
 img: blog-how-to-clean-grout-free-shower
+photoCredit: https://kaboompics.com/ on Pexels, https://www.pexels.com/photo/crop-person-cleaning-tabletop-in-bathroom-4239040/
 photo: person wiping shower wall with microfiber cloth
 draft: true
 ---
