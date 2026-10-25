@@ -4,6 +4,7 @@ date: 2026-11-14
 excerpt: The floor by the tub gives a little under the bath mat. What that spot is made of, where the water got in, and why a patch there means the tub comes out.
 description: Soft floor next to the bathtub: what the spot is made of, three places water gets under a tub, how to check from the basement, and what waiting costs.
 img: blog-soft-floor-next-to-bathtub
+photoCredit: cottonbro studio on Pexels, https://www.pexels.com/photo/clean-bathroom-with-white-and-black-floor-tiles-4154986/
 photo: bath mat on tile floor beside white bathtub
 draft: true
 ---
