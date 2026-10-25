@@ -76,7 +76,7 @@ Specific things the pass must catch, because AI drafts about bathrooms produce t
 
 ### Phase 6. Deliver
 
-When working inside the site repo (a scheduled run, or a Claude Code session in `newbulldogkitchenbathsite`), deliver by following `references/publishing.md`: write the `.md` file, update the calendar, open the PR with the header block as its description. Otherwise deliver the post as a Docs artifact when the session offers one, or as a Markdown file. Include at the top, in a short block the owner can delete: title, meta description (under 155 characters), target search phrase, stage, CTA, internal links to add, image suggestions (two or three, described, not generated), and any `[CONFIRM WITH OWNER]` items. Then the post.
+When working inside the site repo (a scheduled run, or a Claude Code session in `newbulldogkitchenbathsite`), deliver by following `references/publishing.md`: write the `.md` file, update the calendar, open the PR with the header block as its description. Otherwise deliver the post as a Docs artifact when the session offers one, or as a Markdown file. Include at the top, in a short block the owner can delete: title, meta description (under 155 characters), target search phrase, stage, CTA, internal links to add, the photo line (the Pexels search phrase in the post's `photo:` field, and one line describing the real Bulldog photo that should replace it someday), and any `[CONFIRM WITH OWNER]` items. Then the post.
 
 End your chat reply with one line: what the post does and the next post you would write. No recap of the process.
 
@@ -105,6 +105,8 @@ End your chat reply with one line: what the post does and the next post you woul
 **Site in transition.** The new site (newbulldogkitchenbathsite.vercel.app until launch) is the source of truth. Link to bulldogkitchenbath.com paths listed in `brand-and-product.md`. Do not link to old-site pages (pricing-guide, projects, our-process, walk-in-showers) that the new site does not have.
 
 **One post, one job.** A post answers one question. If the brief needs two, it is two posts.
+
+**One photo per post.** Every post has exactly one image, the header photo named in `img:`. The GitHub Action fetches it from Pexels using the `photo:` search phrase in the front matter, so write that phrase with care: a concrete, visual, five-to-eight-word description of a plausible stock photo ("older couple looking at bathroom tile samples", "gray grout lines on white shower tile"), not the post's topic or keyword. No `![...]` images in the body, ever.
 
 ## Working with the owner
 

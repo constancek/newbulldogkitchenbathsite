@@ -18,7 +18,7 @@ module.exports = {
 
   nav: [
     {
-      label: 'Bath', href: '/bathrooms/', all: 'All Bath Products',
+      label: 'Bath', href: '/bathrooms/', all: 'All Bath Services',
       children: [
         { label: 'Showers & Enclosures', href: '/bathrooms/showers/' },
         { label: 'Bathtubs', href: '/bathrooms/bathtubs/' },
@@ -28,7 +28,7 @@ module.exports = {
       ],
     },
     {
-      label: 'Kitchen', href: '/kitchens/', all: 'All Kitchen Products',
+      label: 'Kitchen', href: '/kitchens/', all: 'All Kitchen Services',
       children: [
         { label: 'Cabinets & Organizers', href: '/kitchens/cabinets/' },
         { label: 'Countertops & Backsplash', href: '/kitchens/countertops/' },
@@ -56,7 +56,7 @@ module.exports = {
     ['About Us', '/about/'],
     ['Contact Us', '/about/#contact'],
     ['Blog', '/blog/'],
-    ['Bath Products', '/bathrooms/'],
+    ['Bath Services', '/bathrooms/'],
     ['Kitchen Remodeling', '/kitchens/'],
     ['Current Promos', '/current-promos/'],
     ['Financing', '/financing/'],

@@ -195,7 +195,7 @@ const PICKS = {
   bath: ['Bath<br>Installation', 'icon-bath.png'],
   'tub-to-shower': ['Tub-to-Shower<br>Conversion', 'icon-tub-to-shower.png'],
   walkin: ['Walk-in Tub<br>Installation', 'icon-walkin.png'],
-  accessibility: ['Accessibility<br>Products', 'icon-accessibility.svg'],
+  accessibility: ['Accessibility<br>Features', 'icon-accessibility.svg'],
   enclosure: ['Shower<br>Enclosure', 'icon-enclosure.svg'],
   vanity: ['Bathroom<br>Vanity', 'icon-vanity.svg'],
   accessories: ['Bath<br>Accessories', 'icon-accessories.png'],
@@ -214,9 +214,9 @@ const PICK_SETS = {
   cabinets: ['cabinets', 'organizers', 'countertops'],
   countertops: ['countertops', 'backsplash', 'sinks'],
 };
-// Every product, for the "View all products" dropdown under the tiles
+// Every product, for the "View all services" dropdown under the tiles
 const ALL_PRODUCTS = {
-  Bath: ['Bath installation', 'Shower installation', 'Tub-to-shower conversion', 'Bathtub', 'Walk-in tub', 'Accessibility products', 'Shower enclosure', 'Bathroom vanity', 'Bath accessories'],
+  Bath: ['Bath installation', 'Shower installation', 'Tub-to-shower conversion', 'Bathtub', 'Walk-in tub', 'Accessibility features', 'Shower enclosure', 'Bathroom vanity', 'Bath accessories'],
   Kitchen: ['Kitchen cabinets', 'Countertops', 'Backsplash', 'Sinks &amp; faucets', 'Kitchen organizers &amp; accessories'],
 };
 
@@ -226,7 +226,7 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
   const others = Object.entries(ALL_PRODUCTS).map(([g, list]) => `<optgroup label="${g}">${list.map((o) => `<option>${o}</option>`).join('')}</optgroup>`).join('');
   const interest = picker ?`<fieldset class="interest"><legend>I'm interested in:</legend>
       ${keys.map((v, i) => `<label class="interest__opt"><input type="radio" name="interest" value="${v}"${i === 0 ? ' checked' : ''}><img src="/assets/img/form-icons/${PICKS[v][1]}" alt="" width="50" height="51"><span>${PICKS[v][0]}</span></label>`).join('')}
-      <div class="interest__more"><label class="sr-only" for="${id}-other">Or choose from all products</label><select id="${id}-other" name="other_product"><option value="">View all products</option>${others}</select></div>
+      <div class="interest__more"><label class="sr-only" for="${id}-other">Or choose from all services</label><select id="${id}-other" name="other_product"><option value="">View all services</option>${others}</select></div>
     </fieldset>` : '';
   const head = bare ? '' : promo
     ?`<div class="form-card__promo"><h2>Get <strong>$1,250 OFF</strong></h2><p>${kitchen ? 'and upgrade your kitchen in as little as three days.*' : 'and transform your bathroom in as little as one day.*'}</p></div>`
@@ -241,8 +241,8 @@ function estimateForm({ heading = 'Request <strong>an Estimate</strong>', text =
       <div class="field"><label for="${id}-phone">Phone <span class="req">*</span></label><input id="${id}-phone" name="phone" type="tel" autocomplete="tel" required></div>
       <div class="field"><label for="${id}-zip">ZIP code <span class="req">*</span></label><input id="${id}-zip" name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
       <div class="field full"><label for="${id}-email">Email <span class="req">*</span></label><input id="${id}-email" name="email" type="email" autocomplete="email" required></div>
-      ${picker ? '' : `<div class="field full"><label for="${id}-project">Product of interest</label><select id="${id}-project" name="project">
-        <option>Bath installation</option><option>Shower installation</option><option>Walk-in tub installation</option><option>Tub-to-shower conversion</option><option>Accessibility products</option><option>Shower enclosure</option><option>Bathroom vanity</option><option>Kitchen cabinets</option><option>Countertops</option><option>Backsplash</option><option>Sinks &amp; faucets</option><option>Kitchen organizers &amp; accessories</option><option>Not sure yet</option>
+      ${picker ? '' : `<div class="field full"><label for="${id}-project">Service of interest</label><select id="${id}-project" name="project">
+        <option>Bath installation</option><option>Shower installation</option><option>Walk-in tub installation</option><option>Tub-to-shower conversion</option><option>Accessibility features</option><option>Shower enclosure</option><option>Bathroom vanity</option><option>Kitchen cabinets</option><option>Countertops</option><option>Backsplash</option><option>Sinks &amp; faucets</option><option>Kitchen organizers &amp; accessories</option><option>Not sure yet</option>
       </select></div>`}
       ${message ? `<div class="field full"><label for="${id}-msg">How can we help?</label><textarea id="${id}-msg" name="message"></textarea></div>` : ''}
     </div>

@@ -453,8 +453,8 @@ form.sent .form-success { display: block; }
 .site-footer a:hover { text-decoration: underline; }
 .footer__top { display: grid; grid-template-columns: 1.2fr 1fr 1.3fr; gap: 3rem; }
 .footer__top > * { min-width: 0; }
-.footer__brand .logo { color: #fff; margin-bottom: 1.25rem; padding-left: 0; }
-.footer__brand .logo__img { height: 130px; }
+.footer__brand .logo { color: #fff; margin-bottom: 1.25rem; padding: 0; height: auto; align-self: auto; }
+.footer__brand .logo__img { height: 130px; top: 0; }
 .footer__brand p { opacity: .9; font-size: .95rem; }
 .newsletter { display: flex; margin: 1rem 0 1.5rem; max-width: 420px; }
 .newsletter input { flex: 1; min-width: 0; border: 0; padding: .8rem .9rem; font: inherit; font-size: .9rem; }
@@ -767,19 +767,18 @@ form.sent .form-success { display: block; }
   .reviews__quote p { font-size: 1.15rem; line-height: 1.55; }
   .reviews__name::before { margin-bottom: 1.6rem; }
 }
-/* Desktop: rounded photo centered on a red background (--pw wide), with the card hanging past its edge */
+/* Desktop: one wide card on a red background holding the photo (--pw wide, original 20:11 shape) on the left and the review on the right */
 @media (min-width: 1001px) {
-  .reviews { --pw: min(990px, 70vw); --hang: 4.5rem; background: var(--red); padding-block: clamp(2.5rem, 4.5vw, 4.5rem); }
+  .reviews { --pw: min(594px, 42vw); --inset: 1.5rem; background: var(--red); padding-block: clamp(2.5rem, 4.5vw, 4.5rem); }
   .reviews__frame { overflow: visible; background: none; }
-  .reviews__slide { min-height: calc(var(--pw) * .55); padding: 2.5rem calc(50% - var(--pw) / 2 - var(--hang)); }
-  .reviews__slide > img { left: calc(50% - var(--pw) / 2); width: var(--pw); border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
-  .reviews__card { box-shadow: 0 24px 50px rgba(0,0,0,.3); }
-  .reviews__controls { bottom: 1rem; }
+  .reviews__slide, .reviews__slide--right { min-height: 0; justify-content: center; padding: 1rem var(--gutter) 6rem; }
+  .reviews__slide > img { position: relative; z-index: 2; inset: auto; flex: 0 0 var(--pw); width: var(--pw); height: auto; aspect-ratio: 20 / 11; margin: 0 calc(-1 * var(--pw) - var(--inset)) 0 var(--inset); border-radius: 14px; }
+  .reviews__controls { bottom: 1.25rem; }
 }
 /* Desktop review card size */
 @media (min-width: 1001px) {
   /* Card 25% larger than the base size */
-  .reviews__card { width: min(405px, 100%); padding: 2.1rem 2.1rem 1.9rem; border-radius: 20px; }
+  .reviews__card { box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; width: calc(var(--pw) + var(--inset) + 2.5rem + 405px); min-height: calc(var(--pw) * 11 / 20 + 2 * var(--inset)); padding: 2.1rem 2.1rem 1.9rem calc(var(--pw) + var(--inset) + 2.5rem); border-radius: 20px; box-shadow: 0 24px 50px rgba(0,0,0,.3); }
   .reviews__stars { gap: .375rem; }
   .reviews__stars span { width: 24px; height: 24px; }
   .reviews__quote { margin: 1.4rem 0 1.65rem; }
