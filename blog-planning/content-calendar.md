@@ -13,14 +13,14 @@ Stage: awareness · consideration · decision · post-purchase
 | 0 | 2026-10-01 | Is a Tub-to-Shower Conversion Right for You? | consideration | Linda | tub to shower conversion | published (starter) | /blog/tub-to-shower-conversion-guide/ |
 | 1 | 2026-10-17 | Why your shower grout turns gray again a year after you clean it | awareness | Linda | shower grout turns gray | drafted | blog/shower-grout-turns-gray |
 | 2 | 2026-10-24 | What's behind the shower tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | drafted | blog/behind-shower-tile-1960s-cincinnati-bathroom |
-| 3 | | Tile shower vs. solid-surface walls: an honest comparison | consideration | all | tile vs acrylic shower walls | planned | |
-| 4 | | Install day, hour by hour | decision | all | one day bathroom remodel what to expect | planned | |
-| 5 | | The soft spot in the floor next to your tub | awareness | Linda | soft floor next to bathtub | planned | |
-| 6 | | What sets the price of a one-day shower gut in Cincinnati | consideration | Dave & Karen | one day bathroom remodel cost Cincinnati | planned | |
+| 3 | 2026-10-31 | Tile vs. acrylic shower walls: what each one asks of you over 20 years | consideration | all | tile vs acrylic shower walls | drafted | blog/tile-vs-acrylic-shower-walls |
+| 4 | 2026-11-07 | One-day bathroom remodel: what to expect, hour by hour | decision | all | one day bathroom remodel what to expect | drafted | blog/one-day-bathroom-remodel-what-to-expect |
+| 5 | 2026-11-14 | Soft floor next to your bathtub: what it is and what waiting costs | awareness | Linda | soft floor next to bathtub | drafted | blog/soft-floor-next-to-bathtub |
+| 6 | 2026-12-05 | One-day bathroom remodel cost in Cincinnati: what sets the price | consideration | Dave & Karen | one day bathroom remodel cost Cincinnati | drafted | blog/one-day-bathroom-remodel-cost-cincinnati |
 | 7 | | "Won't it look like a plastic insert?" | consideration | Linda | acrylic shower walls look cheap | planned | |
-| 8 | | Grab bars and walk-in showers are for old people (and other things we hear) | awareness | Margaret | walk in shower for seniors | planned | |
-| 9 | | The three questions to ask every bathroom contractor before a deposit | decision | all | questions to ask bathroom contractor | planned | |
-| 10 | | How to clean your new grout-free shower | post-purchase | all | how to clean acrylic shower walls | planned | |
+| 8 | 2026-12-12 | "Grab bars are for old people," and four other things we hear | awareness | Margaret | walk in shower for seniors | drafted | blog/grab-bars-are-for-old-people |
+| 9 | 2026-11-21 | Three questions to ask a bathroom contractor before a deposit | decision | all | questions to ask bathroom contractor | drafted | blog/questions-to-ask-bathroom-contractor |
+| 10 | 2026-11-28 | How to clean your new grout-free shower (and what to keep off it) | post-purchase | all | how to clean acrylic shower walls | drafted | blog/how-to-clean-grout-free-shower |
 | 11 | | A new grout-free shower for about the cost of a cable bill | consideration | Linda, Margaret | bathroom remodel financing | planned | |
 | 12 | | Bathroom mildew that keeps coming back: where it lives | awareness | Linda | shower mildew keeps coming back | planned | |
 
