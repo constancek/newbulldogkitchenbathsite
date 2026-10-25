@@ -4,6 +4,7 @@ date: 2026-12-05
 excerpt: A number over the phone is a guess, and there is a reason. The five things that move a one-day shower quote up or down, and how to read the quotes on your table.
 description: One-day bathroom remodel cost in Cincinnati depends on five things a consultant measures. What they are, what a low quote leaves out, and how the financing works.
 img: blog-one-day-bathroom-remodel-cost-cincinnati
+photoCredit: Vodafone x Rankin everyone.connected on Pexels, https://www.pexels.com/photo/couple-sitting-by-table-calculating-expenses-14599250/
 photo: couple reviewing remodeling quote at kitchen table with calculator
 draft: true
 ---
