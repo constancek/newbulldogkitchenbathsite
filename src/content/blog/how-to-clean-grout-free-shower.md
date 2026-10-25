@@ -1,6 +1,6 @@
 ---
 title: How to clean your new grout-free shower (and what to keep off it)
-date: 2026-10-25
+date: 2026-10-24
 excerpt: The crew left yesterday and the care sheet is on the vanity. The ten-minute routine, the Cincinnati hard-water trick, and the two cleaners that can dull the walls.
 description: How to clean acrylic shower walls and solid-surface panels after a one-day install: the weekly routine, what hard water does, and the two cleaners to keep off them.
 img: blog-how-to-clean-grout-free-shower

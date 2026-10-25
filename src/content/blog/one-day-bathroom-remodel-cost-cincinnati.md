@@ -1,6 +1,6 @@
 ---
 title: "One-day bathroom remodel cost in Cincinnati: what sets the price"
-date: 2026-10-25
+date: 2026-10-13
 excerpt: A number over the phone is a guess, and there is a reason. The five things that move a one-day shower quote up or down, and how to read the quotes on your table.
 description: One-day bathroom remodel cost in Cincinnati depends on five things a consultant measures. What they are, what a low quote leaves out, and how the financing works.
 img: blog-one-day-bathroom-remodel-cost-cincinnati

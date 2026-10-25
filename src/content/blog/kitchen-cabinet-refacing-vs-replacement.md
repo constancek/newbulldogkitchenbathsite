@@ -1,6 +1,6 @@
 ---
 title: "Cabinet Refacing vs. Replacement: Which Should You Choose?"
-date: 2026-09-15
+date: 2026-09-29
 excerpt: Both can transform your kitchen. The right choice depends on your cabinet boxes, layout, and budget.
 description: How to decide between refacing and replacing kitchen cabinets, based on the condition of your boxes, your layout and your budget.
 img: blog-cabinet-refacing

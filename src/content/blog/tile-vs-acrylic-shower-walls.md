@@ -1,6 +1,6 @@
 ---
 title: Tile vs. acrylic shower walls: what each one asks of you over 20 years
-date: 2026-10-25
+date: 2026-10-17
 excerpt: A tile contractor's quote on one side, a one-day solid-surface shower on the other. What each one asks of you, from a company that stopped selling tile.
 description: Tile vs acrylic shower walls, compared by install time, grout, cleaning and warranty over 20 years, from a Cincinnati remodeler that no longer sells tile.
 img: blog-tile-vs-acrylic-shower-walls

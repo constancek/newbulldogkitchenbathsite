@@ -1,6 +1,6 @@
 ---
 title: Is a Tub-to-Shower Conversion Right for You?
-date: 2026-10-01
+date: 2026-10-02
 excerpt: Thinking about trading your bathtub for a walk-in shower? Here's what to weigh before you decide.
 description: What to weigh before trading a bathtub for a walk-in shower, from access and space to when it makes sense to keep a tub.
 img: blog-tub-to-shower

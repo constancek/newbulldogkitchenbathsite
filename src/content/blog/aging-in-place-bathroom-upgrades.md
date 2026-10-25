@@ -1,6 +1,6 @@
 ---
 title: 5 Bathroom Upgrades for Aging in Place
-date: 2026-08-28
+date: 2026-09-26
 excerpt: Simple changes that make your bathroom safer and more comfortable for years to come.
 description: Five bathroom changes that make the room safer and easier to use for years to come, without making it feel clinical.
 img: blog-aging-in-place

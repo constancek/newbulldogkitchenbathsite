@@ -1,6 +1,6 @@
 ---
 title: '"Grab bars are for old people," and four other things we hear'
-date: 2026-10-25
+date: 2026-10-22
 excerpt: Five lines our installers hear about grab bars and walk-in showers, what is true inside each one, and what the height of your tub wall has to do with it.
 description: Grab bars and a walk-in shower read as "nursing home" to many homeowners over 50. What our installers say back, with tub-wall heights and CDC figures.
 img: blog-grab-bars-are-for-old-people
