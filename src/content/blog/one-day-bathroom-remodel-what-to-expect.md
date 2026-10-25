@@ -4,6 +4,7 @@ date: 2026-11-07
 excerpt: The truck is in the driveway at 7:45. Our crew's day in your shower area from then until dinner, the noises you'll hear, and the one thing you have to do.
 description: One day bathroom remodel, what to expect hour by hour, from the 7:45 walkthrough to the first shower next morning, from a Cincinnati crew that does it.
 img: blog-one-day-bathroom-remodel-what-to-expect
+photo: contractor installing shower wall panel in bathroom
 draft: true
 ---
 The install date is on the calendar in the kitchen, the consultant measured your master shower three weeks ago, and you still don't quite believe it. Your sister's bathroom in Loveland took six weeks. This post runs the day with the clock on it, from your chair, so you know what to expect from a one-day bathroom remodel before the truck pulls in.
