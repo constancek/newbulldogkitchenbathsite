@@ -18,7 +18,7 @@ images/              # every site photo, sorted by page: replace photos here
 public/              # generated site (deploy this folder)
   assets/css, assets/js
   assets/img/        # converted photos in the same folders as images/, plus brand/ (logo, home-screen icon, badge) and form-icons/
-image-credits.json   # Pexels photographer credits for placeholder and blog photos
+image-credits.json   # Pexels photographer credits for placeholder photos (blog photos carry theirs in the post's photoCredit: line)
 blog-planning/       # content calendar and customer avatar the blog agent works from
 .claude/skills/      # the bath-blog-agent skill Claude uses to write posts
 .github/workflows/   # build.yml rebuilds public/ and converts photos on every push; notify-discord.yml posts blog PRs to #bath-blog
