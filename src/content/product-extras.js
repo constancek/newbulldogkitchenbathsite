@@ -92,7 +92,6 @@ module.exports = {
       { img: 'kitchen-cabinets-solution-closet-storage-systems', title: 'Closet Storage Systems', alt: 'Walk-in closet with wood cabinets and drawers' },
       { img: 'kitchen-cabinets-solution-entryway-cabinets', title: 'Entryway Cabinets', alt: 'Low cabinet in an entry hallway' },
       { img: 'kitchen-cabinets-solution-vanity-tables', title: 'Vanity Tables', alt: 'White vanity table with a lighted mirror' },
-      { img: 'kitchen-cabinets-solution-tv-cabinets', title: 'TV Cabinets', alt: 'White TV cabinet in a living room' },
     ] },
   },
   countertops: {
