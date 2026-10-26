@@ -4,6 +4,7 @@ date: 2026-10-30
 excerpt: The cheap ones do look like that. Five things that separate a hardware-store tub kit from a made-to-fit marble-look shower, and how to judge one in a ranch like yours.
 description: Acrylic shower walls look cheap when they are thin, glossy and cut from a stock size. What a made-to-fit marble-look surround does instead, from a Cincinnati crew.
 img: blog-wont-it-look-like-a-plastic-insert
+photoCredit: Andrea Piacquadio on Pexels, https://www.pexels.com/photo/woman-in-white-robe-looking-at-the-mirror-3884742/
 photo: woman inspecting marble shower wall up close
 ---
 You have been through the [colors and patterns page](/inspiration-colors-patterns/) on the iPad, and the Calcutta marble looks fine on a screen. Then you picture it in the master bath of your ranch in Anderson Township, and the picture that comes up instead is the glossy white tub kit in your sister's rental, the one that flexes when you lean on it. "Won't it look like a plastic insert?" is the question we hear most at the kitchen table, in those words or close to them, and it is a fair one. Some acrylic shower walls look cheap. We have pulled a lot of them out of houses around Cincinnati. Five things make them look that way, and each one is something you can check on a made-to-fit surround before you take our word that ours is different.
