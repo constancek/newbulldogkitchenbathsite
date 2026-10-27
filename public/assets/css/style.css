@@ -357,6 +357,9 @@ form.sent .form-success { display: block; }
 .card-grid--alternate .card__title { order: -1; margin: 0 0 1.1rem; padding: 1.1rem 1.4rem 1.2rem; background: var(--red); color: #fff; font-weight: 600; line-height: 1.35; min-height: calc(1.25rem * 1.35 * 3 + 2.3rem); }
 .card-grid--alternate .card__meta, .card-grid--alternate .card__text, .card-grid--alternate .card__link { margin-left: 1.4rem; margin-right: 1.4rem; }
 .card-grid--alternate .card__link { align-self: flex-start; }
+/* Date sits on the same line as Read More, at the bottom right */
+.card-grid--alternate .card__body { position: relative; }
+.card-grid--alternate .card__meta { position: absolute; right: 0; bottom: 1.5rem; margin-bottom: 0; line-height: 1.6rem; }
 
 /* Product gallery cards (image + label) */
 .tile { display: block; color: var(--text); text-decoration: none; }
