@@ -23,7 +23,7 @@ const page = (p, title, description, body) => pages.push({ path: p, title, descr
 
 // ---------- Shared blocks ----------
 const promos = {
-  dollarsOff: { title: 'Get $1,250 OFF', text: 'Your full kitchen or bathroom remodel, and a new bath in as little as one day.*', img: 'promos-dollars-off', alt: 'Bathroom with white subway tile, a red tile stripe and a sliding glass shower door', icon: 'tag' },
+  dollarsOff: { title: 'Get $1,250 OFF', text: 'Your full kitchen or bathroom remodel, and a new bath in as little as one day.*', img: 'promos-dollars-off', alt: 'Tub and shower with smooth gray wall panels, a built-in niche and black fixtures', icon: 'tag' },
   financing: { title: 'FREE Financing', text: 'No interest for 24 months on approved credit.*', img: 'promos-financing', alt: 'Couple planning a remodel budget', icon: 'percent' },
   senior: { title: 'Senior Discounts', text: 'Special savings for homeowners 65 and up. See a design consultant for details.*', img: 'promos-senior', alt: 'Senior couple smiling over paperwork', icon: 'heart' },
   military: { title: 'Military Discounts', text: 'Thank you for your service. Extra savings for active-duty military and veterans.*', img: 'promos-military', alt: 'Military service member', icon: 'flag' },
