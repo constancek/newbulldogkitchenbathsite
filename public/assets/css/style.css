@@ -350,6 +350,7 @@ form.sent .form-success { display: block; }
 .card__link { color: var(--red); font-weight: 500; text-decoration: underline; text-underline-offset: .25rem; font-size: .95rem; }
 .card__meta { font-size: .8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .4rem; }
 /* Blog list cards: one style for all, rounded, red heading band over a white body */
+.section:has(> .container > .card-grid--alternate) { background: #eceef1; }
 .card-grid--alternate { gap: 2.5rem 2.25rem; }
 .card-grid--alternate .card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 22px rgba(0,0,0,.09); transition: box-shadow .25s ease, translate .25s ease; }
 .card-grid--alternate .card:hover { box-shadow: 0 12px 30px rgba(0,0,0,.16); translate: 0 -3px; }

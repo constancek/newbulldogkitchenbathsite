@@ -370,7 +370,7 @@ page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and ba
 // ---------- Blog ----------
 page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, [
   C.pageBand({ title: 'The Bulldog Kitchen &amp; Bath <strong>Blog</strong>', lead: 'Ideas, tips, and guides for your next kitchen or bathroom project.' }),
-  C.cards({ perRow: 3, link: 'Read More', alternate: true, items: posts.map((p) => ({ title: p.title, img: p.img, href: `/blog/${p.slug}/`, text: p.excerpt, meta: p.date })) }),
+  C.cards({ perRow: 3, link: 'Read More', alternate: true, grey: true, items: posts.map((p) => ({ title: p.title, img: p.img, href: `/blog/${p.slug}/`, text: p.excerpt, meta: p.date })) }),
 ].join('\n'));
 posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.description || p.excerpt, [
   C.pageBand({ title: p.title, extra: `<p class="post-meta">${p.date} · ${SITE.name}${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>` }),
