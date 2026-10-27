@@ -4,7 +4,6 @@ date: 2026-10-27
 excerpt: The "$150 a month" line explained in plain words, including the one word in a no-interest offer to read twice and what a lender may and may not hold against a retirement income.
 description: Bathroom remodel financing explained for a fixed income. What "as low as $150 a month" means, how a no-interest plan works, and six questions to ask before you sign.
 img: blog-bathroom-remodel-financing-cable-bill
-photoCredit: T Leish on Pexels, https://www.pexels.com/photo/elderly-couple-sitting-at-the-table-hugging-and-using-a-laptop-6975190/
 photo: older couple paying bills at kitchen table
 ---
 The consultant left an hour ago. The written quote for the master shower is on the kitchen table in your 1968 ranch in Anderson Township, next to the folder of color samples, and one line on it reads "as low as $150 a month with promotional financing." Tom wants to know what the catch is. You want to know how bathroom remodel financing works before anyone signs anything, and whether a pension and two Social Security checks count as income to a lender. Both answers are below, in the order the lender takes them.
