@@ -1,6 +1,6 @@
 ---
 title: "Bathroom remodel financing: a new shower for about the cost of a cable bill"
-date: 2026-11-06
+date: 2026-10-27
 excerpt: The "$150 a month" line explained in plain words, including the one word in a no-interest offer to read twice and what a lender may and may not hold against a retirement income.
 description: Bathroom remodel financing explained for a fixed income. What "as low as $150 a month" means, how a no-interest plan works, and six questions to ask before you sign.
 img: blog-bathroom-remodel-financing-cable-bill
