@@ -98,7 +98,7 @@
         r.classList.remove('is-moving');
         if (k === n) { place(0, false); k = 0; }
         i = k; activate(k); busy = false;
-      }, still ? 0 : 900);
+      }, still ? 0 : 600);
     }
     function auto() { clearInterval(timer); if (!paused) timer = setInterval(function () { go(i + 1); }, 7000); }
     r.querySelector('[data-dir="prev"]').addEventListener('click', function () { go(i - 1); auto(); });
