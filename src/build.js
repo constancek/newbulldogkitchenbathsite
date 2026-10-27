@@ -98,7 +98,7 @@ const homeReviews = () => C.reviews([0, 1, 2, 3, 4].flatMap((i) => [bathReviewIt
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
   C.carousel([
-    { img: 'home-slide-new-bath', alt: 'Glass corner shower with beige tile, a built-in niche and black fixtures, beside a dark wood vanity', pos: 'center 40%', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
+    { img: 'home-slide-new-bath', alt: 'Bathroom with a freestanding tub behind a frameless glass panel, a gray stone-look wall and a floating wood double vanity with lit mirrors', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
     { img: 'home-slide-kitchen', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
     { img: 'home-slide-promo', alt: 'Glass walk-in shower with marble-look wall panels, a built-in niche and a white base', pos: 'center 35%', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
     { img: 'home-slide-quality', alt: 'Walk-in shower with marble-look walls, black sliding glass door and black hex tile floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },
@@ -106,7 +106,7 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
   C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
   C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
   C.banner({
-    title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'home-one-day-banner', alt: 'Walk-in shower with marble-look wall panels, a grab bar and a glass panel', badge: '1-DAY',
+    title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'home-one-day-banner', alt: 'Walk-in shower with white marble-look wall panels, a built-in shelf niche and a black sliding glass door', badge: '1-DAY',
     text: 'Turn your bathroom into a spa-like retreat with minimal disruption to your home. Our crews prep, install, and clean up, often in a single visit.',
     buttons: [['Schedule an Estimate', '/about/#contact']],
   }),
@@ -115,8 +115,8 @@ page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs be
   exploreBath(),
   C.anatomy(extras.cabinets.anatomy),
   C.beforeAfter({ title: 'What your space could look like', text: 'Done in as little as 1 day', items: [
-    { img: 'home-before', alt: 'Before: an outdated bathroom', label: 'Before' },
-    { img: 'home-after', alt: 'After: a remodeled bathroom', label: 'After' },
+    { img: 'home-before', alt: 'Before: a bathroom with an old gray vanity, a marble top and a plain mirror', label: 'Before' },
+    { img: 'home-after', alt: 'After: the same bathroom with a wood double vanity, a white top, black faucets and a black-framed mirror', label: 'After' },
   ] }),
   homeReviews(),
   C.sideBySide({
@@ -141,7 +141,7 @@ const optionSections = {
   showers: [
     C.swatches({ title: 'Shower Base Styles', intro: 'Every base is custom-measured to fit your space.', items: options.showerBases, cards: true, flush: true }),
     C.swatches({ title: 'Wall Styles', intro: colorsLink, items: options.wallStyles }),
-    C.sideBySide({ title: 'Glass Doors <strong>&amp; Enclosures</strong>', img: 'shower-enclosures-intro', alt: 'Glass shower enclosure', reverse: true,
+    C.sideBySide({ title: 'Glass Doors <strong>&amp; Enclosures</strong>', img: 'shower-enclosures-intro', alt: 'Frameless hinged glass door on a gray tile walk-in shower', reverse: true,
       text: '<p>The right glass door or curtain rod frames your new walls, keeps water where it belongs, and makes the whole bathroom feel brighter and more open. We measure every opening so your enclosure fits precisely and seals properly.</p><p>Choose clear glass to show off your walls, or rain, frosted, or corrugated glass for more privacy. Sliding and bypass doors save space on wide showers, and pivot and hinged doors give a clean, frameless-style look. A protective coating helps water bead off so cleanup stays quick.</p>' }),
     C.swatches({ title: 'Doors &amp; Curtain Rods', intro: 'Choose glass or a rod, in the finish that matches your fixtures.', items: options.showerDoors, cards: true, flush: true }),
     C.swatches({ title: 'Doors &amp; Rods – Finishes', items: options.finishes, flush: true,
@@ -236,8 +236,8 @@ productPage(colorsPatterns, '/inspiration-');
 
 // ---------- Products overview ----------
 page('/bathrooms/', 'Bath Services', `Explore showers and glass enclosures, tub-to-shower conversions, bathtubs, walk-in tubs and accessibility features, and vanities from ${SITE.name}.`, [
-  C.hero({ img: 'services-header', alt: 'Remodeled bathroom', title: 'Our <strong>Services</strong>', lead: 'Durable, beautiful, low-maintenance bath upgrades, custom-fit and installed by our own team.' }),
-  C.sideBySide({ title: 'Beautiful, <strong>Durable Results</strong>', img: 'services-feature', alt: 'Bathroom with glass shower',
+  C.hero({ img: 'services-header', alt: 'Walk-in shower with white textured wall tile, a black sliding glass door and a patterned floor', title: 'Our <strong>Services</strong>', lead: 'Durable, beautiful, low-maintenance bath upgrades, custom-fit and installed by our own team.' }),
+  C.sideBySide({ title: 'Beautiful, <strong>Durable Results</strong>', img: 'services-feature', alt: 'Long bathroom with a wood double vanity, a frameless glass shower and a freestanding tub',
     text: '<p>Everything we install is chosen to look great on day one and stay that way for years. Non-porous surfaces resist mold and mildew, colors won\'t fade, and there\'s no grout to scrub. ' + sinceLine('has been installing durable, low-maintenance bath upgrades for homeowners across the area.') + '</p><p>Everything is custom-measured for your space and backed by our lifetime warranty.</p>' }),
   bulldogDifference(),
   C.tiles({ tall: true,
@@ -298,7 +298,7 @@ page('/inspiration-design-spotlight/', 'Design Spotlight', `Real kitchen and bat
 
 // ---------- One day remodel ----------
 page('/one-day-bathroom-remodel/', 'One Day Bathroom Remodel', `Get a beautiful new bathroom in as little as one day with ${SITE.name}.`, [
-  C.banner({ titleTag: 'h1', bold: true, title: 'A Brand-New Bath in As Little As One Day', img: 'home-one-day-banner', alt: 'Walk-in shower with marble-look wall panels, a grab bar and a glass panel',
+  C.banner({ titleTag: 'h1', bold: true, title: 'A Brand-New Bath in As Little As One Day', img: 'home-one-day-banner', alt: 'Walk-in shower with white marble-look wall panels, a built-in shelf niche and a black sliding glass door',
     text: 'Most bathroom remodels drag on for weeks. Ours don\'t. Because everything is custom-measured and prepared before install day, our crew can remove your old tub or shower and install your new one, often in a single visit.',
     buttons: [['Schedule an Estimate', '/about/#contact']] }),
   bulldogDifference({
