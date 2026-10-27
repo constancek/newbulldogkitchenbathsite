@@ -50,10 +50,10 @@ Both make the tub you have safer.
 
 ## When the tub itself is the problem
 
-A bar and a curtain make a sound tub safer, and they leave the 14 inches, or the 23 and a half, where they were. If anyone in the house sits on the rim and swings their legs over to get in, or waits for someone else to be home before showering, the tub wall is the thing to replace. The same goes when the shower is past 20 years and you are pricing a regrout: new grout over the old tub keeps the step. Our [tub-to-shower conversion guide](/blog/tub-to-shower-conversion-guide/) walks through what the swap involves and when keeping a tub still makes sense.
+A bar and a curtain make a sound tub safer, and they leave the 14 inches, or the 23 and a half, where they were. If anyone in the house sits on the rim and swings their legs over to get in, or waits for someone else to be home before showering, the tub wall is the thing to replace. The same goes when the shower is past 20 years and you are pricing a regrout: new grout over the old tub keeps the step. Our [tub-to-shower conversions page](/bathrooms/tub-to-shower-conversions/) walks through what the swap involves.
 
 ## How we build it in
 
 Bulldog's one-day wet-area gut takes the tub or shower area to the studs in the morning and rebuilds it by evening: a low-threshold base with a slip-resistant floor, solid-surface walls in the marble or travertine look you picked, a built-in seat if you want one, and grab bars in a finish that matches the fixtures. Our own crew, the same people who measured, does it in one visit, and you take the first shower the next morning. With promotional financing, qualified buyers get it for as low as $150 a month, or 12 months no interest, on approved credit. The floor, vanity and toilet in the rest of the room are a separate, longer job, and we say so before you sign.
 
-If you are not there yet, and most people reading this are not, the signup box at the bottom of this page is where we send the next one. The post on [five bathroom changes that keep a room from feeling clinical](/blog/aging-in-place-bathroom-upgrades/) is up now.
+If you are not there yet, and most people reading this are not, the signup box at the bottom of this page is where we send the next one. Our [walk-in tubs and accessibility page](/bathrooms/walk-in-tubs/) shows the grab bars, seats and low-entry showers we install.
