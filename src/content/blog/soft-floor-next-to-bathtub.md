@@ -1,5 +1,6 @@
 ---
 title: Soft floor next to your bathtub: what it is and what waiting costs
+seoTitle: "Soft floor next to your bathtub: what it is, what it costs"
 date: 2026-10-19
 excerpt: The floor by the tub gives a little under the bath mat. What that spot is made of, where the water got in, and why a patch there means the tub comes out.
 description: Soft floor next to the bathtub: what the spot is made of, three places water gets under a tub, how to check from the basement, and what waiting costs.
@@ -44,7 +45,7 @@ A wet patch of subfloor spreads along the grain of the plywood, which is why a s
 
 The toilet is a foot or two from the tub in most of these bathrooms, and its flange, the ring that holds it to the floor, is screwed into the same subfloor. Once that goes soft the toilet rocks, the wax ring under it loses its seal, and you have a second leak feeding the first.
 
-Then there is the tub. A 60-inch cast-iron alcove tub weighs about [327 pounds](https://store.thegranitegroup.com/Product/K876WHI) empty, by Kohler's spec sheet, and the water in a full tub weighs about as much again. All of that sits on the wet wood. The tub settles, the caulk line at the tile opens, and more water gets through the joint that started this. Our crews have pulled cast-iron tubs out of ranches in Montgomery and Fort Thomas, Kentucky that sat lower at the front than at the back.
+Then there is the tub. A 60-inch cast-iron alcove tub weighs about [327 pounds](https://resources.kohler.com/webassets/kpna/catalog/pdf/en/K-876_spec_US-CA_Kohler_en.pdf) empty, by the manufacturer's spec sheet, and the water in a full tub weighs about as much again. All of that sits on the wet wood. The tub settles, the caulk line at the tile opens, and more water gets through the joint that started this. Our crews have pulled cast-iron tubs out of ranches in Montgomery and Fort Thomas, Kentucky that sat lower at the front than at the back.
 
 None of this drops the tub through the ceiling. It turns a one-sheet patch into a floor, and a floor into a joist repair, over a few years of stepping around the spot.
 
@@ -60,6 +61,6 @@ Our installers take the tub or shower area down to the studs in the morning and 
 
 With promotional financing, qualified buyers get that new grout-free shower for as low as $150 a month, or 12 months no interest, on approved credit. The [one-day remodel page](/one-day-bathroom-remodel/) walks through install day hour by hour.
 
-If you are not there yet, do the three checks and write down what you found. [The post on what sits behind the shower tile](/blog/behind-shower-tile-1960s-cincinnati-bathroom/) covers the wall side of the same water, and the newsletter signup at the bottom of this page sends you the next post when it is up.
+If you are not there yet, do the three checks and write down what you found. [The post on what sits behind the shower tile](/blog/behind-shower-tile-1960s-cincinnati-bathroom/) covers the wall side of the same water, and [what to do about bathroom mildew that keeps coming back](/blog/shower-mildew-keeps-coming-back/) covers the damp air that keeps it going.
 
 For the full picture of how an older shower fails, and when to stop fixing it, start with [your 20-year-old shower: what fails first](/blog/signs-shower-needs-replacing/).

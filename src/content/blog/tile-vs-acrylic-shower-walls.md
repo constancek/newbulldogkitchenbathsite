@@ -6,7 +6,6 @@ excerpt: A tile contractor's quote on one side, a one-day solid-surface shower o
 description: Tile vs acrylic shower walls, compared by install time, grout, cleaning and warranty over 20 years, from a Cincinnati remodeler that no longer sells tile.
 summary: A tiled shower takes several days to two weeks to install because of cure times, and its grout needs sealing about every two years. A made-to-fit solid-surface shower has no grout, goes in in one day and cleans with mild soap and water. Tile is still the better pick for a custom mosaic, a curbless wet room or a feature wall.
 img: blog-tile-vs-acrylic-shower-walls
-photoCredit: Max Vakhtbovych on Pexels, https://www.pexels.com/photo/a-white-ceramic-sink-and-toilet-bowl-8142058/
 photo: modern walk-in shower with marble look wall panels
 ---
 You have a tile contractor's card on the refrigerator and you're reading up on the other option on the iPad after dinner. The master shower in your ranch is original, you've regrouted it twice, and at some point you typed "tile vs acrylic shower walls" into Google. Bulldog used to sell tiled showers and stopped, and you should know that before you read a comparison we wrote. We'll give tile its due anyway, because a tile shower built right is a good shower.

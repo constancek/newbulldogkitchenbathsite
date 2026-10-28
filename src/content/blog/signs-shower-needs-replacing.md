@@ -90,7 +90,7 @@ Either way, the old tile and the board behind it come out to the studs, and some
 
 A tile contractor rebuilds with cement backer board and a waterproofing layer, then sets new tile. Done right, that's a good shower that lasts a long time. It still has grout joints, the joints still need sealing, and the cure times stretch the job across several days.
 
-A grout-free shower uses one solid-surface panel per wall, measured in your bathroom and made to those numbers before install day. With no grout there's no stage 1. Each wall is one sheet instead of hundreds of grout joints, so the only joints left are the seams at the corners and the base. [Tile vs. acrylic shower walls](/blog/tile-vs-acrylic-shower-walls/) compares tile with panel walls like these over 20 years and gives tile its due.
+A grout-free shower uses one solid-surface panel per wall, measured in your bathroom and made to those numbers before install day. With no grout there's no stage 1. There are no grout lines on the walls, so there are no grout joints for water to work through. [Tile vs. acrylic shower walls](/blog/tile-vs-acrylic-shower-walls/) compares tile with panel walls like these over 20 years and gives tile its due.
 
 Bulldog builds the second kind. Our installers take the tub or shower area to the studs in the morning, look at the subfloor and the pipes with the wall open, and have the new base, walls and fixtures in by evening. You take your first shower the next morning. The rest of the room (floor, vanity, toilet) is a separate, longer job, and we tell you that before you sign. [The one-day remodel page](/one-day-bathroom-remodel/) walks through install day hour by hour.
 

@@ -1,10 +1,11 @@
 ---
 title: Why your shower grout turns gray again a year after you clean it
+seoTitle: "Why shower grout turns gray again after you clean it"
 date: 2026-10-05
 excerpt: You regrouted in the spring and the bottom row is gray again by fall. Here's what's going on inside the grout, and when the fix stops being worth it.
 photo: gray grout lines on white shower tile
 description: Regrouted or scrubbed your shower and the gray came back? What happens inside the grout, which fixes last a season, and when it stops being worth it.
-summary: Shower grout turns gray again because it is porous: water, soap and minerals soak in, and most sealers wear off within six to twelve months. A pink line on the caulk is a common bacterium feeding on soap film. Grout that grays fast can mean water is reaching the wall behind it, and past about 20 years regrouting stops being worth it.
+summary: Shower grout turns gray again because it is porous: water, soap and minerals soak in, and sealers wear off, the floor and bottom row first. A pink line on the caulk is a common bacterium feeding on soap film. Grout that grays fast can mean water is reaching the wall behind it, and past about 20 years regrouting stops being worth it.
 img: blog-shower-grout-turns-gray
 ---
 You regrouted the master shower last spring, or paid a handyman to. By fall the lines along the bottom row are gray again, and a pink stripe is back where the tub meets the wall. You did the work right. The grout is doing what grout does. The gray comes from three things happening inside it, in this order, and the order tells you which fixes last and which don't.
@@ -25,7 +26,7 @@ Bleach kills it for a week or two. It comes back because the film comes back. Th
 
 ## Grout sealer helps, for about a season
 
-A penetrating sealer fills the pores for a while, which is why a shower sealed in April stays clean through the summer. Sealers wear. On a shower used twice a day, most of them are gone in six to twelve months, sooner on the floor and the bottom row. The instructions say to reseal every year. Few people do, and the ones who do are back on their knees in the shower every spring.
+A penetrating sealer fills the pores for a while, which is why a shower sealed in April stays clean through the summer. Sealers wear. How long a coat lasts depends on the product and how hard the shower works, and the floor and the bottom row wear first. [Regrouting vs. resealing vs. replacing](/blog/regrout-reseal-or-replace-shower/) compares what the makers' data sheets say. The instructions say to reseal every year. Few people do, and the ones who do are back on their knees in the shower every spring.
 
 Regrouting resets the clock further, since you're starting with fresh grout and fresh sealer. It's also a weekend of work, or a few hundred dollars for someone else to do it, and in a shower that's 20 years old or more the new grout often sits on a wall that's wet behind it. Which brings up the thing the gray grout is hiding.
 
@@ -52,7 +53,7 @@ Regrouting and sealing make sense for a shower under about 20 years old with a s
 
 At that point the honest choice is between a new tiled shower from a tile contractor, built with a real waterproofing layer behind it, and a shower with no grout at all. Tile done right will last. It will still have joints, and the joints will still need the spring ritual above.
 
-A grout-free shower is a solid-surface panel on each wall, measured to your bathroom and cut to fit, with seams only at the corners. There's nothing for the pink stripe to live in and no pores for the gray to come back through. Mild soap and water is the whole routine. If you want the look of tile, the same material comes in [subway, herringbone and hexagon patterns](/inspiration-colors-patterns/) with the lines molded in and nothing to scrub out of them. Our crews take the shower area down to the studs in the morning, including the wet board we just talked about, and have the new walls, base and fixtures in by evening. You take your first shower in it the next morning, once the caulk has set. Replacing the floor and vanity too is a longer job, and we'll tell you how long before you sign. With promotional financing, qualified buyers get the new shower for as low as $150 a month, or 12 months no interest, on approved credit, so the shower goes in now and the bill waits.
+A grout-free shower is a solid-surface panel on each wall, measured to your bathroom and cut to fit, with no grout lines on its face. There's nothing for the pink stripe to live in and no pores for the gray to come back through. Mild soap and water is the whole routine. If you want the look of tile, the same material comes in [subway, herringbone and hexagon patterns](/inspiration-colors-patterns/) with the lines molded in and nothing to scrub out of them. Our crews take the shower area down to the studs in the morning, including the wet board we just talked about, and have the new walls, base and fixtures in by evening. You take your first shower in it the next morning, once the caulk has set. Replacing the floor and vanity too is a longer job, and we'll tell you how long before you sign. With promotional financing, qualified buyers get the new shower for as low as $150 a month, or 12 months no interest, on approved credit, so the shower goes in now and the bill waits.
 
 If you'd like to see what the walls look like in a real bathroom, the [colors and patterns page](/inspiration-colors-patterns/) shows the marble and travertine looks most of our customers pick, and the [one-day remodel page](/one-day-bathroom-remodel/) walks through install day. If you're not there yet, clean the bottom row this weekend and see how long it lasts. You'll know.
 

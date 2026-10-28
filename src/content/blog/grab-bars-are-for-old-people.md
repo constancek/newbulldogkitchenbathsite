@@ -1,5 +1,6 @@
 ---
 title: '"Grab bars are for old people," and four other things we hear'
+seoTitle: "Grab bars are for old people, and 4 more things we hear"
 date: 2026-10-22
 excerpt: Five lines our installers hear about grab bars and walk-in showers, what is true inside each one, and what the height of your tub wall has to do with it.
 description: Grab bars and a walk-in shower read as "nursing home" to many homeowners over 50. What our installers say back, with tub-wall heights and CDC figures.
@@ -30,7 +31,7 @@ This is the most reasonable line on the list, and the timing is the problem with
 
 There is a plainer reason too. Most of the showers we replace are 20 years old or older, and at that age you will be putting in a new base anyway. Picking the low-threshold version of it is one decision inside a job you are doing regardless.
 
-## "The tub is fine": how high your tub wall really is
+## "The tub is fine": how high your tub wall is
 
 Say you are careful. The tub wall is still worth measuring. A standard cast-iron alcove tub, the 60-by-30 kind in a 1960s or 70s ranch in Anderson Township or Fairfield, stands [14 inches at the rim](https://build.com/kohler-k-716/s563320) by Kohler's spec sheet for its Villager model. A 5-foot cast-iron clawfoot, the kind in a 1920s house in Hyde Park or Fort Thomas, Kentucky, puts its rim at about [23 and a half inches](https://rejuvenation.com/products/clawfoot-tub). Stepping out of one means lifting a wet foot close to two feet in the air onto a tile floor, while holding a shower curtain.
 

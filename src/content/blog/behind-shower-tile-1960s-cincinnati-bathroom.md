@@ -65,6 +65,6 @@ At that age the choice is between a new tiled shower from a tile contractor, who
 
 A grout-free shower is one solid-surface panel per wall, measured to your bathroom and made to those numbers before anyone shows up. Our installers take the tub or shower area to the studs in the morning, handle what they find back there, and have the new base, walls and fixtures in by evening. You take your first shower the next morning. The floor, vanity and toilet are a separate, longer job, and we say so before you sign. With promotional financing, qualified buyers get the new shower for as low as $150 a month, or 12 months no interest, on approved credit. [The one-day remodel page](/one-day-bathroom-remodel/) walks through install day.
 
-If you are not there yet, do the four checks and write down what you found. The [grout post](/blog/shower-grout-turns-gray/) has the weekend routine that keeps a sound wall going, and the newsletter signup at the bottom of this page will send you the next post, on the soft spot in the floor, when it is up.
+If you are not there yet, do the four checks and write down what you found. The [grout post](/blog/shower-grout-turns-gray/) has the weekend routine that keeps a sound wall going, and [the post on the soft spot in the floor next to the tub](/blog/soft-floor-next-to-bathtub/) covers the same water from below.
 
 For the full picture of how an older shower fails, and when to stop fixing it, start with [your 20-year-old shower: what fails first](/blog/signs-shower-needs-replacing/).
