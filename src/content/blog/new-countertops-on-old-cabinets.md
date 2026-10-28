@@ -6,6 +6,7 @@ excerpt: A quartz, granite or solid-surface top can go on the cabinets you have 
 description: New countertops without new cabinets: what older base cabinets need to carry quartz, granite or solid surface, and when to reface the doors too.
 summary: Most older kitchens can take a new quartz, granite or solid-surface top on the cabinets already there. Cambria, a quartz maker, wants the bases flat within 1/8 inch over 8 feet, the sink base has to be dry and solid, and openings like the dishwasher need support on three sides. Cambria lists its 3 cm quartz at about 15 pounds per square foot, so a soft sink base or a box pulling off the wall has to be fixed first. If the boxes are sound and the doors are tired, refacing them on the same job lets one consultant plan both together.
 img: blog-new-countertops-on-old-cabinets
+photoCredit: Max Vakhtbovych on Pexels, https://www.pexels.com/photo/kitchen-in-room-8089193/
 photo: white quartz countertop on older wood kitchen cabinets
 ---
 The oak cabinets in your Anderson Township kitchen went in around 1990, and they still close. The laminate on top of them is done: a burn ring by the stove, a seam by the sink you can feel with your thumb. You'd like quartz or granite, and you'd like to skip the part where the whole kitchen comes out. You can get new countertops without new cabinets in most older kitchens. A stone top doesn't care how old the boxes under it are. It cares whether they're flat, whether the sink base is solid, and whether the openings in the run have something to sit on.
