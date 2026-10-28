@@ -6,7 +6,6 @@ excerpt: One lever or two handles, pull-down or pull-out, how tall the spout sta
 description: The best kitchen faucet type for an older kitchen: a single lever, the right sprayer, a spout that clears your pots and a finish that hides spots.
 summary: For stiff or sore hands, a single lever is the easiest faucet to work, since you push it instead of gripping and twisting. A pull-down sprayer suits a deep sink and tall pots, and a pull-out suits a low window or a cabinet that hangs close over the sink. Count the holes under your sink before you shop, and measure your tallest pot against the spout. Brushed nickel hides fingerprints and small scratches better than polished chrome, which shows water spots.
 img: blog-choosing-a-kitchen-faucet
-photoCredit: Castorly Stock on Pexels, https://www.pexels.com/photo/person-washing-shaver-3944862/
 photo: hand pushing single lever faucet over deep sink
 ---
 The faucet in your Anderson Township kitchen went in with the oak cabinets around 1995: two round knobs and a side sprayer that dribbles out of a cracked hose. Shutting off the hot knob takes a grip your hand doesn't like first thing in the morning, and the stockpot won't fit under the spout unless you tip it. For most people in an older house, the best kitchen faucet type is a single lever with a pull-down sprayer, a spout tall enough for the biggest pot you own, and a brushed nickel finish. The six choices below explain why, and where the other answer is the right one for your kitchen.
