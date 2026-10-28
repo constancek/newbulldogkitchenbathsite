@@ -517,15 +517,10 @@ form.sent .form-success { display: block; }
 .toc li { margin-bottom: .45rem; }
 .toc a { color: var(--ink) !important; text-decoration: none !important; }
 .toc a:hover { color: var(--red) !important; text-decoration: underline !important; }
-.post-author { display: flex; gap: 1.5rem; align-items: center; margin-top: 3.5rem; padding: 1.5rem; background: var(--ink); border-radius: 16px; color: #fff; }
-.post .post-author img { width: 120px; height: auto; margin: 0; flex-shrink: 0; }
-.post-author p { color: #d2d4d8 !important; font-size: 1rem; line-height: 1.6; margin: 0 0 .6rem; }
-.post-author .post-author__name { color: #fff !important; font-weight: 700; font-size: 1.05rem; margin-bottom: .3rem; }
-.post-author .link-arrow { color: #fff; text-decoration-color: var(--red); }
+.post .post-author { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #e2e4e8; font-size: .95rem; color: #555; }
 .post-related .section-head h2 strong { color: var(--red); }
 @media (max-width: 600px) {
   .post { font-size: 1.06rem; }
-  .post-author { flex-direction: column; align-items: flex-start; }
   .breadcrumb [aria-current] { display: none; }
   .breadcrumb span:nth-last-child(2) { display: none; }
 }

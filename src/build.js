@@ -415,12 +415,7 @@ posts.forEach((p) => {
   <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
   ${showToc ? `<details class="toc" open><summary>In this article</summary><ol>${p.toc.map((t) => `<li><a href="#${t.id}">${t.text}</a></li>`).join('')}</ol></details>` : ''}
   ${p.body}
-  <aside class="post-author">
-    <img src="/assets/img/brand/logo.png" alt="${SITE.name} logo" width="560" height="297" loading="lazy">
-    <div><p class="post-author__name">Written by the ${SITE.name} team</p>
-    <p>We have been remodeling kitchens and baths across the Cincinnati area since ${SITE.founded}. Our own crews do every install, many bathrooms are finished in one day, and the work is backed by a lifetime warranty.</p>
-    <a class="link-arrow" href="/about/">About us</a></div>
-  </aside>
+  <p class="post-author">Written by the <a href="/about/">${SITE.name}</a> team, Cincinnati remodelers since ${SITE.founded}.</p>
 </article></section>`,
     C.carousel(homeSlides, { top: false }),
     homeCallout(),
