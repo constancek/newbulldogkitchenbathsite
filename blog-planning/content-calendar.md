@@ -8,9 +8,9 @@ Stage: awareness · consideration · decision · post-purchase
 
 | # | Date | Title | Stage | Variant | Search phrase | Status | PR / URL |
 |---|---|---|---|---|---|---|---|
-| 0 | 2026-08-28 | 5 Bathroom Upgrades for Aging in Place | awareness | Margaret | aging in place bathroom | published (starter) | /blog/aging-in-place-bathroom-upgrades/ |
-| 0 | 2026-09-15 | Cabinet Refacing vs. Replacement | consideration | (kitchen) | cabinet refacing vs replacement | published (starter) | /blog/kitchen-cabinet-refacing-vs-replacement/ |
-| 0 | 2026-10-01 | Is a Tub-to-Shower Conversion Right for You? | consideration | Linda | tub to shower conversion | published (starter) | /blog/tub-to-shower-conversion-guide/ |
+| 0 | 2026-08-28 | 5 Bathroom Upgrades for Aging in Place | awareness | Margaret | aging in place bathroom | not on the live site (404 as of 2026-10-28) | /blog/aging-in-place-bathroom-upgrades/ |
+| 0 | 2026-09-15 | Cabinet Refacing vs. Replacement | consideration | (kitchen) | cabinet refacing vs replacement | not on the live site (404 as of 2026-10-28) | /blog/kitchen-cabinet-refacing-vs-replacement/ |
+| 0 | 2026-10-01 | Is a Tub-to-Shower Conversion Right for You? | consideration | Linda | tub to shower conversion | not on the live site (404 as of 2026-10-28) | /blog/tub-to-shower-conversion-guide/ |
 | 1 | 2026-10-05 | Why your shower grout turns gray again a year after you clean it | awareness | Linda | shower grout turns gray | published | /blog/shower-grout-turns-gray/ |
 | 2 | 2026-10-08 | What's behind the shower tile in a 1960s Cincinnati bathroom | awareness | Linda | what is behind shower tile | published | /blog/behind-shower-tile-1960s-cincinnati-bathroom/ |
 | 3 | 2026-10-17 | Tile vs. acrylic shower walls: what each one asks of you over 20 years | consideration | all | tile vs acrylic shower walls | published | /blog/tile-vs-acrylic-shower-walls/ |
