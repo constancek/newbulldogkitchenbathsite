@@ -5,6 +5,7 @@ excerpt: Some dark granite takes little or no sealer, and some light slabs need 
 description: Does granite need to be sealed? Dark, dense slabs often need little. A hot-water test, how often to reseal, and the cleaners that wear sealer down.
 summary: Most granite countertops don't need a sealer to do their job, and dark, dense slabs often take little or none. Lighter, more porous granite benefits from one. Leave a little hot water on the counter for 10 to 20 minutes, and if the stone darkens, it's absorbing and due for a penetrating sealer. A neutral stone cleaner keeps a good sealer working for years, while vinegar, bleach and scouring powder wear it down.
 img: blog-does-granite-need-sealing
+photoCredit: https://kaboompics.com/ on Pexels, https://www.pexels.com/photo/person-in-glove-wiping-surface-of-sink-in-modern-bathroom-4239113/
 photo: hand wiping granite kitchen countertop beside sink
 ---
 Congratulations on the new counters. About a week after install, the question at the kitchen table is the sealing one: does granite need to be sealed, and if it does, how often? The [Natural Stone Institute](https://www.naturalstoneinstitute.org/consumers/sealing-stone/), the stone industry's trade association, says most granite countertops do not need to be sealed. Many still benefit from a sealer, since it slows moisture moving into a surface that already resists it. Whether yours is one of them depends on the slab, and a test on your own counter answers it.

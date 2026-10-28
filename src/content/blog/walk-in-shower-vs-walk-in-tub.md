@@ -5,6 +5,7 @@ excerpt: A walk-in tub keeps the bath, a low-threshold shower takes away the ste
 description: Walk in tub vs walk in shower: step-in heights, fill and drain time, sitting while the water drains, and where a shower with a built-in seat fits.
 summary: A walk-in tub suits someone who takes a bath most nights and would miss it, as long as they're fine sitting in the tub while it fills and drains. A walk-in shower with a low-threshold base suits someone who showers standing and wants the tub wall gone. A low-threshold base with a built-in seat suits someone who wants to sit while they wash without waiting on a tub of water to fill and drain. All three replace a high tub wall with a low step.
 img: blog-walk-in-shower-vs-walk-in-tub
+photoCredit: Curtis Adams on Pexels, https://www.pexels.com/photo/modern-white-marble-walk-in-shower-interior-36777898/
 photo: marble-look walk-in shower with built-in seat and glass door
 ---
 You've been getting out of the clawfoot upstairs by sitting on the rim and swinging one leg over, then the other. You have two brochures on the counter, one for a walk-in tub and one for a walk-in shower, and you'd like to know which one a sensible person picks. Which one fits comes down to how you bathe now: whether you sit in water, stand under it, or would like to sit under it. There's a third option that gets less attention, a low-threshold shower base with a built-in seat, and it may be the one that fits.
