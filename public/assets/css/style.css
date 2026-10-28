@@ -475,6 +475,9 @@ form.sent .form-success { display: block; }
 .newsletter input { flex: 1; min-width: 0; border: 0; padding: .8rem .9rem; font: inherit; font-size: .9rem; }
 .newsletter button { border: 1px solid #fff; background: transparent; color: #fff; font: inherit; font-weight: 500; padding: .8rem 1.1rem; cursor: pointer; }
 .newsletter button:hover { background: #fff; color: var(--ink); }
+/* After subscribing: the box and button give way to one message */
+.newsletter.sent input, .newsletter.sent button { display: none; }
+.newsletter .form-success { flex: 1; margin: 0; padding: .8rem 1rem .8rem 2.9rem; background: rgba(255,255,255,.07) url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2712%27 fill=%27%23d71920%27/%3E%3Cpath d=%27m7 12.5 3.3 3.3L17 9%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%272.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E") no-repeat 1rem center / 20px; border: 1px solid rgba(255,255,255,.28); color: #fff; font-size: .95rem; line-height: 1.4; }
 .social { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
 .social a { display: flex; width: 22px; height: 22px; align-items: center; justify-content: center; }
 .social a:hover { opacity: .75; }
