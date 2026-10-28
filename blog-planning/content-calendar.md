@@ -23,5 +23,6 @@ Stage: awareness · consideration · decision · post-purchase
 | 10 | 2026-10-24 | How to clean your new grout-free shower (and what to keep off it) | post-purchase | all | how to clean acrylic shower walls | published | /blog/how-to-clean-grout-free-shower/ |
 | 11 | 2026-11-06 | Bathroom remodel financing: a new shower for about the cost of a cable bill | consideration | Linda, Margaret | bathroom remodel financing | drafted | blog/bathroom-remodel-financing-cable-bill |
 | 12 | | Bathroom mildew that keeps coming back: where it lives | awareness | Linda | shower mildew keeps coming back | planned | |
+| 13 | 2026-10-28 | Your 20-year-old shower: what fails first, and when to stop fixing it (hub P1) | awareness | Linda | signs your shower needs replacing | published | /blog/signs-shower-needs-replacing/ |
 
 The agent takes the next `planned` row in order unless the stage mix of the last ten `drafted`/`published` rows calls for a different stage; then it takes the next `planned` row of the needed stage. Topics beyond row 12 come from the topic bank in the skill's `references/funnel-stages.md`.
