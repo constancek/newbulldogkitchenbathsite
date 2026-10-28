@@ -6,6 +6,7 @@ excerpt: Two-tone isn't the part that goes out of style. The color is. Which spl
 description: Two tone kitchen cabinets that age well: an island in its own color, darker lowers under lighter uppers, and the splits that date a kitchen fast.
 summary: Two-tone cabinets have been around for decades; what dates a kitchen is the color of the moment, not the split. The splits that age well follow how the kitchen is built, with the island as its own piece or the lower cabinets darker than the uppers. Splits that cut one run in half or put the trend color on the biggest surface tie the room to a year. Keep the main cabinets white, off-white or wood, and put the bolder color on the island, which usually has fewer doors to change later.
 img: blog-two-tone-kitchen-cabinets
+photoCredit: Max Vakhtbovych on Pexels, https://www.pexels.com/photo/modern-interior-of-spacious-minimalist-kitchen-6283972/
 photo: white upper cabinets dark lower cabinets kitchen island
 ---
 Your daughter sent you a photo of a kitchen with white uppers and navy lowers, and you liked it more than you expected to. Then you remembered the harvest gold range your mother had, and the hunter green everything from the 1990s, and you wondered whether two-tone kitchen cabinets are the next thing you'll be embarrassed by in 2040. It's a fair worry. Our answer, after a lot of Cincinnati kitchens: two-tone is not the trend. The color is. Pick the split for how your kitchen is built and keep the trend color on the smallest piece, and the kitchen holds up.

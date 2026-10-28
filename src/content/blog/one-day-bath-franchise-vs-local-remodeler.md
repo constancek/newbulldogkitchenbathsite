@@ -6,6 +6,7 @@ excerpt: A national one-day bath brand or a local remodeler. Either can put in a
 description: One day bath company vs local contractor: who installs, what happens to the old wall, how the price is presented, and the warranty in writing.
 summary: A franchise one-day bath company and a local remodeler can both put in a good shower. The bids differ in five places: who installs, whether the old wall comes out or gets covered, how the price is presented, what the warranty says in writing and who you call later. Ask every company the same five questions and get the answers on paper. If you sign at your kitchen table, the FTC's Cooling-Off Rule gives you three business days to change your mind.
 img: blog-one-day-bath-franchise-vs-local-remodeler
+photoCredit: Kampus Production on Pexels, https://www.pexels.com/photo/an-elderly-man-consulting-an-insurance-agent-8441780/
 photo: two people talking over papers at kitchen table
 ---
 The postcard had a national name on it, and a salesperson came out on a Tuesday evening and sat at your dining table for two hours. The photos looked good. The price on the sheet came with a discount that ended when the visit did. Now you're wondering whether to call a local remodeler too, and what you would even compare once you have the second bid.
