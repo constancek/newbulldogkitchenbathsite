@@ -407,8 +407,8 @@ posts.forEach((p) => {
   page(url, p.seoTitle || p.title, p.description || p.excerpt, [
     `<section class="page-band post-band"><div class="container">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/blog/">Blog</a><span aria-hidden="true">›</span><span aria-current="page">${p.title}</span></nav>
-  <h1>${p.title}</h1>${p.excerpt ? `<p class="post-band__lead">${p.excerpt}</p>` : ''}
-  <p class="post-meta">${p.date} <span aria-hidden="true">·</span> ${p.readMinutes} min read <span aria-hidden="true">·</span> ${SITE.name}${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>
+  <h1>${p.title}</h1>
+  <p class="post-meta">By the ${SITE.name} team <span aria-hidden="true">·</span> ${p.date} <span aria-hidden="true">·</span> ${p.readMinutes} min read${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>
 </div></section>`,
     `<section class="section post-section"><article class="container prose post">
   <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
