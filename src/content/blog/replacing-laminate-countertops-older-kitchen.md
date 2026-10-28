@@ -56,7 +56,7 @@ The kitchen sink is out of service for part of the job, and you'll want the coun
 
 ## The sink and faucet
 
-Many laminate kitchens have a drop-in sink, the kind with a rim that sits on top of the counter. That rim is part of why the cutout edge stays wet. A stone or solid-surface top can take an undermount sink, mounted under the counter so you can wipe crumbs straight into it. Bulldog's tops come with [undermount sink cutouts](/kitchens/countertops/).
+Many laminate kitchens have a drop-in sink, the kind with a rim that sits on top of the counter. That rim is part of why the cutout edge stays wet. A stone or solid-surface top can take an undermount sink, mounted under the counter so you can wipe crumbs straight into it. Bulldog's tops come with [undermount sink cutouts](/kitchens/countertops/), and a drop-in sink is an option too if you'd rather keep that style.
 
 The faucet is a choice too. A new stone top gets its faucet holes drilled to match the faucet you pick, so this is the easy time to change it. If your current faucet is newer and you like it, ask whether it can go back on.
 
