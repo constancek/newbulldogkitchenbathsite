@@ -11,7 +11,7 @@ The reader has a problem, not a plan. Gray grout, a tub they struggle with, a so
 - Bulldog content: 10% or less. One mention near the end, as the company that wrote the article.
 - Job of the post: explain the problem so well that the reader trusts the author. Teach them one thing they can repeat to their spouse.
 - Surround mention: light. Introduce the idea that a bathroom can be built without grout, as one of the options, and move on.
-- CTA: another post, or the pricing guide ("if you're curious what this costs in Cincinnati"), or email signup if the owner has a list. Not the phone number alone.
+- CTA: another post, or the pricing guide ("if you're curious what this costs in Cincinnati"), or the colors and patterns page. Not the phone number alone. (No email signup: the footer box is not connected yet.)
 - Length: 900–1,300 words.
 
 ### Consideration: "I'm going to do something; what are my options and what do they cost?"
@@ -105,7 +105,7 @@ Each entry: working title (not final), stage, the belief it corrects, the avatar
 Use the lowest rung that fits the stage. Each post uses one primary CTA, in the last section, and may reference one more inline.
 
 1. Read a related post (internal link).
-2. Join the newsletter (the site has a signup; the best awareness CTA because it keeps the reader without asking for a call).
+2. (Reserved for a newsletter signup once the footer box is connected to a real list. Until then, skip this rung.)
 3. Browse colors and patterns (/inspiration-colors-patterns/) or Shop the Room.
 4. See how a one-day install works (/one-day-bathroom-remodel/).
 5. Current promos (/current-promos/) and financing (/financing/). Date-check the promo before linking.

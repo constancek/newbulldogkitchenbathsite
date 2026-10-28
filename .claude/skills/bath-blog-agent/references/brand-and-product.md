@@ -22,7 +22,7 @@ Three buckets. Use the labels when you write.
 - Site promises: "Done In Days, Not Months," "Leave the Worry to Us," "If something isn't right, we make it right," a written quote after the consultant measures.
 - Process, four steps: Discover → Design → Build → Enjoy.
 - Services. Bathroom: showers and enclosures, bathtubs, tub-to-shower conversions, walk-in tubs and accessibility, vanities, wall systems. Kitchen: cabinets and organizers, countertops and backsplash, sinks and faucets.
-- Blog lives at /blog/. Newsletter signup exists on the site ("updates, offers, and inspiration"). Inspiration pages: Shop the Room, Design Spotlight, Colors & Patterns.
+- Blog lives at /blog/. The footer newsletter box is not connected to an email list yet (it sends nothing), so never point readers to it or promise to email them. Inspiration pages: Shop the Room, Design Spotlight, Colors & Patterns.
 
 **Promotions and money (verified, new site; promos change, so date-check before publishing)**
 

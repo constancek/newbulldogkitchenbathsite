@@ -94,7 +94,7 @@ End your chat reply with one line: what the post does and the next post you woul
 
 **Local.** Cincinnati and Northern Kentucky. Name real suburbs from the service-area list. Reference real housing stock (1950s–70s ranches and Cape Cods, 1980s–90s two-stories, pink-and-mint tile, cast-iron tubs, mud-set tile floors) when it fits.
 
-**CTA by stage.** Awareness: another post or the newsletter signup. Consideration: the colors and patterns page, the one-day remodel page, or current promos and financing. Decision: schedule the estimate at (513) 657-3750 or the contact form. Post-purchase: care tips, referral, review. Never put the phone number as the only CTA in an awareness post.
+**CTA by stage.** Awareness: another post or the colors and patterns page (no newsletter signup: the footer box is not connected yet). Consideration: the colors and patterns page, the one-day remodel page, or current promos and financing. Decision: schedule the estimate at (513) 657-3750 or the contact form. Post-purchase: care tips, referral, review. Never put the phone number as the only CTA in an awareness post.
 
 **What "one day" means.** The offer is a one-day wet-area gut: the tub or shower area taken to the studs and rebuilt with solid-surface walls, base and fixtures in a single day. Say "wet area" or "the shower area" when you say "gut." A whole-bathroom gut (floor, vanity, toilet, layout) takes longer; never promise that in a day. See `brand-and-product.md`.
 
