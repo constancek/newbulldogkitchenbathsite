@@ -74,7 +74,6 @@ Good: "You regrouted the master shower in the spring. By October the lines along
 - No italics for emphasis. No emoji. No exclamation points.
 - One table maximum per post.
 - One or two tip boxes per post, for the single takeaway a reader should not miss in that section. Write them as a Markdown quote starting with a bold label, and the site shows them as a red-edged box: `> **Tip:** Run your hand along the bottom row of grout. If it flexes, the board behind it is wet.` Labels: **Tip:**, **Worth knowing:** or **Before you sign:**. Never more than two, never back to back.
-- H2s become the post's "In this article" list (shown on posts over 1,200 words with three or more H2s), so each H2 should make sense on its own in that list.
 - Define the first use of any trade term in the same sentence: "backerboard, the waterproof panel that goes behind the wall surface."
 - Numbers as numerals ($150 not one hundred fifty dollars). The only dollar figures that appear in posts are the financing line and the promo amount.
 - One photo per post, the header photo, and none inside the body. It comes from Pexels via the `photo:` search phrase in the front matter (see `publishing.md`), so write a phrase that describes a picture, not a topic: "older couple looking at bathroom tile samples", not "bathroom remodel cost". Also describe, in one line, the real Bulldog photo the owner could swap in later (a finished job in an ordinary house, or a mid-install shot). Never generate or fabricate images.

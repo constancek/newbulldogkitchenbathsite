@@ -394,7 +394,6 @@ posts.forEach((p) => {
   const url = `/blog/${p.slug}/`;
   const plainTitle = p.title.replace(/<[^>]+>/g, '');
   const image = abs(imgUrl(p.img));
-  const showToc = p.toc.length >= 3 && p.words >= 1200;
   const schema = jsonLd([
     { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: plainTitle, description: p.description, ...(p.summary ? { abstract: p.summary } : {}),
       image, datePublished: p.isoDate, dateModified: p.isoDate, wordCount: p.words, mainEntityOfPage: abs(url),
@@ -414,7 +413,6 @@ posts.forEach((p) => {
     `<section class="section post-section"><article class="container prose post">
   <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
   ${p.summary ? `<div class="post-summary"><p class="post-summary__label">The short answer</p><p>${C.esc(p.summary)}</p></div>` : ''}
-  ${showToc ? `<details class="toc" open><summary>In this article</summary><ol>${p.toc.map((t) => `<li><a href="#${t.id}">${t.text}</a></li>`).join('')}</ol></details>` : ''}
   ${p.body}
   <p class="post-author">Written by the <a href="/about/">${SITE.name}</a> team, Cincinnati remodelers since ${SITE.founded}.</p>
 </article></section>`,

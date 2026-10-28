@@ -124,7 +124,7 @@ function loadPosts() {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(meta.date || '')) throw new Error(`${f}: front matter needs date: YYYY-MM-DD`);
     const d = new Date(meta.date + 'T12:00:00');
     const words = body.split(/\s+/).filter(Boolean).length;
-    // Each H2 gets an id so the table of contents can link to it
+    // Each H2 gets an id so search results and links can point at a section
     const toc = [];
     const html = markdown(body).replace(/<h2>([\s\S]*?)<\/h2>/g, (_, inner) => {
       const text = inner.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"');
