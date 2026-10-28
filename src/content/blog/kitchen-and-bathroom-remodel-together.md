@@ -6,6 +6,7 @@ excerpt: Doing the kitchen and a bathroom with one company means our own crews i
 description: Planning a kitchen and bathroom remodel at the same time? What to schedule first, living in the house during the work, and one team versus two.
 summary: You can have one company do the kitchen and a bathroom, and every Bulldog project gets a dedicated project coordinator, so you aren't running two contractors' schedules yourself. The shower area is the one-day job, gutted to the studs and rebuilt, with your first shower the next morning. The kitchen takes longer, in days rather than months, and your coordinator gives you a detailed schedule before work starts. Pick the finishes for both rooms before either is ordered so the counters, cabinets and hardware carry from one room to the next.
 img: blog-kitchen-and-bathroom-remodel-together
+photoCredit: Curtis Adams on Pexels, https://www.pexels.com/photo/white-wooden-cabinets-in-the-kitchen-10099277/
 photo: white shaker kitchen cabinets, quartz counter, subway tile backsplash
 ---
 The house in West Chester went up in 1994, and two rooms still look it. The kitchen has the honey oak cabinets and the laminate counter with a seam by the sink. Upstairs, the tub-shower in the master bath has a cultured-marble surround that turned yellow years ago. If you're selling in two or three years, it's tempting to do a kitchen and bathroom remodel at the same time and be done with both. These are the questions couples in that spot ask before they book, with straight answers.

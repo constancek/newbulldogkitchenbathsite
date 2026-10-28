@@ -5,6 +5,7 @@ excerpt: The install date is on the calendar. What to clear out, who to plan aro
 description: How to prepare for a bathroom remodel that's a one-day shower install: clear the room and the path, plan for pets, parking and that night.
 summary: Getting the house ready for a one-day shower install takes an evening or two. Clear the bathroom and the path from the door to it, put pets somewhere behind a closed door, and leave the driveway open for the crew's truck. Plan where everyone showers that night, because the first shower in the new one is the next morning. An adult needs to be home when the crew starts and again when they finish.
 img: blog-prepare-house-for-bathroom-install
+photoCredit: cottonbro studio on Pexels, https://www.pexels.com/photo/empty-modern-school-corridor-6345058/
 photo: empty bright hallway leading to open bathroom door
 ---
 The consultant measured the hall bath in your Montgomery ranch two weeks ago, you signed, and the install is on the kitchen calendar for a Tuesday. Most advice on how to prepare for a bathroom remodel is written for a whole-room job that keeps a room torn up for weeks: a temporary bathroom, a storage plan, a schedule with the plumber. A one-day shower install asks a lot less of you, and the list below is the one our crews would hand you.

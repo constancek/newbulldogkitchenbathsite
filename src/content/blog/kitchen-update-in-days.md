@@ -6,6 +6,7 @@ excerpt: An older kitchen doesn't always need to be torn out. Keep the cabinet b
 description: A fast kitchen remodel starts with what you keep. Cabinet boxes, doors, counters, sink, backsplash and organizers, in the order that makes sense.
 summary: When the cabinet boxes are sound, keeping them is what lets the rest of the work happen in days, not months. Check the boxes first, then decide on new doors and drawer fronts, then the countertops, with the sink and faucet going in alongside them. The backsplash goes after the counters, or on its own if the counters are staying, and organizers fit into the boxes you kept. Many kitchen upgrades are finished in as little as three days, and a full kitchen with new cabinets takes longer.
 img: blog-kitchen-update-in-days
+photoCredit: HONG SON on Pexels, https://www.pexels.com/photo/modern-kitchen-interior-with-blue-cabinets-34558075/
 photo: white shaker kitchen cabinets quartz countertop undermount sink
 ---
 The kitchen in a 1972 split-level in Montgomery tends to look the same. Someone put oak doors on it in the 1990s, the laminate counter has a burn mark by the stove and a ridge at the seam by the sink, and the faucet drips if you don't lean on the handle. The cabinets themselves still hang straight on the wall. That last part decides how long the job takes.

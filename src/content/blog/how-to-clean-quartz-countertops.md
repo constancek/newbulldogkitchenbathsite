@@ -6,6 +6,7 @@ excerpt: A damp cloth and a little mild soap do most of the work. What to do wit
 description: How to clean quartz countertops: daily wipe-downs, dried-on spills and grease, plus the hot pans, harsh chemicals and scrub pads makers say to avoid.
 summary: Quartz makers say a damp cloth, warm water and a little mild soap handle everyday cleaning, and quartz never needs sealing. For dried-on food, scrape with a plastic putty knife and use a nonabrasive pad with a surface cleaner. Hot pans go on a trivet, knives go on a cutting board, and oven cleaner, strong bleach and abrasive powders stay off the counter.
 img: blog-how-to-clean-quartz-countertops
+photoCredit: Cup of Couple on Pexels, https://www.pexels.com/photo/person-wiping-a-wooden-spoon-7303854/
 photo: hand wiping white quartz kitchen counter with cloth
 ---
 Congratulations on the new counters. The question that comes up at the kitchen table a week or two later is how to clean quartz countertops without hurting them, and the answer is less than most people expect. Quartz is crushed stone bound with resin, and the makers' own care guides ask for a damp cloth, a trivet and a cutting board, and not much else. What follows comes from those guides.
