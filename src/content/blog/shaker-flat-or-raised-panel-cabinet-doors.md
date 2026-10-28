@@ -6,7 +6,6 @@ excerpt: Three door styles, three kinds of house. How shaker, flat and raised-pa
 description: Shaker vs raised panel cabinet doors, plus flat doors: how each looks in an older house, which corners hold grease, and how each takes paint or stain.
 summary: Shaker doors fit the widest range of older houses and take paint or stain well, with a small ledge to wipe. Flat doors suit a 1960s ranch and clean in one pass, but show every ding and brush mark. Raised-panel doors suit a 1990s two-story or a formal kitchen, hold the most grease in their grooves, show hairlines at the joints under paint, and go darker at the bevels under stain. Pick the style for the house first, then the finish, then think about which doors sit next to the range.
 img: blog-shaker-flat-or-raised-panel-cabinet-doors
-photoCredit: cottonbro studio on Pexels, https://www.pexels.com/photo/a-child-in-white-short-sitting-on-white-and-green-cabinet-5893076/
 photo: white shaker kitchen cabinet doors with brass pulls
 ---
 You've decided the cabinet doors are going, whether the boxes stay and get refaced or the whole run gets replaced. Now you have to pick a style. Shaker vs raised panel cabinet doors is the choice most people stall on, with flat doors as the third option. The answer depends on the house the kitchen sits in, which doors are next to the stove, and whether you want paint or wood grain.
