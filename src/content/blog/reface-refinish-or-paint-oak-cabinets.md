@@ -6,6 +6,7 @@ excerpt: Honey oak from a 1990s refresh, sound boxes, tired color. What refacing
 description: Three ways to update oak kitchen cabinets: reface, refinish or paint. What each does to oak's open grain, how it wears, and what's DIY.
 summary: Refacing puts new doors and drawer fronts on your old boxes, so the oak grain on the fronts is gone. Refinishing keeps the wood look and the grain, and stain tends to make the grain stand out more. Paint changes the color but shows oak's open grain through it unless someone fills the pores first. Painting is the one you can do yourself; refacing is a job for a crew.
 img: blog-reface-refinish-or-paint-oak-cabinets
+photoCredit: Peter Vang on Pexels, https://www.pexels.com/photo/modern-wooden-kitchen-with-stainless-steel-appliances-35419408/
 photo: honey oak kitchen cabinets with laminate countertop
 ---
 Your kitchen got its oak cabinets in a refresh around 1995, and the boxes are still solid. What bothers you is the color, which has gone from honey toward orange, and the bare wood showing through the finish beside the handles on the drawers you use every day. You want to update oak kitchen cabinets without tearing the kitchen out. You have three ways to do it: refacing, refinishing and painting. Each one does something different to oak's grain, and the grain is what you'll see when the work is done.

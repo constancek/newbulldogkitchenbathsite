@@ -6,6 +6,7 @@ excerpt: The original fan over the tub clatters, buzzes and leaves the mirror fo
 description: Why a bathroom exhaust fan in an old house rattles, the toilet-paper test, attic venting, cfm and sone numbers, and how long to run it.
 summary: An original bath fan rattles because its bearings, blades, damper flap and mounting have worn or worked loose since the house was built. Hold a square of toilet paper to the grille with the fan on, and if it drops, the fan isn't pulling enough air to dry the room. The Department of Energy says a bath fan should move at least 50 cfm when switched on and vent outdoors, not into the attic. Run it at least 20 minutes after every shower, since a bathroom that stays damp keeps the grout wet between showers, and wet grout is where mildew and gray joints start.
 img: blog-bathroom-fan-rattles-old-house
+photoCredit: Chad Populis on Pexels, https://www.pexels.com/photo/luxury-modern-bathroom-interior-with-elegant-design-30725669/
 photo: white bathroom ceiling exhaust fan grille close up
 ---
 You flip the switch in the hall bath and the fan over the tub starts with a clatter, settles into a buzz, and the mirror fogs up anyway. In a 1960s ranch that fan often went in with the house. It's loud, and a loud fan is the one everybody shuts off before the steam clears. That habit matters more than the noise, because a bathroom that never dries out is where gray grout, black caulk and soft board behind the tile get started.

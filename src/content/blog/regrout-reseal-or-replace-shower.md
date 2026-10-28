@@ -6,6 +6,7 @@ excerpt: Gray grout can mean a bottle of sealer, a weekend with a grout saw, or 
 description: Regrout or replace shower: what resealing, regrouting and replacing each fix, how long each lasts, and the checks that tell you which you need.
 summary: Resealing protects grout that is still whole, and it lasts anywhere from a season to several years depending on the sealer and how hard the shower works. Regrouting replaces cracked or missing grout, and it holds only on tile that is still bonded tight to a dry wall. Replacing is the fix once tiles sound dull, the floor by the tub gives, or a 20-year-old shower has been regrouted twice. A tap test and a heel test tell you which side of that line you are on.
 img: blog-regrout-reseal-or-replace-shower
+photoCredit: Max Vakhtbovych on Pexels, https://www.pexels.com/photo/a-toilet-with-stainless-steel-shower-6444256/
 photo: white marble look shower panel with glass door
 ---
 The bottom row of grout in the master shower is gray again, there's a hairline crack in the joint under the soap dish, and the caulk at the tub has its pink stripe back. If that's your shower, you have three fixes to pick from: a bottle of sealer, a weekend with a grout saw, or a new shower. Each one fixes a different problem, and two checks you can do in ten minutes tell you which problem you have.

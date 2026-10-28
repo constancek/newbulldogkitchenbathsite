@@ -6,6 +6,7 @@ excerpt: The glazed tile in a 1960s bathroom often looks as good as the day it w
 description: 1960s bathroom tile often outlasts the wall it's stuck to. When keeping pink, mint or almond tile makes sense, and when the wall behind it says no.
 summary: The glazed tile in a 1960s bathroom was made to last, and in most houses it has outlasted the grout and the wall behind it. Keeping it is a fair choice if you like it and the wall is sound, and there are preservation groups that will back you up. Keeping it stops making sense when the tile sounds dull when you tap it, the floor by the tub gives, or a repair means matching a color and size nobody stocks.
 img: blog-almond-pink-mint-bathroom-tile
+photoCredit: Magda Ehlers on Pexels, https://www.pexels.com/photo/modern-kitchen-sink-with-countertop-and-faucet-34410071/
 photo: vintage pink pedestal sink with chrome faucet detail
 ---
 The pink tile in the hall bath has no chips, the glaze still shines, and the grout between the tiles is the color of weak tea. If you own a 1960s bathroom you've heard two opinions about it. The house-flipping shows say gut it. The neighbor who loves mid-century houses says it's the best-built thing in the place and you'd be crazy to tear it out. They each have a point, and the tile is the least of it. In most of the houses our crews open, the tile has outlasted the wall it's stuck to, and the wall decides how long you get to keep it.
