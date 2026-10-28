@@ -20,7 +20,7 @@ title: Why your shower grout turns gray again a year after you clean it
 date: 2026-10-20
 excerpt: One or two sentences for the blog index card. Under 160 characters.
 description: Meta description for search. Under 155 characters. Different from the excerpt.
-summary: The short answer, 2 or 3 plain sentences that answer the title's question with the post's key facts. Shown in a box at the top of the post and quoted by search and AI answers. No scene-setting, no sales line.
+summary: The key takeaways, 2 or 3 plain sentences (each becomes one bullet under "Key takeaways") that answer the title's question with the post's key facts. Shown in a box at the top of the post and quoted by search and AI answers. No scene-setting, no sales line.
 seoTitle: Only when the title runs past 60 characters: a shorter version for search results (the page keeps the full title).
 img: blog-shower-grout-gray
 photo: gray grout lines on white shower tile

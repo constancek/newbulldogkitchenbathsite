@@ -514,7 +514,10 @@ form.sent .form-success { display: block; }
 .post blockquote p:last-child { margin-bottom: 0; }
 .post blockquote strong:first-child { color: var(--red); }
 .post-summary { margin: 0 0 2rem; padding: 1.25rem 1.5rem; background: #fbeeee; border-radius: 12px; }
-.post .post-summary p { margin: 0; font-size: 1.05rem; line-height: 1.65; }
+.post .post-summary p { margin: 0; }
+.post .post-summary ul { margin: 0; padding-left: 1.2rem; }
+.post .post-summary li { margin: 0 0 .45rem; font-size: 1.02rem; line-height: 1.6; }
+.post .post-summary li:last-child { margin-bottom: 0; }
 .post .post-summary .post-summary__label { margin-bottom: .4rem; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
 .post .post-author { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #e2e4e8; font-size: .95rem; color: #555; }
 .post-related .section-head h2 strong { color: var(--red); }
