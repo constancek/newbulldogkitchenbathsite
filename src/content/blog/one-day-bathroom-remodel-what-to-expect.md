@@ -75,3 +75,5 @@ Day two, you shower, and the caulk has set. Sometime in that first week your pro
 The day above starts with a consultant in your bathroom with a tape measure, and that visit is free. They measure the tub or shower area, go through the colors and patterns with you (most of our customers land on the marble or travertine looks), and leave you a written quote. With promotional financing, qualified buyers get the shower area gutted to the studs and rebuilt, walls, base, fixtures and the lifetime warranty, for as low as $150 a month, or 12 months no interest on approved credit. Get the shower now and pay later; the [financing page](/financing/) has the current terms.
 
 Call (513) 657-3750, or [send us your address and a good time](/about/#contact), and we'll come measure. The one-day remodel page has the [rest of the process from first visit to install day](/one-day-bathroom-remodel/).
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

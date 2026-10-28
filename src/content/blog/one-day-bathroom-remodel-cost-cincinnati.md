@@ -79,3 +79,5 @@ Two more things on the money page. Bulldog takes $1,250 off a qualifying full ki
 The consultant measures the tub or shower area, goes through the colors and patterns with you, answers the five sections above for your bathroom, and leaves a written quote. You can take the three business days, and the other two quotes, and compare them line by line.
 
 Call (513) 657-3750 or [send us your address and a good time](/about/#contact). The estimate is free and the quote is in writing.
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

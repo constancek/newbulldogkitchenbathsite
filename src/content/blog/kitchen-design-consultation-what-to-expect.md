@@ -105,3 +105,5 @@ Our own crews do the installation, and every installer is background-checked. Ev
 ## Book the free in-home estimate
 
 Call (513) 657-3750, any day from 8am to 8pm, or [request an estimate](/about/#contact). Tell us the look you like and any promotion you saw when you book. Then have your list, your tape-marked cabinets and your appliance sizes on the counter when the consultant rings the bell.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

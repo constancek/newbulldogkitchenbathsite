@@ -122,3 +122,5 @@ The FTC lists an [estimated start and completion date](https://consumer.ftc.gov/
 When you're done, each quote has a second color of ink on it: a question next to every vague line, and a check next to every line that names a product, a person or a date. Send the questions back to each company and see who answers in writing, and how fast. [What sets the price of a one-day bathroom in Cincinnati](/blog/one-day-bathroom-remodel-cost-cincinnati/) explains why the totals differ once the lines match.
 
 At Bulldog, a design consultant comes to the house, measures, brings samples of the colors and finishes, and leaves a written quote for your bathroom. The same people who measure come back to install, with our own crew. Read ours with the same ten steps and send your questions back like the others. The [one-day remodel page](/one-day-bathroom-remodel/) walks through install day, so you can check the schedule line against it.
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

@@ -90,3 +90,5 @@ For the two shower options, our installers take the tub and its walls out to the
 Walk-in tubs go in without a major remodel, often in one day, and your consultant confirms the timeline after measuring. Homeowners 65 and older get a discount too; the consultant has the details, and [current promotions](/current-promos/) lists what's running.
 
 The same person who measures can show you a walk-in tub, a low-threshold base and a seat in one visit. Our [walk-in tubs and accessibility page](/bathrooms/walk-in-tubs/) shows the tubs, seats and grab bars, and the [tub-to-shower conversion page](/bathrooms/tub-to-shower-conversions/) shows what the swap to a shower involves.
+
+[Staying in your house: a bathroom plan for the next 15 years](/blog/aging-in-place-bathroom-plan/) puts these changes in order.

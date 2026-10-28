@@ -58,3 +58,5 @@ A bar and a curtain make a sound tub safer, and they leave the 14 inches, or the
 Bulldog's one-day wet-area gut takes the tub or shower area to the studs in the morning and rebuilds it by evening: a low-threshold base with a slip-resistant floor, solid-surface walls in the marble or travertine look you picked, a built-in seat if you want one, and grab bars in a finish that matches the fixtures. Our own crew, the same people who measured, does it in one visit, and you take the first shower the next morning. With promotional financing, qualified buyers get it for as low as $150 a month, or 12 months no interest, on approved credit. The floor, vanity and toilet in the rest of the room are a separate, longer job, and we say so before you sign.
 
 If you are not there yet, and most people reading this are not, start with the two weekend steps above and keep this page for later. Our [walk-in tubs and accessibility page](/bathrooms/walk-in-tubs/) shows the grab bars, seats and low-entry showers we install.
+
+[Staying in your house: a bathroom plan for the next 15 years](/blog/aging-in-place-bathroom-plan/) puts these changes in order.

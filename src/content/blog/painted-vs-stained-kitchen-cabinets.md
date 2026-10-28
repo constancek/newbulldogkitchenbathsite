@@ -94,3 +94,5 @@ Bulldog offers shaker, flat-panel and raised-panel doors in painted, stained and
 You get the doors two ways. If your boxes are solid, refacing replaces the doors, drawer fronts and veneers, and the boxes stay on the wall; [can my cabinets be refaced?](/blog/can-my-cabinets-be-refaced/) walks through a five-minute check. If the boxes are worn or damaged, we replace the cabinets. Refacing is done in days, not months, and many kitchen updates take a few days. A full kitchen with new cabinets takes longer, and your project coordinator gives you a schedule before work starts.
 
 The same crew that comes for the consultation does the install, and the products and the work carry a lifetime warranty for as long as you own the home. [Financing](/financing/) is available on approved credit. Your design consultant measures and gives you a written quote. Call (513) 657-3750 or [request an estimate](/about/#contact), and ask to see painted and stained samples side by side.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

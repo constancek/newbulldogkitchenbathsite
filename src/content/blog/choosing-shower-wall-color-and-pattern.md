@@ -78,3 +78,5 @@ Once you've picked, the consultant measures the tub or shower area, and the base
 We don't post job prices. The consultant measures, and you get a written quote, free. The warranty covers the product and the work for as long as you own the home. To book the free in-home estimate, call (513) 657-3750 or [use the estimate form](/about/#contact).
 
 Start on the [colors and patterns page](/inspiration-colors-patterns/). Pick two looks that suit the floor and vanity you're keeping, and ask the consultant to bring those samples when they come to measure.
+
+[Grout-free shower walls: an honest guide](/blog/grout-free-shower-walls-guide/) covers the look, the care and how they hold up, in one place.

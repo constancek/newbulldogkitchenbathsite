@@ -85,3 +85,5 @@ Before anyone tears out the cabinet, take photos and call your insurance agent. 
 Bulldog's kitchen work includes new and refaced cabinets, sinks and faucets, and countertops. If the rest of your cabinet boxes are solid, refacing gives them new doors, drawer fronts and veneers. If they're worn or damaged, we'll say so and recommend replacement. [Whether your cabinets can be refaced](/blog/can-my-cabinets-be-refaced/) covers how to check the boxes. Many kitchen updates take a few days, and a consultant measures and gives a written quote. [The cabinets page](/kitchens/cabinets/) shows the door styles and how the boxes are built.
 
 If the cabinet is dry and firm, do the paper bag check, fix the joint it points to, and put a mat down. If the floor by the tub upstairs feels soft too, [the signs your shower needs replacing](/blog/signs-shower-needs-replacing/) covers the bathroom side.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

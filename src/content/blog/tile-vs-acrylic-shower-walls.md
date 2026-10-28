@@ -72,3 +72,5 @@ Judge it the way you'd judge a countertop. Stand in the doorway, then go stand s
 We don't publish job prices. A consultant measures your bathroom and you get a written quote, free. With promotional financing, qualified buyers get the new shower, the wet area gutted to the studs, new base, walls, fixtures and the lifetime warranty, for as low as $150 a month, or 12 months no interest on approved credit. Get the shower now and pay later.
 
 If you want to see how install day runs, the [one-day remodel page](/one-day-bathroom-remodel/) walks through it. If you're still weighing tile, call the number on the refrigerator and ask that contractor two things: what goes behind the tile, and when you can shower. Then call us and ask the same two.
+
+[Grout-free shower walls: an honest guide](/blog/grout-free-shower-walls-guide/) covers the look, the care and how they hold up, in one place.

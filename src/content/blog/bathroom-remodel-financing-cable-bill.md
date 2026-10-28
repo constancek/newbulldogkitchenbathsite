@@ -78,3 +78,5 @@ Write the answers on the back of the quote. If two companies are bidding, ask bo
 With promotional financing, qualified buyers get the shower area gutted to the studs and rebuilt, base, walls, fixtures and the lifetime warranty on the product and the work, for as low as $150 a month, or 12 months no interest on approved credit. The [financing page](/financing/) has the current plans, [current promos](/current-promos/) has what is live the week you call, and the consultant goes through both at the estimate.
 
 The estimate is free, the quote is written, and the three business days are yours. Call (513) 657-3750 or [send us your address and a good time](/about/#contact), and bring the six questions.
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

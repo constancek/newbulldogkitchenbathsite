@@ -77,3 +77,5 @@ If she tells you she has fallen, or that she's worried about falling, the CDC's 
 Night-lights, a rubber-backed mat and non-slip strips in the tub cost an afternoon. A grab bar into the framing is a short visit from a handyman. The tub wall itself stays where it is until someone takes the tub out.
 
 That last one is where we come in. Bulldog guts the tub or shower area to the studs and has the new base, grout-free walls and fixtures in by evening, with the first shower the next morning. You can pick a low-threshold base and a built-in seat. The floor, vanity and toilet are a separate, longer job. If your parent's tub is past 20 years and you're weighing it, [what fails first in an older shower](/blog/signs-shower-needs-replacing/) helps you tell a tub worth keeping from one worth replacing, and our [walk-in tubs and accessibility page](/bathrooms/walk-in-tubs/) shows the seats, bars and low-entry showers we install.
+
+[Staying in your house: a bathroom plan for the next 15 years](/blog/aging-in-place-bathroom-plan/) puts these changes in order.

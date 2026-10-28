@@ -53,3 +53,5 @@ If you are 71 and live alone in Hyde Park, the first question is the one to weig
 Ask the three questions at your Bulldog estimate too. The consultant measures, goes through colors and patterns with you (most of our customers land on the marble or travertine looks), and leaves a written quote. With promotional financing, qualified buyers get the shower area gutted to the studs and rebuilt, base, walls, fixtures and the lifetime warranty, for as low as $150 a month, or 12 months no interest on approved credit. Get the shower now and pay later; the [financing page](/financing/) has the current terms.
 
 Call (513) 657-3750 or [send us your address and a good time](/about/#contact). The estimate is free, the quote is written, and you can take all three business days to think it over.
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

@@ -81,3 +81,5 @@ A Bulldog design consultant comes to the house, measures the space, and looks at
 With promotional financing, qualified buyers get a new grout-free shower for as low as $150 a month, or 12 months no interest, on approved credit. Bulldog also has a discount for homeowners 65 and older, and the consultant has the details.
 
 If you're keeping the tub for now, put the bar up first. If getting out is already the hard part, our post on [what sets the price of a one-day shower](/blog/one-day-bathroom-remodel-cost-cincinnati/) explains what goes into the written quote.
+
+[Staying in your house: a bathroom plan for the next 15 years](/blog/aging-in-place-bathroom-plan/) puts these changes in order.

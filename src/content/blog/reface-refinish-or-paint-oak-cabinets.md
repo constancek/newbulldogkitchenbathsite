@@ -89,3 +89,5 @@ A Bulldog design consultant looks at your cabinets, walks you through door style
 Many kitchen updates take a few days. A full kitchen with new cabinets takes longer, and your project coordinator gives you a schedule before work starts. Our own crews do the work, with a lifetime warranty on products and workmanship for as long as you own the home. [Financing](/financing/) is available on approved credit. If you're comparing bids, the [three questions to ask a contractor before a deposit](/blog/questions-to-ask-bathroom-contractor/) work the same on a kitchen quote.
 
 Start with the box check. If the sink base is dry and the frames are tight, you have all three options, and the doors and drawer fronts are the only part of the kitchen that has to change.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

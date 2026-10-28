@@ -98,3 +98,5 @@ Bulldog's kitchen work is the round-two list: refaced, refinished or new cabinet
 Our design consultant comes to the house, measures, and brings samples of colors and finishes. They walk you through the options, recommend what fits a kitchen you're planning to sell, and leave a written quote. If that means doors and a counter and nothing else, that's what the quote says. Financing is available on approved credit; see [financing](/financing/) for the current terms, and [our kitchens page](/kitchens/) for what we install.
 
 Before anyone comes out, do the five-minute check in [can my cabinets be refaced?](/blog/can-my-cabinets-be-refaced/). If the sink base is dry and the face frames are tight, the boxes in your kitchen can stay where they are.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

@@ -87,3 +87,5 @@ Every kitchen job gets a design consultant and a dedicated project coordinator. 
 We don't post prices for kitchen work. The number depends on what you're replacing, the sink and faucet you choose, and what's under the old counter. A consultant measures your kitchen and gives you a written quote. Financing is available on approved credit, and the [financing page](/financing/) has the details. Homeowners 65 and older get a discount, and the design consultant has the details. The work carries our lifetime warranty on products and workmanship, for as long as you own the home.
 
 Bring the hole count and the pot measurement to the consultation, and tell the consultant how your hands feel on a cold morning. The [countertops page](/kitchens/countertops/) shows the sinks, counters and backsplashes we install together.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

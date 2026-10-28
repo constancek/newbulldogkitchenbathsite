@@ -91,3 +91,5 @@ Tile is a good product, and a glazed tile face can take harder scrubbing than a 
 Our crew guts the tub or shower area to the studs and has the new base, walls and fixtures in by evening. You take your first shower the next morning. That one day covers the wet area. The floor, vanity and toilet are a separate, longer job, and we tell you how long before you sign.
 
 The [one-day remodel page](/one-day-bathroom-remodel/) walks through install day hour by hour. When the consultant comes out to measure, ask two things: to hold a sample of the wall in your hand, and to see the written warranty.
+
+[Grout-free shower walls: an honest guide](/blog/grout-free-shower-walls-guide/) covers the look, the care and how they hold up, in one place.

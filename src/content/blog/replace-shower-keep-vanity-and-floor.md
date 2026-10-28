@@ -89,3 +89,5 @@ If the floor is sound, the order is yours to pick. Doing the wet area first fixe
 Our design consultant measures the tub or shower area at the first visit. The base, walls and trim are made to those measurements before install day, and the same people who measured come back to install. The walls are solid-surface, with no grout lines, and you clean them with mild soap and water.
 
 Before you get a quote from anyone, do the heel test along the apron and around the toilet, and look at the basement ceiling under the bathroom. If the floor is solid and the shower is staying where it is, you're likely a shower-only job. [The one-day remodel page](/one-day-bathroom-remodel/) shows how that day runs, from the walkthrough to the first shower the next morning.
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

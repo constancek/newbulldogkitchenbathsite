@@ -94,3 +94,5 @@ The same three materials come on our bathroom vanity tops, so if the hall bath i
 We don't post prices for countertop jobs. The number depends on the material and color, how many square feet you have, how many pieces and seams the layout needs, the edge, the sink cutout and what comes off the cabinets first. A consultant measures your kitchen and gives you a written quote. Financing is available on approved credit, and the [financing page](/financing/) has the details. The work carries our lifetime warranty on products and workmanship, for as long as you own the home.
 
 Your design consultant brings samples to the house, so hold them against a cabinet door in your kitchen's light. The [countertops page](/kitchens/countertops/) shows the options, and the consultation is where you find out which of the three suits the way your house cooks.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

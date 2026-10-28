@@ -96,3 +96,5 @@ A Bulldog design consultant measures the kitchen, walks you through door styles 
 Many kitchen updates take a few days. A full kitchen with new cabinets takes longer, and your project coordinator gives you a schedule before work starts. Our own crews do the installation, and the work and the products carry a lifetime warranty for as long as you own the home. [Financing](/financing/) is available on approved credit. The [three questions to ask a contractor before a deposit](/blog/questions-to-ask-bathroom-contractor/) were written about bathrooms, and they work the same way on a kitchen quote.
 
 Do the check this weekend and write down what you find. Then call (513) 657-3750 or [request an estimate](/about/#contact), and have the notes on the counter when the consultant opens the sink base.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

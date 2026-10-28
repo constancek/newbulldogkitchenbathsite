@@ -98,3 +98,5 @@ The door on our [cabinets page](/kitchens/cabinets/) is listed as 3/4-inch solid
 Refacing takes days, not months, and many kitchen updates take a few days. A full kitchen with new cabinets takes longer, and your project coordinator gives you a schedule before work starts. The same crew that comes for the consultation does the install, and the products and the work carry a lifetime warranty for as long as you own the home. [Financing](/financing/) is available on approved credit.
 
 You see cabinet colors in person during the design consultation, so ask to see a shaker and a raised-panel door side by side and think about the cabinets next to your range. The quote is written and comes after the measuring. Before you sign with anyone, the [three questions to ask a contractor before a deposit](/blog/questions-to-ask-bathroom-contractor/) work as well on a kitchen quote as on a bathroom one. Call (513) 657-3750 or [request an estimate](/about/#contact).
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

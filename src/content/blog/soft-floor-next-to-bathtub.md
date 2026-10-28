@@ -61,3 +61,5 @@ Our installers take the tub or shower area down to the studs in the morning and 
 With promotional financing, qualified buyers get that new grout-free shower for as low as $150 a month, or 12 months no interest, on approved credit. The [one-day remodel page](/one-day-bathroom-remodel/) walks through install day hour by hour.
 
 If you are not there yet, do the three checks and write down what you found. [The post on what sits behind the shower tile](/blog/behind-shower-tile-1960s-cincinnati-bathroom/) covers the wall side of the same water, and the newsletter signup at the bottom of this page sends you the next post when it is up.
+
+For the full picture of how an older shower fails, and when to stop fixing it, start with [your 20-year-old shower: what fails first](/blog/signs-shower-needs-replacing/).

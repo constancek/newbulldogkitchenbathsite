@@ -98,3 +98,5 @@ Here's how we answer them. The old tile and the wall behind it come out to the s
 With promotional financing, qualified buyers get a new grout-free, mold-resistant shower for as low as $150 a month, or 12 months no interest. Both are on approved credit.
 
 To get your wet area measured, book a free in-home estimate on the [contact form](/about/#contact) or call (513) 657-3750. We've worked in Cincinnati bathrooms since 1993, and the quote is written and free.
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

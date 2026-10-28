@@ -84,3 +84,5 @@ On the new cabinets we install, the plywood boxes are finished on the outside to
 You see cabinet colors in person during the design consultation, so you can hold the two finishes up against your own floor and counter. The consultant measures and gives you a written quote. Many kitchen updates take a few days; a full kitchen with new cabinets takes longer, and your project coordinator gives you a schedule before work starts. The products and the work carry a lifetime warranty for as long as you own the home, and [financing](/financing/) is available on approved credit.
 
 If you're stuck between two pairings, call (513) 657-3750 or [request an estimate](/about/#contact) and ask the consultant to bring samples of both.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

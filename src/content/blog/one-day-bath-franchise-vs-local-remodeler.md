@@ -109,3 +109,5 @@ Here are our answers, so you can hold them up against the other bids.
 Size buys a system, a catalog and a name you've seen on TV. It doesn't change who stands in your bathroom on install day; that's a local crew either way, employees or subcontractors. The five answers on paper tell you more than the size of the ad spend.
 
 Before anyone measures, read [the three questions to ask a bathroom contractor before a deposit](/blog/questions-to-ask-bathroom-contractor/), and bring them to every visit, ours included. If you want to see what our install day looks like, [the one-day remodel page](/one-day-bathroom-remodel/) walks through it, and the [estimate form](/about/#contact) puts a consultant at your kitchen table with a tape measure and samples.
+
+[One-day shower replacement in Cincinnati](/blog/one-day-shower-replacement-cincinnati/) puts the whole job in one place: what it covers, what it doesn't, and how to judge a bid.

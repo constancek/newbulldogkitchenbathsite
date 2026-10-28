@@ -100,3 +100,5 @@ The price comes from that visit. The things that set it are the square footage, 
 Many kitchen updates take a few days, and countertops on existing cabinets are the kind of job that runs in days, not months. A full kitchen with new cabinets takes longer, and your project coordinator gives you the schedule before work starts. Our own crews do the installation, and the products and the work carry a lifetime warranty for as long as you own the home.
 
 If your old top is a laminate with a ridge at the sink seam, [what replacing a laminate countertop involves](/blog/replacing-laminate-countertops-older-kitchen/) covers the tear-off and the backsplash strip behind it. When you're ready, look through the colors and edges on [our countertops page](/kitchens/countertops/), then call (513) 657-3750 and have your level readings written down for the consultant.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

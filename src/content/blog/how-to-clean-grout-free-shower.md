@@ -53,3 +53,5 @@ The warranty on the product and on our work runs for as long as you own the home
 ## Help the next homeowner find us
 
 The best thing you can do for us is the thing you were going to do anyway: tell the neighbor who asked about the truck in the driveway, and the sister who is still scrubbing grout. A Google review with a photo of the finished shower helps the next couple in Anderson Township find us. And when the hall bath's turn comes, we already know your house.
+
+[Grout-free shower walls: an honest guide](/blog/grout-free-shower-walls-guide/) covers the look, the care and how they hold up, in one place.

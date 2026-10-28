@@ -67,3 +67,5 @@ The look is decided at your kitchen table, weeks before the truck pulls up. On i
 We don't post job prices. A consultant measures, and you get a written quote, free. The warranty covers the product and the workmanship for as long as you own the home.
 
 Start with the finishes. The [colors and patterns page](/inspiration-colors-patterns/) has the marble, travertine and tile-look options side by side. Pick two you'd put next to your vanity, and ask the consultant to bring those samples when they come to measure.
+
+[Grout-free shower walls: an honest guide](/blog/grout-free-shower-walls-guide/) covers the look, the care and how they hold up, in one place.

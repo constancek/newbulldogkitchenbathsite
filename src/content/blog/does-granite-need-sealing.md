@@ -63,3 +63,5 @@ Water that keeps running off the front edge at the sink, or a slow drip at the f
 If the counters went in the way your project coordinator said they would, a short review helps the next couple in Montgomery, or in Fort Thomas, Kentucky, decide who to call.
 
 And if the cabinets under the new granite are the next thing that bothers you, [can my cabinets be refaced](/blog/can-my-cabinets-be-refaced/) walks through a five-minute check of the boxes. Our [countertops page](/kitchens/countertops/) shows the quartz, granite and solid-surface options, along with the backsplash, sink and faucet that go with them. Many kitchen updates take a few days, not months, and a design consultant measures and gives a written quote. Call (513) 657-3750 when you're ready.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

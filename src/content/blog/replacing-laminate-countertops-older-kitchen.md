@@ -96,3 +96,5 @@ We don't post countertop prices, because the measurement sets them. The things t
 A consultant measures and gives a written quote. Financing is available [on approved credit](/financing/), and the quote is free.
 
 If your top has one burn ring and a dry, flat seam, put a trivet over the ring and keep it. If the seam by the sink has a ridge and the board underneath is soft, look at the colors and edges on [our countertops page](/kitchens/countertops/), then call (513) 657-3750 and we'll come measure.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

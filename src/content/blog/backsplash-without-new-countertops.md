@@ -96,3 +96,5 @@ We add backsplashes on their own, without new counters, and we coordinate the ne
 If the counters do turn out to be next, one team handles the counter, the backsplash and the sink and faucet. The same people who measure come back to install, and the work carries Bulldog's lifetime warranty on product and workmanship for as long as you own the home. Financing is available on approved credit; the [financing page](/financing/) has the current plans.
 
 If the check in Step 1 told you the counters are next, start with [quartz, granite or solid surface](/blog/quartz-granite-or-solid-surface-countertops/) and put the backsplash on the list for the same visit. If the counters are staying, call (513) 657-3750 or [request an estimate](/about/#contact), and tell the consultant which of the three back edges you found.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.

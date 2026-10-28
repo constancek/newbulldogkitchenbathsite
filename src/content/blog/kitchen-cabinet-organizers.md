@@ -5,7 +5,6 @@ excerpt: Pull-out shelves so you stop kneeling, drawer inserts, a trash pull-out
 description: Kitchen cabinet organizers that keep you off your knees and off the step stool: pull-out shelves, drawer inserts, pull-out pantry and trash, soft-close.
 summary: The organizers worth adding are the ones that bring things out to you, so you stop kneeling at the base cabinets and climbing to the top shelf. Pull-out shelves, a trash and recycling pull-out, a pull-out pantry and a lazy Susan in the corner cover the lower cabinets. Drawer inserts and soft-close hardware make the drawers you use every day easier to work. In the uppers, keep daily items on the lowest shelf, and use the top shelf and the cabinet over the refrigerator for things you need a few times a year.
 img: blog-kitchen-cabinet-organizers
-photoCredit: cottonbro studio on Pexels, https://www.pexels.com/photo/low-angle-shot-of-a-woman-opening-a-cabinet-8666838/
 photo: hands pulling out wooden base cabinet shelf
 ---
 The big stockpot lives at the back of the corner cabinet, so getting it out means kneeling on the kitchen floor with a flashlight. The everyday glasses are on the second shelf of the upper cabinet, and the platter you use at Thanksgiving is over the refrigerator, where it takes a step stool and a held breath. In a 1920s Tudor in Hyde Park or a 1960s ranch in Anderson Township, that's how the kitchen was built. Kitchen cabinet organizers change how you get to what's inside the boxes, and most of them fit into the cabinets you already have.
@@ -95,3 +94,5 @@ At the consultation, open every cabinet with the consultant standing next to you
 We don't post prices for kitchen work. The number depends on how many cabinets get organizers, which ones, and whether the boxes stay or get replaced. A consultant measures your kitchen and gives you a written quote. Financing is available on approved credit, and the [financing page](/financing/) has the details. Homeowners 65 and older get a discount, and the design consultant has the details. The work carries our lifetime warranty on products and workmanship, for as long as you own the home.
 
 Before the consultant comes, take a sticky note and put one on every cabinet you kneel for or climb to. Call (513) 657-3750 or use the [estimate form](/about/#contact), and start with the cabinets that have a note on them.
+
+[A new-looking kitchen in days, not months](/blog/kitchen-update-in-days/) walks through every part of the kitchen in order: what to keep and what to replace.
