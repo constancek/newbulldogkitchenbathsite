@@ -7,7 +7,7 @@ summary: The panel showers that look like a plastic insert are most often stock 
 img: blog-do-shower-wall-panels-look-cheap
 photo: bright bathroom marble look panel shower glass door
 ---
-Your daughter-in-law has nice taste, and the last panel shower you stood in was the one at the lake house your brother rents every July: white, shiny, and a little hollow when you leaned on it. So when the hall bath in your ranch came up at dinner and Tom said "one of those wall systems," you picked up the iPad and typed "acrylic shower walls look cheap." That's a fair worry. Some of them do look that way, and the reasons are specific enough that you can spot them from the bathroom door.
+Your daughter-in-law has nice taste, and the last panel shower you stood in was the one at the lake house your brother rents every July: white, shiny, and a little hollow when you leaned on it. So when the hall bath in your ranch came up at dinner and your spouse said "one of those wall systems," you picked up the iPad and typed "acrylic shower walls look cheap." That's a fair worry. Some of them do look that way, and the reasons are specific enough that you can spot them from the bathroom door.
 
 ## Why some acrylic shower walls look like a plastic insert
 

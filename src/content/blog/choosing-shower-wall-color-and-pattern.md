@@ -8,7 +8,7 @@ summary: Start with what stays in the room, the floor, the vanity top and the to
 img: blog-choosing-shower-wall-color-and-pattern
 photo: white marble look panel shower with glass door
 ---
-You've decided on a grout-free shower for the hall bath, and now the consultant is coming Thursday and the [colors page](/inspiration-colors-patterns/) has thirty color swatches on it. Linda likes the gray one this week. Tom wants whatever won't look dated before the grandkids finish high school. Picking shower wall colors for the next twenty years comes down to a few things you can check in your own bathroom before anyone shows up, and most of them start with what you're not replacing.
+You've decided on a grout-free shower for the hall bath, and now the consultant is coming Thursday and the [colors page](/inspiration-colors-patterns/) has thirty color swatches on it. You like the gray one this week. Your spouse wants whatever won't look dated before the grandkids finish high school. Picking shower wall colors for the next twenty years comes down to a few things you can check in your own bathroom before anyone shows up, and most of them start with what you're not replacing.
 
 We walk through eight of them at the kitchen table, in this order.
 

@@ -9,7 +9,7 @@ img: blog-bathroom-remodel-financing-fixed-income
 photoCredit: SHVETS production on Pexels, https://www.pexels.com/photo/an-elderly-man-and-woman-having-conversation-while-looking-at-the-laptop-7545351/
 photo: older couple at kitchen table with laptop
 ---
-The written quote for the master shower is on the kitchen table in your Anderson Township ranch, next to Tom's pension statement and the laptop with the bank's website open. The 401(k) is for the next twenty years, and neither of you wants to take a bathroom out of it. Bathroom remodel financing for retirees comes down to four choices: a promotional financing plan, cash from savings, a home equity line of credit, and the discount for homeowners 65 and older. The questions below take them one at a time, with what each one costs you besides the shower.
+The written quote for the master shower is on the kitchen table in your Anderson Township ranch, next to the pension statement and the laptop with the bank's website open. The 401(k) is for the next twenty years, and neither of you wants to take a bathroom out of it. Bathroom remodel financing for retirees comes down to four choices: a promotional financing plan, cash from savings, a home equity line of credit, and the discount for homeowners 65 and older. The questions below take them one at a time, with what each one costs you besides the shower.
 
 Bulldog does not post job prices. A consultant measures your shower and leaves a written quote, and the estimate is free. This post is general information about paying that quote, not financial or tax advice, and the right answer depends on your accounts and your tax return, so talk to your financial adviser before you move money for a remodel. Our post on [bathroom remodel financing for about the cost of a cable bill](/blog/bathroom-remodel-financing-cable-bill/) explains the plans, the credit application and your right to cancel after signing. This one is about choosing between the ways to pay when the income is fixed.
 
@@ -85,11 +85,11 @@ The [financing page](/financing/) says promotions cannot be combined with other 
 
 ### A couple in Anderson Township on a pension and two Social Security checks
 
-Linda and Tom have a paid-off 1968 ranch, a pension, two Social Security checks and a 401(k) they want to leave alone. The monthly plan fits them, since it puts the shower in among the bills and keeps the 401(k) out of it, provided they read the disclosure for deferred interest. Tom is 64. If his birthday puts him at 65 before the estimate, they should ask the consultant whether the discount does more for them than the financing.
+This couple has a paid-off 1968 ranch, a pension, two Social Security checks and a 401(k) they want to leave alone. The monthly plan fits them, since it puts the shower in among the bills and keeps the 401(k) out of it, provided they read the disclosure for deferred interest. If one of them turns 65 before the estimate, they should ask the consultant whether the discount does more for them than the financing.
 
 ### A widow in Hyde Park with a clawfoot tub
 
-Margaret is 71, lives alone in a 1920s Tudor, and the clawfoot tub upstairs has become hard to get in and out of. She worries less about the price than about a crew in the house for weeks. If she has savings past her emergency cushion, cash from a savings account, with the 65-and-older discount on the quote, keeps it simple: no new bill and no application. Her daughter in Mariemont can sit in on the estimate. On a [tub-to-shower conversion](/bathrooms/tub-to-shower-conversions/), our crew takes the tub area to the studs and has the new shower in by evening, and she takes her first shower the next morning. The floor and the rest of the room are a separate, longer job, and we say so up front.
+She is 71, lives alone in a 1920s Tudor, and the clawfoot tub upstairs has become hard to get in and out of. She worries less about the price than about a crew in the house for weeks. If she has savings past her emergency cushion, cash from a savings account, with the 65-and-older discount on the quote, keeps it simple: no new bill and no application. Her daughter in Mariemont can sit in on the estimate. On a [tub-to-shower conversion](/bathrooms/tub-to-shower-conversions/), our crew takes the tub area to the studs and has the new shower in by evening, and she takes her first shower the next morning. The floor and the rest of the room are a separate, longer job, and we say so up front.
 
 ## Paying for a Bulldog shower on a fixed income
 

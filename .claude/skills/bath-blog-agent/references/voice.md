@@ -13,6 +13,7 @@ Test for any sentence: would that person say it out loud, in that kitchen, witho
 - The trade words, glossed once: subfloor, backerboard, valve, trim, niche, threshold, caulk, mortar, vapor barrier.
 - The house: "your ranch," "the hall bath," "the tub wall," "the almond tile," "the fan that rattles."
 - The town: "a couple in Montgomery," "a Cape Cod in Fort Thomas," "a 1972 two-story in West Chester."
+- The people: "you," "your spouse," "your mom." Never the avatar names (Linda, Tom, Margaret, Dave, Karen) in a post. They are internal planning labels, and a reader sees "You and Tom" as the blog guessing at her life. Don't assume the reader's gender or marriage either: "your spouse," not "your husband."
 - The money line with the qualifier in the same breath: "With promotional financing, qualified buyers get the whole thing, the shower area gutted to the studs, new base, walls, fixtures and the lifetime warranty, for as low as $150 a month."
 - The reader: "you." The crew: "we," "our installers," "your project manager."
 - Concessions: "Tile is a good product." "The cheap ones do look like that." "That's a fair worry."

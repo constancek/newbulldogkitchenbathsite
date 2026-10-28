@@ -8,7 +8,7 @@ summary: The manufacturer of the walls we install doesn't publish a lifespan in 
 img: blog-do-grout-free-showers-hold-up
 photo: hand wiping marble look shower wall panel with cloth
 ---
-You've seen a marble-look panel up close and it didn't look like the insert at the lake house. Then Tom asked the next question at the kitchen table: how long is it going to last? So you typed "how long do acrylic shower walls last" into the iPad and got a page of confident numbers. Below are the durability questions homeowners in houses like your Anderson Township ranch ask us, one at a time, with what the manufacturer puts in writing and what we tell people from our side of the job. One of them gets an answer you may not like: we don't have a number of years to give you.
+You've seen a marble-look panel up close and it didn't look like the insert at the lake house. Then your spouse asked the next question at the kitchen table: how long is it going to last? So you typed "how long do acrylic shower walls last" into the iPad and got a page of confident numbers. Below are the durability questions homeowners in houses like your Anderson Township ranch ask us, one at a time, with what the manufacturer puts in writing and what we tell people from our side of the job. One of them gets an answer you may not like: we don't have a number of years to give you.
 
 ## How long acrylic shower walls last
 

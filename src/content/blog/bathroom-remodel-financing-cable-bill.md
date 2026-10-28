@@ -8,7 +8,7 @@ summary: "As low as $150 a month" is a monthly payment on a financing plan for q
 img: blog-bathroom-remodel-financing-cable-bill
 photo: older couple paying bills at kitchen table
 ---
-The consultant left an hour ago. The written quote for the master shower is on the kitchen table in your 1968 ranch in Anderson Township, next to the folder of color samples, and one line on it reads "as low as $150 a month with promotional financing." Tom wants to know what the catch is. You want to know how bathroom remodel financing works before anyone signs anything, and whether a pension and two Social Security checks count as income to a lender. Both answers are below, in the order the lender takes them.
+The consultant left an hour ago. The written quote for the master shower is on the kitchen table in your 1968 ranch in Anderson Township, next to the folder of color samples, and one line on it reads "as low as $150 a month with promotional financing." Your spouse wants to know what the catch is. You want to know how bathroom remodel financing works before anyone signs anything, and whether a pension and two Social Security checks count as income to a lender. Both answers are below, in the order the lender takes them.
 
 Bulldog does not post job prices. The price of your shower comes from measuring your shower, and the quote is written and free. This post is about the payment side of that quote: the two kinds of plans, the word in a no-interest offer that costs people money, and what the law says about a retirement income on a credit application.
 

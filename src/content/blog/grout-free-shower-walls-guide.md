@@ -8,7 +8,7 @@ summary: Grout-free shower walls are solid-surface panels made to fit your tub o
 img: blog-grout-free-shower-walls-guide
 photo: marble look panel shower with glass door
 ---
-You and Tom have always pictured the new master shower in tile. Your parents had tile, the nice houses on the parade of homes had tile, and the one panel shower you remember was the shiny white one at the lake house. Then you saw an ad for a shower done in one day with no grout, in a pattern that looks like marble. So you typed "grout free shower walls" into the iPad to find out what you'd be giving up. Bulldog stopped selling tile, and you should know that going in. We'll still tell you when tile is the better call.
+You've always pictured the new master shower in tile. Your parents had tile, the nice houses on the parade of homes had tile, and the one panel shower you remember was the shiny white one at the lake house. Then you saw an ad for a shower done in one day with no grout, in a pattern that looks like marble. So you typed "grout free shower walls" into the iPad to find out what you'd be giving up. Bulldog stopped selling tile, and you should know that going in. We'll still tell you when tile is the better call.
 
 Each section below answers one question homeowners ask us at the kitchen table, in about the order they ask it, and points to the post that goes deeper.
 

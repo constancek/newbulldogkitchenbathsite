@@ -11,7 +11,7 @@ photo: couple at kitchen island with white quartz counters
 ---
 The most expensive mistake in a kitchen you're about to leave is new cabinets. Most advice about whether to update the kitchen before selling says the kitchen sells the house, so put the money there. That's half right. A buyer does look hard at the kitchen. What they look at is the doors, the counters, the wall behind the range and the sink, and none of that needs the cabinet boxes to come off the wall.
 
-Say you're Dave and Karen, in a 1994 two-story in West Chester. The kids are gone, and in two or three years you'll move to something smaller in Mason or over in Florence, Kentucky. The kitchen has the oak cabinets it came with, a laminate counter with a seam by the sink, and a faucet that drips if you don't push the handle all the way down. You'll get three bids, and you want to know which of them is worth the money. Here's where we'd put it, and where we wouldn't.
+Say you're a couple in a 1994 two-story in West Chester. The kids are gone, and in two or three years you'll move to something smaller in Mason or over in Florence, Kentucky. The kitchen has the oak cabinets it came with, a laminate counter with a seam by the sink, and a faucet that drips if you don't push the handle all the way down. You'll get three bids, and you want to know which of them is worth the money. Here's where we'd put it, and where we wouldn't.
 
 ## The usual advice: redo the kitchen, it sells the house
 
