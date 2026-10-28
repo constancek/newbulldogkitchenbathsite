@@ -5,7 +5,6 @@
   "description": "Bulldog Kitchen & Bath marketing website (static HTML)",
   "scripts": {
     "build": "node src/build.js",
-    "start": "npx serve public",
-    "watch-photos": "node src/watch-photos.js"
+    "start": "npx serve public"
   }
 }
