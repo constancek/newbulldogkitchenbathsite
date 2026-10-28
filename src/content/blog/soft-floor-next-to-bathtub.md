@@ -3,13 +3,14 @@ title: Soft floor next to your bathtub: what it is and what waiting costs
 date: 2026-10-19
 excerpt: The floor by the tub gives a little under the bath mat. What that spot is made of, where the water got in, and why a patch there means the tub comes out.
 description: Soft floor next to the bathtub: what the spot is made of, three places water gets under a tub, how to check from the basement, and what waiting costs.
+summary: A soft floor next to a bathtub is usually wet subfloor, the plywood or boards under the finish floor, soaked by water getting past the tub's joints. The soft spot spreads while you wait, and fixing it means lifting the tub out because the damage runs under it. Bulldog replaces the tub area and the wet subfloor in its footprint in one day.
 img: blog-soft-floor-next-to-bathtub
 photoCredit: cottonbro studio on Pexels, https://www.pexels.com/photo/clean-bathroom-with-white-and-black-floor-tiles-4154986/
 photo: bath mat on tile floor beside white bathtub
 ---
 You step out of the tub onto the same square of floor each morning, and under the bath mat it gives, the way a porch board does. In a 1968 ranch in Anderson Township that square is a piece of wet wood under the vinyl, and the water came from the tub beside it. This is what a soft floor next to the bathtub is made of, where the water got in, and what changes if you leave it another winter.
 
-## The floor is three layers of wood, and one of them is soggy
+## What is under a soft bathroom floor: three layers of wood
 
 Under the vinyl or the little hex tile there is an underlayment, a thin sheet that gives the finish floor a smooth bed. Under that is the subfloor, plywood in most houses built after 1960 and 1-by-6 boards laid on a diagonal in the older ones. The subfloor sits on the joists you can see from the basement.
 
@@ -17,7 +18,7 @@ The give you feel is the underlayment and the top of the subfloor losing their s
 
 In many 1970s and 80s houses the underlayment is particleboard, which Bill and Kevin Burnett described in [an Inman column](https://inman.com/2010/08/05/a-permanent-fix-wet-bathroom-floor) as "little more than glued, compressed sawdust." Particleboard swells the first season it gets wet and crumbles the next. Plywood holds longer.
 
-## Where the water gets in
+## Where the water gets in around a bathtub
 
 Water reaches that floor through three joints, in the order our installers find them.
 
@@ -27,7 +28,7 @@ The second is the joint between the apron and the floor. Water that drips off yo
 
 The third is under the tub itself. The drain has a rubber gasket where it passes through the tub bottom, and the overflow, the round plate under the spout, has another one behind it. Those gaskets went in with the tub. After 50 years the foam ones have hardened and shrunk, and they leak when you fill the tub deep enough to reach the overflow. A floor can stay dry through a decade of showers and go soft the winter a grandchild starts taking baths.
 
-## Three checks this weekend
+## Three ways to check a soft floor this weekend
 
 You can learn most of this without pulling anything up.
 
@@ -37,7 +38,7 @@ You can learn most of this without pulling anything up.
 
 If the floor gives but the basement is dry and the fill test shows nothing, the water is coming through the wall or the apron joint. The grout post's weekend routine, plus a bead of silicone along the apron, buys you time.
 
-## What the spot does while you wait
+## What happens to a soft spot if you wait
 
 A wet patch of subfloor spreads along the grain of the plywood, which is why a soft spot the size of a bath mat is a 4-foot sheet by the time someone opens the floor. Water that reaches the joist softens its top edge first, the part the subfloor nails hold onto.
 
@@ -47,13 +48,13 @@ Then there is the tub. A 60-inch cast-iron alcove tub weighs about [327 pounds](
 
 None of this drops the tub through the ceiling. It turns a one-sheet patch into a floor, and a floor into a joist repair, over a few years of stepping around the spot.
 
-## Why the fix means the tub comes out
+## Why fixing the subfloor means the tub comes out
 
 The soft piece runs under the tub apron, where a patch cut from the open floor cannot reach it. To replace it, someone lifts the tub out. The bottom row of tile sits on the tub rim, so the tile on the tub wall comes with it, and the plumber disconnects the valve and drain to do it.
 
 A soft floor next to the bathtub is a shower job with a floor repair inside it. Regrout the wall this spring and leave the floor, and you have put new grout over a tub that is still settling. Fix the floor and set the old tub back, and you have paid a carpenter and a plumber to reinstall a 1968 tub. Our advice to a couple in that spot is to stop spending on the old tub wall and plan the replacement, with the floor done the day the tub comes out.
 
-## One way that gets done in a day
+## Replacing the tub and subfloor in one day
 
 Our installers take the tub or shower area down to the studs in the morning and lift the old tub out, and the lead installer looks at the subfloor with the tub gone. Wet wood in the footprint of the tub comes out and new goes in before the new base goes down. The walls are solid-surface panels measured to your bathroom and made before install day, with no grout for water to move through. The crew has the walls, base and fixtures in by evening, and you take the first shower the next morning once the caulk has set. The floor, vanity and toilet in the rest of the room are a separate, longer job, and we tell you that before you sign.
 

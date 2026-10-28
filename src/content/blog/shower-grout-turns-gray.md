@@ -4,11 +4,12 @@ date: 2026-10-05
 excerpt: You regrouted in the spring and the bottom row is gray again by fall. Here's what's going on inside the grout, and when the fix stops being worth it.
 photo: gray grout lines on white shower tile
 description: Regrouted or scrubbed your shower and the gray came back? What happens inside the grout, which fixes last a season, and when it stops being worth it.
+summary: Shower grout turns gray again because it is porous: water, soap and minerals soak in, and most sealers wear off within six to twelve months. A pink line on the caulk is a common bacterium feeding on soap film. Grout that grays fast can mean water is reaching the wall behind it, and past about 20 years regrouting stops being worth it.
 img: blog-shower-grout-turns-gray
 ---
 You regrouted the master shower last spring, or paid a handyman to. By fall the lines along the bottom row are gray again, and a pink stripe is back where the tub meets the wall. You did the work right. The grout is doing what grout does. The gray comes from three things happening inside it, in this order, and the order tells you which fixes last and which don't.
 
-## Grout is a sponge with a hard face
+## Why grout turns gray: a sponge with a hard face
 
 Standard grout is cement, sand and water. Once it cures it's hard on the surface and full of tiny pores underneath, the way a brick is. Water goes into those pores every time you shower. Soap, skin oils and the minerals in Cincinnati tap water go in with it.
 
@@ -16,25 +17,25 @@ Scrubbing cleans the face of the grout. It can't reach the pores. The gray you s
 
 The bottom row goes first because it stays wet longest. Water runs down the wall, pools on the tub ledge, and the lowest joint sits in it for an hour after everyone's done.
 
-## The pink line is bacteria, and it likes the caulk
+## The pink stain on shower caulk is bacteria
 
 The pink stripe along the tub edge is a bacterium called Serratia marcescens. It lives in most homes and feeds on the fatty residue in soap scum. It shows up pink on caulk and grout because those surfaces hold the film it eats.
 
 Bleach kills it for a week or two. It comes back because the film comes back. The only way to keep it off is a surface that doesn't hold a film, and grout and caulk both do.
 
-## Sealer helps, for about a season
+## Grout sealer helps, for about a season
 
 A penetrating sealer fills the pores for a while, which is why a shower sealed in April stays clean through the summer. Sealers wear. On a shower used twice a day, most of them are gone in six to twelve months, sooner on the floor and the bottom row. The instructions say to reseal every year. Few people do, and the ones who do are back on their knees in the shower every spring.
 
 Regrouting resets the clock further, since you're starting with fresh grout and fresh sealer. It's also a weekend of work, or a few hundred dollars for someone else to do it, and in a shower that's 20 years old or more the new grout often sits on a wall that's wet behind it. Which brings up the thing the gray grout is hiding.
 
-## What the grout is telling you about the wall
+## What gray grout says about the wall behind it
 
 Grout that goes gray fast and caulk that keeps growing pink are signs that water is getting through the joints and staying there. In a shower built in the 1960s through the 1990s, the wall behind the tile is drywall or a cement board with no waterproof layer in front of it. Water that passes the grout soaks the board, wicks into the studs, and in a lot of Cincinnati-area ranches ends up in the subfloor next to the tub. That soft spot you've been stepping around is the same water.
 
 Our crews pull tile out of houses in Anderson Township, Montgomery and Fort Thomas, Kentucky every week, and the wet board behind a gray-grouted wall is the most common thing we find. The grout looked bad for years before the wall gave up.
 
-## What to do this weekend
+## What to do about gray grout this weekend
 
 If the shower is otherwise in decent shape and you want another year out of it:
 
@@ -45,7 +46,7 @@ If the shower is otherwise in decent shape and you want another year out of it:
 
 That will hold through next summer. Put a note on the calendar for next spring, because you'll be doing it again.
 
-## When the fix stops being worth it
+## When regrouting stops being worth it
 
 Regrouting and sealing make sense for a shower under about 20 years old with a solid wall behind it. Past that, each round costs more than the last and the water damage keeps going while you wait. If you've regrouted twice, if the floor near the tub moves under your foot, or if the tile sounds hollow when you tap it, the grout is no longer the problem. The wall is.
 

@@ -92,7 +92,9 @@ function footer() {
 }
 
 function layout({ path, title, description, body, image, type = 'website' }) {
-  const fullTitle = path === '/' ? `${SITE.name} | ${title}` : `${title} | ${SITE.name}`;
+  // Long article titles drop the brand suffix so search results don't cut them off (about 60 characters)
+  const fullTitle = path === '/' ? `${SITE.name} | ${title}`
+    : type === 'article' && title.length + SITE.name.length + 3 > 62 ? title : `${title} | ${SITE.name}`;
   return `<!doctype html>
 <html lang="en">
 <head>

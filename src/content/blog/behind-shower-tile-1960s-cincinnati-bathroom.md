@@ -3,6 +3,7 @@ title: What's behind the shower tile in a 1960s Cincinnati bathroom
 date: 2026-10-08
 excerpt: Tap the tile by the tub and the sound goes dull. Layer by layer, what sits behind the tile in a house built around 1965, and what each layer is doing now.
 description: What is behind shower tile in a 1960s house? Mortar or greenboard, studs, subfloor and galvanized pipe, and how to check each without opening the wall.
+summary: In a house built around the 1960s, the shower tile usually outlasts the wall behind it. Behind it you will find a mortar bed or greenboard with no waterproof membrane, often a damp subfloor under the tub, and galvanized pipe near the end of its 40 to 60 year life. A shower under about 20 years old with a dry floor is worth maintaining; an older one usually needs the wall replaced.
 img: blog-behind-shower-tile-1960s-cincinnati-bathroom
 photoCredit: Tomás Asurmendi on Pexels, https://www.pexels.com/photo/elegant-bathroom-decor-with-floral-elements-33362147/
 photo: vintage 1960s bathroom with pink tile walls
@@ -15,7 +16,7 @@ The 4-inch square tile your house came with was made to outlast the house. It is
 
 The tile is also the hard shell over everything that is not perfect. Water gets past it through the grout joints and the caulk line at the tub, and once it is through, the same tile that kept it out of the room keeps it in the wall.
 
-## Behind the shower tile, two kinds of wall
+## Mortar bed or greenboard: the two walls behind 1960s shower tile
 
 Tile setters did these bathrooms one of two ways. The median house in Hamilton County was built in [1963](https://dam.assets.ohio.gov/image/upload/development.ohio.gov/research/countytrends/2025/hamilton.pdf), by the state's count, so a lot of local bathrooms sit right on the line between the two.
 
@@ -25,7 +26,7 @@ In a thin-set job, the setter hung gypsum board on the studs, in many houses the
 
 If your house was built in the 1970s or later, assume thin-set over greenboard. Before about 1960, assume a mortar bed. For the years in between, the tap test is the fastest tell.
 
-## Nothing in that wall was built to stay wet
+## No waterproof membrane behind the tile
 
 Behind either wall type you find the studs, and in most of these bathrooms you find nothing between the wall and the studs. Some mortar-bed setters put tar paper behind the lath. Behind greenboard, in the houses we open, there is no membrane at all.
 
@@ -33,13 +34,13 @@ Grout is porous. The gray that comes back a year after you clean it is water and
 
 The Environmental Protection Agency's guidance for water-damaged buildings says to dry wet materials within 24 to 48 hours, and it treats wallboard that has swelled or lost its seams as material to [remove and replace](https://epa.gov/mold/mold-remediation-schools-and-commercial-buildings-guide-chapter-4). A shower wall gets wet twice a day and has about 20 hours to dry in between. The back of it has not had 48 dry hours since the Johnson administration.
 
-## Under the tub
+## The subfloor under a 1960s cast-iron tub
 
 The cast-iron tub in a 1960s ranch sits on the subfloor, the plywood or boards the finish floor is nailed to. The tub apron hides the joint between the tub and the floor, and that joint is where the caulk you have replaced three times lives.
 
 Water that passes the caulk runs down the outside of the tub and onto the subfloor. In some ranches you can see the result from the basement as a stain on the joists. From above, you feel it as the soft spot in the floor next to the tub. The floor is not going to fall in tomorrow. It is telling you the subfloor has been wet long enough to lose its stiffness, which takes plywood years and particleboard a season.
 
-## The pipe in the wall is as old as the tile
+## The galvanized pipe in the wall is as old as the tile
 
 In many 1960s houses the hot and cold lines feeding the tub valve are galvanized steel, which [InspectApedia puts at a 40 to 60 year service life](https://inspectapedia.com/plumbing/Galvanized_Iron_Pipes.htm). Your house is 60. Galvanized pipe closes up from the inside with rust scale, which is why the hot water in the master shower comes out slower than it did, and why the spout coughs rusty water for a second after a vacation.
 
@@ -56,7 +57,7 @@ Most of this you can learn from the finished side.
 
 If all four come back clean, the grout routine in the earlier post buys you years. If two of them do not, the problem is past what regrouting can reach.
 
-## The 20-year line
+## When to maintain a tiled shower and when to replace it
 
 A shower under about 20 years old, built after the greenboard rule changed, with a dry floor and a solid tap, is worth maintaining. The showers our crews replace are 20 years old and up, and in those the wall behind the tile is the job. Regrouting puts new grout over the same wet board, and the gray comes back on schedule.
 

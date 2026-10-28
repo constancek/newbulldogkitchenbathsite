@@ -3,6 +3,7 @@ title: One-day bathroom remodel: what to expect, hour by hour
 date: 2026-10-11
 excerpt: The truck is in the driveway at 7:45. Our crew's day in your shower area from then until dinner, the noises you'll hear, and the one thing you have to do.
 description: One day bathroom remodel, what to expect hour by hour, from the 7:45 walkthrough to the first shower next morning, from a Cincinnati crew that does it.
+summary: A one-day bathroom remodel runs from about 7:45 a.m. to 6 p.m.: a walkthrough, demolition to the studs, subfloor and plumbing checks, the new base, then walls, trim and door, then cleanup and the warranty. The toilet stays usable through the day, and you take your first shower the next morning once the caulk has set.
 img: blog-one-day-bathroom-remodel-what-to-expect
 photoCredit: Jimmy Nilsson Masth on Pexels, https://www.pexels.com/photo/man-wearing-gloves-on-a-renovation-11427055/
 photo: worker in work gloves renovating a bathroom
@@ -11,7 +12,7 @@ The install date is on the calendar in the kitchen, the consultant measured your
 
 One thing before we start. The one-day job is the wet area: the tub or shower, its walls and its fixtures, gutted to the studs and rebuilt. If your job also includes the floor, the vanity or the toilet, it runs longer, and your consultant told you how long when you signed. The clock below is for the wet area. Times are close to what our crews run in most houses; your project coordinator gives you the schedule for yours.
 
-## The week before
+## The week before your one-day remodel
 
 The walls, base and trim for your shower come from the numbers the consultant took in your bathroom, and the fabricator builds them to those numbers before install day. That is the whole reason the day works. Nothing gets measured and cut on your floor. Your project coordinator confirms the date and the arrival window with you a few days ahead.
 
@@ -31,7 +32,7 @@ By mid-morning the shower area is open to the studs: no tile, no wall surface, n
 
 The old tub, the tile and the wet board go out to the truck or the trailer. None of it sits in your driveway overnight.
 
-## 10:30 to noon: what's under there, and the plumbing
+## 10:30 to noon: subfloor, framing and plumbing checks
 
 Once the area is open, the lead installer looks at three things: the subfloor under where the tub sat, the framing behind where the tile was, and the pipes. In a house from the 1960s through the 1990s around here, the common finds are a damp patch of subfloor by the drain, dark drywall or plaster behind the bottom rows of tile, and a galvanized supply line or a valve older than the one your consultant expected.
 
@@ -57,19 +58,19 @@ The lead installer walks you through the shower: how the valve works, how the do
 
 The shower is in by evening. You take your first shower in it the next morning.
 
-## If you have one bathroom
+## If your house has only one bathroom
 
 In a 1920s Tudor in Hyde Park with one bathroom upstairs, the thing to plan around is the toilet. It stays in place and stays usable through the day; the crew works around it, and the water to it comes back on as soon as the valve work is done. Plan on a neighbor's or a family member's shower that one evening, or skip a night.
 
-## If you're keeping the house showable
+## If you are selling the house soon
 
 A 1994 two-story in West Chester that goes on the market in the spring doesn't have a month to spare with the master bath torn up. One day of a dust barrier, and the agent can photograph the bathroom that weekend. Tell the buyer they are getting a shower with nothing to regrout; the warranty stays with you, so leave it out of the listing.
 
-## The first week
+## The first week with your new shower
 
 Day two, you shower, and the caulk has set. Sometime in that first week your project coordinator checks in to ask whether anything isn't right. If it isn't, we make it right, which is the line on our website and the one your coordinator works by.
 
-## Getting on the calendar
+## How to schedule a one-day bathroom remodel
 
 The day above starts with a consultant in your bathroom with a tape measure, and that visit is free. They measure the tub or shower area, go through the colors and patterns with you (most of our customers land on the marble or travertine looks), and leave you a written quote. With promotional financing, qualified buyers get the shower area gutted to the studs and rebuilt, walls, base, fixtures and the lifetime warranty, for as low as $150 a month, or 12 months no interest on approved credit. Get the shower now and pay later; the [financing page](/financing/) has the current terms.
 

@@ -396,7 +396,7 @@ posts.forEach((p) => {
   const image = abs(imgUrl(p.img));
   const showToc = p.toc.length >= 3 && p.words >= 1200;
   const schema = jsonLd([
-    { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: plainTitle, description: p.description,
+    { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: plainTitle, description: p.description, ...(p.summary ? { abstract: p.summary } : {}),
       image, datePublished: p.isoDate, dateModified: p.isoDate, wordCount: p.words, mainEntityOfPage: abs(url),
       author: { '@type': 'Organization', name: SITE.name, url: abs('/about/') },
       publisher: { '@type': 'Organization', name: SITE.name, url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/img/brand/logo.png') } } },
@@ -405,7 +405,7 @@ posts.forEach((p) => {
       { '@type': 'ListItem', position: 2, name: 'Blog', item: abs('/blog/') },
       { '@type': 'ListItem', position: 3, name: plainTitle, item: abs(url) }] },
   ]);
-  page(url, p.title, p.description || p.excerpt, [
+  page(url, p.seoTitle || p.title, p.description || p.excerpt, [
     `<section class="page-band post-band"><div class="container">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/blog/">Blog</a><span aria-hidden="true">›</span><span aria-current="page">${p.title}</span></nav>
   <h1>${p.title}</h1>${p.excerpt ? `<p class="post-band__lead">${p.excerpt}</p>` : ''}
@@ -413,6 +413,7 @@ posts.forEach((p) => {
 </div></section>`,
     `<section class="section post-section"><article class="container prose post">
   <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
+  ${p.summary ? `<div class="post-summary"><p class="post-summary__label">The short answer</p><p>${C.esc(p.summary)}</p></div>` : ''}
   ${showToc ? `<details class="toc" open><summary>In this article</summary><ol>${p.toc.map((t) => `<li><a href="#${t.id}">${t.text}</a></li>`).join('')}</ol></details>` : ''}
   ${p.body}
   <p class="post-author">Written by the <a href="/about/">${SITE.name}</a> team, Cincinnati remodelers since ${SITE.founded}.</p>

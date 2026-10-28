@@ -3,6 +3,7 @@ title: Three questions to ask a bathroom contractor before a deposit
 date: 2026-10-15
 excerpt: Three quotes on the kitchen table and a deposit check to write. The three questions whose answers separate the contractors, and what Bulldog says to each.
 description: Questions to ask a bathroom contractor before a deposit: who does the work, what the quote covers once the wall is open, and who holds the warranty.
+summary: Before you pay a bathroom contractor a deposit, ask three questions: who will be in your bathroom on install day, what the written quote covers once the wall is open, and who you call about the warranty in year five. Write the answers on the back of each quote and compare them before you compare prices.
 img: blog-questions-to-ask-bathroom-contractor
 photoCredit: Kampus Production on Pexels, https://www.pexels.com/photo/an-agent-handing-a-pen-to-a-client-8439732/
 photo: older couple reviewing contract with contractor at kitchen table
@@ -43,7 +44,7 @@ Whose warranty matters because a manufacturer's warranty on the wall panels and 
 
 Our answer: Bulldog has been doing kitchens and bathrooms in Cincinnati since 1993, 33 years in Cincinnati bathrooms. The lifetime warranty covers the product and the workmanship for as long as you own the home, and the crew registers it before they leave on install day. If something isn't right in year five, you call (513) 657-3750 and the same company that built it comes out. The line on our website is "If something isn't right, we make it right," and it is the line your project coordinator works by.
 
-## Three bids, three answers
+## Comparing three bathroom contractor bids
 
 Put the three quotes side by side with the answers written on the back. The lowest number with "we'll see when we get there" behind it is a different thing from a higher number with the subfloor already in it.
 

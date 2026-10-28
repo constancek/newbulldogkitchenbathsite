@@ -7,6 +7,9 @@
 //   date: 2026-10-20
 //   excerpt: One or two sentences shown on the blog index card.
 //   description: Meta description for search engines, under 155 characters.
+//   seoTitle: Optional shorter title for search results when the title runs past about 60 characters
+//   summary: Two or three plain sentences that answer the post's question, shown as "The short answer"
+//            at the top of the post (search engines and AI answers quote this kind of passage).
 //   img: blog-shower-grout-gray         (photo name in images/blog/, no extension; optional)
 //   photo: gray grout tiled shower      (Pexels search phrase; src/fetch-blog-photo.js fetches the
 //                                        post's one photo with it when images/blog/ has none)
@@ -135,6 +138,7 @@ function loadPosts() {
       date: d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
       excerpt: meta.excerpt || '',
       description: meta.description || meta.excerpt || '',
+      summary: meta.summary || '', seoTitle: meta.seoTitle || '',
       img: meta.img || '',
       words, readMinutes: Math.max(1, Math.round(words / 225)), toc,
       body: html,

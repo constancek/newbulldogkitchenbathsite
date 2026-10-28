@@ -1,8 +1,10 @@
 ---
 title: Tile vs. acrylic shower walls: what each one asks of you over 20 years
+seoTitle: "Tile vs. acrylic shower walls: 20 years of cost and care"
 date: 2026-10-17
 excerpt: A tile contractor's quote on one side, a one-day solid-surface shower on the other. What each one asks of you, from a company that stopped selling tile.
 description: Tile vs acrylic shower walls, compared by install time, grout, cleaning and warranty over 20 years, from a Cincinnati remodeler that no longer sells tile.
+summary: A tiled shower takes several days to two weeks to install because of cure times, and its grout needs sealing about every two years. A made-to-fit solid-surface shower has no grout, goes in in one day and cleans with mild soap and water. Tile is still the better pick for a custom mosaic, a curbless wet room or a feature wall.
 img: blog-tile-vs-acrylic-shower-walls
 photoCredit: Max Vakhtbovych on Pexels, https://www.pexels.com/photo/a-white-ceramic-sink-and-toilet-bowl-8142058/
 photo: modern walk-in shower with marble look wall panels
@@ -17,7 +19,7 @@ The third is a made-to-fit solid-surface wall system, and that is what Bulldog i
 
 This post compares tile with that third product. The first two are not worth your money, and we'd say so at your kitchen table.
 
-## What a tiled shower is, and what it asks of you
+## What a tiled shower asks of you over 20 years
 
 A tile contractor builds a shower in layers. Demo to the studs. Cement backerboard, the water-resistant panel that replaces the old drywall. A waterproofing membrane over that, either a sheet or a paint-on coat. A sloped mortar bed or a preformed pan for the floor. Then the tile, set in thin-set mortar, then grout in the joints, then caulk where the walls meet the base, and then, if the contractor is thorough, a penetrating sealer over the grout.
 
@@ -27,7 +29,7 @@ The 20 years after that are where tile asks the most. Grout is cement, sand and 
 
 Tile is the right call for some bathrooms. A hand-set mosaic you've had your eye on. A curbless wet room with a tiled floor that runs out into the bathroom. A feature wall in a house where you want a design story. If that's you, hire a tile contractor who will show you the waterproofing before the tile covers it, and plan for a longer install and, in most bids, a higher price. We mean that. Most people reading this are not that person, and you know by now which one you are.
 
-## What a solid-surface shower asks of you
+## What a solid-surface shower asks of you over 20 years
 
 The reason our install is one day is that the work that takes a week in tile happens in the shop. The walls, base and trim are fabricated to your measurements before the truck shows up. On install day, the crew gutting your shower area to the studs is the same crew that measured it. They take out the old tub or tile and the wet board behind it, deal with what they find, set the new base, set the walls, hang the door, put in the valve and trim, caulk, clean up and register your warranty. The shower is in by evening. You take your first shower in it the next morning, once the caulk has set, because there is no mortar to cure and no grout to seal.
 
@@ -37,7 +39,7 @@ The 20 years after install day are the easy part. Mild soap and water, a spray-d
 
 The fair worry here is the material. You have had a cultured-marble vanity top yellow on you, or a fiberglass insert in a rental crack along the floor. Those were thin fiberglass and old cultured marble. The solid-surface polymer we install is a different material, made in the USA by a manufacturer that has built it since 1999, and the manufacturer's claim is that it resists scratches, chips, stains and fading. We don't put our own number on that. We put the lifetime warranty behind it.
 
-## Side by side
+## Tile vs. solid-surface shower walls compared
 
 | | Tiled shower | Solid-surface shower |
 |---|---|---|
@@ -47,7 +49,7 @@ The fair worry here is the material. You have had a cultured-marble vanity top y
 | Warranty | Varies by contractor; ask what it covers and for how long | Lifetime on product and workmanship, for as long as you own the home |
 | Best for | A specific mosaic, a curbless wet room, a feature wall | A shower you clean in ten minutes and don't think about again |
 
-## If you're in a 1968 ranch with the original shower
+## If your house still has its original 1960s shower
 
 If you've regrouted the master shower at least once and the thing you want is to spray it down after the morning showers and be done, the solid-surface shower is built for you. Pick the Calcutta marble look or the travertine, and if you miss the lines, pick the subway pattern and get the look without the joints. The soft spot in the floor by the tub comes up on install day, and we would rather find it with the tub out than have you find it later.
 
@@ -59,13 +61,13 @@ You have a 1994 two-story in West Chester with a yellowed cultured-marble surrou
 
 You're in a 1920s Tudor in Hyde Park with a clawfoot tub upstairs, and you do not want a crew in the house for two weeks. One day, one crew, and the same people who came to measure. Ask for the low-threshold base and the built-in seat. The seat reads as a shelf, and the threshold is easier for anyone carrying laundry up those stairs. If the house's original hex tile floor is staying, the walls above it can match it in the hexagonal pattern, which is one panel and no joints.
 
-## The plastic-insert worry
+## Why a solid-surface shower is not a plastic insert
 
 The cheap ones do look like that. You have seen one in a rental or a lake house, high-gloss white with the tub and walls in one molded piece and a gap where it meets the drywall. A made-to-fit surround is a different thing to look at: a matte or low-sheen marble pattern, cut to your room's dimensions so the corners meet, trim at the edges, and a niche or a shelf built into the wall rather than stuck on afterward.
 
 Judge it the way you'd judge a countertop. Stand in the doorway, then go stand six inches from it. The [colors and patterns page](/inspiration-colors-patterns/) has the finishes. Ask us to see a finished shower in a ranch like yours before you decide.
 
-## The money part
+## Cost and financing for a solid-surface shower
 
 We don't publish job prices. A consultant measures your bathroom and you get a written quote, free. With promotional financing, qualified buyers get the new shower, the wet area gutted to the studs, new base, walls, fixtures and the lifetime warranty, for as low as $150 a month, or 12 months no interest on approved credit. Get the shower now and pay later.
 

@@ -514,10 +514,13 @@ form.sent .form-success { display: block; }
 .post blockquote p { margin: 0 0 .5rem; color: #1e1e1e; }
 .post blockquote p:last-child { margin-bottom: 0; }
 .post blockquote strong:first-child { color: var(--red); }
-.toc { margin: 0 0 2.5rem; padding: 1.25rem 1.5rem; background: #f3f4f6; border-radius: 12px; }
-.toc summary { font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; }
-.toc ol { margin: .9rem 0 0; padding-left: 1.3rem; font-size: 1rem; line-height: 1.5; }
-.toc li { margin-bottom: .45rem; }
+.toc { margin: 0 0 2.5rem; padding: 1rem 1.25rem; background: #f3f4f6; border-radius: 12px; }
+.toc summary { font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; }
+.toc ol { margin: .7rem 0 0; padding-left: 1.2rem; font-size: .88rem; line-height: 1.45; }
+.toc li { margin-bottom: .3rem; }
+.post-summary { margin: 0 0 2rem; padding: 1.25rem 1.5rem; background: #fbeeee; border-radius: 12px; }
+.post .post-summary p { margin: 0; font-size: 1.05rem; line-height: 1.65; }
+.post .post-summary .post-summary__label { margin-bottom: .4rem; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
 .toc a { color: var(--ink) !important; text-decoration: none !important; }
 .toc a:hover { color: var(--red) !important; text-decoration: underline !important; }
 .post .post-author { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #e2e4e8; font-size: .95rem; color: #555; }
