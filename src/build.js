@@ -417,8 +417,8 @@ posts.forEach((p) => {
   ${p.body}
   <p class="post-author">Written by the <a href="/about/">${SITE.name}</a> team, Cincinnati remodelers since ${SITE.founded}.</p>
 </article></section>`,
-    C.carousel(homeSlides, { top: false }),
     homeCallout(),
+    C.carousel(homeSlides, { top: false }),
     `<section class="section post-related"><div class="container">
   <header class="section-head"><div><h2>Keep <strong>Reading</strong></h2></div><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></header>
   <div class="card-grid card-grid--alternate" style="--per-row:3">${related(p).map((o) => `<a class="card" href="/blog/${o.slug}/">
