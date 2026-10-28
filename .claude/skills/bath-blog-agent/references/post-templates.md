@@ -73,6 +73,8 @@ Good: "You regrouted the master shower in the spring. By October the lines along
 - Bold sparingly: the one number or the one sentence per section that the reader would highlight. Never bold a whole sentence of marketing.
 - No italics for emphasis. No emoji. No exclamation points.
 - One table maximum per post.
+- One or two tip boxes per post, for the single takeaway a reader should not miss in that section. Write them as a Markdown quote starting with a bold label, and the site shows them as a red-edged box: `> **Tip:** Run your hand along the bottom row of grout. If it flexes, the board behind it is wet.` Labels: **Tip:**, **Worth knowing:** or **Before you sign:**. Never more than two, never back to back.
+- H2s become the post's "In this article" list (shown on posts over 1,200 words with three or more H2s), so each H2 should make sense on its own in that list.
 - Define the first use of any trade term in the same sentence: "backerboard, the waterproof panel that goes behind the wall surface."
 - Numbers as numerals ($150 not one hundred fifty dollars). The only dollar figures that appear in posts are the financing line and the promo amount.
 - One photo per post, the header photo, and none inside the body. It comes from Pexels via the `photo:` search phrase in the front matter (see `publishing.md`), so write a phrase that describes a picture, not a topic: "older couple looking at bathroom tile samples", not "bathroom remodel cost". Also describe, in one line, the real Bulldog photo the owner could swap in later (a finished job in an ordinary house, or a mid-install shot). Never generate or fabricate images.
@@ -84,7 +86,7 @@ Good: "You regrouted the master shower in the spring. By October the lines along
 - Two internal links to other posts or site pages, with descriptive anchor text ("our walk-in shower packages" not "click here").
 - One or two external links to cited sources, opened in the same sentence that uses the fact.
 - The photo's alt text is the post title (the build sets it), so no alt text to write.
-- Schema and technical SEO are the site builder's job; do not add JSON-LD to a post.
+- Schema and technical SEO are the site builder's job; do not add JSON-LD to a post. The build already adds article and breadcrumb schema, the share image, reading time, an author box, a closing estimate section and three related posts, so do not write a sign-off, an author line, a "related reading" list or a closing call-to-action button into the body.
 
 ## The deliverable block (top of every post, for the owner to delete)
 

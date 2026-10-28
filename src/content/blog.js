@@ -120,13 +120,24 @@ function loadPosts() {
     if (!meta.title) throw new Error(`${f}: front matter needs a title:`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(meta.date || '')) throw new Error(`${f}: front matter needs date: YYYY-MM-DD`);
     const d = new Date(meta.date + 'T12:00:00');
+    const words = body.split(/\s+/).filter(Boolean).length;
+    // Each H2 gets an id so the table of contents can link to it
+    const toc = [];
+    const html = markdown(body).replace(/<h2>([\s\S]*?)<\/h2>/g, (_, inner) => {
+      const text = inner.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"');
+      let id = text.toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60).replace(/-$/, '') || 'section';
+      while (toc.some((t) => t.id === id)) id += '-2';
+      toc.push({ id, text: inner });
+      return `<h2 id="${id}">${inner}</h2>`;
+    });
     return {
-      slug, title: meta.title, preview: PREVIEW, sortKey: meta.date,
+      slug, title: meta.title, preview: PREVIEW, sortKey: meta.date, isoDate: meta.date,
       date: d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
       excerpt: meta.excerpt || '',
       description: meta.description || meta.excerpt || '',
       img: meta.img || '',
-      body: markdown(body),
+      words, readMinutes: Math.max(1, Math.round(words / 225)), toc,
+      body: html,
     };
   });
   return all.sort((a, b) => (a.sortKey < b.sortKey ? 1 : -1));

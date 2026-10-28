@@ -91,7 +91,7 @@ function footer() {
 </footer>`;
 }
 
-function layout({ path, title, description, body }) {
+function layout({ path, title, description, body, image, type = 'website' }) {
   const fullTitle = path === '/' ? `${SITE.name} | ${title}` : `${title} | ${SITE.name}`;
   return `<!doctype html>
 <html lang="en">
@@ -103,7 +103,11 @@ function layout({ path, title, description, body }) {
 <link rel="canonical" href="https://${SITE.domain}${path}">
 <meta property="og:title" content="${esc(fullTitle)}">
 <meta property="og:description" content="${esc(description)}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${type}">
+<meta property="og:url" content="https://${SITE.domain}${path}">
+<meta property="og:site_name" content="${esc(SITE.name)}">${image ? `
+<meta property="og:image" content="${image}">
+<meta name="twitter:card" content="summary_large_image">` : ''}
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/img/brand/apple-touch-icon.png">
 <meta name="theme-color" content="#111111">

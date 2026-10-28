@@ -19,7 +19,7 @@ const posts = blog.loadPosts().map((p) => ({ ...p, img: p.img && hasPhoto(p.img)
 
 const OUT = path.join(__dirname, '..', 'public');
 const pages = [];
-const page = (p, title, description, body) => pages.push({ path: p, title, description, body });
+const page = (p, title, description, body, extra = {}) => pages.push({ path: p, title, description, body, ...extra });
 
 // ---------- Shared blocks ----------
 const promos = {
@@ -372,12 +372,66 @@ page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, 
   C.pageBand({ title: 'The Bulldog Kitchen &amp; Bath <strong>Blog</strong>', lead: 'Ideas, tips, and guides for your next kitchen or bathroom project.' }),
   C.cards({ perRow: 3, link: 'Read More', alternate: true, grey: true, items: posts.map((p) => ({ title: p.title, img: p.img, href: `/blog/${p.slug}/`, text: p.excerpt, meta: p.date })) }),
 ].join('\n'));
-posts.forEach((p) => page(`/blog/${p.slug}/`, p.title, p.description || p.excerpt, [
-  C.pageBand({ title: p.title, extra: `<p class="post-meta">${p.date} · ${SITE.name}${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>` }),
-  `<section class="section"><div class="container prose">${C.picture(p.img, p.title)}${p.body}
-  <p><a class="button" href="/about/#contact">Request an Estimate</a></p>
-  <p><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></p></div></section>`,
-].join('\n')));
+// Related posts: the ones sharing the most meaningful words with this post's title and
+// description, newest first on a tie
+const STOP = new Set('a an and are as at be before by can do does for from has have how in is it its of on or our that the their them they this to up we what when where which who why will with you your'.split(' '));
+const keywords = (p) => new Set(`${p.title} ${p.description}`.toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').split(' ').filter((w) => w.length > 2 && !STOP.has(w)));
+const related = (p) => {
+  const mine = keywords(p);
+  return posts.filter((o) => o.slug !== p.slug)
+    .map((o) => ({ o, score: [...keywords(o)].filter((w) => mine.has(w)).length }))
+    .sort((a, b) => b.score - a.score || (a.o.sortKey < b.o.sortKey ? 1 : -1))
+    .slice(0, 3).map((x) => x.o);
+};
+const abs = (u) => `https://${SITE.domain}${u}`;
+const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
+
+posts.forEach((p) => {
+  const url = `/blog/${p.slug}/`;
+  const plainTitle = p.title.replace(/<[^>]+>/g, '');
+  const image = abs(imgUrl(p.img));
+  const showToc = p.toc.length >= 3 && p.words >= 1200;
+  const schema = jsonLd([
+    { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: plainTitle, description: p.description,
+      image, datePublished: p.isoDate, dateModified: p.isoDate, wordCount: p.words, mainEntityOfPage: abs(url),
+      author: { '@type': 'Organization', name: SITE.name, url: abs('/about/') },
+      publisher: { '@type': 'Organization', name: SITE.name, url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/img/brand/logo.png') } } },
+    { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: abs('/') },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: abs('/blog/') },
+      { '@type': 'ListItem', position: 3, name: plainTitle, item: abs(url) }] },
+  ]);
+  page(url, p.title, p.description || p.excerpt, [
+    `<section class="page-band post-band"><div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/blog/">Blog</a><span aria-hidden="true">›</span><span aria-current="page">${p.title}</span></nav>
+  <h1>${p.title}</h1>${p.excerpt ? `<p class="post-band__lead">${p.excerpt}</p>` : ''}
+  <p class="post-meta">${p.date} <span aria-hidden="true">·</span> ${p.readMinutes} min read <span aria-hidden="true">·</span> ${SITE.name}${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>
+</div></section>`,
+    `<section class="section post-section"><article class="container prose post">
+  <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
+  ${showToc ? `<details class="toc" open><summary>In this article</summary><ol>${p.toc.map((t) => `<li><a href="#${t.id}">${t.text}</a></li>`).join('')}</ol></details>` : ''}
+  ${p.body}
+  <aside class="post-author">
+    <img src="/assets/img/brand/logo.png" alt="${SITE.name} logo" width="560" height="297" loading="lazy">
+    <div><p class="post-author__name">Written by the ${SITE.name} team</p>
+    <p>We have been remodeling kitchens and baths across the Cincinnati area since ${SITE.founded}. Our own crews do every install, many bathrooms are finished in one day, and the work is backed by a lifetime warranty.</p>
+    <a class="link-arrow" href="/about/">About us</a></div>
+  </aside>
+</article></section>`,
+    C.banner({ title: 'Ready to See What Your Bathroom <strong>Could Look Like?</strong>', img: 'home-one-day-banner',
+      alt: 'Walk-in shower with white marble-look wall panels, a built-in shelf niche and a black sliding glass door',
+      text: `A free, no-pressure in-home estimate with a written quote. Prefer to talk first? Call <a href="tel:${SITE.phoneHref}">${SITE.phone}</a>.`,
+      buttons: [['Request an Estimate', '/about/#contact']] }),
+    `<section class="section post-related"><div class="container">
+  <header class="section-head"><div><h2>Keep <strong>Reading</strong></h2></div><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></header>
+  <div class="card-grid card-grid--alternate" style="--per-row:3">${related(p).map((o) => `<a class="card" href="/blog/${o.slug}/">
+    <div class="card__image">${C.picture(o.img, o.title)}</div>
+    <div class="card__body"><div class="card__meta">${o.date}</div><h3 class="card__title">${o.title}</h3><p class="card__text">${o.excerpt}</p><span class="card__link">Read More</span></div>
+  </a>`).join('')}</div>
+</div></section>`,
+    schema,
+  ].join('\n'), { image, type: 'article' });
+});
 
 // ---------- 404 ----------
 page('/404', 'Page Not Found', 'The page you were looking for could not be found.', [
