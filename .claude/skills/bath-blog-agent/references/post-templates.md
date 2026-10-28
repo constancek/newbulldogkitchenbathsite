@@ -3,7 +3,7 @@
 ## Titles
 
 - Plain and specific. The reader's problem or question, in words they'd type, with a hint of the answer. "Why your shower grout turns gray again a year after you clean it" beats "The Ultimate Guide to Grout Maintenance."
-- Under 65 characters where possible. Cincinnati or a suburb in the title when the post is local ("What a one-day bathroom conversion costs in Cincinnati").
+- Under 60 characters where possible; if the title runs longer, add a seoTitle: under 60 (see publishing.md). Cincinnati or a suburb in the title when the post is local ("What a one-day bathroom conversion costs in Cincinnati").
 - No colons-plus-subtitle unless the subtitle carries the specific ("Tile vs. surround: what each one asks of you over 20 years").
 - No "Ultimate," "Complete Guide," "Everything You Need to Know," "Top 10," "Secrets," "Transform," "Dream."
 - One question in a title is fine. Questions in every H2 beneath it are not.
@@ -68,7 +68,7 @@ Good: "You regrouted the master shower in the spring. By October the lines along
 ## Formatting for a 50+ reader on a phone
 
 - Paragraphs of two to four sentences. One idea each.
-- H2 every 200–300 words. H2s are statements or short noun phrases, not questions.
+- H2 every 200–300 words. H2s are statements or short noun phrases, not questions, and each one names its topic in words a searcher would use ("Price factor 2: the shower base you choose", "Hard water spots on a grout-free shower"). No bare labels like "The money part", "Side by side", "The door" or "Tell your sister": search engines and AI answers lean on H2s to know what each section answers. A quoted line as an H2 is fine when a colon adds the topic ("The tub is fine": how high your tub wall really is).
 - Bulleted lists only for actual lists (steps, items to check). Never for prose dressed as bullets. No list longer than six items.
 - Bold sparingly: the one number or the one sentence per section that the reader would highlight. Never bold a whole sentence of marketing.
 - No italics for emphasis. No emoji. No exclamation points.
