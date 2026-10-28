@@ -95,15 +95,19 @@ const kitchenReviews = () => C.reviews(kitchenReviewItems);
 // Home: one slideshow with bath and kitchen reviews taking turns
 const homeReviews = () => C.reviews([0, 1, 2, 3, 4].flatMap((i) => [bathReviewItems[i], kitchenReviewItems[i]]).filter(Boolean));
 
+// Homepage slideshow and the Lifetime Warranty strip under it (also closes every blog post)
+const homeSlides = [
+  { img: 'home-slide-new-bath', alt: 'Bathroom with a freestanding tub behind a frameless glass panel, a gray stone-look wall and a floating wood double vanity with lit mirrors', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
+  { img: 'home-slide-kitchen', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
+  { img: 'home-slide-promo', alt: 'Glass walk-in shower with marble-look wall panels, a built-in niche and a white base', pos: 'center 35%', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
+  { img: 'home-slide-quality', alt: 'Walk-in shower with marble-look walls, black sliding glass door and black hex tile floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },
+];
+const homeCallout = () => C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`);
+
 // ---------- Home ----------
 page('/', 'Kitchen & Bathroom Remodeling', `${SITE.name} designs and installs beautiful, affordable kitchens and bathrooms, with many bath remodels in as little as one day. Request an estimate.`, [
-  C.carousel([
-    { img: 'home-slide-new-bath', alt: 'Bathroom with a freestanding tub behind a frameless glass panel, a gray stone-look wall and a floating wood double vanity with lit mirrors', eyebrow: 'Transform Your Bathroom', title: 'A New Bath in <strong>As Little As One Day</strong>', text: 'Custom showers, tubs, and wall systems installed by our own crews.', cta: 'Request an Estimate', href: '/about/#contact' },
-    { img: 'home-slide-kitchen', alt: 'White kitchen with an island, pendant lights and a breakfast table', eyebrow: 'Now Remodeling Kitchens', title: 'The Kitchen <strong>You\'ve Been Waiting For</strong>', text: 'Cabinets, countertops, backsplash, and fixtures, designed and installed by one team.', cta: 'Explore Kitchens', href: '/kitchens/' },
-    { img: 'home-slide-promo', alt: 'Glass walk-in shower with marble-look wall panels, a built-in niche and a white base', pos: 'center 35%', eyebrow: 'Limited-Time Offer', title: 'Save <strong>$1,250</strong> on Your Remodel', text: 'Plus free financing for 24 months on approved credit.*', cta: 'Claim Discount Now', href: '/current-promos/' },
-    { img: 'home-slide-quality', alt: 'Walk-in shower with marble-look walls, black sliding glass door and black hex tile floor', eyebrow: 'Built to Last', title: 'Affordable Remodels, <strong>Quality You Can Count On</strong>', text: `Proudly serving ${SITE.serviceArea} for over ${SITE.years} years.`, cta: 'Book a Design Consultation', href: '/about/#contact' },
-  ]),
-  C.callout(`${SITE.name}: <strong>Beautiful Remodels Since ${SITE.founded}</strong>`),
+  C.carousel(homeSlides),
+  homeCallout(),
   C.offerCards({ title: 'Current <strong>Promos</strong>', slider: true, offers: [promos.dollarsOff, promos.financing, promos.senior] }),
   C.banner({
     title: 'A Brand-New Bath in <strong>As Little As One Day</strong>', img: 'home-one-day-banner', alt: 'Walk-in shower with white marble-look wall panels, a built-in shelf niche and a black sliding glass door', badge: '1-DAY',
@@ -418,10 +422,8 @@ posts.forEach((p) => {
     <a class="link-arrow" href="/about/">About us</a></div>
   </aside>
 </article></section>`,
-    C.banner({ title: 'Ready to See What Your Bathroom <strong>Could Look Like?</strong>', img: 'home-one-day-banner',
-      alt: 'Walk-in shower with white marble-look wall panels, a built-in shelf niche and a black sliding glass door',
-      text: `A free, no-pressure in-home estimate with a written quote. Prefer to talk first? Call <a href="tel:${SITE.phoneHref}">${SITE.phone}</a>.`,
-      buttons: [['Request an Estimate', '/about/#contact']] }),
+    C.carousel(homeSlides, { top: false }),
+    homeCallout(),
     `<section class="section post-related"><div class="container">
   <header class="section-head"><div><h2>Keep <strong>Reading</strong></h2></div><a class="link-arrow" href="/blog/">&larr; Back to the blog</a></header>
   <div class="card-grid card-grid--alternate" style="--per-row:3">${related(p).map((o) => `<a class="card" href="/blog/${o.slug}/">

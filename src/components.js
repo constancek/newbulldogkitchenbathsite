@@ -132,18 +132,20 @@ ${footer()}
 // ---------- Sections ----------
 
 // Each slide: text on the left and the whole photo on the right with rounded corners, over the same photo faded on black (like banner)
-function carousel(slides) {
+// top: false when the slideshow sits lower on a page (end of a blog post): no h1, every photo lazy
+function carousel(slides, { top = true } = {}) {
   const s = slides.map((sl, i) => {
-    const H = i === 0 ? 'h1' : 'h2';
+    const H = i === 0 && top ? 'h1' : 'h2';
+    const load = i === 0 && top ? ' fetchpriority="high"' : ' loading="lazy"';
     return `<div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${slides.length}">
-      <img class="carousel__bg" src="${img(sl.img)}" alt="" aria-hidden="true"${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}>
+      <img class="carousel__bg" src="${img(sl.img)}" alt="" aria-hidden="true"${load}>
       <div class="carousel__content">
         ${sl.eyebrow ? `<span class="carousel__eyebrow">${sl.eyebrow}</span>` : ''}
         <${H}>${sl.title}</${H}>
         ${sl.text ? `<p>${sl.text}</p>` : ''}
         <a class="button" href="${sl.href}">${sl.cta}</a>
       </div>
-      <div class="carousel__photo"><img src="${img(sl.img)}" alt="${esc(sl.alt)}"${sl.pos ? ` style="object-position:${sl.pos}"` : ''}${i === 0 ? ' fetchpriority="high"' : ' loading="lazy"'}></div>
+      <div class="carousel__photo"><img src="${img(sl.img)}" alt="${esc(sl.alt)}"${sl.pos ? ` style="object-position:${sl.pos}"` : ''}${load}></div>
     </div>`;
   }).join('');
   const dots = slides.map((_, i) => `<button type="button" aria-label="Go to slide ${i + 1}"></button>`).join('');
