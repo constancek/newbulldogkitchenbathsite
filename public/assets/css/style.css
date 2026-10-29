@@ -527,14 +527,18 @@ form.sent .form-success { display: block; }
 .post-layout .post { max-width: none; margin: 0; }
 .post-aside { display: flex; flex-direction: column; gap: 1.5rem; }
 .post-aside__sticky { position: sticky; top: 108px; display: flex; flex-direction: column; }
-/* One promo card at a time: all three share one grid cell (so the box keeps the tallest card's height) and fade in turn */
-.aside-promos { display: grid; }
-.aside-promos > .aside-promo { grid-area: 1 / 1; transition: opacity .6s ease, visibility .6s; }
-.aside-promos.is-rotating > .aside-promo:not(.is-active) { opacity: 0; visibility: hidden; }
+/* One promo card at a time: all three share one grid cell (so the box keeps the tallest card's height). The next card
+   slides in from the right while the current one slides out to the left; waiting cards sit hidden off to the right. */
+.aside-promos { display: grid; overflow: hidden; }
+.aside-promos > .aside-promo { grid-area: 1 / 1; }
+.aside-promos.is-rotating > .aside-promo { transform: translateX(100%); visibility: hidden; transition: transform .6s ease, visibility 0s .6s; }
+.aside-promos.is-rotating > .aside-promo.is-active { transform: none; visibility: visible; transition: transform .6s ease; }
+.aside-promos.is-rotating > .aside-promo.is-leaving { transform: translateX(-100%); visibility: visible; transition: transform .6s ease; }
+@media (prefers-reduced-motion: reduce) { .aside-promos.is-rotating > .aside-promo { transition: none !important; } }
 /* Kept compact so the promo and the estimate card fit on a laptop screen while they stick */
 .aside-promos .aside-promo { padding-bottom: 1rem; }
 .aside-promos .aside-promo__img { aspect-ratio: 16 / 9; margin-bottom: .8rem; }
-.aside-promos .aside-card__kicker { margin-top: .9rem; margin-bottom: .7rem; }
+.post-aside .aside-promos .aside-card__kicker { margin-top: .9rem; margin-bottom: .7rem; font-size: 1rem; color: var(--red); }
 .aside-promos .aside-card__title { font-size: 1.05rem; margin-bottom: .35rem; }
 .aside-promos .aside-card__text { font-size: .85rem; line-height: 1.5; margin-bottom: 0; }
 .post-aside__sticky .aside-card--dark { padding: 1.1rem 1.25rem; }
@@ -551,10 +555,13 @@ form.sent .form-success { display: block; }
 .aside-card--dark .aside-card__title, .aside-card--dark .aside-card__text, .aside-author .aside-card__text, .aside-promo .aside-card__title, .aside-promo .aside-card__text { color: #fff; }
 .post-aside__sticky .aside-card--dark { background: var(--red); border-color: var(--red); }
 .post-aside__sticky .aside-card__button { background: var(--ink); border-color: var(--ink); }
-.post-aside__sticky .aside-card__button:hover, .post-aside__sticky .aside-card__button:focus-visible { background: #fff; border-color: #fff; color: var(--ink); }
+.post-aside__sticky .aside-card__button { transition: transform .2s ease; }
+.post-aside__sticky .aside-card__button:hover, .post-aside__sticky .aside-card__button:focus-visible { background: var(--ink); border-color: var(--ink); color: #fff; transform: scale(1.05); }
 .aside-card__button { display: block; width: 100%; }
-.aside-card__phone { display: block; margin-top: .9rem; text-align: center; color: #fff; font-size: 1.15rem; font-weight: 700; text-decoration: none; }
-.aside-card__phone:hover { text-decoration: underline; }
+.aside-card__phone { display: flex; align-items: center; justify-content: center; gap: .5rem; margin-top: .9rem; color: #fff; font-size: 1.15rem; font-weight: 700; text-decoration: none; }
+.aside-card__phone svg { width: 1.1em; height: 1.1em; flex: none; }
+.aside-card__phone { transition: transform .2s ease; }
+.aside-card__phone:hover, .aside-card__phone:focus-visible { transform: scale(1.08); }
 .aside-author .aside-card__kicker { margin-bottom: .25rem; }
 .aside-author__name { margin: 0; font-weight: 600; line-height: 1.3; }
 .aside-author__role { margin: .15rem 0 .9rem; font-size: .85rem; color: #bbb; line-height: 1.3; }
@@ -586,7 +593,8 @@ form.sent .form-success { display: block; }
 @media (max-width: 1024px) {
   .post-layout { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
   .post-aside__sticky { position: static; }
-  .aside-toc { display: none; }
+  /* Small screens: no On this page list (already scrolled past) and no More on this topic (Keep reading covers it) */
+  .aside-toc, .aside-topic { display: none; }
 }
 .post .post__photo { margin: 0 0 2.25rem; border-radius: 16px; aspect-ratio: 16 / 9; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
 .post h2 { font-size: clamp(1.5rem, 2.6vw, 1.9rem); font-weight: 600; line-height: 1.25; margin-top: 3rem; scroll-margin-top: 140px; }

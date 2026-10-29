@@ -346,7 +346,7 @@
     renderBlog();
   }
 
-  // Blog post sidebar: the three promo cards take turns, 10 seconds each (paused while the mouse is over them).
+  // Blog post sidebar: the three promo cards take turns sliding in from the right, 10 seconds each (paused while the mouse is over them).
   // Without JavaScript all three show, stacked.
   var rotator = document.querySelector('[data-promo-rotator]');
   if (rotator && rotator.children.length > 1) {
@@ -359,7 +359,16 @@
     rotator.addEventListener('focusout', function () { promoHold = false; });
     setInterval(function () {
       if (promoHold || document.hidden) return;
-      promoCards[promoAt].classList.remove('is-active');
+      var out = promoCards[promoAt];
+      out.classList.remove('is-active');
+      out.classList.add('is-leaving');
+      // Once it has slid out, park it back off to the right without animating, ready for its next turn
+      setTimeout(function () {
+        out.style.transition = 'none';
+        out.classList.remove('is-leaving');
+        void out.offsetWidth;
+        out.style.transition = '';
+      }, 700);
       promoAt = (promoAt + 1) % promoCards.length;
       promoCards[promoAt].classList.add('is-active');
     }, 10000);

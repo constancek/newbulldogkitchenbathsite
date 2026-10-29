@@ -457,7 +457,7 @@ const postAside = (p) => {
   </div>
   <div class="aside-card aside-card--dark">
     <a class="button aside-card__button" href="/about/#contact">Request an Estimate</a>
-    <a class="aside-card__phone" href="tel:${SITE.phoneHref}">${SITE.phone}</a>
+    <a class="aside-card__phone" href="tel:${SITE.phoneHref}">${icon.phoneSolid}${SITE.phone}</a>
   </div></div>
 </aside>`;
 };
