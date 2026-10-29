@@ -7,7 +7,7 @@ excerpt: The rim you wipe around, the crumbs you sweep off the counter, and what
 description: Undermount vs drop in kitchen sink: cleaning, the rim that holds grime, which countertops each one needs, and what replacing the sink later involves.
 summary: A drop-in sink sits on top of the counter on its own rim, works with almost any countertop including laminate, and is the easier one to swap out later. An undermount sink hangs under the counter, so you wipe crumbs and water off the counter straight into the bowl, with no rim to clean around. An undermount needs a countertop with a solid edge at the cutout, such as granite, quartz or solid surface, and laminate can take one only with a special sink and adhesive. If you're replacing an old laminate top with stone or solid surface anyway, undermount is the one to look at first, and Bulldog's tops come with undermount sink cutouts.
 img: blog-undermount-vs-drop-in-kitchen-sink
-photoCredit: RDNE Stock project on Pexels, https://www.pexels.com/photo/a-person-in-an-apron-wiping-their-hands-6004130/
+photoCredit: Derwin Edwards on Pexels, https://www.pexels.com/photo/photo-of-sink-with-black-faucet-11208979/
 photo: hands wiping crumbs into undermount stainless kitchen sink
 ---
 The sink in your Anderson Township kitchen is a stainless double bowl that went in with the laminate around 1992. It drains, the faucet works, and nobody has ever complained about it. But when you wipe the counter after dinner, the crumbs stop at the lip of the sink and you push them over it with your hand. There's a gray line in the caulk where the rim meets the laminate, and an old toothbrush lives under the sink for that line.

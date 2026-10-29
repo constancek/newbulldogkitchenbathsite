@@ -6,7 +6,7 @@ excerpt: Three kitchen quotes on the table and a deposit to write. Eight questio
 description: Questions to ask a kitchen remodeler before a deposit: who installs, how long the kitchen is down, what the quote lists, the warranty and the payments.
 summary: Before you pay a kitchen remodeler a deposit, ask whose crews install, how many days the kitchen will be out of use, and what the written quote lists. Ask what happens if a cabinet box turns out damaged, how the countertops get templated, and to see the warranty in writing. Then ask how the payments are spaced and who you call while the job is running. Write each company's answers on the back of its quote and compare those before you compare prices.
 img: blog-questions-to-ask-kitchen-remodeler
-photoCredit: T Leish on Pexels, https://www.pexels.com/photo/elderly-couple-sitting-at-the-table-hugging-and-using-a-laptop-6975190/
+photoCredit: RDNE Stock project on Pexels, https://www.pexels.com/photo/a-man-and-a-woman-talking-in-the-kitchen-8292827/
 photo: older couple reading contract at kitchen counter
 ---
 The oak cabinets in your Anderson Township ranch went in around 1978, the laminate has a scorch ring next to the range, and three companies have now stood in your kitchen with a tape measure. One of them was us. The quotes are close, and one company would like a deposit by the end of the month. These are the questions to ask a kitchen remodeler before that check leaves the house, eight of them, in the order the job runs.
