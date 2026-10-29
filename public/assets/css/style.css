@@ -533,12 +533,11 @@ form.sent .form-success { display: block; }
 .aside-promos.is-rotating > .aside-promo:not(.is-active) { opacity: 0; visibility: hidden; }
 /* Kept compact so the promo and the estimate card fit on a laptop screen while they stick */
 .aside-promos .aside-promo { padding-bottom: 1rem; }
-.aside-promos .aside-promo__img { aspect-ratio: 5 / 2; margin-bottom: .8rem; }
+.aside-promos .aside-promo__img { aspect-ratio: 16 / 9; margin-bottom: .8rem; }
 .aside-promos .aside-card__kicker { margin-bottom: .35rem; }
 .aside-promos .aside-card__title { font-size: 1.05rem; margin-bottom: .35rem; }
 .aside-promos .aside-card__text { font-size: .85rem; line-height: 1.5; margin-bottom: 0; }
 .post-aside__sticky .aside-card--dark { padding: 1.1rem 1.25rem; }
-.post-aside__sticky .aside-card--dark .aside-card__title { font-size: 1.1rem; margin-bottom: .75rem; }
 .post-aside__sticky .aside-card__phone { margin-top: .6rem; font-size: 1.05rem; }
 @media (max-height: 600px) { .post-aside__sticky { position: static; } }
 /* Sidebar in the site's black, red and white: author and promo cards black, lists white with a black outline,

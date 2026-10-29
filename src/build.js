@@ -425,7 +425,6 @@ const postAside = (p) => {
     .sort((a, b) => b.score - a.score || (a.o.sortKey < b.o.sortKey ? 1 : -1))
     .slice(0, hub ? 3 : 4).map((x) => x.o);
   const topic = [hub, ...sameRoom].filter(Boolean);
-  const kitchenOnly = !p.categories.includes('Bath');
   const topicHtml = topic.length ? `<nav class="aside-card aside-topic" aria-label="More on this topic">
     <p class="aside-card__kicker">More on this topic</p>
     <ul>${topic.map((o) => `<li><a href="/blog/${o.slug}/">${o.title}</a></li>`).join('')}</ul>
@@ -456,7 +455,6 @@ const postAside = (p) => {
   ${promoCard(promos.senior, 'Savings for homeowners 65 and older')}
   </div>
   <div class="aside-card aside-card--dark">
-    <p class="aside-card__title">Get a quote for your ${kitchenOnly ? 'kitchen' : 'bathroom'}</p>
     <a class="button aside-card__button" href="/about/#contact">Request an Estimate</a>
     <a class="aside-card__phone" href="tel:${SITE.phoneHref}">${SITE.phone}</a>
   </div></div>
