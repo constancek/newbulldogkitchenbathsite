@@ -300,10 +300,10 @@
     });
   });
 
-  // Blog index: search, All / Kitchen / Bath filter, 12 cards at a time
+  // Blog index: search, All / Kitchen / Bath filter, 9 cards at a time
   var blogBar = document.querySelector('[data-blog-toolbar]');
   if (blogBar) {
-    var STEP = 12;
+    var STEP = 9;
     var blogSec = blogBar.parentNode;
     var blogCards = Array.prototype.slice.call(blogSec.querySelectorAll('[data-blog-card]'));
     var blogSearch = blogBar.querySelector('[data-blog-search]');

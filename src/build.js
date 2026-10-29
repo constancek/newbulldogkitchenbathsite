@@ -374,7 +374,7 @@ page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and ba
 // ---------- Blog ----------
 page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, [
   C.pageBand({ title: 'The Bulldog Kitchen &amp; Bath <strong>Blog</strong>', lead: 'Ideas, tips, and guides for your next kitchen or bathroom project.' }),
-  // Search and All / Kitchen / Bath filters above the grid; 12 cards at a time
+  // Search and All / Kitchen / Bath filters above the grid; 9 cards at a time
   // with a Load more button below (both run in main.js; without JavaScript every card shows)
   C.cards({
     perRow: 3, link: 'Read More', alternate: true, grey: true,
