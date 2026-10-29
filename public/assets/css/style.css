@@ -575,11 +575,12 @@ form.sent .form-success { display: block; }
 .aside-promo .aside-card__kicker, .aside-promo .aside-card__title, .aside-promo .aside-card__text, .aside-promo__link { margin-left: 1.25rem; margin-right: 1.25rem; }
 .aside-promo .aside-card__text { margin-bottom: .75rem; }
 .aside-promo__link { display: inline-block; color: #fff; font-size: .9rem; font-weight: 600; text-decoration: underline; text-underline-offset: .2rem; }
-/* More on this topic: each post is a rounded pill with a black outline that fills black on hover */
+/* More on this topic: no box around it; each post is a see-through red pill that fills red on hover */
+.aside-topic { padding: 0; border: 0; background: none; }
 .aside-topic ul { display: flex; flex-direction: column; gap: .6rem; margin: 0; padding: 0; list-style: none; }
 .aside-topic li { font-size: .9rem; line-height: 1.35; }
-.aside-topic a { display: block; padding: .6rem 1.1rem; border: 1px solid var(--ink); border-radius: 1.6rem; color: var(--ink); text-decoration: none; transition: background .2s ease, color .2s ease; }
-.aside-topic a:hover, .aside-topic a:focus-visible { background: var(--ink); color: #fff; }
+.aside-topic a { display: block; padding: .6rem 1.1rem; border-radius: 1.6rem; background: rgba(215, 25, 32, .1); color: var(--ink); text-decoration: none; transition: background .2s ease, color .2s ease; }
+.aside-topic a:hover, .aside-topic a:focus-visible { background: var(--red); color: #fff; }
 @media (max-width: 1024px) {
   .post-layout { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
   .post-aside__sticky { position: static; }
