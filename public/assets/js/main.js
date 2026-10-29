@@ -346,6 +346,25 @@
     renderBlog();
   }
 
+  // Blog post sidebar: the three promo cards take turns, 10 seconds each (paused while the mouse is over them).
+  // Without JavaScript all three show, stacked.
+  var rotator = document.querySelector('[data-promo-rotator]');
+  if (rotator && rotator.children.length > 1) {
+    var promoCards = rotator.children, promoAt = 0, promoHold = false;
+    rotator.classList.add('is-rotating');
+    promoCards[0].classList.add('is-active');
+    rotator.addEventListener('mouseenter', function () { promoHold = true; });
+    rotator.addEventListener('mouseleave', function () { promoHold = false; });
+    rotator.addEventListener('focusin', function () { promoHold = true; });
+    rotator.addEventListener('focusout', function () { promoHold = false; });
+    setInterval(function () {
+      if (promoHold || document.hidden) return;
+      promoCards[promoAt].classList.remove('is-active');
+      promoAt = (promoAt + 1) % promoCards.length;
+      promoCards[promoAt].classList.add('is-active');
+    }, 10000);
+  }
+
   // Placeholder form handling: replace with a real form endpoint (HubSpot, Formspree, etc.)
   document.querySelectorAll('form[data-placeholder-form]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
