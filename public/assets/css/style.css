@@ -368,7 +368,7 @@ form.sent .form-success { display: block; }
 /* Blog index: label on each card photo, search / filter / count toolbar, Load more */
 .card__image { position: relative; }
 .card[hidden] { display: none; }
-.card__label { position: absolute; top: .85rem; left: .85rem; padding: .3rem .75rem; border-radius: 999px; background: rgba(215, 25, 32, .8); color: #fff; font-size: .78rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.card__label { position: absolute; top: .85rem; left: .85rem; padding: .3rem .75rem; border-radius: 999px; background: rgba(215, 25, 32, .55); border: 1.5px solid #fff; color: #fff; font-size: .78rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
 .blog-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; margin-bottom: 2.25rem; }
 .blog-toolbar__search { flex: 1 1 260px; max-width: 420px; }
 .blog-toolbar__search input { width: 100%; padding: .8rem 1rem; border: 1px solid var(--ink); border-radius: 0; background: #fff; font: inherit; color: var(--text); }
