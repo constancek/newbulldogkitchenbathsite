@@ -408,6 +408,38 @@ const related = (p) => {
 const abs = (u) => `https://${SITE.domain}${u}`;
 const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
 
+// Post sidebar: "More on this topic" (the post's hub first, then related posts about the same room)
+// and below it a free-estimate card that stays in view while you scroll (financing line fits the room)
+const HUBS = ['signs-shower-needs-replacing', 'one-day-shower-replacement-cincinnati', 'grout-free-shower-walls-guide', 'aging-in-place-bathroom-plan', 'kitchen-update-in-days'];
+const postAside = (p) => {
+  const bySlug = (s) => posts.find((o) => o.slug === s);
+  const hub = HUBS.includes(p.slug) ? null : bySlug(HUBS.find((h) => p.body.includes(`/blog/${h}/`)));
+  const mine = keywords(p);
+  const sameRoom = posts.filter((o) => o.slug !== p.slug && (!hub || o.slug !== hub.slug) && o.categories.some((c) => p.categories.includes(c)))
+    .map((o) => ({ o, score: [...keywords(o)].filter((w) => mine.has(w)).length }))
+    .sort((a, b) => b.score - a.score || (a.o.sortKey < b.o.sortKey ? 1 : -1))
+    .slice(0, hub ? 3 : 4).map((x) => x.o);
+  const topic = [hub, ...sameRoom].filter(Boolean);
+  const kitchenOnly = !p.categories.includes('Bath');
+  const money = kitchenOnly
+    ? 'Financing available on approved credit.'
+    : 'With promotional financing, a new grout-free shower for as low as $150 a month, on approved credit.';
+  const topicHtml = topic.length ? `<nav class="aside-card aside-topic" aria-label="More on this topic">
+    <p class="aside-card__kicker">More on this topic</p>
+    <ul>${topic.map((o) => `<li><a href="/blog/${o.slug}/">${o.title}</a></li>`).join('')}</ul>
+  </nav>` : '';
+  return `<aside class="post-aside" aria-label="More from Bulldog">
+  ${topicHtml}
+  <div class="post-aside__sticky"><div class="aside-card aside-card--dark">
+    <p class="aside-card__kicker">Free in-home estimate</p>
+    <p class="aside-card__title">Get a written quote for your ${kitchenOnly ? 'kitchen' : 'bathroom'}</p>
+    <p class="aside-card__text">A design consultant comes to your house, measures, and gives you a written quote. ${money}</p>
+    <a class="button aside-card__button" href="/about/#contact">Request an Estimate</a>
+    <a class="aside-card__phone" href="tel:${SITE.phoneHref}">${SITE.phone}</a>
+  </div></div>
+</aside>`;
+};
+
 posts.forEach((p) => {
   const url = `/blog/${p.slug}/`;
   const plainTitle = p.title.replace(/<[^>]+>/g, '');
@@ -428,12 +460,14 @@ posts.forEach((p) => {
   <h1>${p.title}</h1>
   <p class="post-meta">By the ${SITE.name} team <span aria-hidden="true">·</span> ${p.date} <span aria-hidden="true">·</span> ${p.readMinutes} min read${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>
 </div></section>`,
-    `<section class="section post-section"><article class="container prose post">
+    `<section class="section post-section"><div class="container post-layout"><article class="prose post">
   <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
   ${p.summary ? `<div class="post-summary"><p class="post-summary__label">Key takeaways</p><ul>${p.summary.split(/(?<=[.!?])\s+(?=[A-Z"])/).map((t) => `<li>${C.esc(t)}</li>`).join('')}</ul></div>` : ''}
   ${p.body}
   <p class="post-author">Written by the <a href="/about/">${SITE.name}</a> team, Cincinnati remodelers since ${SITE.founded}.</p>
-</article></section>`,
+</article>
+${postAside(p)}
+</div></section>`,
     homeCallout(),
     C.carousel(homeSlides, { top: false }),
     `<section class="section post-related"><div class="container">
