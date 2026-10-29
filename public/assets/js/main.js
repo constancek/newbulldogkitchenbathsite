@@ -304,7 +304,7 @@
   var blogBar = document.querySelector('[data-blog-toolbar]');
   if (blogBar) {
     var STEP = 9;
-    var blogSec = document;
+    var blogSec = blogBar.parentNode;
     var blogCards = Array.prototype.slice.call(blogSec.querySelectorAll('[data-blog-card]'));
     var blogSearch = blogBar.querySelector('[data-blog-search]');
     var blogBtns = blogBar.querySelectorAll('[data-blog-filter]');

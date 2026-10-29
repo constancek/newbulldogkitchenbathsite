@@ -373,18 +373,19 @@ page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and ba
 
 // ---------- Blog ----------
 page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, [
-  // Search and All / Kitchen / Bath filters sit in the black title band; the grid shows 9 cards at a time
+  C.pageBand({ title: 'The Bulldog Kitchen &amp; Bath <strong>Blog</strong>', lead: 'Ideas, tips, and guides for your next kitchen or bathroom project.' }),
+  // Search and All / Kitchen / Bath filters above the grid; 9 cards at a time
   // with a Load more button below (both run in main.js; without JavaScript every card shows)
-  C.pageBand({ title: 'The Bulldog Kitchen &amp; Bath <strong>Blog</strong>', lead: 'Ideas, tips, and guides for your next kitchen or bathroom project.', extra: `<div class="blog-toolbar" data-blog-toolbar>
+  C.cards({
+    perRow: 3, link: 'Read More', alternate: true, grey: true,
+    before: `<div class="blog-toolbar" data-blog-toolbar>
     <label class="blog-toolbar__search"><span class="sr-only">Search the blog</span><input type="search" placeholder="Search the blog" data-blog-search></label>
     <div class="blog-toolbar__filters" role="group" aria-label="Show posts about">
       <button class="button" type="button" data-blog-filter="all" aria-pressed="true">All</button>
       <button class="button button--outline" type="button" data-blog-filter="kitchen" aria-pressed="false">Kitchen</button>
       <button class="button button--outline" type="button" data-blog-filter="bath" aria-pressed="false">Bath</button>
     </div>
-  </div>` }),
-  C.cards({
-    perRow: 3, link: 'Read More', alternate: true, grey: true,
+  </div>`,
     after: `<p class="blog-empty" data-blog-empty hidden>No blogs match that search. Try another word, or <button type="button" class="blog-empty__reset" data-blog-reset>show all blogs</button>.</p>
   <div class="blog-more"><button class="button" type="button" data-blog-more hidden>Load more blogs</button></div>`,
     items: posts.map((p) => ({
