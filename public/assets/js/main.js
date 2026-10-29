@@ -300,7 +300,7 @@
     });
   });
 
-  // Blog index: search, All / Kitchen / Bath filter, "x of y blogs" count, 12 cards at a time
+  // Blog index: search, All / Kitchen / Bath filter, 12 cards at a time
   var blogBar = document.querySelector('[data-blog-toolbar]');
   if (blogBar) {
     var STEP = 12;
@@ -308,7 +308,6 @@
     var blogCards = Array.prototype.slice.call(blogSec.querySelectorAll('[data-blog-card]'));
     var blogSearch = blogBar.querySelector('[data-blog-search]');
     var blogBtns = blogBar.querySelectorAll('[data-blog-filter]');
-    var blogCount = blogBar.querySelector('[data-blog-count]');
     var blogMore = blogSec.querySelector('[data-blog-more]');
     var blogEmpty = blogSec.querySelector('[data-blog-empty]');
     var blogFilter = 'all';
@@ -323,7 +322,6 @@
       blogCards.forEach(function (c) { c.hidden = true; });
       matches.slice(0, blogShown).forEach(function (c) { c.hidden = false; });
       var visible = Math.min(blogShown, matches.length);
-      blogCount.textContent = visible + ' out of ' + matches.length + ' blogs';
       blogMore.hidden = visible >= matches.length;
       blogEmpty.hidden = matches.length > 0;
     };
