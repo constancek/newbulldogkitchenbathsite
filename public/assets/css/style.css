@@ -541,6 +541,7 @@ form.sent .form-success { display: block; }
 .aside-author__logo { flex: none; width: 72px; height: auto; }
 .aside-author__head .aside-card__kicker { margin-bottom: .25rem; }
 .aside-author__name { margin: 0; font-weight: 600; line-height: 1.3; }
+.aside-author__role { margin: .15rem 0 0; font-size: .85rem; color: var(--text-muted); line-height: 1.3; }
 .aside-author .aside-card__text { margin-bottom: .6rem; font-size: .9rem; }
 .aside-author__link { color: var(--red); font-size: .9rem; font-weight: 600; }
 .aside-toc ol { margin: 0; padding-left: 1.2rem; }

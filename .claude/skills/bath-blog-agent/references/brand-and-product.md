@@ -23,6 +23,7 @@ Three buckets. Use the labels when you write.
 - Process, four steps: Discover → Design → Build → Enjoy.
 - Services. Bathroom: showers and enclosures, bathtubs, tub-to-shower conversions, walk-in tubs and accessibility, vanities, wall systems. Kitchen: cabinets and organizers, countertops and backsplash, sinks and faucets.
 - Blog lives at /blog/. The footer newsletter box is not connected to an email list yet (it sends nothing), so never point readers to it or promise to email them. Inspiration pages: Shop the Room, Design Spotlight, Colors & Patterns.
+- Blog author (confirmed by the site owner, 2026-10-29): James Smith, Lead Technician at Bulldog Kitchen & Bath. The site's build adds his name to every post's byline, sidebar and schema, so posts don't need an author line. Don't invent other details about him (years, background, quotes).
 
 **Promotions and money (verified, new site; promos change, so date-check before publishing)**
 

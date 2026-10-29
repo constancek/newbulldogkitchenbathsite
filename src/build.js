@@ -408,6 +408,9 @@ const related = (p) => {
 const abs = (u) => `https://${SITE.domain}${u}`;
 const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
 
+// Author shown on every post: byline under the title, the sidebar's Written by box and the article schema
+const AUTHOR = { name: 'James Smith', role: 'Lead Technician' };
+
 // Post sidebar, top to bottom: Written by, On this page (the post's H2s), More on this topic (the post's hub first,
 // then related posts about the same room), two promo cards, and a free-estimate card that stays in view while
 // you scroll (financing line fits the room)
@@ -445,9 +448,9 @@ const postAside = (p) => {
   <div class="aside-card aside-author">
     <div class="aside-author__head">
       <img class="aside-author__logo" src="/assets/img/brand/logo.png" alt="${SITE.name} logo" width="96" height="96" loading="lazy" decoding="async">
-      <div><p class="aside-card__kicker">Written by</p><p class="aside-author__name">The ${SITE.name} team</p></div>
+      <div><p class="aside-card__kicker">Written by</p><p class="aside-author__name">${AUTHOR.name}</p><p class="aside-author__role">${AUTHOR.role}</p></div>
     </div>
-    <p class="aside-card__text">Cincinnati remodelers since ${SITE.founded}. Our own crews design and install kitchens and bathrooms across Greater Cincinnati and Northern Kentucky.</p>
+    <p class="aside-card__text">${AUTHOR.name} is ${AUTHOR.role} at ${SITE.name}, Cincinnati remodelers since ${SITE.founded}. Our own crews design and install kitchens and bathrooms across Greater Cincinnati and Northern Kentucky.</p>
     <a class="aside-author__link" href="/about/">About us</a>
   </div>
   ${tocHtml}
@@ -471,7 +474,7 @@ posts.forEach((p) => {
   const schema = jsonLd([
     { '@context': 'https://schema.org', '@type': 'BlogPosting', headline: plainTitle, description: p.description, ...(p.summary ? { abstract: p.summary } : {}),
       image, datePublished: p.isoDate, dateModified: p.isoDate, wordCount: p.words, mainEntityOfPage: abs(url),
-      author: { '@type': 'Organization', name: SITE.name, url: abs('/about/') },
+      author: { '@type': 'Person', name: AUTHOR.name, jobTitle: AUTHOR.role, worksFor: { '@type': 'Organization', name: SITE.name, url: abs('/') } },
       publisher: { '@type': 'Organization', name: SITE.name, url: abs('/'), logo: { '@type': 'ImageObject', url: abs('/assets/img/brand/logo.png') } } },
     { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: abs('/') },
@@ -482,7 +485,7 @@ posts.forEach((p) => {
     `<section class="page-band post-band"><div class="container">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/blog/">Blog</a><span aria-hidden="true">›</span><span aria-current="page">${p.title}</span></nav>
   <h1>${p.title}</h1>
-  <p class="post-meta">By the ${SITE.name} team <span aria-hidden="true">·</span> ${p.date} <span aria-hidden="true">·</span> ${p.readMinutes} min read${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>
+  <p class="post-meta">By ${AUTHOR.name}, ${AUTHOR.role} <span aria-hidden="true">·</span> ${p.date} <span aria-hidden="true">·</span> ${p.readMinutes} min read${p.preview ? ' · <strong>Preview, not on the live site yet</strong>' : ''}</p>
 </div></section>`,
     `<section class="section post-section"><div class="container post-layout"><article class="prose post">
   <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
