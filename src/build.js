@@ -488,7 +488,6 @@ posts.forEach((p) => {
   <img class="post__photo" src="${imgUrl(p.img)}" alt="${C.esc(plainTitle)}" fetchpriority="high" decoding="async">
   ${p.summary ? `<div class="post-summary"><p class="post-summary__label">Key takeaways</p><ul>${p.summary.split(/(?<=[.!?])\s+(?=[A-Z"])/).map((t) => `<li>${C.esc(t)}</li>`).join('')}</ul></div>` : ''}
   ${p.body}
-  <p class="post-author">Written by the <a href="/about/">${SITE.name}</a> team, Cincinnati remodelers since ${SITE.founded}.</p>
 </article>
 ${postAside(p)}
 </div></section>`,
