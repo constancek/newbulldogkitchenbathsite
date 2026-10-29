@@ -1,6 +1,6 @@
 ---
 title: Does a granite countertop need sealing?
-date: 2026-08-14
+date: 2026-08-06
 category: Kitchen
 excerpt: Some dark granite takes little or no sealer, and some light slabs need several coats. A hot-water test on your own counter tells you which kind you have and when it's due.
 description: Does granite need to be sealed? Dark, dense slabs often need little. A hot-water test, how often to reseal, and the cleaners that wear sealer down.

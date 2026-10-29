@@ -1,6 +1,6 @@
 ---
 title: Staying in your house: a bathroom plan for the next 15 years
-date: 2026-09-04
+date: 2026-08-23
 category: Bath
 excerpt: The order to do things in for an older bathroom you plan to keep using into your eighties: the small fixes this month, the tub decision, the seat, the threshold, the lighting and the floor.
 description: An aging in place bathroom plan for Cincinnati homeowners, in stages: small fixes now, the tub decision, the seat, the threshold, then light and floor.

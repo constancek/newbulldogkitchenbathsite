@@ -1,7 +1,7 @@
 ---
 title: Laminate countertops in an older kitchen: what replacing them involves
 seoTitle: "Replace laminate countertops: what the job involves"
-date: 2026-07-27
+date: 2026-07-23
 category: Kitchen
 excerpt: A burn ring by the stove and a seam by the sink that has puffed up. What's under an old laminate top, what you can still fix, and what happens when the top comes off for quartz, granite or solid surface.
 description: Thinking you should replace laminate countertops? What's under an old top, the burn mark and the swollen seam, and what replacing it involves.

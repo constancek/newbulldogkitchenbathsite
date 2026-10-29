@@ -1,7 +1,7 @@
 ---
 title: Should you update the kitchen before selling? Where the money goes in a house you'll leave in two or three years
 seoTitle: "Update the kitchen before selling: where the money goes"
-date: 2026-09-25
+date: 2026-09-09
 category: Kitchen
 excerpt: You're selling in two or three years and the kitchen looks its age. Fix what an inspector will write up, update what a buyer sees first, and leave the cabinet boxes where they are.
 description: Should you update the kitchen before selling? Fix what an inspector flags, refresh what buyers see first, and skip new cabinets in a house you're leaving.

@@ -1,7 +1,7 @@
 ---
 title: Reface, refinish or paint: what each does to a 1990s oak kitchen
 seoTitle: "Update oak kitchen cabinets: reface, refinish or paint"
-date: 2026-07-22
+date: 2026-07-18
 category: Kitchen
 excerpt: Honey oak from a 1990s refresh, sound boxes, tired color. What refacing, refinishing and painting each do to oak's open grain, how each one wears, and which ones you can do yourself.
 description: Three ways to update oak kitchen cabinets: reface, refinish or paint. What each does to oak's open grain, how it wears, and what's DIY.

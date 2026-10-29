@@ -1,7 +1,7 @@
 ---
 title: Why your bathroom fan rattles and what that means for your walls
 seoTitle: "Old bathroom fan rattles? What it means for your walls"
-date: 2026-07-17
+date: 2026-07-16
 category: Bath
 excerpt: The original fan over the tub clatters, buzzes and leaves the mirror fogged. Why it's loud, where its air goes, what cfm and sones mean, and how long to run it after a shower.
 description: Why a bathroom exhaust fan in an old house rattles, the toilet-paper test, attic venting, cfm and sone numbers, and how long to run it.

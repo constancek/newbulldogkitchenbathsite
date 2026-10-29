@@ -1,6 +1,6 @@
 ---
 title: How to get your house ready for a one-day shower install
-date: 2026-10-07
+date: 2026-09-19
 category: Bath
 excerpt: The install date is on the calendar. What to clear out, who to plan around and where everyone showers that night, in the days before our crew guts your shower area and rebuilds it.
 description: How to prepare for a bathroom remodel that's a one-day shower install: clear the room and the path, plan for pets, parking and that night.

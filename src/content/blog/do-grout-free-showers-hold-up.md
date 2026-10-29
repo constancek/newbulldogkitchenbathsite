@@ -1,7 +1,7 @@
 ---
 title: Do grout-free shower walls hold up? Scratches, stains, cracks and the warranty
 seoTitle: "How long do acrylic shower walls last? Care and warranty"
-date: 2026-08-17
+date: 2026-08-09
 category: Bath
 excerpt: After "will it look like a plastic insert" comes "will it hold up." Scratches, stains, fading and cracks, the cleaners that hurt the surface, and what the lifetime warranty covers.
 description: How long do acrylic shower walls last? What the maker says about scratches, stains, fading and cracks, and what the lifetime warranty covers.

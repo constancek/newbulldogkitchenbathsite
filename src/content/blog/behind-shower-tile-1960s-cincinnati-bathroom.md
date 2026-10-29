@@ -1,6 +1,6 @@
 ---
 title: What's behind the shower tile in a 1960s Cincinnati bathroom
-date: 2026-10-08
+date: 2026-09-22
 category: Bath
 excerpt: Tap the tile by the tub and the sound goes dull. Layer by layer, what sits behind the tile in a house built around 1965, and what each layer is doing now.
 description: What is behind shower tile in a 1960s house? Mortar or greenboard, studs, subfloor and galvanized pipe, and how to check each without opening the wall.

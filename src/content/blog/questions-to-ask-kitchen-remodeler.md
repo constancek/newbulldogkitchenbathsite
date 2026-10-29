@@ -1,6 +1,6 @@
 ---
 title: Eight questions to ask a kitchen remodeler before a deposit
-date: 2026-10-09
+date: 2026-09-24
 category: Kitchen
 excerpt: Three kitchen quotes on the table and a deposit to write. Eight questions that sort them out, from whose crew sets the cabinets to how the payments are spaced, and what Bulldog says to each.
 description: Questions to ask a kitchen remodeler before a deposit: who installs, how long the kitchen is down, what the quote lists, the warranty and the payments.

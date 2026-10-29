@@ -1,7 +1,7 @@
 ---
 title: Undermount or drop-in sink: the small kitchen change people notice
 seoTitle: "Undermount vs drop-in kitchen sink: how each one lives"
-date: 2026-09-02
+date: 2026-08-21
 category: Kitchen
 excerpt: The rim you wipe around, the crumbs you sweep off the counter, and what happens when the sink needs replacing years from now. How a drop-in and an undermount sink compare in a kitchen you cook in every day.
 description: Undermount vs drop in kitchen sink: cleaning, the rim that holds grime, which countertops each one needs, and what replacing the sink later involves.

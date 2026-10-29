@@ -1,7 +1,7 @@
 ---
 title: Two-tone kitchen cabinets: which splits last, and which date your kitchen
 seoTitle: "Two tone kitchen cabinets: which splits age well"
-date: 2026-09-18
+date: 2026-09-05
 category: Kitchen
 excerpt: Two-tone isn't the part that goes out of style. The color is. Which splits hold up for 20 years, which ones tie a kitchen to the year it was done, and how each reads in a 1960s ranch and a 1990s open kitchen.
 description: Two tone kitchen cabinets that age well: an island in its own color, darker lowers under lighter uppers, and the splits that date a kitchen fast.

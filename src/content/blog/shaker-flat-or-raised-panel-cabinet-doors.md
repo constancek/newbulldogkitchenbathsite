@@ -1,7 +1,7 @@
 ---
 title: Shaker, flat or raised-panel doors: what suits an older house
 seoTitle: "Shaker vs raised panel cabinet doors for an older house"
-date: 2026-07-15
+date: 2026-07-13
 category: Kitchen
 excerpt: Three door styles, three kinds of house. How shaker, flat and raised-panel doors look in a 1960s ranch, a 1920s Tudor and a 1990s two-story, which ones hold grease, and how each takes paint and stain.
 description: Shaker vs raised panel cabinet doors, plus flat doors: how each looks in an older house, which corners hold grease, and how each takes paint or stain.

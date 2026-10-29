@@ -1,6 +1,6 @@
 ---
 title: 7 kitchen cabinet organizers for the next 15 years
-date: 2026-09-14
+date: 2026-08-31
 category: Kitchen
 excerpt: Pull-out shelves so you stop kneeling, drawer inserts, a trash pull-out by the sink, a pull-out pantry, soft-close hardware and a plan for the upper cabinets you can reach. Seven organizers that keep an older kitchen easy to use.
 description: Kitchen cabinet organizers that keep you off your knees and off the step stool: pull-out shelves, drawer inserts, pull-out pantry and trash, soft-close.

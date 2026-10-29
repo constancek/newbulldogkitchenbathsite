@@ -1,7 +1,7 @@
 ---
 title: A new backsplash without new countertops: what has to be true first
 seoTitle: "Kitchen backsplash without replacing countertops"
-date: 2026-08-26
+date: 2026-08-16
 category: Kitchen
 excerpt: Your counters are fine and the wall behind them isn't. What to check at the back edge of the counter, at the outlets and at the joint before a new backsplash goes up over the old tops.
 description: A kitchen backsplash without replacing countertops works if the counter is staying, the old splash is dealt with, and the outlets come forward.

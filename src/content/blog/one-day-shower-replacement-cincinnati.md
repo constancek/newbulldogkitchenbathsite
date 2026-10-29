@@ -1,7 +1,7 @@
 ---
 title: One-day shower replacement in Cincinnati: what it covers, what it doesn't, and how to judge a bid
 seoTitle: "One-day shower replacement in Cincinnati: what it covers"
-date: 2026-10-21
+date: 2026-10-13
 category: Bath
 excerpt: What a one-day shower replacement covers in a Cincinnati house, what takes longer, what sets the price, what install day looks like and how to judge any bid you get.
 description: One day shower replacement in Cincinnati: what the day covers, what takes longer, what sets the price and how to judge a bid before you sign.

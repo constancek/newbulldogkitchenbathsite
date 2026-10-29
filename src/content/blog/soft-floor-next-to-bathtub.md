@@ -1,7 +1,7 @@
 ---
 title: Soft floor next to your bathtub: what it is and what waiting costs
 seoTitle: "Soft floor next to your bathtub: what it is, what it costs"
-date: 2026-10-19
+date: 2026-10-11
 category: Bath
 excerpt: The floor by the tub gives a little under the bath mat. What that spot is made of, where the water got in, and why a patch there means the tub comes out.
 description: Soft floor next to the bathtub: what the spot is made of, three places water gets under a tub, how to check from the basement, and what waiting costs.

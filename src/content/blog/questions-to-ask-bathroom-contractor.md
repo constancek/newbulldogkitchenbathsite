@@ -1,7 +1,7 @@
 ---
 title: Three questions to ask a bathroom contractor before a deposit
 seoTitle: "3 questions to ask a bathroom contractor before a deposit"
-date: 2026-10-15
+date: 2026-10-06
 category: Bath
 excerpt: Three quotes on the kitchen table and a deposit check to write. The three questions whose answers separate the contractors, and what Bulldog says to each.
 description: Questions to ask a bathroom contractor before a deposit: who does the work, what the quote covers once the wall is open, and who holds the warranty.

@@ -1,7 +1,7 @@
 ---
 title: Grout-free shower walls: an honest guide for people who assumed they wanted tile
 seoTitle: "Grout-free shower walls: an honest guide"
-date: 2026-09-11
+date: 2026-08-28
 category: Bath
 excerpt: You grew up thinking a real bathroom means tile. What grout-free solid-surface walls are, what they ask of you, how they look and hold up, and who should still hire a tile contractor.
 description: Grout free shower walls explained for people who assumed they wanted tile: what they are, how they look, how they hold up and when tile still wins.

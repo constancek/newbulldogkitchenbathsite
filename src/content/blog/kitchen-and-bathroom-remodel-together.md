@@ -1,7 +1,7 @@
 ---
 title: Kitchen and bathroom remodel at the same time: what goes first
 seoTitle: "Kitchen and bathroom remodel together: what goes first"
-date: 2026-10-14
+date: 2026-10-04
 category: Kitchen, Bath
 excerpt: Doing the kitchen and a bathroom with one company means our own crews in both rooms and finishes chosen together. What to schedule first, how to live in the house while both are going, and what to ask before you book.
 description: Planning a kitchen and bathroom remodel at the same time? What to schedule first, living in the house during the work, and one team versus two.

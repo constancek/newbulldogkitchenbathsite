@@ -1,7 +1,7 @@
 ---
 title: Bathroom remodel financing for retirees: paying for a shower without touching retirement savings
 seoTitle: "Bathroom remodel financing for retirees on a fixed income"
-date: 2026-10-12
+date: 2026-09-29
 category: Bath
 excerpt: Promotional financing, cash from savings, a home equity line or the discount for homeowners 65 and older. What each one costs a retired household besides the shower.
 description: Bathroom remodel financing for retirees: promotional plans, paying from savings, a home equity line and the 65-and-older discount, in plain words.

@@ -1,7 +1,7 @@
 ---
 title: Quartz, granite or solid surface: a countertop you'll live with for 20 years
 seoTitle: "Quartz vs granite countertops, plus solid surface"
-date: 2026-08-03
+date: 2026-07-28
 category: Kitchen
 excerpt: Granite takes heat and knives best, quartz never needs sealing, and solid surface is the one you can sand when it scratches. How each holds up to 20 years of daily cooking.
 description: Quartz vs granite countertops, plus solid surface: how each handles heat, stains, scratches, sealing, repairs and seams over 20 years of cooking.

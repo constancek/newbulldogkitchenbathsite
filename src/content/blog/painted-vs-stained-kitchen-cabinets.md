@@ -1,7 +1,7 @@
 ---
 title: Painted or stained cabinets in a kitchen that cooks every day
 seoTitle: "Painted vs stained kitchen cabinets for a busy kitchen"
-date: 2026-08-07
+date: 2026-08-02
 category: Kitchen
 excerpt: New doors are coming, and you have to pick a finish. How factory paint and stain each handle chips, hairline cracks, grease by the range and years of light, and when two-tone makes sense.
 description: Painted vs stained kitchen cabinets in a kitchen that cooks every day: chips, hairline cracks at joints, grease, cleaning and color choices.

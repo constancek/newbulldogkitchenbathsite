@@ -1,7 +1,7 @@
 ---
 title: Why your shower grout turns gray again a year after you clean it
 seoTitle: "Why shower grout turns gray again after you clean it"
-date: 2026-10-05
+date: 2026-09-17
 category: Bath
 excerpt: You regrouted in the spring and the bottom row is gray again by fall. Here's what's going on inside the grout, and when the fix stops being worth it.
 photo: gray grout lines on white shower tile

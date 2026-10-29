@@ -1,7 +1,7 @@
 ---
 title: Franchise one-day bath companies vs. a local remodeler: five things to compare in any bid
 seoTitle: "One-day bath company vs local contractor: what to compare"
-date: 2026-09-28
+date: 2026-09-12
 category: Bath
 excerpt: A national one-day bath brand or a local remodeler. Either can put in a good shower. The five questions that tell the two bids apart, and what to get in writing.
 description: One day bath company vs local contractor: who installs, what happens to the old wall, how the price is presented, and the warranty in writing.

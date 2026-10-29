@@ -1,7 +1,7 @@
 ---
 title: A new-looking kitchen in days, not months: what to keep and what to replace
 seoTitle: "Fast kitchen remodel: what to keep and what to replace"
-date: 2026-10-26
+date: 2026-10-23
 category: Kitchen
 excerpt: An older kitchen doesn't always need to be torn out. Keep the cabinet boxes if they're sound, then change the doors, the counters, the sink, the backsplash and what's inside the cabinets, in that order.
 description: A fast kitchen remodel starts with what you keep. Cabinet boxes, doors, counters, sink, backsplash and organizers, in the order that makes sense.
