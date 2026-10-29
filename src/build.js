@@ -444,11 +444,8 @@ const postAside = (p) => {
   </a>`;
   return `<aside class="post-aside" aria-label="More from Bulldog">
   <div class="aside-card aside-author">
-    <div class="aside-author__head">
-      <img class="aside-author__logo" src="/assets/img/brand/logo.png" alt="${SITE.name} logo" width="96" height="96" loading="lazy" decoding="async">
-      <div><p class="aside-card__kicker">Written by</p><p class="aside-author__name">${AUTHOR.name}</p><p class="aside-author__role">${AUTHOR.role}</p></div>
-    </div>
-    <p class="aside-card__text">${AUTHOR.name} is ${AUTHOR.role} at ${SITE.name}, Cincinnati remodelers since ${SITE.founded}. Our own crews design and install kitchens and bathrooms across Greater Cincinnati and Northern Kentucky.</p>
+    <p class="aside-card__kicker">Written by</p><p class="aside-author__name">${AUTHOR.name}</p><p class="aside-author__role">${AUTHOR.role}</p>
+    <p class="aside-card__text">Part of the ${SITE.name} team, Cincinnati remodelers since ${SITE.founded}. Our own crews design and install kitchens and bathrooms across Greater Cincinnati and Northern Kentucky, including a new bath in as little as one day.</p>
     <a class="aside-author__link" href="/about/">About us</a>
   </div>
   ${tocHtml}
