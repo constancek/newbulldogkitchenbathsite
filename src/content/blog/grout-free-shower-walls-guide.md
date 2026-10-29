@@ -2,6 +2,7 @@
 title: Grout-free shower walls: an honest guide for people who assumed they wanted tile
 seoTitle: "Grout-free shower walls: an honest guide"
 date: 2026-09-11
+category: Bath
 excerpt: You grew up thinking a real bathroom means tile. What grout-free solid-surface walls are, what they ask of you, how they look and hold up, and who should still hire a tile contractor.
 description: Grout free shower walls explained for people who assumed they wanted tile: what they are, how they look, how they hold up and when tile still wins.
 summary: Grout-free shower walls are solid-surface panels made to fit your tub or shower area, with no grout lines to seal, scrub or regrout. Care is mild soap and water, with no abrasive pads or harsh cleaners. They come in marble and travertine looks and in tile-look patterns like subway and herringbone. Tile is still the right pick for a hand-set mosaic, a curbless wet room or a feature wall.

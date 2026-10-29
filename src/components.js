@@ -288,9 +288,11 @@ function sideBySide({ title, titleTag = 'h2', text = '', img: im, alt, media, re
 </div></section>`;
 }
 
-function cards({ title, intro, items, perRow = 4, grey = false, center = false, link = 'Learn More', alternate = false }) {
-  const html = items.map((c) => `<a class="card" href="${c.href}">
-    <div class="card__image">${picture(c.img, c.alt || c.title)}</div>
+// `label` puts a small tag on a card's photo, `attrs` adds data attributes to the card link;
+// `before` / `after` add markup above and below the grid (the blog index's toolbar and Load more button)
+function cards({ title, intro, items, perRow = 4, grey = false, center = false, link = 'Learn More', alternate = false, before = '', after = '' }) {
+  const html = items.map((c) => `<a class="card" href="${c.href}"${c.attrs || ''}>
+    <div class="card__image">${picture(c.img, c.alt || c.title)}${c.label ? `<span class="card__label">${c.label}</span>` : ''}</div>
     <div class="card__body">
       ${c.meta ? `<div class="card__meta">${c.meta}</div>` : ''}
       <h3 class="card__title">${c.title}</h3>
@@ -300,7 +302,9 @@ function cards({ title, intro, items, perRow = 4, grey = false, center = false, 
   </a>`).join('');
   return `<section class="section${grey ? ' section--grey' : ''}"><div class="container">
   ${title ? `<header class="section-head${center ? ' section-head--center' : ''}"><div><h2>${title}</h2>${intro ? `<p>${intro}</p>` : ''}</div></header>` : ''}
+  ${before}
   <div class="card-grid${alternate ? ' card-grid--alternate' : ''}" style="--per-row:${perRow}">${html}</div>
+  ${after}
 </div></section>`;
 }
 

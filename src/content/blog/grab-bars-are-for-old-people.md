@@ -2,6 +2,7 @@
 title: '"Grab bars are for old people," and four other things we hear'
 seoTitle: "Grab bars are for old people, and 4 more things we hear"
 date: 2026-10-22
+category: Bath
 excerpt: Five lines our installers hear about grab bars and walk-in showers, what is true inside each one, and what the height of your tub wall has to do with it.
 description: Grab bars and a walk-in shower read as "nursing home" to many homeowners over 50. What our installers say back, with tub-wall heights and CDC figures.
 summary: Modern grab bars come in finishes that match your faucet and shower head, and a walk-in shower with a low threshold and a built-in seat looks like any other new shower. The step that causes trouble is the tub wall, 14 inches high on a standard cast-iron tub. Two small changes make a tub safer this weekend, and a one-day shower replacement removes the step.

@@ -1,6 +1,7 @@
 ---
 title: How to read a bathroom remodel quote, line by line
 date: 2026-09-23
+category: Bath
 excerpt: Three quotes on the table and three different totals. Read each one top to bottom, line by line, and write down the question every line should raise before you look at the price.
 description: How to read a bathroom remodel quote line by line: scope, demo, change orders, materials, fixtures, base and door, permits, warranty and payments.
 summary: Read a bathroom remodel quote from the top down and leave the total for last. Each line should name what gets done and with which product, and each one raises a question: how far the job goes, who hauls the old tub out, what happens if the crew finds damage once the wall is open, which color and model, who pulls the permit, whose warranty, and what you pay when. A line too vague to answer its question is the one to send back before you sign.

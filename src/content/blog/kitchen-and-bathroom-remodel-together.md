@@ -2,6 +2,7 @@
 title: Kitchen and bathroom remodel at the same time: what goes first
 seoTitle: "Kitchen and bathroom remodel together: what goes first"
 date: 2026-10-14
+category: Kitchen, Bath
 excerpt: Doing the kitchen and a bathroom with one company means our own crews in both rooms and finishes chosen together. What to schedule first, how to live in the house while both are going, and what to ask before you book.
 description: Planning a kitchen and bathroom remodel at the same time? What to schedule first, living in the house during the work, and one team versus two.
 summary: You can have one company do the kitchen and a bathroom, and every Bulldog project gets a dedicated project coordinator, so you aren't running two contractors' schedules yourself. The shower area is the one-day job, gutted to the studs and rebuilt, with your first shower the next morning. The kitchen takes longer, in days rather than months, and your coordinator gives you a detailed schedule before work starts. Pick the finishes for both rooms before either is ordered so the counters, cabinets and hardware carry from one room to the next.

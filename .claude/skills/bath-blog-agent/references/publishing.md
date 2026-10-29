@@ -18,6 +18,7 @@ The site is a static build. Posts are Markdown files; a GitHub Action renders th
 ---
 title: Why your shower grout turns gray again a year after you clean it
 date: 2026-10-20
+category: Bath (or Kitchen; "Kitchen, Bath" for a post about both. Sets the card label and the blog page's filter buttons)
 excerpt: One or two sentences for the blog index card. Under 160 characters.
 description: Meta description for search. Under 155 characters. Different from the excerpt.
 summary: The key takeaways, 2 or 3 plain sentences (each becomes one bullet under "Key takeaways") that answer the title's question with the post's key facts. Shown in a box at the top of the post and quoted by search and AI answers. No scene-setting, no sales line.

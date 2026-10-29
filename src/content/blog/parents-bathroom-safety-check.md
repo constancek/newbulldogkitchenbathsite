@@ -1,6 +1,7 @@
 ---
 title: Your parent's bathroom: what to look at on your next visit
 date: 2026-07-24
+category: Bath
 excerpt: A 15-minute walk-through of your mom's or dad's bathroom (the tub wall, what they grab, the bath mat, the night path and the toilet) and how to bring it up without making it about age.
 description: Bathroom safety for an older parent, as a 15-minute check on your next visit: the tub wall, the bath mat, the night path, the toilet, and how to raise it.
 summary: Most falls among people 65 and older happen at home, and in the bathroom most injuries happen in or around the tub or shower, with getting out far more common than getting in. On your next visit, measure the tub wall, watch what your parent holds onto, check the bath mat, walk the path from bed to bathroom in the dark, and look at the toilet. Night-lights, non-slip strips in the tub and a rubber-backed bath mat fix a lot that same afternoon. Talk about the house and the tub, not about your parent.

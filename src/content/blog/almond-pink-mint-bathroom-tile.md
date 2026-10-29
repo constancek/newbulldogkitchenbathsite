@@ -2,6 +2,7 @@
 title: Almond, pink and mint tile: built to last, and why that's the problem now
 seoTitle: "1960s bathroom tile: why it outlasts the wall behind it"
 date: 2026-07-13
+category: Bath
 excerpt: The glazed tile in a 1960s bathroom often looks as good as the day it went up. The case for keeping it, and the point where the wall behind it decides for you.
 description: 1960s bathroom tile often outlasts the wall it's stuck to. When keeping pink, mint or almond tile makes sense, and when the wall behind it says no.
 summary: The glazed tile in a 1960s bathroom was made to last, and in most houses it has outlasted the grout and the wall behind it. Keeping it is a fair choice if you like it and the wall is sound, and there are preservation groups that will back you up. Keeping it stops making sense when the tile sounds dull when you tap it, the floor by the tub gives, or a repair means matching a color and size nobody stocks.

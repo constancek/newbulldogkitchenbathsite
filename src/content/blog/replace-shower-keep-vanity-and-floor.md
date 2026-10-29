@@ -2,6 +2,7 @@
 title: Can you replace only the shower and keep the vanity and floor?
 seoTitle: "Replace only the shower, keep the vanity and floor?"
 date: 2026-08-31
+category: Bath
 excerpt: The vanity went in a few years ago, the floor is fine, and the shower is the problem. When replacing only the tub or shower area works, when it doesn't, and what to ask about the floor edge.
 description: Can you replace the shower only, not the whole bathroom? When keeping the vanity, floor and toilet works, when it doesn't, and what to ask first.
 summary: Yes, in many older bathrooms you can replace only the tub or shower area and keep the vanity, floor and toilet. It works when the floor is solid past the tub and the shower stays where it is. It stops working when the soft floor runs past the tub, when you want to change the layout, or when plumbing has to move to another wall. Before you sign, ask what happens to the strip of floor where the old tub meets it.

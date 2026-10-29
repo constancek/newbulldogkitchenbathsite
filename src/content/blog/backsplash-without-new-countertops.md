@@ -2,6 +2,7 @@
 title: A new backsplash without new countertops: what has to be true first
 seoTitle: "Kitchen backsplash without replacing countertops"
 date: 2026-08-26
+category: Kitchen
 excerpt: Your counters are fine and the wall behind them isn't. What to check at the back edge of the counter, at the outlets and at the joint before a new backsplash goes up over the old tops.
 description: A kitchen backsplash without replacing countertops works if the counter is staying, the old splash is dealt with, and the outlets come forward.
 summary: You can put a new backsplash over the countertops you have, as long as those counters are staying for years. What decides the job is the back edge of the counter: a laminate top with a curved splash built into it keeps that splash, while a separate splash strip can come off. Outlets and switches have to come forward to meet the new wall surface, and the joint where the backsplash meets the counter gets flexible sealant, not grout. That caulked joint also gives a future countertop swap a clean line to cut, though the bottom row may need new caulk or trimming.

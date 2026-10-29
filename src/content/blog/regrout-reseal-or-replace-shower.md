@@ -2,6 +2,7 @@
 title: Regrouting vs. resealing vs. replacing: which one your shower needs
 seoTitle: "Regrout or replace your shower? How to choose"
 date: 2026-07-06
+category: Bath
 excerpt: Gray grout can mean a bottle of sealer, a weekend with a grout saw, or a new shower. What each fix does, how long it lasts, and the two checks that tell you which one you need.
 description: Regrout or replace shower: what resealing, regrouting and replacing each fix, how long each lasts, and the checks that tell you which you need.
 summary: Resealing protects grout that is still whole, and it lasts anywhere from a season to several years depending on the sealer and how hard the shower works. Regrouting replaces cracked or missing grout, and it holds only on tile that is still bonded tight to a dry wall. Replacing is the fix once tiles sound dull, the floor by the tub gives, or a 20-year-old shower has been regrouted twice. A tap test and a heel test tell you which side of that line you are on.

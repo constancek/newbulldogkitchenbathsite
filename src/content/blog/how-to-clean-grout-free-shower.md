@@ -2,6 +2,7 @@
 title: How to clean your new grout-free shower (and what to keep off it)
 seoTitle: "How to clean a grout-free shower, and what to keep off it"
 date: 2026-10-24
+category: Bath
 excerpt: The crew left yesterday and the care sheet is on the vanity. The ten-minute routine, the Cincinnati hard-water trick, and the two cleaners that can dull the walls.
 description: How to clean acrylic and solid-surface shower walls after a one-day install: the weekly routine, hard water spots, and the two cleaners to keep off them.
 summary: Clean a grout-free solid-surface shower with mild soap, water and a soft cloth; the routine takes about ten minutes. Cincinnati's hard water is what leaves white spots, abrasive pads and harsh chemicals are the two things to keep off the walls, and running the fan for 20 minutes after a shower keeps mildew away.

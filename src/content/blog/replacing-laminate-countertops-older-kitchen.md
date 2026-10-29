@@ -2,6 +2,7 @@
 title: Laminate countertops in an older kitchen: what replacing them involves
 seoTitle: "Replace laminate countertops: what the job involves"
 date: 2026-07-27
+category: Kitchen
 excerpt: A burn ring by the stove and a seam by the sink that has puffed up. What's under an old laminate top, what you can still fix, and what happens when the top comes off for quartz, granite or solid surface.
 description: Thinking you should replace laminate countertops? What's under an old top, the burn mark and the swollen seam, and what replacing it involves.
 summary: An older laminate countertop is a thin plastic sheet glued to a particleboard core, so a burn goes through the pattern and water at the sink seam swells the board underneath for good. A small burn or one lifted edge can be patched, but a swollen seam by the sink means the core has taken on water and the top is near the end. Replacing it means the old top and its backsplash come off, the new top is templated and cut to fit, and the sink and faucet are reset. Bulldog installs quartz, granite and solid surface, and a consultant measures and gives a written quote.

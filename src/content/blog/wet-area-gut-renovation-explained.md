@@ -2,6 +2,7 @@
 title: Wet-area gut renovation explained: what comes out, what stays
 seoTitle: "Wet area gut renovation: what comes out, what stays"
 date: 2026-09-16
+category: Bath
 excerpt: A wet-area gut takes the tub or shower area to the studs and rebuilds it in a day, while the floor, vanity and toilet stay put. What comes out, what goes in, and what to ask before you sign.
 description: A wet area gut renovation takes the tub or shower area to the studs and rebuilds it in a day. What comes out, what goes in and what stays.
 summary: A wet-area gut takes out the old tub or shower, the tile and the wall surface behind it, down to the studs. The new base, solid-surface walls and fixtures go in the same day, and you shower the next morning. The floor, vanity, toilet and layout stay as they are. The wet area is the part of an older bathroom that takes on water every day, so it is the part worth taking all the way back.

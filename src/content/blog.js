@@ -5,6 +5,8 @@
 //   ---
 //   title: Why your shower grout turns gray again a year after you clean it
 //   date: 2026-10-20
+//   category: Bath                     (Bath or Kitchen; "Kitchen, Bath" for a post about both. Drives the
+//                                       label on the blog index card and the Bath / Kitchen filter buttons)
 //   excerpt: One or two sentences shown on the blog index card.
 //   description: Meta description for search engines, under 155 characters.
 //   seoTitle: Optional shorter title for search results when the title runs past about 60 characters
@@ -140,6 +142,7 @@ function loadPosts() {
       description: meta.description || meta.excerpt || '',
       summary: meta.summary || '', seoTitle: meta.seoTitle || '',
       img: meta.img || '',
+      categories: (meta.category || 'Bath').split(',').map((c) => c.trim()).filter((c) => c === 'Bath' || c === 'Kitchen'),
       words, readMinutes: Math.max(1, Math.round(words / 225)), toc,
       body: html,
     };

@@ -2,6 +2,7 @@
 title: Painted or stained cabinets in a kitchen that cooks every day
 seoTitle: "Painted vs stained kitchen cabinets for a busy kitchen"
 date: 2026-08-07
+category: Kitchen
 excerpt: New doors are coming, and you have to pick a finish. How factory paint and stain each handle chips, hairline cracks, grease by the range and years of light, and when two-tone makes sense.
 description: Painted vs stained kitchen cabinets in a kitchen that cooks every day: chips, hairline cracks at joints, grease, cleaning and color choices.
 summary: Painted doors give you a solid, even color and a smooth surface to wipe, but a chip shows, and hairline cracks can open at the door joints as the wood moves with the seasons. Stained doors let the grain show, and the grain hides small dings and the film that builds up near the range. Both need a soft cloth and quick drying, not scouring pads. If you cook every day and want white, a two-tone kitchen with stained lower doors and island under painted uppers is a fair middle road.

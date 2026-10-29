@@ -374,7 +374,27 @@ page('/about/', 'About Us', `Learn about ${SITE.name}, your local kitchen and ba
 // ---------- Blog ----------
 page('/blog/', 'Blog', `Remodeling tips, ideas, and guides from ${SITE.name}.`, [
   C.pageBand({ title: 'The Bulldog Kitchen &amp; Bath <strong>Blog</strong>', lead: 'Ideas, tips, and guides for your next kitchen or bathroom project.' }),
-  C.cards({ perRow: 3, link: 'Read More', alternate: true, grey: true, items: posts.map((p) => ({ title: p.title, img: p.img, href: `/blog/${p.slug}/`, text: p.excerpt, meta: p.date })) }),
+  // Search, All / Kitchen / Bath filters and "x of y" count above the grid; 12 cards at a time
+  // with a Load more button below (both run in main.js; without JavaScript every card shows)
+  C.cards({
+    perRow: 3, link: 'Read More', alternate: true, grey: true,
+    before: `<div class="blog-toolbar" data-blog-toolbar>
+    <label class="blog-toolbar__search"><span class="sr-only">Search the blog</span><input type="search" placeholder="Search the blog" data-blog-search></label>
+    <div class="blog-toolbar__filters" role="group" aria-label="Show posts about">
+      <button class="button" type="button" data-blog-filter="all" aria-pressed="true">All</button>
+      <button class="button button--outline" type="button" data-blog-filter="kitchen" aria-pressed="false">Kitchen</button>
+      <button class="button button--outline" type="button" data-blog-filter="bath" aria-pressed="false">Bath</button>
+    </div>
+    <p class="blog-toolbar__count" aria-live="polite" data-blog-count>${posts.length} out of ${posts.length} blogs</p>
+  </div>`,
+    after: `<p class="blog-empty" data-blog-empty hidden>No blogs match that search. Try another word, or <button type="button" class="blog-empty__reset" data-blog-reset>show all blogs</button>.</p>
+  <div class="blog-more"><button class="button" type="button" data-blog-more hidden>Load more blogs</button></div>`,
+    items: posts.map((p) => ({
+      title: p.title, img: p.img, href: `/blog/${p.slug}/`, text: p.excerpt, meta: p.date,
+      label: p.categories.join(' &amp; '),
+      attrs: ` data-blog-card data-cat="${p.categories.join(' ').toLowerCase()}" data-search="${C.esc(`${p.title} ${p.excerpt}`.replace(/<[^>]+>/g, '').toLowerCase())}"`,
+    })),
+  }),
 ].join('\n'));
 // Related posts: the ones sharing the most meaningful words with this post's title and
 // description, newest first on a tie

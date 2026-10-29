@@ -1,6 +1,7 @@
 ---
 title: Can my cabinets be refaced? A five-minute check of the boxes
 date: 2026-07-10
+category: Kitchen
 excerpt: Refacing puts new doors, drawer fronts and veneer on the cabinets you have, so it works when the boxes behind them are sound. A flashlight, a yardstick and five minutes tell you whether yours are.
 description: Can my cabinets be refaced? Check the boxes in five minutes: the sink base, the shelves, the face frames and the layout, and see when replacement wins.
 summary: Your cabinets can be refaced if the boxes are solid. Refacing replaces the doors, the drawer fronts and the veneer on the face frames, and the boxes stay on the wall. Check the sink base for soft or swollen wood, lay a straightedge across the shelves, push on the face frames, and decide whether you still like the layout. A damaged sink base, loose face frames or a layout you want to change point to new cabinets.

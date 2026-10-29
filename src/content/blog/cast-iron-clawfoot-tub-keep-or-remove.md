@@ -2,6 +2,7 @@
 title: Cast-iron and clawfoot tubs in older homes: keep, refinish or remove?
 seoTitle: "Clawfoot tub alternatives: keep, refinish or remove"
 date: 2026-07-29
+category: Bath
 excerpt: A clawfoot upstairs in a 1920s house, or a cast-iron alcove tub in a ranch. What keeping it, refinishing it and taking it out for a shower each change, starting with the height of the rim.
 description: Clawfoot tub alternatives for an older house: keep the cast-iron tub, refinish it, or swap it for a low-threshold shower, with rim heights compared.
 summary: A sound cast-iron tub is worth keeping if you get in and out of it without trouble, and a grab bar and a hand shower make it safer. Refinishing fixes chipped or stained enamel and leaves the rim at the height it was. If stepping out over the rim is the hard part, taking the tub out for a low-threshold shower is the one option that removes the step. A clawfoot that stands out in the room makes the shower a layout change, which takes longer than one day.

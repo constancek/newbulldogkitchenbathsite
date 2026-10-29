@@ -2,6 +2,7 @@
 title: Shaker, flat or raised-panel doors: what suits an older house
 seoTitle: "Shaker vs raised panel cabinet doors for an older house"
 date: 2026-07-15
+category: Kitchen
 excerpt: Three door styles, three kinds of house. How shaker, flat and raised-panel doors look in a 1960s ranch, a 1920s Tudor and a 1990s two-story, which ones hold grease, and how each takes paint and stain.
 description: Shaker vs raised panel cabinet doors, plus flat doors: how each looks in an older house, which corners hold grease, and how each takes paint or stain.
 summary: Shaker doors fit the widest range of older houses and take paint or stain well, with a small ledge to wipe. Flat doors suit a 1960s ranch and clean in one pass, but show every ding and brush mark. Raised-panel doors suit a 1990s two-story or a formal kitchen, hold the most grease in their grooves, show hairlines at the joints under paint, and go darker at the bevels under stain. Pick the style for the house first, then the finish, then think about which doors sit next to the range.

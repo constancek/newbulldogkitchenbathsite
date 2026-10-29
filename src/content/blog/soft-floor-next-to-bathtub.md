@@ -2,6 +2,7 @@
 title: Soft floor next to your bathtub: what it is and what waiting costs
 seoTitle: "Soft floor next to your bathtub: what it is, what it costs"
 date: 2026-10-19
+category: Bath
 excerpt: The floor by the tub gives a little under the bath mat. What that spot is made of, where the water got in, and why a patch there means the tub comes out.
 description: Soft floor next to the bathtub: what the spot is made of, three places water gets under a tub, how to check from the basement, and what waiting costs.
 summary: A soft floor next to a bathtub is usually wet subfloor, the plywood or boards under the finish floor, soaked by water getting past the tub's joints. The soft spot spreads while you wait, and fixing it means lifting the tub out because the damage runs under it. Bulldog replaces the tub area and the wet subfloor in its footprint in one day.

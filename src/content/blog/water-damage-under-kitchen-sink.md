@@ -2,6 +2,7 @@
 title: The soft floor under your kitchen sink: what a slow leak does to a cabinet
 seoTitle: "Water damage under kitchen sink cabinet: what to check"
 date: 2026-07-03
+category: Kitchen
 excerpt: The bottom of the sink cabinet gives under the dish soap and the front edge has puffed up. Where the slow leak comes from, how to find it on a Saturday, and when the cabinet needs replacing.
 description: Water damage under kitchen sink cabinet floors: the four slow leaks behind it, a weekend check, and when to repair or replace the sink base.
 summary: A soft or swollen floor in the sink cabinet is particleboard or plywood that took on water from a slow leak, and particleboard does not shrink back flat after it dries. In most kitchens the leak comes from one of four places: the supply lines, the faucet base, the drain trap or the dishwasher hookup. Find and fix the leak first, then dry the cabinet out for a few days before you decide anything. A swollen floor panel on its own can be replaced, but soft sides, a swollen face frame or mold on the back wall mean a new sink base cabinet.

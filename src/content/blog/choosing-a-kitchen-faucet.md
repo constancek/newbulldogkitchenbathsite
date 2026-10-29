@@ -2,6 +2,7 @@
 title: Choosing a kitchen faucet you won't fight with: six choices that matter
 seoTitle: "Best kitchen faucet type for sore hands and deep sinks"
 date: 2026-09-07
+category: Kitchen
 excerpt: One lever or two handles, pull-down or pull-out, how tall the spout stands, how many holes you have to work with, the finish and the flow. What to pick if your hands ache or your sink is deep.
 description: The best kitchen faucet type for an older kitchen: a single lever, the right sprayer, a spout that clears your pots and a finish that hides spots.
 summary: For stiff or sore hands, a single lever is the easiest faucet to work, since you push it instead of gripping and twisting. A pull-down sprayer suits a deep sink and tall pots, and a pull-out suits a low window or a cabinet that hangs close over the sink. Count the holes under your sink before you shop, and measure your tallest pot against the spout. Brushed nickel hides fingerprints and small scratches better than polished chrome, which shows water spots.

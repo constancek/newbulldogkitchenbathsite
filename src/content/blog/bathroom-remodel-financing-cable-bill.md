@@ -2,6 +2,7 @@
 title: "Bathroom remodel financing: a new shower for about the cost of a cable bill"
 seoTitle: "Bathroom remodel financing: a shower for about a cable bill"
 date: 2026-10-27
+category: Bath
 excerpt: The "$150 a month" line explained in plain words, including the one word in a no-interest offer to read twice and what a lender may and may not hold against a retirement income.
 description: Bathroom remodel financing on a fixed income: what "as low as $150 a month" means, how no-interest plans work, and six questions to ask before you sign.
 summary: "As low as $150 a month" is a monthly payment on a financing plan for qualified buyers, not the price of the job. Bulldog offers a no-interest promotional plan and a standard plan of up to 60 months, both on approved credit. A lender may not ignore pension or Social Security income, and you have three business days after signing to cancel.

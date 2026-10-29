@@ -2,6 +2,7 @@
 title: What happens at a kitchen design consultation, and what to have ready
 seoTitle: "Kitchen design consultation: what to expect"
 date: 2026-09-30
+category: Kitchen
 excerpt: A Bulldog design consultant comes to your kitchen, measures it, brings samples and gives you a written quote. What happens at the table, what comes after, and five things to have ready before the doorbell rings.
 description: What happens at a kitchen design consultation with Bulldog: measuring, samples, a 3D look, a written quote, and what to have ready first.
 summary: A Bulldog kitchen design consultation happens in your own kitchen. The consultant measures, brings samples of colors and finishes so you see them in your light, walks you through the options and recommends what fits. You get a written quote after the measuring, and once you go ahead, a project coordinator gives you a schedule before work starts. Have a list of what bothers you, the cabinets you use most, photos of kitchens you like and the sizes of any appliances you're keeping.

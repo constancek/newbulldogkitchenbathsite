@@ -1,6 +1,7 @@
 ---
 title: What's behind the shower tile in a 1960s Cincinnati bathroom
 date: 2026-10-08
+category: Bath
 excerpt: Tap the tile by the tub and the sound goes dull. Layer by layer, what sits behind the tile in a house built around 1965, and what each layer is doing now.
 description: What is behind shower tile in a 1960s house? Mortar or greenboard, studs, subfloor and galvanized pipe, and how to check each without opening the wall.
 summary: In a house built around the 1960s, the shower tile usually outlasts the wall behind it. Behind it you will find a mortar bed or greenboard with no waterproof membrane, often a damp subfloor under the tub, and galvanized pipe near the end of its 40 to 60 year life. A shower under about 20 years old with a dry floor is worth maintaining; an older one usually needs the wall replaced.

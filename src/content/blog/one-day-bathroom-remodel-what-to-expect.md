@@ -1,6 +1,7 @@
 ---
 title: One-day bathroom remodel: what to expect, hour by hour
 date: 2026-10-11
+category: Bath
 excerpt: The truck is in the driveway at 7:45. Our crew's day in your shower area from then until dinner, the noises you'll hear, and the one thing you have to do.
 description: One day bathroom remodel, what to expect hour by hour, from the 7:45 walkthrough to the first shower next morning, from a Cincinnati crew that does it.
 summary: A one-day bathroom remodel runs from about 7:45 a.m. to 6 p.m.: a walkthrough, demolition to the studs, subfloor and plumbing checks, the new base, then walls, trim and door, then cleanup and the warranty. The toilet stays usable through the day, and you take your first shower the next morning once the caulk has set.

@@ -1,6 +1,7 @@
 ---
 title: Won't shower wall panels look like a plastic insert?
 date: 2026-08-10
+category: Bath
 excerpt: The glossy white kit at the lake house and the liner glued over old tile are what give panel showers their reputation. What a made-to-fit, marble-look wall does differently, and how to judge one before you buy.
 description: Worried acrylic shower walls will look like a plastic insert? Liners can. What a made-to-fit, marble-look wall does differently.
 summary: The panel showers that look like a plastic insert are most often stock kits or liners glued over the old tile. A made-to-fit solid-surface wall is measured in your bathroom, comes in marble, travertine and tile-look patterns, and goes up after the old wall comes out to the studs. Judge any panel from the doorway and from six inches away, look at the samples in your own bathroom light, and ask whether the old wall stays or goes.

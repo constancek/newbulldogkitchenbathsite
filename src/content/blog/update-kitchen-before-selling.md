@@ -2,6 +2,7 @@
 title: Should you update the kitchen before selling? Where the money goes in a house you'll leave in two or three years
 seoTitle: "Update the kitchen before selling: where the money goes"
 date: 2026-09-25
+category: Kitchen
 excerpt: You're selling in two or three years and the kitchen looks its age. Fix what an inspector will write up, update what a buyer sees first, and leave the cabinet boxes where they are.
 description: Should you update the kitchen before selling? Fix what an inspector flags, refresh what buyers see first, and skip new cabinets in a house you're leaving.
 summary: In a house you'll sell in two or three years, the kitchen money goes to repairs a buyer's inspector would write up, then to the surfaces a buyer sees first. Cabinet fronts, counters, the backsplash, the sink and the faucet change how the room looks without tearing it out. In a national 2025 study of resale value, a minor kitchen remodel that kept the cabinet boxes got back a far larger share of its cost than a major remodel with new cabinets. New cabinet boxes, layout changes and a bigger island are money you spend for the next owner.

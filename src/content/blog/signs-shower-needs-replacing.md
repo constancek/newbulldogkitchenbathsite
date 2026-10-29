@@ -2,6 +2,7 @@
 title: Your 20-year-old shower: what fails first, and when to stop fixing it
 seoTitle: "Signs your shower needs replacing: what fails first"
 date: 2026-10-28
+category: Bath
 excerpt: Gray grout, a pink caulk line, a dull tile, a soft floor, slow hot water. The order an older shower fails in, how to check each one, and where fixing stops paying.
 description: Signs your shower needs replacing, in the order an older shower fails: grout, caulk, the wall behind the tile, the subfloor and the pipes.
 summary: An older tiled shower fails from the surface inward. The grout goes first, then the caulk at the tub, then the board behind the tile and the subfloor under the tub. The pipes in the wall wear out on their own schedule. Grout and caulk problems respond to cleaning, sealing and new caulk. A dull tap on the tile or a soft floor by the tub means water has reached the wall or the floor, and in a shower 20 years or older that usually means replacing the wall, not regrouting it.

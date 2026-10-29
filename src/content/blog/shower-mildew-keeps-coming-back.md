@@ -1,6 +1,7 @@
 ---
 title: Shower mildew that keeps coming back: where it lives
 date: 2026-07-01
+category: Bath
 excerpt: You scrub the black spots off on Saturday and they're back by the next month. Mildew that returns is living somewhere your sponge can't reach. Here are the four places to check, and what fixes each one.
 description: Shower mildew keeps coming back when it lives where a sponge can't reach: grout pores, caulk, the wall behind the tile, or a room that never dries.
 summary: Mildew that comes back after cleaning is growing below the surface or is being fed by a bathroom that stays damp. It lives in four places: the pores of the grout, inside and behind the caulk, the board behind the tile, and the air of a room the fan can't dry. Grout and caulk respond to cleaning, sealing and new silicone, and a weak fan is worth replacing whatever you decide about the shower. Mildew in the wall behind the tile can't be cleaned from the front.
