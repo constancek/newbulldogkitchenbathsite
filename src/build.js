@@ -446,7 +446,7 @@ const postAside = (p) => {
   <div class="aside-card aside-author">
     <p class="aside-card__kicker">Written by</p><p class="aside-author__name">${AUTHOR.name}</p><p class="aside-author__role">${AUTHOR.role}</p>
     <p class="aside-card__text">Our own crews design and install kitchens and bathrooms across Greater Cincinnati and Northern Kentucky, in as little as one day.</p>
-    <a class="aside-author__link" href="/about/">About us</a>
+    <a class="aside-author__link" href="/about/">About ${SITE.name}</a>
   </div>
   ${tocHtml}
   ${topicHtml}
