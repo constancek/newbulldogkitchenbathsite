@@ -536,7 +536,7 @@ form.sent .form-success { display: block; }
 .aside-promos .aside-promo__img { aspect-ratio: 5 / 2; margin-bottom: .8rem; }
 .aside-promos .aside-card__kicker { margin-bottom: .35rem; }
 .aside-promos .aside-card__title { font-size: 1.05rem; margin-bottom: .35rem; }
-.aside-promos .aside-card__text { font-size: .85rem; line-height: 1.5; margin-bottom: .5rem; }
+.aside-promos .aside-card__text { font-size: .85rem; line-height: 1.5; margin-bottom: 0; }
 .post-aside__sticky .aside-card--dark { padding: 1.1rem 1.25rem; }
 .post-aside__sticky .aside-card--dark .aside-card__title { font-size: 1.1rem; margin-bottom: .75rem; }
 .post-aside__sticky .aside-card__phone { margin-top: .6rem; font-size: 1.05rem; }
@@ -572,9 +572,8 @@ form.sent .form-success { display: block; }
 .aside-promo__img { aspect-ratio: 16 / 9; overflow: hidden; margin-bottom: 1rem; background: #eee; }
 .aside-promo__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
 .aside-promo:hover .aside-promo__img img { transform: scale(1.04); }
-.aside-promo .aside-card__kicker, .aside-promo .aside-card__title, .aside-promo .aside-card__text, .aside-promo__link { margin-left: 1.25rem; margin-right: 1.25rem; }
+.aside-promo .aside-card__kicker, .aside-promo .aside-card__title, .aside-promo .aside-card__text { margin-left: 1.25rem; margin-right: 1.25rem; }
 .aside-promo .aside-card__text { margin-bottom: .75rem; }
-.aside-promo__link { display: inline-block; color: #fff; font-size: .9rem; font-weight: 600; text-decoration: underline; text-underline-offset: .2rem; }
 /* More on this topic: no box around it; each post is a see-through red pill that fills red on hover */
 .aside-topic { padding: 0; border: 0; background: none; }
 .aside-topic ul { display: flex; flex-direction: column; gap: .6rem; margin: 0; padding: 0; list-style: none; }

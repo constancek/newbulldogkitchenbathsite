@@ -440,7 +440,6 @@ const postAside = (p) => {
     <p class="aside-card__kicker">Current promo</p>
     <p class="aside-card__title">${title}</p>
     <p class="aside-card__text">${o.text}</p>
-    <span class="aside-promo__link">See current promos</span>
   </a>`;
   return `<aside class="post-aside" aria-label="More from Bulldog">
   <div class="aside-card aside-author">
