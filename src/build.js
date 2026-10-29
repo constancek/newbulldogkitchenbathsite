@@ -408,8 +408,9 @@ const related = (p) => {
 const abs = (u) => `https://${SITE.domain}${u}`;
 const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(data).replace(/</g, '\\u003c')}</script>`;
 
-// Post sidebar: "More on this topic" (the post's hub first, then related posts about the same room)
-// and below it a free-estimate card that stays in view while you scroll (financing line fits the room)
+// Post sidebar, top to bottom: Written by, On this page (the post's H2s), More on this topic (the post's hub first,
+// then related posts about the same room), two promo cards, and a free-estimate card that stays in view while
+// you scroll (financing line fits the room)
 const HUBS = ['signs-shower-needs-replacing', 'one-day-shower-replacement-cincinnati', 'grout-free-shower-walls-guide', 'aging-in-place-bathroom-plan', 'kitchen-update-in-days'];
 const postAside = (p) => {
   const bySlug = (s) => posts.find((o) => o.slug === s);
@@ -428,8 +429,31 @@ const postAside = (p) => {
     <p class="aside-card__kicker">More on this topic</p>
     <ul>${topic.map((o) => `<li><a href="/blog/${o.slug}/">${o.title}</a></li>`).join('')}</ul>
   </nav>` : '';
+  const tocHtml = p.toc.length > 1 ? `<nav class="aside-card aside-toc" aria-label="On this page">
+    <p class="aside-card__kicker">On this page</p>
+    <ol>${p.toc.map((h) => `<li><a href="#${h.id}">${h.text}</a></li>`).join('')}</ol>
+  </nav>` : '';
+  // Promo cards reuse the Current Promos page's offers so they stay in step with it
+  const promoCard = (o, title) => `<a class="aside-card aside-promo" href="/current-promos/">
+    <div class="aside-promo__img">${C.picture(o.img, o.alt)}</div>
+    <p class="aside-card__kicker">Current promo</p>
+    <p class="aside-card__title">${title}</p>
+    <p class="aside-card__text">${o.text}</p>
+    <span class="aside-promo__link">See current promos</span>
+  </a>`;
   return `<aside class="post-aside" aria-label="More from Bulldog">
+  <div class="aside-card aside-author">
+    <div class="aside-author__head">
+      <img class="aside-author__logo" src="/assets/img/brand/logo.png" alt="${SITE.name} logo" width="96" height="96" loading="lazy" decoding="async">
+      <div><p class="aside-card__kicker">Written by</p><p class="aside-author__name">The ${SITE.name} team</p></div>
+    </div>
+    <p class="aside-card__text">Cincinnati remodelers since ${SITE.founded}. Our own crews design and install kitchens and bathrooms across Greater Cincinnati and Northern Kentucky.</p>
+    <a class="aside-author__link" href="/about/">About us</a>
+  </div>
+  ${tocHtml}
   ${topicHtml}
+  ${promoCard(promos.dollarsOff, promos.dollarsOff.title)}
+  ${promoCard(promos.senior, 'Savings for homeowners 65 and older')}
   <div class="post-aside__sticky"><div class="aside-card aside-card--dark">
     <p class="aside-card__kicker">Free in-home estimate</p>
     <p class="aside-card__title">Get a written quote for your ${kitchenOnly ? 'kitchen' : 'bathroom'}</p>
