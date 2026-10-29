@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const SITE = require('./site');
 const C = require('./components');
+const icon = require('./icons');
 const { bath, kitchen, colorsPatterns } = require('./content/products');
 const options = require('./content/options');
 const extras = require('./content/product-extras');
@@ -435,8 +436,8 @@ const postAside = (p) => {
   </nav>` : '';
   // Promo cards reuse the Current Promos page's offers so they stay in step with it
   const promoCard = (o, title) => `<a class="aside-card aside-promo" href="/current-promos/">
-    <div class="aside-promo__img">${C.picture(o.img, o.alt)}</div>
     <p class="aside-card__kicker">Current promo</p>
+    <div class="aside-promo__media"><div class="aside-promo__img">${C.picture(o.img, o.alt)}</div><span class="aside-promo__icon">${icon[o.icon] || icon.tag}</span></div>
     <p class="aside-card__title">${title}</p>
     <p class="aside-card__text">${o.text}</p>
   </a>`;

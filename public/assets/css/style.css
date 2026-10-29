@@ -534,7 +534,7 @@ form.sent .form-success { display: block; }
 /* Kept compact so the promo and the estimate card fit on a laptop screen while they stick */
 .aside-promos .aside-promo { padding-bottom: 1rem; }
 .aside-promos .aside-promo__img { aspect-ratio: 16 / 9; margin-bottom: .8rem; }
-.aside-promos .aside-card__kicker { margin-bottom: .35rem; }
+.aside-promos .aside-card__kicker { margin-top: .9rem; margin-bottom: .7rem; }
 .aside-promos .aside-card__title { font-size: 1.05rem; margin-bottom: .35rem; }
 .aside-promos .aside-card__text { font-size: .85rem; line-height: 1.5; margin-bottom: 0; }
 .post-aside__sticky .aside-card--dark { padding: 1.1rem 1.25rem; }
@@ -571,6 +571,10 @@ form.sent .form-success { display: block; }
 .aside-promo__img { aspect-ratio: 16 / 9; overflow: hidden; margin-bottom: 1rem; background: #eee; }
 .aside-promo__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
 .aside-promo:hover .aside-promo__img img { transform: scale(1.04); }
+/* Red icon circle (same icons as the home page promo cards) sitting over the photo's top right corner */
+.aside-promo__media { position: relative; }
+.aside-promo__icon { position: absolute; top: -26px; right: 1rem; z-index: 2; width: 52px; height: 52px; border-radius: 50%; background: var(--red); color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,.25); display: flex; align-items: center; justify-content: center; }
+.aside-promo__icon svg { width: 24px; height: 24px; }
 .aside-promo .aside-card__kicker, .aside-promo .aside-card__title, .aside-promo .aside-card__text { margin-left: 1.25rem; margin-right: 1.25rem; }
 .aside-promo .aside-card__text { margin-bottom: .75rem; }
 /* More on this topic: no box around it; each post is a see-through red pill that fills red on hover */
