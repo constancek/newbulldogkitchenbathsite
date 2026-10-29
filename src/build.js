@@ -412,8 +412,8 @@ const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(da
 const AUTHOR = { name: 'James Smith', role: 'Lead Technician' };
 
 // Post sidebar, top to bottom: Written by, On this page (the post's H2s), More on this topic (the post's hub first,
-// then related posts about the same room), two promo cards, and a free-estimate card that stays in view while
-// you scroll (financing line fits the room)
+// then related posts about the same room), the three promo cards, and a short estimate card that stays in view
+// while you scroll
 const HUBS = ['signs-shower-needs-replacing', 'one-day-shower-replacement-cincinnati', 'grout-free-shower-walls-guide', 'aging-in-place-bathroom-plan', 'kitchen-update-in-days'];
 const postAside = (p) => {
   const bySlug = (s) => posts.find((o) => o.slug === s);
@@ -425,9 +425,6 @@ const postAside = (p) => {
     .slice(0, hub ? 3 : 4).map((x) => x.o);
   const topic = [hub, ...sameRoom].filter(Boolean);
   const kitchenOnly = !p.categories.includes('Bath');
-  const money = kitchenOnly
-    ? 'Financing available on approved credit.'
-    : 'With promotional financing, a new grout-free shower for as low as $150 a month, on approved credit.';
   const topicHtml = topic.length ? `<nav class="aside-card aside-topic" aria-label="More on this topic">
     <p class="aside-card__kicker">More on this topic</p>
     <ul>${topic.map((o) => `<li><a href="/blog/${o.slug}/">${o.title}</a></li>`).join('')}</ul>
@@ -456,11 +453,10 @@ const postAside = (p) => {
   ${tocHtml}
   ${topicHtml}
   ${promoCard(promos.dollarsOff, promos.dollarsOff.title)}
+  ${promoCard(promos.financing, promos.financing.title)}
   ${promoCard(promos.senior, 'Savings for homeowners 65 and older')}
   <div class="post-aside__sticky"><div class="aside-card aside-card--dark">
-    <p class="aside-card__kicker">Free in-home estimate</p>
-    <p class="aside-card__title">Get a written quote for your ${kitchenOnly ? 'kitchen' : 'bathroom'}</p>
-    <p class="aside-card__text">A design consultant comes to your house, measures, and gives you a written quote. ${money}</p>
+    <p class="aside-card__title">Get a quote for your ${kitchenOnly ? 'kitchen' : 'bathroom'}</p>
     <a class="button aside-card__button" href="/about/#contact">Request an Estimate</a>
     <a class="aside-card__phone" href="tel:${SITE.phoneHref}">${SITE.phone}</a>
   </div></div>
