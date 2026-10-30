@@ -6,8 +6,8 @@ excerpt: A 15-minute walk-through of your mom's or dad's bathroom (the tub wall,
 description: Bathroom safety for an older parent, as a 15-minute check on your next visit: the tub wall, the bath mat, the night path, the toilet, and how to raise it.
 summary: Most falls among people 65 and older happen at home, and in the bathroom most injuries happen in or around the tub or shower, with getting out far more common than getting in. On your next visit, measure the tub wall, watch what your parent holds onto, check the bath mat, walk the path from bed to bathroom in the dark, and look at the toilet. Night-lights, non-slip strips in the tub and a rubber-backed bath mat fix a lot that same afternoon. Talk about the house and the tub, not about your parent.
 img: blog-parents-bathroom-safety-check
-photoCredit: https://kaboompics.com/ on Pexels, https://www.pexels.com/photo/women-eating-breakfast-6957110/
-photo: adult daughter and older mother talking at kitchen table
+photoCredit: Erik Mclean on Pexels, https://www.pexels.com/photo/photo-of-ceramic-bathtub-near-window-4048081/
+photo: clawfoot tub under a window in an older home bathroom
 ---
 You drive over to your mom's on a Sunday, the 1920s Tudor in Hyde Park she has lived in since 1990, and she mentions that she has been taking sponge baths "for a while now." She says it the way she'd mention the weather. The upstairs bathroom has a clawfoot tub, a towel bar she has started using as a handle, and a bath mat that slides when you step on it. None of that is a crisis yet. It is the room to look at before it becomes one, and you can do it on your next visit with a tape measure and fifteen minutes.
 
