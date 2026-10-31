@@ -435,11 +435,11 @@ const postAside = (p) => {
     <ol>${p.toc.map((h) => `<li><a href="#${h.id}">${h.text}</a></li>`).join('')}</ol>
   </nav>` : '';
   // Promo cards reuse the Current Promos page's offers so they stay in step with it
-  const promoCard = (o, title) => `<a class="aside-card aside-promo" href="/current-promos/">
+  const promoCard = (o, title, text = o.text) => `<a class="aside-card aside-promo" href="/current-promos/">
     <p class="aside-card__kicker">Current promo</p>
     <div class="aside-promo__media"><div class="aside-promo__img">${C.picture(o.img, o.alt)}</div><span class="aside-promo__icon">${icon[o.icon] || icon.tag}</span></div>
     <p class="aside-card__title">${title}</p>
-    <p class="aside-card__text">${o.text}</p>
+    <p class="aside-card__text">${text}</p>
   </a>`;
   return `<aside class="post-aside" aria-label="More from Bulldog">
   <div class="aside-card aside-author">
@@ -452,7 +452,7 @@ const postAside = (p) => {
   <div class="post-aside__sticky">
   <div class="aside-promos" data-promo-rotator>
   ${promoCard(promos.dollarsOff, promos.dollarsOff.title)}
-  ${promoCard(promos.financing, promos.financing.title)}
+  ${promoCard(promos.financing, promos.financing.title, 'No interest for 24 months on approved credit, for eligible customers only.*')}
   ${promoCard(promos.senior, 'Savings for homeowners 65 and older')}
   </div>
   <div class="aside-card aside-card--dark">
