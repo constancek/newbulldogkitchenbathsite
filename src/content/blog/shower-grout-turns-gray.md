@@ -3,59 +3,73 @@ title: Why your shower grout turns gray again a year after you clean it
 seoTitle: "Why shower grout turns gray again after you clean it"
 date: 2026-09-17
 category: Bath
-excerpt: You regrouted in the spring and the bottom row is gray again by fall. Here's what's going on inside the grout, and when the fix stops being worth it.
+excerpt: You regrouted in the spring and the bottom row is gray again by fall. What's going on inside the grout, what the sealer labels say, and when the fix stops being worth it.
 photo: gray grout lines on white shower tile
-description: Regrouted or scrubbed your shower and the gray came back? What happens inside the grout, which fixes last a season, and when it stops being worth it.
-summary: Shower grout turns gray again because it is porous: water, soap and minerals soak in, and sealers wear off, the floor and bottom row first. A pink line on the caulk is a common bacterium feeding on soap film. Grout that grays fast can mean water is reaching the wall behind it, and past about 20 years regrouting stops being worth it.
+description: Why shower grout turns gray again after cleaning, what sealer data sheets say, a weekend plan that holds, and when regrouting stops being worth it.
+summary: Shower grout turns gray again because cement grout is porous, so soap, minerals and mildew live below the surface your brush reaches. Sealer makers sell their products as stain protection and warn that harsh cleaners shorten their life. A pink line on the caulk is a common bacterium feeding on soap film. Grout that grays fast can mean water is reaching the wall behind it, and past about 20 years regrouting stops being worth it.
 img: blog-shower-grout-turns-gray
 ---
-You regrouted the master shower last spring, or paid a handyman to. By fall the lines along the bottom row are gray again, and a pink stripe is back where the tub meets the wall. You did the work right. The grout is doing what grout does. The gray comes from three things happening inside it, in this order, and the order tells you which fixes last and which don't.
+You regrouted the master shower last spring, or paid a handyman to do it. By fall the lines along the bottom row are gray again, and a pink stripe is back where the tub meets the wall. You did the work right. The gray comes from what's going on inside the grout, and once you know where it lives, you can tell which fixes last a year and which last a month.
 
 ## Why grout turns gray: a sponge with a hard face
 
-Standard grout is cement, sand and water. Once it cures it's hard on the surface and full of tiny pores underneath, the way a brick is. Water goes into those pores every time you shower. Soap, skin oils and the minerals in Cincinnati tap water go in with it.
+**Grout** is the cement-based filler packed into the joints between tiles. Polyblend Plus, a common sanded grout, is a [polymer-modified, cement-based grout](https://www.custombuildingproducts.com/wp-content/uploads/Polyblend-Plus-TDS-8-14-26.pdf) that cures hard, and the same maker's sealer sheet lists ["porous grout"](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf) among the surfaces it's made for. Think of a brick: hard face, full of tiny pores.
 
-Scrubbing cleans the face of the grout. It can't reach the pores. The gray you see a few months later is the same soap and mineral load coming back to the surface, with mildew growing on top of it because the pores stay damp between showers.
+Every shower sends water into those pores, with soap, skin oils and tap-water minerals along for the ride. Scrubbing cleans the face of the joint. It can't reach the pores. The gray that comes back is that soap and mineral load working to the surface, with mildew growing on top because the joint stays damp.
 
-The bottom row goes first because it stays wet longest. Water runs down the wall, pools on the tub ledge, and the lowest joint sits in it for an hour after everyone's done.
+The bottom row goes first because it stays wet longest. The EPA's home mold guide says wet materials should dry [within 24 to 48 hours](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home) to keep mold from growing. A bottom joint that gets wet every morning doesn't get a dry day in between.
 
 ## The pink stain on shower caulk is bacteria
 
-The pink stripe along the tub edge is a bacterium called Serratia marcescens. It lives in most homes and feeds on the fatty residue in soap scum. It shows up pink on caulk and grout because those surfaces hold the film it eats.
+The pink stripe along the tub edge is a bacterium called Serratia marcescens. North Dakota State University Extension says it shows up in shower stalls and tub enclosures, anywhere with ["materials containing phosphorus or fatty substances,"](https://www.ag.ndsu.edu/news/newsreleases/2010/aug-9-2010/red-substance-in-tub-toilet-is-bacteria/) and soap residue is one of them. Caulk and the bottom grout joint hold that film, so that's where the stripe settles.
 
-Bleach kills it for a week or two. It comes back because the film comes back. The only way to keep it off is a surface that doesn't hold a film, and grout and caulk both do.
+NDSU's fix is a household cleaner, then a chlorine bleach solution for [10 to 20 minutes](https://www.ag.ndsu.edu/news/newsreleases/2010/aug-9-2010/red-substance-in-tub-toilet-is-bacteria/) before rinsing. NDSU also calls the bacteria hard to remove from a house for good, and the stripe returns with the soap film. Wiping the tub ledge and caulk dry after showers keeps it away longer.
 
-## Grout sealer helps, for about a season
+## Grout sealer is rated for stains, and bleach wears it down
 
-A penetrating sealer fills the pores for a while, which is why a shower sealed in April stays clean through the summer. Sealers wear. How long a coat lasts depends on the product and how hard the shower works, and the floor and the bottom row wear first. [Regrouting vs. resealing vs. replacing](/blog/regrout-reseal-or-replace-shower/) compares what the makers' data sheets say. The instructions say to reseal every year. Few people do, and the ones who do are back on their knees in the shower every spring.
+**A penetrating sealer** is a clear liquid that soaks into grout and lines its pores so spills bead up instead of sinking in. It's the right step, and the data sheets spell out its limits.
 
-Regrouting resets the clock further, since you're starting with fresh grout and fresh sealer. It's also a weekend of work, or a few hundred dollars for someone else to do it, and in a shower that's 20 years old or more the new grout often sits on a wall that's wet behind it. Which brings up the thing the gray grout is hiding.
+Custom Building Products rates its TileLab SurfaceGard for [up to 2 years](https://www.custombuildingproducts.com/wp-content/uploads/TileLab-SurfaceGuard-4-9-26-Final.pdf) of stain protection. Its Aqua Mix Sealer's Choice Gold is rated for [up to 10 years](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf), with top stain resistance for spills that sit [up to 1 hour](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf). A shower floor that stays wet for hours every day asks more than a spill on a counter.
+
+The bigger catch is in the maintenance section. The Gold sheet warns that [high-alkalinity cleaners and harsh chemicals](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf) shorten how long the sealer protects, and asks for a pH-neutral cleaner. Chlorine bleach is not pH-neutral. So the soak that clears the pink stripe wears down the sealer that keeps the gray out. For example, a shower sealed in April and bleached every few weeks for pink can look tired by October. [Regrouting vs. resealing vs. replacing](/blog/regrout-reseal-or-replace-shower/) compares the data sheets in more detail.
+
+Regrouting resets the clock further, with fresh grout and fresh sealer. It also takes days: Polyblend Plus asks for [72 hours](https://www.custombuildingproducts.com/wp-content/uploads/Polyblend-Plus-TDS-8-14-26.pdf) of protection to cure. In an older shower, the new grout can end up on a wall that's wet behind it.
 
 ## What gray grout says about the wall behind it
 
-Grout that goes gray fast and caulk that keeps growing pink are signs that water is getting through the joints and staying there. In a shower built in the 1960s through the 1990s, the wall behind the tile is drywall or a cement board with no waterproof layer in front of it. Water that passes the grout soaks the board, wicks into the studs, and in a lot of Cincinnati-area ranches ends up in the subfloor next to the tub. That soft spot you've been stepping around is the same water.
+Fast-graying grout and caulk that keeps growing pink both point to water getting into the joints and staying there. In many older showers the backing is **greenboard**, which is gypsum board with a water-repellent green paper face. Philadelphia's Department of Licenses and Inspections says in a code bulletin that greenboard ["is not a waterproof material and will deteriorate if subjected to extended or repeated application of water"](https://www.phila.gov/media/20190306152610/Code-Bulletin-No.-B-001-R1-Water-Resistant-Gypsum-Backing-Board.pdf).
 
-Our crews pull tile out of houses in Anderson Township, Montgomery and Fort Thomas, Kentucky every week, and the wet board behind a gray-grouted wall is the most common thing we find. The grout looked bad for years before the wall gave up.
+Water that gets past the grout can soak that board, wick into the studs and reach the subfloor next to the tub. That soft spot you've been stepping around may be the same water. [What's behind the tile in a 1960s Cincinnati bathroom](/blog/behind-shower-tile-1960s-cincinnati-bathroom/) covers the backings you're likely to find and how each one fails.
 
-## What to do about gray grout this weekend
+## What each sign points to
 
-If the shower is otherwise in decent shape and you want another year out of it:
+| What you see | What it points to | What to do |
+|---|---|---|
+| Gray that scrubs off, then returns within months | Soap and minerals in the grout pores | Deep clean, dry, then seal |
+| Pink stripe on the caulk at the tub | Serratia bacteria feeding on soap film | Bleach soak, then wipe dry after showers |
+| Black spots that come back within weeks | Mildew in grout that stays damp | Run the fan longer, for example on a timer |
+| Cracked, crumbling or missing grout | Joints open to water | Regrout |
+| Hollow-sounding tile, or a floor that gives by the tub | Tile has lost its bond; water may be past the grout | Stop cleaning and have the wall looked at |
 
-1. Clean with an oxygen bleach product (the powder kind), left on the joints for 15 minutes, then a stiff brush. It gets further into the pores than chlorine bleach does.
-2. Let the shower dry for a full day with the fan running.
-3. Apply a penetrating sealer to all the grout, two coats on the bottom row and the floor.
-4. Cut out the caulk at the tub line and replace it with a 100% silicone caulk, which holds a film less than acrylic latex does.
+## A weekend plan for gray grout
 
-That will hold through next summer. Put a note on the calendar for next spring, because you'll be doing it again.
+If the shower is otherwise sound, the weekend goes like this, by the clock. Plan on the hall bath Saturday night and Sunday.
+
+1. **Saturday morning.** Scrub the joints with a household cleaner and a stiff nylon brush. Put a chlorine bleach solution on pink areas and black spots for [10 to 20 minutes](https://www.ag.ndsu.edu/news/newsreleases/2010/aug-9-2010/red-substance-in-tub-toilet-is-bacteria/), then rinse. Open a window, and don't mix bleach with any other cleaner.
+2. **Saturday afternoon.** Cut out the old caulk at the tub line. That joint doesn't get grout; the Polyblend Plus sheet calls for a [silicone caulk or sealant](https://www.custombuildingproducts.com/wp-content/uploads/Polyblend-Plus-TDS-8-14-26.pdf) where the wall meets the tub.
+3. **Saturday night.** Leave the fan running and the door open. The surface [must be dry and clean](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf) before sealing.
+4. **Sunday morning.** Brush two coats of penetrating sealer onto every joint, the second at least [30 minutes](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf) after the first, heaviest on the bottom row and floor.
+5. **Sunday afternoon.** Run a bead of silicone kitchen-and-bath caulk along the tub line.
+6. **Monday.** Keep the shower dry for [24 hours](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf) after sealing, and follow the caulk tube's cure time.
+
+After that, wash the grout once a week with a [pH-neutral cleaner](https://www.custombuildingproducts.com/wp-content/uploads/Sealers-Choice-Gold-PFAS-Free-8-21-26.pdf) and save the bleach for pink spots. The Department of Energy's Building America Solution Center says to run the fan [one hour after a shower](https://basc.pnnl.gov/resource-guides/bathroom-exhaust-fans), vented outdoors, not into the attic. If black spots keep coming back, [shower mildew that keeps coming back](/blog/shower-mildew-keeps-coming-back/) explains where it hides.
 
 ## When regrouting stops being worth it
 
-Regrouting and sealing make sense for a shower under about 20 years old with a solid wall behind it. Past that, each round costs more than the last and the water damage keeps going while you wait. If you've regrouted twice, if the floor near the tub moves under your foot, or if the tile sounds hollow when you tap it, the grout is no longer the problem. The wall is.
+Regrouting and sealing make sense for a shower under about 20 years old with a solid wall behind it. That's the line we use, since most showers we replace are 20 or older. Past that, each round of fixes buys less time while any water behind the tile keeps working. If you've regrouted twice, the floor near the tub moves underfoot, or the tile sounds hollow, a better cleaner won't help. The wall needs a look.
 
-At that point the honest choice is between a new tiled shower from a tile contractor, built with a real waterproofing layer behind it, and a shower with no grout at all. Tile done right will last. It will still have joints, and the joints will still need the spring ritual above.
+At that point you're choosing between a new tiled shower from a tile contractor, built with a waterproof layer behind it, and a shower with no grout. Tile done right lasts. It will still have joints that need the weekend above.
 
-A grout-free shower is a solid-surface panel on each wall, measured to your bathroom and cut to fit, with no grout lines on its face. There's nothing for the pink stripe to live in and no pores for the gray to come back through. Mild soap and water is the whole routine. If you want the look of tile, the same material comes in [subway, herringbone and hexagon patterns](/inspiration-colors-patterns/) with the lines molded in and nothing to scrub out of them. Our crews take the shower area down to the studs in the morning, including the wet board we just talked about, and have the new walls, base and fixtures in by evening. You take your first shower in it the next morning, once the caulk has set. Replacing the floor and vanity too is a longer job, and we'll tell you how long before you sign. With promotional financing, qualified buyers get the new shower for as low as $150 a month, or 12 months no interest, on approved credit, so the shower goes in now and the bill waits.
+Bulldog builds the second kind. Our grout-free walls are solid-surface panels measured to your bathroom and fabricated to fit, with no grout lines and a non-porous face, so there are no pores for the gray to come back through. Care is mild soap and water, no abrasive pads or harsh cleaners. If you like the look of tile, the same material comes in [subway, herringbone and hexagon patterns](/inspiration-colors-patterns/). We gut the shower area to the studs and rebuild it in a day: in by evening, first shower the next morning. The floor and vanity are a separate, longer job.
 
-If you'd like to see what the walls look like in a real bathroom, the [colors and patterns page](/inspiration-colors-patterns/) shows the marble and travertine looks most of our customers pick, and the [one-day remodel page](/one-day-bathroom-remodel/) walks through install day. If you're not there yet, clean the bottom row this weekend and see how long it lasts. You'll know.
-
-For the full picture of how an older shower fails, and when to stop fixing it, start with [your 20-year-old shower: what fails first](/blog/signs-shower-needs-replacing/).
+If you're not there yet, try the weekend plan and see how long it holds. For how an older shower wears out, read [your 20-year-old shower: what fails first](/blog/signs-shower-needs-replacing/).
